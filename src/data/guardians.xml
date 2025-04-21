@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guardians>
+  <guardian id="guardian01">
+    <name>Maria Cruz</name>
+    <username>maria.cruz</username>
+    <password>hashed_password_here</password>
+    <contact>Email: maria.cruz@email.com</contact>
+    <children>
+      <studentRef id="student01" />
+      <studentRef id="student02" />
+    </children>
+  </guardian>
+</guardians>
+

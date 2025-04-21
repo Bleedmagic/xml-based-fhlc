@@ -10,11 +10,12 @@
   <!-- Variables to access the database XML files -->
   <xsl:variable name="home" select="document('../data/home.xml')/homepage" />
 
-  <!-- Transform -->
+  <!-- Transformers -->
   <xsl:template match="/">
     <html>
       <head>
-        <!-- meta tags -->
+
+        <!-- META TAGS -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,11 +23,32 @@
           content="A web-based portal for guardians and students to track learning progress and communicate with educators." />
         <meta name="keywords"
           content="guardian portal, student progress, school communication, learning management, education tools" />
-        <meta name="author" content="Full House Learning Center" />
 
+        <!-- FAVICONS -->
+        <link
+          rel="apple-touch-icon"
+          href="img/favicons/apple-touch-icon.png"
+          sizes="180x180"
+        />
+        <link
+          rel="icon"
+          href="img/favicons/favicon-32x32.png"
+          sizes="32x32"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          href="img/favicons/favicon-16x16.png"
+          sizes="16x16"
+          type="image/png"
+        />
+        <link rel="icon" href="img/favicons/favicon.ico" />
+
+        <!-- PAGE TITLE -->
         <title>Home / FHLC</title>
 
         <!-- CSS FRAMEWORKS -->
+        <!-- <link rel="stylesheet" href="css/lib/bootstrap.min.css" /> -->
         <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
         <!-- ACCESSIBILITY STYLES -->
         <link id="style" rel="stylesheet" href="css/accessibility/none.css" />
@@ -36,15 +58,15 @@
         <!--
           <a class="navbar-brand" href="#">
             <img src="{ $home/navbar/logo }" alt="Logo" style="height: 40px; margin-right: 10px;" />
-            <xsl:value-of select="$home/navbar/title" />
+            <xsl:value-of select="$home/navbar/brand" />
           </a>
         -->
 
         <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a class="navbar-brand" href="#">
-            <img src="{ $home/navbar/logo }" alt="Logo" style="height: 40px; margin-right: 10px;" />
-            <xsl:value-of select="$home/navbar/title" />
+            <img src="{ $home/navbar/logo }" alt="Logo" style="height: 50px; margin-right: 10px;" />
+            <xsl:value-of select="$home/navbar/brand" />
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
@@ -87,8 +109,47 @@
         </nav>
 
 
-        <script type="text/javascript" src="js/style.js"> </script>
+        <!-- About Us Description -->
+        <!-- <xsl:apply-templates select="$home/content/about-us/description/p" /> -->
+
+        <!-- Mission -->
+        <!-- <div class="mission">
+          <p>
+            <xsl:value-of select="$home/content/about-us/mission/intro" />
+          </p>
+          <ul>
+            <xsl:apply-templates select="$home/content/about-us/mission/goals/li" />
+          </ul>
+        </div> -->
+
+        <!-- Vision -->
+        <!-- <div class="vision">
+          <p>
+            <xsl:value-of select="$home/content/about-us/vision" />
+          </p>
+        </div> -->
+
+
+        <!-- JS FRAMEWORKS -->
+        <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+        <!-- ACCESSIBILITY STYLES -->
+        <!-- <script type="text/javascript" src="js/style.js"> </script> -->
       </body>
     </html>
   </xsl:template>
+
+  <!-- XSL Templates -->
+  <xsl:template match="p">
+    <p>
+      <xsl:value-of select="." />
+    </p>
+  </xsl:template>
+
+  <xsl:template match="li">
+    <li>
+      <xsl:value-of select="." />
+    </li>
+  </xsl:template>
+
 </xsl:stylesheet>
