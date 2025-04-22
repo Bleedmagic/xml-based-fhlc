@@ -11,6 +11,7 @@
   <!-- Variables to access the database XML files -->
   <xsl:variable name="navbar" select="document('../data/public.xml')/public/navbar" />
   <xsl:variable name="home" select="document('../data/public.xml')/public/home" />
+  <xsl:variable name="footer" select="document('../data/public.xml')/public/footer" />
 
   <!-- Transform -->
   <xsl:template match="/">
@@ -48,62 +49,93 @@
 
         <!-- PAGE TITLE -->
         <title>Home / FHLC</title>
-        <!-- CSS FRAMEWORKS -->
+        <!-- CSS LIB -->
         <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
-
+        <link rel="stylesheet" href="css/icons/bootstrap-icons.min.css" />
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="css/custom.css" />
       </head>
       <body>
 
         <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <!-- Brand (left side) -->
-          <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="{ $navbar/logo }" alt="Logo" style="height: 50px; margin-right: 10px;" />
-            <xsl:value-of select="$navbar/brand" />
-          </a>
+        <header class="container">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-gray">
 
-          <!-- Toggler for mobile -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+              <img src="{ $navbar/logo }" alt="Logo" style="height: 50px; margin-right: 10px;" />
+              <xsl:value-of select="$navbar/brand" />
+            </a>
 
-          <!-- Navbar items (right side) -->
-          <div class="collapse navbar-collapse justify-content-end" id="navbarColor01">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.xhtml">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                  aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
-                </div>
-              </li>
-            </ul>
-            <!-- Login button also on the right -->
-            <button class="btn btn-secondary my-2 my-sm-0 ml-2">Register</button>
-            <button class="btn btn-secondary my-2 my-sm-0 ml-2">Login</button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarColor01">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.xhtml">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.xhtml">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="announcements.xhtml">Announcements</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                    aria-haspopup="true" aria-expanded="false">Admissions</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Admissions Process</a>
+                    <a class="dropdown-item" href="#">Forms &amp; Requirements</a>
+                    <a class="dropdown-item" href="#">Re-enrollment &amp; Withdrawal</a>
+                    <a class="dropdown-item" href="#">New Student Information</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Apply Now</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Forum</a>
+                </li>
+              </ul>
+              <button class="btn btn-outline-info my-2 my-sm-0 ml-2">Login</button>
+            </div>
+          </nav>
+        </header>
+
+        <main role="main">
+          <div class="container-fluid">
+            <p class="lead">
+              
+            </p>
           </div>
-        </nav>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer py-3">
+          <div class="container text-center">
+            <span class="text-muted"> &#169;<xsl:value-of select="$footer/copyright" />
+            </span>
+            <div class="mt-2">
+              <a href="#link1" class="mr-2">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#link2" class="mr-2">
+                <i class="bi bi-youtube"></i>
+              </a>
+              <a href="#link3">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </footer>
 
 
-        <!-- JS FRAMEWORKS -->
+        <!-- JS LIB -->
         <script type="text/javascript" src="js/lib/jquery.min.js"></script>
         <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
       </body>

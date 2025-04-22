@@ -1,0 +1,10 @@
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar .dropdown-item,
+.navbar button {
+  font-size: 1.2rem;
+}
+
+.footer{
+  font-size: 1.2rem;
+}

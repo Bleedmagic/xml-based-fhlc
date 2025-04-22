@@ -53,25 +53,27 @@
       </head>
       <body>
 
-        <!-- About Us Description -->
-        <xsl:apply-templates select="$about/description/p" />
+        <main role="main" class="container">
+          <!-- About Us Description -->
+          <xsl:apply-templates select="$about/description/p" />
 
-        <!-- Mission -->
-        <div class="mission">
-          <p>
-            <xsl:value-of select="$about/mission/intro" />
-          </p>
-          <ul>
-            <xsl:apply-templates select="$about/mission/goals/li" />
-          </ul>
-        </div>
+          <!-- Mission -->
+          <div class="mission">
+            <p>
+              <xsl:value-of select="$about/mission/intro" />
+            </p>
+            <ul>
+              <xsl:apply-templates select="$about/mission/goals/li" />
+            </ul>
+          </div>
 
-        <!-- Vision -->
-        <div class="vision">
-          <p>
-            <xsl:value-of select="$about/vision" />
-          </p>
-        </div>
+          <!-- Vision -->
+          <div class="vision">
+            <p>
+              <xsl:value-of select="$about/vision" />
+            </p>
+          </div>
+        </main>
 
         <!-- JS FRAMEWORKS -->
         <script type="text/javascript" src="js/lib/jquery.min.js"></script>
