@@ -35,6 +35,15 @@
     </description>
     <cta-button>Enroll Now</cta-button>
   </home>
+  <hero>
+    <header>Welcome to Full House Learning Center</header>
+    <description>
+      <p>Where every child's potential is nurtured.</p>
+      <p>Our mission is to provide children with joyful and meaningful learning experiences.</p>
+      <p>We focus on the unique gifts and capabilities of every child.</p>
+    </description>
+    <cta-button>Enroll Now</cta-button>
+  </hero>
   <about-us>
     <header>About Us</header>
     <description>

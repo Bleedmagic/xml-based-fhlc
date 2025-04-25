@@ -12,6 +12,7 @@
   <xsl:variable name="navbar" select="document('../data/public.xml')/public/navbar" />
   <xsl:variable name="home" select="document('../data/public.xml')/public/home" />
   <xsl:variable name="footer" select="document('../data/public.xml')/public/footer" />
+  <xsl:variable name="hero" select="document('../data/public.xml')/public/hero" />
 
   <!-- Transform -->
   <xsl:template match="/">
@@ -107,12 +108,25 @@
           </nav>
         </header>
 
+        <!-- Main -->
         <main role="main">
-          <div class="container-fluid">
+
+          <!-- Hero Section -->
+          <div class="hero-section text-center py-5">
+            <h1 class="display-4">Welcome to FHLC</h1>
+            <p class="lead">Your portal for tracking learning progress and communication.</p>
+            <a href="#link" class="btn btn-primary btn-lg" onclick="showAlert()">Get Started</a>
+          </div>
+
+          <div class="hero-section text-center py-5">
+            <h1 class="display-4">
+              <xsl:value-of select="$hero/header" />
+            </h1>
             <p class="lead">
-              
+              <xsl:apply-templates select="$hero/description/p" />
             </p>
           </div>
+
         </main>
 
         <!-- FOOTER -->
@@ -138,7 +152,18 @@
         <!-- JS LIB -->
         <script type="text/javascript" src="js/lib/jquery.min.js"></script>
         <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+        <!-- <script type="text/javascript" src="js/lib/sweetalert2.all.min.js"></script> -->
+        <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+
+        <!-- Custom Scripts -->
       </body>
     </html>
+  </xsl:template>
+
+  <!-- Other XSL Templates -->
+  <xsl:template match="p">
+    <p>
+      <xsl:value-of select="." />
+    </p>
   </xsl:template>
 </xsl:stylesheet>
