@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Should I separate the parents from one another? -->
 <public>
   <navbar>
     <logo>./img/fhlc-logo.png</logo>
