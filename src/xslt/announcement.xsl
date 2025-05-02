@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml">
 
   <!-- Set Output to XHTML -->
@@ -9,11 +10,11 @@
     indent="yes" />
 
   <!-- Includes -->
-  <xsl:include href="./shared/navbar.xsl" />
   <xsl:include href="./shared/footer.xsl" />
+  <xsl:include href="./shared/navbar.xsl" />
 
   <!-- Variables to access the database XML files -->
-  <!-- <xsl:variable name="about" select="document('../data/public/about.xml')/about" /> -->
+  <!-- <xsl:variable name="announcement" select="document('../data/public/announcement.xml')/announcement" /> -->
 
   <!-- Transform -->
   <xsl:template match="/">
@@ -49,7 +50,7 @@
         <link rel="icon" href="img/favicons/favicon.ico" />
 
         <!-- PAGE TITLE -->
-        <title>About / FHLC</title>
+        <title>Announcement / FHLC</title>
 
         <!-- CSS LIB -->
         <!-- https://bootswatch.com/4/ -->
@@ -62,12 +63,15 @@
 
       <!-- Header -->
       <xsl:call-template name="navbar">
-        <xsl:with-param name="currentPage" select="'about'" />
+        <xsl:with-param name="currentPage" select="'announcement'" />
       </xsl:call-template>
 
       <!-- Main -->
       <main role="main">
-
+        <div class="container mt-5">
+          <h1>Announcement</h1>
+          <p>Details about the announcement will go here.</p>
+        </div>
       </main>
 
       <!-- Footer -->
@@ -76,8 +80,6 @@
       <!-- JS LIB -->
       <script type="text/javascript" src="js/lib/jquery.min.js"></script>
       <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
-      <!-- <script type="text/javascript" src="js/lib/sweetalert2.all.min.js"></script> -->
-      <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
 
       <!-- Custom Scripts -->
       <script src="../frontend/js/custom.js"></script>
@@ -85,5 +87,5 @@
   </xsl:template>
 
   <!-- Other XSL Templates -->
-  <xsl:template></xsl:template>
+  <!-- <xsl:template></xsl:template> -->
 </xsl:stylesheet>

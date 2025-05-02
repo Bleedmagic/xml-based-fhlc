@@ -1,10 +1,14 @@
-.navbar .nav-link,
-.navbar .navbar-brand,
-.navbar .dropdown-item,
-.navbar button {
-  font-size: 1.2rem;
+@font-face {
+	font-family: "Mukta";
+	src: url("../css/fonts/Mukta-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
 }
 
-.footer{
-  font-size: 1.2rem;
+@font-face {
+	font-family: "Mukta";
+	src: url("../css/fonts/Mukta-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
 }
+

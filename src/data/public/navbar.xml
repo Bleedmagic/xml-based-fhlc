@@ -1,27 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <navbar>
-  <logo>./img/fhlc-logo.png</logo>
-  <brand>Full House Learning Center</brand>
+  <identity>
+    <logo>./img/fhlc-logo.png</logo>
+    <name>Full House Learning Center</name>
+    <link>home.php</link>
+  </identity>
   <menu>
     <item>
       <text>Home</text>
-      <link>index.xhtml</link>
+      <link>home.php</link>
+      <slug>home</slug>
     </item>
     <item>
       <text>About FHLC</text>
-      <link>about.xhtml</link>
+      <link>about.php</link>
+      <slug>about</slug>
     </item>
     <item>
-      <text>Services</text>
-      <link>services.xhtml</link>
+      <text>Contact Us</text>
+      <link>contact.php</link>
+      <slug>contact</slug>
     </item>
     <item>
-      <text>Contact</text>
-      <link>contact.xhtml</link>
+      <text>Announcement</text>
+      <link>announcement.php</link>
+      <slug>announcement</slug>
+    </item>
+    <item>
+      <text>Admission</text>
+      <link>Admission.php</link>
+      <slug>admission</slug>
     </item>
     <item>
       <text>Login</text>
-      <link>login.xhtml</link>
+      <link>login.php</link>
     </item>
   </menu>
 </navbar>

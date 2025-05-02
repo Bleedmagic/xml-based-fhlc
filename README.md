@@ -1,8 +1,6 @@
 # Web-Based Guardian and Student Portal with Learning Progress and Communication Tools
 
-The beneficiaries of this website are the guardians, students, and faculty of Full House Learning Center.
-
-The website shall streamline the processes necessary for the private educational institution.
+A web-based portal for guardians and students to track learning progress and communicate with educators.
 
 ## Tech Used
 

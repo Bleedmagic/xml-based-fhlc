@@ -13,7 +13,6 @@
   <xsl:include href="./shared/footer.xsl" />
 
   <!-- Variables to access the database XML files -->
-  <!-- <xsl:variable name="about" select="document('../data/public.xml')/public/about-us" /> -->
   <xsl:variable name="about" select="document('../data/public/about.xml')/about" />
 
   <!-- Transform -->
@@ -68,8 +67,25 @@
 
       <!-- Main -->
       <main role="main">
-        <!-- Hero Section -->
+        <div class="container">
+          <h1>About Us</h1>
+          <xsl:apply-templates select="$about/description/p" />
 
+          <div class="mission">
+            <p>
+              <xsl:value-of select="$about/mission/intro" />
+            </p>
+            <ul>
+              <xsl:apply-templates select="$about/mission/goals/li" />
+            </ul>
+          </div>
+
+          <div class="vision">
+            <p>
+              <xsl:value-of select="$about/vision" />
+            </p>
+          </div>
+        </div>
       </main>
 
       <!-- Footer -->
@@ -78,8 +94,6 @@
       <!-- JS LIB -->
       <script type="text/javascript" src="js/lib/jquery.min.js"></script>
       <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
-      <!-- <script type="text/javascript" src="js/lib/sweetalert2.all.min.js"></script> -->
-      <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
 
       <!-- Custom Scripts -->
       <script src="../frontend/js/custom.js"></script>

@@ -4,16 +4,17 @@
   xmlns="http://www.w3.org/1999/xhtml">
 
   <!-- Set Output to XHTML -->
-  <xsl:output method="xml" indent="yes"
+  <xsl:output method="xml"
     doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
+    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+    indent="yes" />
 
   <!-- Includes -->
-  <xsl:include href="./shared/navbar.xsl" />
   <xsl:include href="./shared/footer.xsl" />
+  <xsl:include href="./shared/navbar.xsl" />
 
   <!-- Variables to access the database XML files -->
-  <xsl:variable name="home" select="document('../data/public/home.xml')/home" />
+  <!-- <xsl:variable name="about" select="document('../data/public/about.xml')/about" /> -->
 
   <!-- Transform -->
   <xsl:template match="/">
@@ -49,7 +50,7 @@
         <link rel="icon" href="img/favicons/favicon.ico" />
 
         <!-- PAGE TITLE -->
-        <title>Home / FHLC</title>
+        <title>About / FHLC</title>
 
         <!-- CSS LIB -->
         <!-- https://bootswatch.com/4/ -->
@@ -59,43 +60,29 @@
         <!-- Custom Styles -->
         <link rel="stylesheet" href="css/custom.css" />
       </head>
-      <body>
-        <!-- Header -->
-        <xsl:call-template name="navbar">
-          <xsl:with-param name="currentPage" select="'home'" />
-        </xsl:call-template>
 
-        <!-- Main -->
-        <main role="main">
-          <!-- Hero Section -->
-          <section class="hero-section text-center py-5">
-            <div class="container">
-              <h1 class="display-4">Welcome to FHLC</h1>
-              <p class="lead">Your portal for tracking learning progress and communication.</p>
-            </div>
-          </section>
+      <!-- Header -->
+      <xsl:call-template name="navbar">
+        <xsl:with-param name="currentPage" select="'about'" />
+      </xsl:call-template>
 
-        </main>
+      <!-- Main -->
+      <main role="main">
 
-        <!-- Footer -->
-        <xsl:call-template name="footer" />
+      </main>
 
-        <!-- JS LIB -->
-        <script type="text/javascript" src="js/lib/jquery.min.js"></script>
-        <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
-        <!-- <script type="text/javascript" src="js/lib/sweetalert2.all.min.js"></script> -->
-        <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+      <!-- Footer -->
+      <xsl:call-template name="footer" />
 
-        <!-- Custom Scripts -->
-        <script src="../frontend/js/custom.js"></script>
-      </body>
+      <!-- JS LIB -->
+      <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+      <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+
+      <!-- Custom Scripts -->
+      <script src="../frontend/js/custom.js"></script>
     </html>
   </xsl:template>
 
   <!-- Other XSL Templates -->
-  <xsl:template match="p">
-    <p>
-      <xsl:value-of select="." />
-    </p>
-  </xsl:template>
+  <xsl:template></xsl:template>
 </xsl:stylesheet>
