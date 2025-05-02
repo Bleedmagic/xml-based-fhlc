@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navbar>
+  <logo>./img/fhlc-logo.png</logo>
+  <brand>Full House Learning Center</brand>
+  <menu>
+    <item>
+      <text>Home</text>
+      <link>index.xhtml</link>
+    </item>
+    <item>
+      <text>About FHLC</text>
+      <link>about.xhtml</link>
+    </item>
+    <item>
+      <text>Services</text>
+      <link>services.xhtml</link>
+    </item>
+    <item>
+      <text>Contact</text>
+      <link>contact.xhtml</link>
+    </item>
+    <item>
+      <text>Login</text>
+      <link>login.xhtml</link>
+    </item>
+  </menu>
+</navbar>
