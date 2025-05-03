@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
   <user>
-    <username>guardian01</username>
-    <password>hashed_password_here</password>
-    <role>guardian</role>
-    <profile ref="guardian01.xml" />
+    <username>admin@gmail.com</username>
+    <password>$2y$12$R.IhtrgbcyXFPJ8y2CRlsekqelVeh/qqyMX/XUuOqR.kthqS6GQ86</password>
+    <!-- admin@123 -->
+    <role>admin</role>
   </user>
   <user>
-    <username>student01</username>
-    <password>hashed_password_here</password>
-    <role>student</role>
-    <profile ref="student01.xml" />
+    <username>guardian@gmail.com</username>
+    <password>$2y$12$hZrOhFQ5YxCYmDkAddqcHuK/bFpVwhfLyfFGDYD08KifnHF4T/pLq</password>
+    <!-- guardian@123 -->
+    <role>guardian</role>
   </user>
 </users>

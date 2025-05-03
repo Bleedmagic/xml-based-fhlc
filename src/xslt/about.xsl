@@ -67,7 +67,7 @@
 
       <!-- Main -->
       <main role="main">
-        <div class="container">
+        <div class="container mt-5">
           <h1>About Us</h1>
           <xsl:apply-templates select="$about/description/p" />
 

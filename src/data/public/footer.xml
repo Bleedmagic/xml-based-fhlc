@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <footer>
+  <other>
+    <media>
+      <name>Facebook</name>
+      <link>https://www.facebook.com/FullhouseLC2001</link>
+    </media>
+    <media>
+      <name>Instagram</name>
+      <link>https://www.instagram.com/fhlc2001</link>
+    </media>
+    <media>
+      <name>Youtube</name>
+      <link>https://www.youtube.com/channel/UC3i8egkVhTkibx7ckDFabTw</link>
+    </media>
+  </other>
   <copyright>
     <year>2025</year>
-    <text>Full House Learning Center</text>
+    <name>Full House Learning Center</name>
+    <text>All rights reserved.</text>
   </copyright>
 </footer>

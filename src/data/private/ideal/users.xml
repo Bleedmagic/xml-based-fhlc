@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user>
+    <username>guardian01</username>
+    <password>hashed_password_here</password>
+    <role>guardian</role>
+    <profile ref="guardian01.xml" />
+  </user>
+  <user>
+    <username>student01</username>
+    <password>hashed_password_here</password>
+    <role>student</role>
+    <profile ref="student01.xml" />
+  </user>
+</users>

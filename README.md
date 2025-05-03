@@ -13,7 +13,6 @@ A web-based portal for guardians and students to track learning progress and com
 ## Features
 
 - XML-based
-- Register/Login
 
 ## Contributions
 

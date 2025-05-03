@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <navbar>
   <identity>
     <logo>./img/fhlc-logo.png</logo>
@@ -32,7 +33,7 @@
     </item>
     <item>
       <text>Login</text>
-      <link>login.php</link>
+      <link>auth/login.php</link>
     </item>
   </menu>
 </navbar>
