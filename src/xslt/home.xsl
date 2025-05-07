@@ -68,22 +68,7 @@
         <!-- Main -->
         <main role="main">
           <!-- Hero Section -->
-          <section class="hero-section text-center py-5">
-            <div class="container">
-              <h1 class="display-4">Welcome to FHLC</h1>
-              <p class="lead">Your portal for tracking learning progress and communication.</p>
-            </div>
-          </section>
 
-          <section class="container my-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem animi odit vero, tenetur dolore provident magni nam nemo corporis, sequi dicta a veritatis assumenda cupiditate voluptatem vitae necessitatibus reprehenderit obcaecati!
-            Assumenda quia pariatur perspiciatis cupiditate corporis eum iste ratione, nulla aliquam sunt, enim, incidunt error molestiae sed repudiandae perferendis dicta deleniti suscipit molestias. Sint vitae voluptatibus sapiente dignissimos, nam quas.
-            Quisquam, voluptatum commodi? Error ea nulla voluptatibus aliquam pariatur voluptatum, temporibus exercitationem iusto incidunt debitis in earum possimus tenetur! Voluptates autem cum modi velit amet esse necessitatibus nisi quia itaque?
-            Atque voluptatem explicabo quod laudantium officia voluptatibus aliquam? Nobis inventore beatae ad quod dolore maxime eum excepturi! Ullam voluptates commodi expedita laborum necessitatibus amet quibusdam sequi ab, dolore distinctio assumenda?
-            A ullam nihil maiores eum est explicabo enim dignissimos doloribus! Sunt voluptatem mollitia autem velit ad. Nesciunt repellendus ullam quae molestiae nam veritatis voluptatum at, tenetur recusandae quisquam adipisci quos?
-            Similique molestiae expedita consequuntur exercitationem quas, eaque doloremque ea iure ad placeat, soluta, est tempora! Eos maiores expedita neque, autem inventore possimus dicta dolorem repellat totam similique, blanditiis recusandae illo.
-            Saepe deleniti aliquid eum nostrum vel reiciendis, aut repellat ab necessitatibus eos quibusdam unde cumque quo quisquam voluptas asperiores numquam quod impedit? Nostrum voluptatibus est reprehenderit, hic maxime veritatis excepturi.
-          </section>
 
         </main>
 

@@ -2,45 +2,95 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:template name="footer">
     <xsl:variable name="footer" select="document('../../data/public/footer.xml')/footer" />
-    <footer class="footer py-2">
+
+    <style>
+    .icon-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2em;
+      height: 2em;
+      margin-right: 0.5rem;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: background-color 0.3s, color 0.3s;
+      }
+
+      .icon-circle i {
+      font-size: 1.2em;
+      }
+
+      .icon-circle.facebook { color: #3b5998; }
+      .icon-circle.facebook:hover {
+      background-color: #3b5998;
+      color: #fff;
+      }
+
+      .icon-circle.youtube { color: #FF0000; }
+      .icon-circle.youtube:hover {
+      background-color: #FF0000;
+      color: #fff;
+      }
+
+      .icon-circle.instagram { color: #C13584; }
+      .icon-circle.instagram:hover {
+      background-color: #C13584;
+      color: #fff;
+      }
+
+      .icon-circle.email { color: #6c757d; }
+      .icon-circle.email:hover {
+      background-color: #6c757d;
+      color: #fff;
+      }
+
+      .icon-circle.phone { color: #28a745; }
+      .icon-circle.phone:hover {
+      background-color: #28a745;
+      color: #fff;
+      }
+    </style>
+
+    <footer
+      class="footer py-2">
       <div class="text-center">
 
-        <!-- Reach us at: -->
         <div class="mt-2 text-white" style="background-color: #1A906B;">
-
           <div class="pt-2">
-            <a href="#link1" class="mr-3" style="font-size: 1.5em; text-decoration: none;">
+            <a href="#link1" class="icon-circle facebook">
               <i class="bi bi-facebook"></i>
             </a>
-            <a href="#link2" class="mr-3" style="font-size: 1.5em; text-decoration: none;">
+            <a href="#link2" class="icon-circle youtube">
               <i class="bi bi-youtube"></i>
             </a>
-            <a href="#link3" class="mr-3" style="font-size: 1.5em; text-decoration: none;">
+            <a href="#link3" class="icon-circle instagram">
               <i class="bi bi-instagram"></i>
             </a>
-            <a href="#link3" class="mr-3" style="font-size: 1.5em; text-decoration: none;">
+            <a href="#link4" class="icon-circle email">
               <i class="bi bi-envelope"></i>
             </a>
-            <a href="#link3" style="font-size: 1.5em; text-decoration: none;">
+            <a href="#link5" class="icon-circle phone">
               <i class="bi bi-telephone"></i>
             </a>
           </div>
 
-          <!-- Footer Links -->
           <div class="mt-2 mb-2 pb-2">
             <span class="h7">ABOUT FHLC | CONTACT US | ANNOUNCEMENTS | ADMISSIONS</span>
           </div>
         </div>
 
-        <!-- Copyright -->
-        <span class="font-weight-bold">
-          &#169;
-           <xsl:value-of select="$footer/copyright/year" /> /
-           <xsl:value-of select="$footer/copyright/name" /> /
-          <xsl:value-of select="$footer/copyright/text" />
+        <span class="font-weight-bold"> &#169; <xsl:text> </xsl:text>
+        <xsl:value-of
+            select="$footer/copyright/year" />
+        <xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
+        <xsl:value-of
+            select="$footer/copyright/name" />,
+        <xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
+        <xsl:value-of
+            select="$footer/copyright/text" />
         </span>
+
       </div>
     </footer>
-
   </xsl:template>
 </xsl:stylesheet>
