@@ -25,8 +25,15 @@ Clone the Repository
 
 Create a New Branch
 
-- Give it a descriptive name based on your task:
+- Ensure you're on the latest main branch:
 
+```bash
+  git checkout main
+  git pull origin main
+```
+
+- Create a new branch:
+  - Give it a descriptive name based on your task:
 - `git checkout -b feat-yourname-task`
 
 Make Your Changes
