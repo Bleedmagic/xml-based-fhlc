@@ -23,11 +23,6 @@
         <!-- META TAGS -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description"
-          content="A web-based portal for guardians and students to track learning progress and communicate with educators." />
-        <meta name="keywords"
-          content="guardian portal, student progress, school communication, learning management, education tools" />
 
         <!-- FAVICONS -->
         <link
