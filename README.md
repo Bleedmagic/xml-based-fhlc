@@ -5,6 +5,7 @@ A web-based portal for guardians and students to track learning progress and com
 ## Tech Used
 
 - XML/XSL/DTD/XSD
+- PHP
 - HTML
 - CSS
 - JavaScript
@@ -16,50 +17,57 @@ Feel free to open issues or submit pull requests for improvements or suggestions
 
 ### How to Contribute (Step-by-Step)
 
-Clone the Repository
+#### Setting Up Git
 
-```bash
-  git clone <https://github.com/Bleedmagic/xml-based-fhlc.git>
-  cd your-repo
-```
+Install Git:
 
-Create a New Branch
+- On Windows: <https://git-scm.com/download/win>
 
-- Ensure you're on the latest main branch:
+#### Clone the Repository
 
-```bash
-  git checkout main
-  git pull origin main
-```
 
-- Create a new branch:
-  - Give it a descriptive name based on your task:
-- `git checkout -b feat-yourname-task`
+  `git clone <https://github.com/Bleedmagic/xml-based-fhlc.git>`
 
-Make Your Changes
+  `cd your-repo`
+
+
+#### Create a New Branch
+
+Ensure you're on the latest main branch:
+
+  `git checkout main`
+
+  `git pull origin main`
+
+Make a branch, and give it a descriptive name based on your task:
+
+`git checkout -b feat-yourname-task`
+
+#### Make Your Changes
 
 - Edit the files you need.
 - Save your work often.
 - Avoid editing files others are working on unless necessary.
 
-Add and Commit Your Changes
+#### Add and Commit Your Changes
 
-```bash
-  git add .
-  git commit -m "Add: your change description"
-```
 
-Pull Latest Changes from Main (Optional but Recommended)
+  `git add .`
 
-- Before pushing, update your branch:
+  `git commit -m "Add: your change description"`
 
-- `git pull origin main`
 
-Push Your Branch to GitHub
+#### Pull Latest Changes from Main (Optional but Recommended)
 
-- `git push --set-upstream origin feat-yourname-task`
+Before pushing, update your branch:
 
-Open a Pull Request
+  `git pull origin main`
+
+#### Push Your Branch to GitHub
+
+  `git push --set-upstream origin feat-yourname-task`
+
+#### Open a Pull Request
 
 - Go to the repository on GitHub.
 - Click the "Pull Requests" tab.
@@ -67,14 +75,14 @@ Open a Pull Request
 - Add a clear title and description of your changes.
 - Submit the pull request.
 
-Wait for Review & Merge
+#### Wait for Review & Merge
 
 - Another team member (or the team lead) will review and approve.
 - Once approved, it’ll be merged into main.
 
-----------------------------------
+---
 
-Guidelines:
+### Guidelines
 
 - Make small, focused commits.
 - Use clear, descriptive commit messages.
