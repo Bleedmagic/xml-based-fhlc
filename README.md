@@ -28,7 +28,7 @@ Install Git:
 
   `git clone <https://github.com/Bleedmagic/xml-based-fhlc.git>`
 
-  `cd your-repo`
+  `cd xml-based-fhlc`
 
 
 #### Create a New Branch
@@ -41,7 +41,7 @@ Ensure you're on the latest main branch:
 
 Make a branch, and give it a descriptive name based on your task:
 
-`git checkout -b feat-yourname-task`
+`git checkout -b feat-username-task`
 
 #### Make Your Changes
 
@@ -65,7 +65,7 @@ Before pushing, update your branch:
 
 #### Push Your Branch to GitHub
 
-  `git push --set-upstream origin feat-yourname-task`
+  `git push --set-upstream origin feat-username-task`
 
 #### Open a Pull Request
 
