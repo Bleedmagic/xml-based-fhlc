@@ -36,7 +36,7 @@
 
           <xsl:for-each select="$navbar/menu/item[text = 'Login']">
             <a href="{link}">
-              <button class="btn btn-success my-2 my-sm-0 ml-2">
+              <button class="btn btn-success my-2 my-sm-0 ml-1 mr-1" type="button">
                 <xsl:value-of select="text" />
               </button>
             </a>
