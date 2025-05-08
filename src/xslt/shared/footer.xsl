@@ -114,7 +114,7 @@
             select="$footer/copyright/year" />
         <xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
         <xsl:value-of
-            select="$footer/copyright/name" />, <xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
+            select="$footer/copyright/name" />,<xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
         <xsl:value-of
             select="$footer/copyright/text" />
         </span>
