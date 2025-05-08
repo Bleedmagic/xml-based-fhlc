@@ -1,6 +1,6 @@
-# Web-Based Guardian and Student Portal with Learning Progress and Communication Tools
+# Web-Based Guardian and Teacher Portal with Learning Progress and Communication Tools
 
-A web-based portal for guardians and students to track learning progress and communicate with educators.
+A web-based portal for guardians and teachers to track learning progress of students and communicate with one another.
 
 ## Tech Used
 
