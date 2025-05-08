@@ -19,19 +19,22 @@ Feel free to open issues or submit pull requests for improvements or suggestions
 
 #### Setting Up Git
 
-Install Git:
-
-- On Windows: <https://git-scm.com/download/win>
+Install Git: <https://git-scm.com/download/win>
 
 #### Clone the Repository
 
 
-  `git clone <https://github.com/Bleedmagic/xml-based-fhlc.git>`
+  `git clone https://github.com/Bleedmagic/xml-based-fhlc.git`
 
   `cd xml-based-fhlc`
 
+#### If Branches Are Already Established
 
-#### Create a New Branch
+  `git fetch`
+
+  `git checkout feat-facade`
+
+#### If Not, Create a New Branch
 
 Ensure you're on the latest main branch:
 
@@ -42,6 +45,7 @@ Ensure you're on the latest main branch:
 Make a branch, and give it a descriptive name based on your task:
 
 `git checkout -b feat-username-task`
+
 
 #### Make Your Changes
 
@@ -79,6 +83,16 @@ Before pushing, update your branch:
 
 - Another team member (or the team lead) will review and approve.
 - Once approved, it’ll be merged into main.
+
+#### To Update Branch (If Needed)
+
+  `git checkout main`
+
+  `git pull origin main`
+
+  `git checkout your-feature-branch`
+
+  `git merge main`
 
 ---
 
