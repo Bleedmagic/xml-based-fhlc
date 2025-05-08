@@ -2,9 +2,11 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:template name="footer">
     <xsl:variable name="footer" select="document('../../data/public/footer.xml')/footer" />
+    <xsl:variable
+      name="navbar" select="document('../../data/public/navbar.xml')/navbar" />
 
     <style>
-    .icon-circle {
+      .icon-circle {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -49,6 +51,16 @@
       background-color: #28a745;
       color: #fff;
       }
+
+      .footer-link {
+      color: white; /* Make the text white */
+      text-decoration: none; /* Remove underline */
+      transition: color 0.3s ease; /* Smooth color transition */
+      }
+
+      .footer-link:hover {
+      color: #ddd; /* Slightly lighter shade on hover */
+      }
     </style>
 
     <footer
@@ -89,7 +101,11 @@
           </div>
 
           <div class="mt-2 mb-2 pb-2">
-            <span class="h7">ABOUT FHLC | CONTACT US | ANNOUNCEMENTS | ADMISSIONS</span>
+            <span class="h7">
+              <a href="about.php" class="footer-link">ABOUT FHLC</a> | <a href="contact.php"
+                class="footer-link">CONTACT US</a> | <a href="announcement.php" class="footer-link">
+              ANNOUNCEMENTS</a> | <a href="admission.php" class="footer-link">ADMISSIONS</a>
+            </span>
           </div>
         </div>
 
@@ -98,8 +114,7 @@
             select="$footer/copyright/year" />
         <xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
         <xsl:value-of
-            select="$footer/copyright/name" />,
-        <xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
+            select="$footer/copyright/name" />, <xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
         <xsl:value-of
             select="$footer/copyright/text" />
         </span>
