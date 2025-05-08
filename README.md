@@ -69,7 +69,9 @@ Before pushing, update your branch:
 
 #### Push Your Branch to GitHub
 
-  `git push --set-upstream origin feat-username-task`
+  `git push --set-upstream origin feat-username-task` (Necessary for first time)
+
+  `git push` or `git pull` afterward
 
 #### Open a Pull Request
 
@@ -95,6 +97,115 @@ Before pushing, update your branch:
   `git merge main`
 
 ---
+
+### Additional Notes
+
+<details>
+
+<summary>Here are some answers to questions</summary>
+
+> [!NOTE]
+> Your local repo is the copy of the project on your own computer.
+>
+> A remote is a shared copy that lives online (e.g. <https://github.com/yourname/project.git>) and allows you and your team to collaborate.
+
+`git push origin main`
+
+- "Push my local main branch to the origin remote (usually GitHub)."
+
+`git pull origin main`
+
+- "Fetch and merge the latest changes from the remote main branch into my local one."
+
+---
+
+### Syncing main After Merging on GitHub
+
+After merging on the GitHub website:
+
+```bash
+  git checkout main
+  git pull origin main  # Sync your local main with remote
+```
+
+
+---
+
+### If You Switch to a Branch But Don’t Commit
+
+```bash
+  git restore .
+  git clean -fd
+```
+
+---
+
+### Deleting a Branch
+
+```bash
+git branch -d branchname             # Delete local branch
+git push origin -d branchname        # Delete remote branch
+```
+
+---
+
+### Keeping main Updated While Working on Other Branches
+
+```bash
+git checkout main
+git pull origin main                 # Update local main
+git checkout your-branch-name
+git merge main                       # Merge updated main into your branch
+git push origin your-branch-name
+```
+
+`git rebase main` (Alternative to merge)
+
+> [!WARNING]
+> When using rebase, especially in team environments, be careful to avoid rewriting shared history.
+
+---
+
+### Keeping Your Branch Updated with Remote main
+
+```bash
+git checkout your-branch-name
+git fetch origin
+git merge origin/main                # OR: git rebase origin/main
+git push origin your-branch-name
+```
+
+---
+
+### Stashing Changes
+
+```bash
+git stash                            # Save uncommitted changes
+git stash pop                        # Reapply stashed changes
+
+# Additional for Stash Management
+
+git stash list
+git stash drop
+```
+
+---
+
+### Pushing a New Branch to Remote
+
+`git push -u origin your-branch-name`
+
+---
+
+### Others
+
+```bash
+git fetch origin # Get latest remote changes (no merge)
+
+git status # Check current branch and changes
+```
+
+</details>
 
 ### Guidelines
 
