@@ -2,7 +2,7 @@
 <navbar>
   <identity>
     <logo>./img/fhlc-logo.png</logo>
-    <name>Full House Learning Center</name>
+    <name>Fullhouse Learning Center</name>
     <link>home.php</link>
   </identity>
   <menu>
