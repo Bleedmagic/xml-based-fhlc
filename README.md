@@ -98,16 +98,18 @@ Before pushing, update your branch:
 
 ---
 
-### Additional Notes
+### Additional Stuff
 
 <details>
 
-<summary>Here are some answers to questions</summary>
+<summary>Here are some answers to some questions.</summary>
 
-> [!NOTE]
-> Your local repo is the copy of the project on your own computer.
->
-> A remote is a shared copy that lives online (e.g. <https://github.com/yourname/project.git>) and allows you and your team to collaborate.
+
+#### Note
+
+Your local repo is the copy of the project on your own computer.
+
+A remote is a shared copy that lives online (e.g. <https://github.com/yourname/project.git>) and allows you and your team to collaborate.
 
 `git push origin main`
 
@@ -119,19 +121,18 @@ Before pushing, update your branch:
 
 ---
 
-### Syncing main After Merging on GitHub
+#### Syncing main After Merging on GitHub
 
 After merging on the GitHub website:
 
 ```bash
   git checkout main
-  git pull origin main  # Sync your local main with remote
+  git pull origin main             # Sync your local main with remote
 ```
-
 
 ---
 
-### If You Switch to a Branch But Don’t Commit
+#### If You Switch to a Branch But Don’t Commit
 
 ```bash
   git restore .
@@ -140,7 +141,7 @@ After merging on the GitHub website:
 
 ---
 
-### Deleting a Branch
+#### Deleting a Branch
 
 ```bash
 git branch -d branchname             # Delete local branch
@@ -149,7 +150,7 @@ git push origin -d branchname        # Delete remote branch
 
 ---
 
-### Keeping main Updated While Working on Other Branches
+#### Keeping main Updated While Working on Other Branches
 
 ```bash
 git checkout main
@@ -161,12 +162,13 @@ git push origin your-branch-name
 
 `git rebase main` (Alternative to merge)
 
-> [!WARNING]
-> When using rebase, especially in team environments, be careful to avoid rewriting shared history.
+##### Warning
+
+When using rebase, especially in team environments, be careful to avoid rewriting shared history.
 
 ---
 
-### Keeping Your Branch Updated with Remote main
+#### Keeping Your Branch Updated with Remote main
 
 ```bash
 git checkout your-branch-name
@@ -177,7 +179,7 @@ git push origin your-branch-name
 
 ---
 
-### Stashing Changes
+#### Stashing Changes
 
 ```bash
 git stash                            # Save uncommitted changes
@@ -191,18 +193,18 @@ git stash drop
 
 ---
 
-### Pushing a New Branch to Remote
+#### Pushing a New Branch to Remote
 
 `git push -u origin your-branch-name`
 
 ---
 
-### Others
+#### Others
 
 ```bash
-git fetch origin # Get latest remote changes (no merge)
+git fetch origin             # Get latest remote changes (no merge)
 
-git status # Check current branch and changes
+git status             # Check current branch and changes
 ```
 
 </details>
