@@ -27,12 +27,12 @@
         <!-- FAVICONS -->
         <link
           rel="apple-touch-icon"
-          href="img/favicons/apple-touch-icon.png"
+          href="../img/favicons/apple-touch-icon.png"
           sizes="180x180"
         />
         <link
           rel="icon"
-          href="img/favicons/favicon-32x32.png"
+          href="../img/favicons/favicon-32x32.png"
           sizes="32x32"
           type="image/png"
         />
