@@ -72,27 +72,27 @@
             <xsl:for-each select="$footer/other/media">
               <xsl:choose>
                 <xsl:when test="name='Facebook'">
-                  <a href="{link}" class="icon-circle facebook">
+                  <a href="{link}" class="icon-circle facebook" target="_blank">
                     <i class="bi bi-facebook"></i>
                   </a>
                 </xsl:when>
                 <xsl:when test="name='Instagram'">
-                  <a href="{link}" class="icon-circle instagram">
+                  <a href="{link}" class="icon-circle instagram" target="_blank">
                     <i class="bi bi-instagram"></i>
                   </a>
                 </xsl:when>
                 <xsl:when test="name='Youtube'">
-                  <a href="{link}" class="icon-circle youtube">
+                  <a href="{link}" class="icon-circle youtube" target="_blank">
                     <i class="bi bi-youtube"></i>
                   </a>
                 </xsl:when>
                 <xsl:when test="name='Email'">
-                  <a href="{link}" class="icon-circle email">
+                  <a href="{link}" class="icon-circle email" target="_blank">
                     <i class="bi bi-envelope"></i>
                   </a>
                 </xsl:when>
                 <xsl:when test="name='Phone'">
-                  <a href="{link}" class="icon-circle phone">
+                  <a href="{link}" class="icon-circle phone" target="_blank">
                     <i class="bi bi-telephone"></i>
                   </a>
                 </xsl:when>
