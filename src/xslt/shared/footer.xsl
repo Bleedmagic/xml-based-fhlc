@@ -57,21 +57,35 @@
 
         <div class="mt-2 text-white" style="background-color: #1A906B;">
           <div class="pt-2">
-            <a href="#link1" class="icon-circle facebook">
-              <i class="bi bi-facebook"></i>
-            </a>
-            <a href="#link2" class="icon-circle youtube">
-              <i class="bi bi-youtube"></i>
-            </a>
-            <a href="#link3" class="icon-circle instagram">
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a href="#link4" class="icon-circle email">
-              <i class="bi bi-envelope"></i>
-            </a>
-            <a href="#link5" class="icon-circle phone">
-              <i class="bi bi-telephone"></i>
-            </a>
+            <xsl:for-each select="$footer/other/media">
+              <xsl:choose>
+                <xsl:when test="name='Facebook'">
+                  <a href="{link}" class="icon-circle facebook">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </xsl:when>
+                <xsl:when test="name='Instagram'">
+                  <a href="{link}" class="icon-circle instagram">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </xsl:when>
+                <xsl:when test="name='Youtube'">
+                  <a href="{link}" class="icon-circle youtube">
+                    <i class="bi bi-youtube"></i>
+                  </a>
+                </xsl:when>
+                <xsl:when test="name='Email'">
+                  <a href="{link}" class="icon-circle email">
+                    <i class="bi bi-envelope"></i>
+                  </a>
+                </xsl:when>
+                <xsl:when test="name='Phone'">
+                  <a href="{link}" class="icon-circle phone">
+                    <i class="bi bi-telephone"></i>
+                  </a>
+                </xsl:when>
+              </xsl:choose>
+            </xsl:for-each>
           </div>
 
           <div class="mt-2 mb-2 pb-2">

@@ -13,6 +13,14 @@
       <name>Youtube</name>
       <link>https://www.youtube.com/channel/UC3i8egkVhTkibx7ckDFabTw</link>
     </media>
+    <media>
+      <name>Email</name>
+      <link>mailto:contact@fullhouse.com</link>
+    </media>
+    <media>
+      <name>Phone</name>
+      <link>tel:+1234567890</link>
+    </media>
   </other>
   <copyright>
     <year>2025</year>
