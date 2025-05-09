@@ -27,15 +27,13 @@
         <link rel="icon" href="{$assets-path}img/favicons/favicon-32x32.png" sizes="32x32"
           type="image/png" />
         <link rel="icon" href="{$assets-path}img/favicons/favicon-16x16.png" sizes="16x16"
-          type="image/png"
-        />
+          type="image/png" />
         <link rel="icon" href="{$assets-path}img/favicons/favicon.ico" />
 
         <!-- PAGE TITLE -->
         <title>404 / FHLC</title>
 
         <!-- CSS LIB -->
-        <!-- https://bootswatch.com/4/ -->
         <link rel="stylesheet" href="{$assets-path}css/lib/bootstrap.min.css" />
         <link rel="stylesheet" href="{$assets-path}css/icons/bootstrap-icons.min.css" />
 
@@ -45,8 +43,21 @@
         <style>
           body {
           background-color: #f8f9fa;
-          text-align: center;
-          padding-top: 10%;
+          }
+
+          .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          }
+
+          .left-side {
+          padding: 15px;
+          }
+
+          .right-side {
+          padding: 15px;
           }
 
           h1 {
@@ -81,24 +92,39 @@
           text-shadow: 2px 0 red, -2px 0 blue;
           }
           }
+
+          .return-link {
+          font-size: 1.2rem;
+          color: #007bff;
+          text-decoration: none;
+          margin-top: 20px;
+          }
+
+          .return-link:hover {
+          text-decoration: underline;
+          }
         </style>
       </head>
       <body>
 
-        <!-- Main -->
-        <main role="main">
-          <h1>
-            <xsl:value-of select="$error/code" />
-          </h1>
-          <p class="quirky">
-            <xsl:value-of select="$error/message" />
-          </p>
-          <p class="lead">
-            <xsl:value-of select="$error/description" />
-          </p>
-          <a href="/_XAMPP/XML-FHLC/index.php" class="btn btn-primary mt-3">
-            <xsl:value-of select="$error/solution" />
-          </a>
+        <main role="main" class="container">
+          <div class="row">
+            <div class="col-md-6 order-md-1 order-2">
+              <img src="{$assets-path}img/image.png" alt="404 Image" class="img-fluid" />
+            </div>
+
+            <div class="col-md-6 order-md-2 order-1">
+              <h1>
+                <xsl:value-of select="$error/code" />
+              </h1>
+              <h2 class="quirky">
+                <xsl:value-of select="$error/message" />
+              </h2>
+              <xsl:apply-templates select="$error/description/p" />
+              <a href="/_XAMPP/XML-FHLC/index.php" class="return-link">
+                <xsl:value-of select="$error/solution" /> &gt; </a>
+            </div>
+          </div>
         </main>
 
         <!-- JS LIB -->
@@ -121,5 +147,11 @@
         </script>
       </body>
     </html>
+  </xsl:template>
+
+  <xsl:template match="p">
+    <p class="lead">
+      <xsl:value-of select="." />
+    </p>
   </xsl:template>
 </xsl:stylesheet>

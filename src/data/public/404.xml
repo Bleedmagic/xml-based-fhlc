@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <error>
   <code>404</code>
-  <message>Page Not found</message>
-  <description>The page you are looking for does not exist.</description>
+  <message>Page Not Found</message>
+  <description>
+    <p>We couldn't find the page you were looking for.</p>
+    <p>It might have been removed, had its name changed, or is temporarily unavailable.</p>
+    <p>Check the URL or return to the home page.</p>
+  </description>
   <solution>Return to Home</solution>
   <assets>/_XAMPP/XML-FHLC/assets/</assets>
 </error>
