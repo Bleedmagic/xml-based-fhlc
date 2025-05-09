@@ -48,8 +48,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $role = $_SESSION['role'];
 
     if ($role === 'admin') {
+      // $redirect = '../admin/dashboard.php';
       $redirect = '../admin/index.html';
     } elseif ($role === 'guardian') {
+      // $redirect = '../users/dashboard.php';
       $redirect = '../users/index.html';
     } else {
       $redirect = 'login.php';

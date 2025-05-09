@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['admin'])) {
+if (!isset($_SESSION['guardian'])) {
   header("Location: ../home.php");
   exit();
 }
@@ -13,9 +13,9 @@ if (!isset($_SESSION['admin'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
+  <title>User Dashboard</title>
 </head>
 <body>
-  <h1>Admin</h1>
+  <h1>User</h1>
 </body>
 </html>
