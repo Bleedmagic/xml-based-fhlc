@@ -14,16 +14,17 @@
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse"
-          data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
-          aria-label="Toggle navigation">
+          data-target="#navbarColor01" aria-controls="navbarColor01"
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarColor01">
           <ul class="navbar-nav">
-            <xsl:for-each select="$navbar/menu/item[text != 'Login']">
-              <li class="nav-item">
-                <xsl:attribute name="class"> nav-item<xsl:if test="$currentPage = slug"> active</xsl:if></xsl:attribute>
+            <xsl:for-each select="$navbar/menu/item">
+              <li>
+                <xsl:attribute name="class"> nav-item<xsl:if test="$currentPage = slug"> active</xsl:if>
+                </xsl:attribute>
                 <a class="nav-link" href="{link}">
                   <xsl:value-of select="text" />
                   <xsl:if test="$currentPage = slug">
@@ -34,15 +35,16 @@
             </xsl:for-each>
           </ul>
 
-          <xsl:for-each select="$navbar/menu/item[text = 'Login']">
-            <a href="{link}">
+          <xsl:if test="$navbar/menu/button">
+            <a href="{ $navbar/menu/button/link }">
               <button class="btn btn-success my-2 my-sm-0 ml-1 mr-1" type="button">
-                <xsl:value-of select="text" />
+                <xsl:value-of select="$navbar/menu/button/text" />
               </button>
             </a>
-          </xsl:for-each>
+          </xsl:if>
         </div>
       </nav>
     </header>
   </xsl:template>
+
 </xsl:stylesheet>

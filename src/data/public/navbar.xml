@@ -29,12 +29,12 @@
     </item>
     <item>
       <text>Admission</text>
-      <link>Admission.php</link>
+      <link>admission.php</link>
       <slug>admission</slug>
     </item>
-    <item>
+    <button>
       <text>Login</text>
       <link>auth/login.php</link>
-    </item>
+    </button>
   </menu>
 </navbar>
