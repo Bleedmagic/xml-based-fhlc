@@ -53,13 +53,13 @@
       }
 
       .footer-link {
-      color: white; /* Make the text white */
-      text-decoration: none; /* Remove underline */
-      transition: color 0.3s ease; /* Smooth color transition */
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
       }
 
       .footer-link:hover {
-      color: #ddd; /* Slightly lighter shade on hover */
+      color: #ddd;
       }
     </style>
 

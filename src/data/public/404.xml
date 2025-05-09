@@ -2,6 +2,7 @@
 <error>
   <code>404</code>
   <message>Page Not found</message>
-  <description>The requested resource could not be found on the server.</description>
-  <solution>Please check the URL and try again.</solution>
+  <description>The page you are looking for does not exist.</description>
+  <solution>Return to Home</solution>
+  <assets>/_XAMPP/XML-FHLC/assets/</assets>
 </error>

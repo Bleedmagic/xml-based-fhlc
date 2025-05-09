@@ -10,7 +10,8 @@
     indent="yes" />
 
   <!-- Variables to access the database XML files -->
-  <!-- <xsl:variable name="about" select="document('../data/public/about.xml')/about" /> -->
+  <xsl:variable name="error" select="document('../data/public/404.xml')/error" />
+  <xsl:variable name="assets-path" select="$error/assets" />
 
   <!-- Transform -->
   <xsl:template match="/">
@@ -21,35 +22,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- FAVICONS -->
-        <link
-          rel="apple-touch-icon"
-          href="./img/favicons/apple-touch-icon.png"
-          sizes="180x180"
-        />
-        <link
-          rel="icon"
-          href="./img/favicons/favicon-32x32.png"
-          sizes="32x32"
+        <link rel="apple-touch-icon" href="{$assets-path}img/favicons/apple-touch-icon.png"
+          sizes="180x180" />
+        <link rel="icon" href="{$assets-path}img/favicons/favicon-32x32.png" sizes="32x32"
+          type="image/png" />
+        <link rel="icon" href="{$assets-path}img/favicons/favicon-16x16.png" sizes="16x16"
           type="image/png"
         />
-        <link
-          rel="icon"
-          href="./img/favicons/favicon-16x16.png"
-          sizes="16x16"
-          type="image/png"
-        />
-        <link rel="icon" href="./img/favicons/favicon.ico" />
+        <link rel="icon" href="{$assets-path}img/favicons/favicon.ico" />
 
         <!-- PAGE TITLE -->
         <title>404 / FHLC</title>
 
         <!-- CSS LIB -->
         <!-- https://bootswatch.com/4/ -->
-        <link rel="stylesheet" href="./css/lib/bootstrap.min.css" />
-        <link rel="stylesheet" href="./css/icons/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="{$assets-path}css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="{$assets-path}css/icons/bootstrap-icons.min.css" />
 
         <!-- Custom Styles -->
-        <link rel="stylesheet" href="./css/custom.css" />
+        <link rel="stylesheet" href="{$assets-path}css/custom.css" />
 
         <style>
           body {
@@ -96,17 +87,26 @@
 
         <!-- Main -->
         <main role="main">
-          <h1>404</h1>
-          <p class="quirky">Oops! This page has vanished into the void 👻</p>
-          <a href="/XML-FHLC/index.php" class="btn btn-info mt-3">Return to Home</a>
+          <h1>
+            <xsl:value-of select="$error/code" />
+          </h1>
+          <p class="quirky">
+            <xsl:value-of select="$error/message" />
+          </p>
+          <p class="lead">
+            <xsl:value-of select="$error/description" />
+          </p>
+          <a href="/_XAMPP/XML-FHLC/index.php" class="btn btn-primary mt-3">
+            <xsl:value-of select="$error/solution" />
+          </a>
         </main>
 
         <!-- JS LIB -->
-        <script type="text/javascript" src="./js/lib/jquery.min.js"></script>
-        <script type="text/javascript" src="./js/lib/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{$assets-path}js/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="{$assets-path}js/lib/bootstrap.min.js"></script>
 
         <!-- Custom Scripts -->
-        <script src="./js/custom.js"></script>
+        <script src="{$assets-path}js/custom.js"></script>
 
         <script
           src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>

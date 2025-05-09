@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <navbar>
   <identity>
-    <logo>./img/fhlc-logo.png</logo>
+    <logo>../../assets/img/fhlc-logo.png</logo>
     <name>Fullhouse Learning Center</name>
     <link>home.php</link>
   </identity>
