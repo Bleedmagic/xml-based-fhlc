@@ -22,20 +22,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- FAVICONS -->
-        <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png" sizes="180x180" />
-        <link rel="icon" href="../img/favicons/favicon-32x32.png" sizes="32x32" type="image/png" />
-        <link rel="icon" href="../img/favicons/favicon.ico" />
+        <link rel="apple-touch-icon" href="../../../assets/img/favicons/apple-touch-icon.png"
+          sizes="180x180" />
+        <link rel="icon" href="../../../assets/img/favicons/favicon-32x32.png" sizes="32x32"
+          type="image/png" />
+        <link rel="icon" href="../../../assets/img/favicons/favicon-16x16.png" sizes="16x16"
+          type="image/png"
+        />
+        <link rel="icon" href="../../../assets/img/favicons/favicon.ico" />
 
         <!-- PAGE TITLE -->
         <title>Login / FHLC</title>
 
         <!-- CSS LIB -->
-        <link rel="stylesheet" href="../css/lib/bootstrap.min.css" />
-        <link rel="stylesheet" href="../css/icons/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="../../../assets/css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../../assets/css/icons/bootstrap-icons.min.css" />
 
         <!-- Custom Styles -->
-        <link rel="stylesheet" href="../css/custom.css" />
-        <link rel="stylesheet" href="../css/floating-labels.css" />
+        <link rel="stylesheet" href="../../../assets/css/custom.css" />
+        <link rel="stylesheet" href="../../../assets/css/floating-labels.css" />
 
         <style>
           body {
@@ -133,16 +138,17 @@
         </div>
 
         <div class="image-container">
-          <img src="../img/image.png" alt="Decorative image" class="img-fluid w-100 h-100"
+          <img src="../../../assets/img/image.png" alt="Decorative image"
+            class="img-fluid w-100 h-100"
             style="object-fit: cover;" />
         </div>
 
         <!-- JS LIB -->
-        <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
-        <script type="text/javascript" src="../js/lib/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../../assets/js/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="../../../assets/js/lib/bootstrap.min.js"></script>
 
         <!-- Custom -->
-        <script src="../js/password-toggle.js"></script>
+        <script src="../../../assets/js/password-toggle.js"></script>
 
         <script>
           document.addEventListener('DOMContentLoaded', function () {

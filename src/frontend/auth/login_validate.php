@@ -50,15 +50,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($role === 'admin') {
       $redirect = '../admin/index.html';
     } elseif ($role === 'guardian') {
-      $redirect = '../client/index.html';
+      $redirect = '../users/index.html';
     } else {
       $redirect = 'login.php';
     }
 
     echo "<script>
-            alert('Login successful. Redirecting to dashboard...');
-            window.location.href = '$redirect';
-        </script>";
+    window.location.href = '$redirect';
+    </script>";
     exit();
   } else {
     $_SESSION['error_email'] = "Invalid username or password.";
