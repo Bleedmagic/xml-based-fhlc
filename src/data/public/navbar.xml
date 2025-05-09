@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<navbar>
+<navbar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../schema/navbar.xsd">
   <identity>
     <logo>../../assets/img/fhlc-logo.png</logo>
     <name>Fullhouse Learning Center</name>
