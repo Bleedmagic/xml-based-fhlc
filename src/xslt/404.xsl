@@ -4,16 +4,13 @@
   xmlns="http://www.w3.org/1999/xhtml">
 
   <!-- Set Output to XHTML -->
-  <xsl:output method="xml" indent="yes"
+  <xsl:output method="xml"
     doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
-
-  <!-- Includes -->
-  <xsl:include href="./shared/navbar.xsl" />
-  <xsl:include href="./shared/footer.xsl" />
+    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+    indent="yes" />
 
   <!-- Variables to access the database XML files -->
-  <xsl:variable name="home" select="document('../data/public/home.xml')/home" />
+  <!-- <xsl:variable name="about" select="document('../data/public/about.xml')/about" /> -->
 
   <!-- Transform -->
   <xsl:template match="/">
@@ -44,7 +41,7 @@
         <link rel="icon" href="./img/favicons/favicon.ico" />
 
         <!-- PAGE TITLE -->
-        <title>Home / FHLC</title>
+        <title>404 / FHLC</title>
 
         <!-- CSS LIB -->
         <!-- https://bootswatch.com/4/ -->
@@ -53,22 +50,56 @@
 
         <!-- Custom Styles -->
         <link rel="stylesheet" href="./css/custom.css" />
+
+        <style>
+          body {
+          background-color: #f8f9fa;
+          text-align: center;
+          padding-top: 10%;
+          }
+
+          h1 {
+          font-size: 6rem;
+          color: #dc3545;
+          animation: glitch 1s infinite;
+          }
+
+          .quirky {
+          font-size: 1.5rem;
+          color: #666;
+          }
+
+          @keyframes glitch {
+          0% {
+          text-shadow: 2px 0 red, -2px 0 blue;
+          }
+
+          20% {
+          text-shadow: -2px 0 red, 2px 0 blue;
+          }
+
+          40% {
+          text-shadow: 2px 0 red, -2px 0 blue;
+          }
+
+          60% {
+          text-shadow: -2px 0 red, 2px 0 blue;
+          }
+
+          100% {
+          text-shadow: 2px 0 red, -2px 0 blue;
+          }
+          }
+        </style>
       </head>
       <body>
-        <!-- Header -->
-        <xsl:call-template name="navbar">
-          <xsl:with-param name="currentPage" select="'home'" />
-        </xsl:call-template>
 
         <!-- Main -->
         <main role="main">
-          <!-- Hero Section -->
-
-
+          <h1>404</h1>
+          <p class="quirky">Oops! This page has vanished into the void 👻</p>
+          <a href="/XML-FHLC/index.php" class="btn btn-info mt-3">Return to Home</a>
         </main>
-
-        <!-- Footer -->
-        <xsl:call-template name="footer" />
 
         <!-- JS LIB -->
         <script type="text/javascript" src="./js/lib/jquery.min.js"></script>
@@ -76,14 +107,19 @@
 
         <!-- Custom Scripts -->
         <script src="./js/custom.js"></script>
+
+        <script
+          src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        <script>
+          confetti({
+          particleCount: 150,
+          spread: 100,
+          origin: {
+          y: 0.6
+          }
+          });
+        </script>
       </body>
     </html>
-  </xsl:template>
-
-  <!-- Other XSL Templates -->
-  <xsl:template match="p">
-    <p>
-      <xsl:value-of select="." />
-    </p>
   </xsl:template>
 </xsl:stylesheet>

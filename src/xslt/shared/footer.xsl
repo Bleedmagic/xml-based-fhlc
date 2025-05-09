@@ -64,7 +64,7 @@
     </style>
 
     <footer
-      class="footer py-2">
+      class="footer py-2 mt-auto">
       <div class="text-center">
 
         <div class="mt-2 text-white" style="background-color: #1A906B;">
@@ -118,7 +118,6 @@
         <xsl:value-of
             select="$footer/copyright/text" />
         </span>
-
       </div>
     </footer>
   </xsl:template>

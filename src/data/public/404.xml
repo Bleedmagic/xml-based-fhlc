@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<error>
+  <code>404</code>
+  <message>Page Not found</message>
+  <description>The requested resource could not be found on the server.</description>
+  <solution>Please check the URL and try again.</solution>
+</error>
