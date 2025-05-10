@@ -58,14 +58,49 @@
               <h1> Nurturing <span class="text-green">Young Minds</span> for <br> a <span
                     class="text-orange">Brighter</span> Tomorrow </br>
               </h1>
-              <p class="mt-3"> At Full House Learning Center, we nurture every child's potential <br />
-    through purposeful learning, a caring environment, and programs that build strong foundations
-    for future success. </p>
+              <p class="mt-3">
+              At Full House Learning Center, we nurture every child's potential <br>
+              through purposeful learning, a caring environment, and programs that build strong </br>
+              foundations for future success. 
+              </p>
             </div>
             <div class="hero-image">
               <img src="../../assets/img/image.png" alt="Happy Student" class="img-fluid" />
             </div>
           </section>
+
+          <!--Under Hero -->
+          <section class="hero-section d-flex align-items-center justify-content-between px-5 py-5">
+            <div class="Enrollment">
+              <img src="../../assets/img/home1.png" alt="Enrollment" class="img-fluid" />
+            </div>
+            <div class="hero-text">
+            <h2>Give Your Child the Gift of Early Learning!</h2>
+                    <p>Full House Learning Center Inc.'s Early Enrollment Program for SY: 2025-2026</p>
+                    <ul>
+                      <li>Stable Tuition Rates</li>
+                      <li>Flexible Payment Options</li>
+                      <li>Exceptional Educational Opportunities</li>
+                    </ul>
+                    <p class="mt-3">We're committed to quality and affordability.</p>
+                    <a href="#" class="btn btn-success">ENROLL NOW</a>
+            </div> 
+          </section>
+
+          <!--Under Hero 2-->
+          <section class="hero-section d-flex align-items-center justify-content-between px-5 py-5">
+            <div class="hero-text">
+            <h2>Looking for Summer Fun for Your Little One?</h2>
+                    <p>Full House Learning Center Inc.  is offering a special Preschool Summer Class.</p>
+                    <p class="mt-3">A wonderful way for children to stay engaged during the break! Our program provides a safe and caring place where children can grow and learn through fun experiences.</p>
+                    <a href="#" class="btn btn-success">INQUIRE NOW</a>
+            </div> 
+            <div class="Summer">
+              <img src="../../assets/img/home2.png" alt="Summer Class" class="img-fluid" />
+            </div>
+          </section>
+
+
 
 
         </main>
