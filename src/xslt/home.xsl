@@ -42,7 +42,7 @@
         <link rel="stylesheet" href="../../assets/css/icons/bootstrap-icons.min.css" />
 
         <!-- Custom Styles -->
-        <link rel="stylesheet" href="../../assets/css/custom.css" />
+        <link rel="stylesheet" href="../../assets/css/home.css" />
       </head>
       <body>
         <!-- Header -->
