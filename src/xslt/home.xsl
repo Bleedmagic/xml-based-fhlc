@@ -60,9 +60,9 @@
               a <span class="text-orange">Brighter</span> Tomorrow </br>
               </h1>
               <p class="mt-3">
-              At Full House Learning Center, we nurture every child's potential <br>
-              through purposeful learning, a caring environment, and programs that build strong </br>
-              foundations for future success. 
+              At Full House Learning Center, we nurture every child's potential through<br>
+              purposeful learning, a caring environment, and programs that build </br>
+              strong foundations for future success. 
               </p>
             </div>
             <div class="hero-image">
