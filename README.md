@@ -199,6 +199,18 @@ git stash drop
 
 ---
 
+#### **Undo all uncommitted changes in the whole project**
+
+`git restore .`
+
+#### **Undo staged changes but keep edits in working directory**
+
+`git reset`
+
+#### **Optional Safety Net**
+
+`git branch backup-main main`
+
 #### **Others**
 
 ```bash
