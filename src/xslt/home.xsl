@@ -42,7 +42,7 @@
         <link rel="stylesheet" href="../../assets/css/icons/bootstrap-icons.min.css" />
 
         <!-- Custom Styles -->
-        <link rel="stylesheet" href="../../assets/css/custom.css" />
+        <link rel="stylesheet" href="../../assets/css/home.css" />
       </head>
       <body>
         <!-- Header -->
@@ -52,8 +52,24 @@
 
         <!-- Main -->
         <main role="main">
-          <!-- Hero Section -->
-          Hello Students!
+         <!-- Hero Section -->
+          <section class="hero-section d-flex align-items-center justify-content-between px-5 py-5">
+            <div class="hero-text">
+              <h1>
+              Nurturing <span class="text-green">Young Minds</span> for <br>
+              a <span class="text-orange">Brighter</span> Tomorrow </br>
+              </h1>
+              <p class="mt-3">
+              At Full House Learning Center, we nurture every child's potential <br>
+              through purposeful learning, a caring environment, and programs that build strong </br>
+              foundations for future success. 
+              </p>
+            </div>
+            <div class="hero-image">
+              <img src="../../assets/img/image.png" alt="Happy Student" class="img-fluid" />
+            </div>
+        </section>
+
 
 
         </main>
