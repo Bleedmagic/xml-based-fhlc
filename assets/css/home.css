@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: 5%;
   
 }
 
@@ -43,4 +44,23 @@
 .hero-image img {
   max-width: 100%;
   height: auto;
+}
+
+.Enrollment {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Enrollment img {
+  max-width: 60%;
+  height: auto;
+}
+
+.Summer {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
