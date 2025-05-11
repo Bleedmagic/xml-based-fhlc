@@ -11,6 +11,9 @@ A web-based portal for guardians and teachers to track learning progress of stud
 - JavaScript
 - Bootstrap
 
+> [!NOTE]
+> XSLT rendering and XML transformations may behave differently across browsers. Chrome and Firefox are recommended for consistent results.
+
 ## Installation
 
 ### 1. Install and configure XAMPP
