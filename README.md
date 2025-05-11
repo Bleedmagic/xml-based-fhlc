@@ -17,25 +17,25 @@ A web-based portal for guardians and teachers to track learning progress of stud
 
 [Download link for XAMPP](https://www.apachefriends.org/download.html)
 
-  1. Go to XAMPP's Control Panel.
-  2. Followed by Apache > Config > php.ini
-  3. Ctrl+F to find `;extension=xsl` then uncomment it.
+- Go to XAMPP's Control Panel.
+- Followed by Apache > Config > php.ini
+- Ctrl+F to find `;extension=xsl` then uncomment it.
 
 ### 2. Clone this repository
 
-  1. In your File Explorer, go to "C:\xampp\htdocs"
-  2. Make a folder named _XAMPP\
-  3. Run this in your terminal:
+- In your File Explorer, go to "C:\xampp\htdocs"
+- Make a folder named _XAMPP\
+- Run this in your terminal:
 
-  ```bash
-    git clone https://github.com/Bleedmagic/xml-based-fhlc.git
-    cd xml-based-fhlc
-  ```
+```bash
+git clone https://github.com/Bleedmagic/xml-based-fhlc.git
+cd xml-based-fhlc
+```
 
 ### 3. Run on localhost
 
-  1. Here, [localhost_XAMPP](http://localhost/_XAMPP/)
-  2. Find and click the folder, and you're done.
+- Here, [localhost_XAMPP](http://localhost/_XAMPP/)
+- Find and click the folder, and you're done.
 
 ## Contributions
 
@@ -49,37 +49,37 @@ Feel free to open issues or submit pull requests for improvements or suggestions
 
 #### Setting Up Git
 
-  Install Git: <https://git-scm.com/download/win>
+Install Git: <https://git-scm.com/download/win>
 
 #### Clone the Repository
 
-  `git clone https://github.com/Bleedmagic/xml-based-fhlc.git`
+`git clone https://github.com/Bleedmagic/xml-based-fhlc.git`
 
-  `cd xml-based-fhlc`
+`cd xml-based-fhlc`
 
 #### If Branches Are Already Established
 
-  `git fetch`
+`git fetch`
 
-  `git checkout feat-facade`
+`git checkout feat-facade`
 
 #### If Not, Create a New Branch
 
-  Ensure you're on the latest main branch:
+Ensure you're on the latest main branch:
 
-  `git checkout main`
+`git checkout main`
 
-  `git pull origin main`
+`git pull origin main`
 
-  Make a branch, and give it a descriptive name based on your task:
+Make a branch, and give it a descriptive name based on your task:
 
-  `git checkout -b feat-username-task`
+`git checkout -b feat-username-task`
 
-  Publish your branch:
+Publish your branch:
 
-  `git push -u origin feat-username-task`
+`git push -u origin feat-username-task`
 
-  ---
+---
 
 #### Make Your Changes
 
@@ -89,21 +89,21 @@ Feel free to open issues or submit pull requests for improvements or suggestions
 
 #### Add and Commit Your Changes
 
-  `git add .`
+`git add .`
 
-  `git commit -m "Add: your change description"`
+`git commit -m "Add: your change description"`
 
 #### Pull Latest Changes from Main (Optional but Recommended)
 
   Before pushing, update your branch:
 
-  `git pull origin main`
+`git pull origin main`
 
 #### Push Your Branch to GitHub
 
-  `git push --set-upstream origin feat-username-task` (For first time)
+`git push --set-upstream origin feat-username-task` (For first time)
 
-  `git push` or `git pull` afterward
+`git push` or `git pull` afterwards
 
 #### Open a Pull Request
 
@@ -120,17 +120,17 @@ Feel free to open issues or submit pull requests for improvements or suggestions
 
 #### To Update Branch (If Needed)
 
-  `git checkout feat-username-task`
+`git checkout feat-username-task`
 
-  `git pull origin main`
+`git pull origin main`
 
 ---
 
 ### Additional Stuff
 
-  <details>
+<details>
 
-  <summary>Here are some answers to some questions.</summary>
+<summary>Here are some answers to some questions.</summary>
 
 #### **Note**
 
@@ -138,109 +138,101 @@ Feel free to open issues or submit pull requests for improvements or suggestions
 
   A remote is a shared copy that lives online (e.g. <https://github.com/yourname/project.git>) and allows you and your team to collaborate.
 
-  `git push origin main`
+`git push origin main`
 
 - "Push my local main branch to the origin remote (usually GitHub)."
 
-  `git pull origin main`
+`git pull origin main`
 
 - "Fetch and merge the latest changes from the remote main branch into my local one."
 
-  ---
+---
+
+#### **Test a Pull Request**
+
+```bash
+git fetch origin
+git checkout feat-username-task
+git pull origin feat-username-task
+```
 
 #### **Syncing main After Merging on GitHub**
 
   After merging on the GitHub website:
 
-  ```bash
-    git checkout main
-    git pull origin main             # Sync your local main with remote
-  ```
+```bash
+git checkout main
+git pull origin main             # Sync your local main with remote
+```
 
-  ---
-
-#### **Keeping main Updated While Working on Other Branches**
-
-  ```bash
-  git checkout main
-  git pull origin main                 # Update local main
-  git checkout your-branch-name
-  git merge main                       # Merge updated main into your branch
-  git push origin your-branch-name
-  ```
-
-  `git rebase main` (Alternative to merge)
-
-##### **Warning**
-
-  When using rebase, especially in team environments, be careful to avoid rewriting shared history.
-
-  ---
+---
 
 #### **Keeping Your Branch Updated with Remote main**
 
-  ```bash
-  git checkout your-branch-name
-  git fetch origin
-  git merge origin/main                # OR: git rebase origin/main
-  git push origin your-branch-name
-  ```
+```bash
+git checkout feat-dashboard
+git pull origin main            # This fetches + merges
+git push origin feat-dashboard  # optional, if you want to push the updated branch
+```
 
-  ---
+---
 
-#### **If You Switch to a Branch But Don’t Commit**
+#### **Cleaning Up Before Switching Branches**
 
-  ```bash
-    git restore .
-    git clean -fd
-  ```
+```bash
+git restore .
+git clean -fd
+```
 
-  ---
+> [!WARNING]
+> These commands are destructive, and you will lose any uncommitted or untracked work.
+
+---
 
 #### **Deleting a Branch**
 
-  ```bash
-  git branch -d branchname             # Delete local branch
-  git push origin -d branchname        # Delete remote branch
-  ```
+```bash
+git branch -d branch-name             # Delete local branch
+git push origin -d branch-name        # Delete remote branch
+```
 
-  ---
+---
 
 #### **Stashing Changes**
 
-  ```bash
-  git stash                            # Save uncommitted changes
-  git stash pop                        # Reapply stashed changes
+```bash
+git stash                            # Save uncommitted changes
+git stash pop                        # Reapply stashed changes
 
-  # Additional for Stash Management
+# Additional for Stash Management
 
-  git stash list
-  git stash drop
-  ```
+git stash list
+git stash drop
+```
 
-  ---
+---
 
 #### **Undo all uncommitted changes in the whole project**
 
-  `git restore .`
+`git restore .`
 
 #### **Undo staged changes but keep edits in working directory**
 
-  `git reset`
+`git reset`
 
 #### **Optional Safety Net**
 
-  `git branch backup-main main`
+`git branch backup-main main`
 
 #### **Others**
 
-  ```bash
-  git fetch origin             # Get latest remote changes (no merge)
+```bash
+git fetch origin             # Get latest remote changes (no merge)
 
-  git status             # Check current branch and changes
-  ```
+git status             # Check current branch and changes
+```
 
-  </details>
+</details>
 
 ### Guidelines
 
