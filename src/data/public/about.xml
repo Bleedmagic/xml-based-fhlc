@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <about>
   <header>About Us</header>
-  Providing
   <title> Quality Education and Lifelong Learning Opportunities for Children Since 2001</title>
   <content>
-    Welcome to Full House Learning Center, where every child’s potential is nurtured, and their journey of learning is filled with love, growth, and progress. Established in 2001 under the name Complete in Christ Kiddie Center, our school began by catering to young children ages 3-5. Since 2016, we have evolved into a formal educational institution offering both preschool and elementary programs, committed to developing well-rounded and capable learners.
+    Welcome to Full House Learning Center, where every child’s potential is nurtured, and 
+    their journey of learning is filled with love, growth, and progress. Established in 2001 
+    under the name Complete in Christ Kiddie Center, our school began by catering to young 
+    children ages 3-5. Since 2016, we have evolved into a formal educational institution 
+    offering both preschool and elementary programs, committed to developing well-rounded and
+    capable learners.
   </content>
   <content>
-    Our school's achievements are a testament to our dedication to excellence. Many of our students have successfully passed entrance exams to Pasig City Science High School, while others studying abroad meet and exceed international standards, ensuring smooth transitions to their new schools. Our alumni who have transferred to prestigious institutions like Ateneo de Manila University and the University of the Philippines Integrated School are often commended for their proficiency in reading, reflecting the strong academic foundation they built with us.
+    Our school's achievements are a testament to our dedication to excellence. Many of our 
+    students have successfully passed entrance exams to Pasig City Science High School, while 
+    others studying abroad meet and exceed international standards, ensuring smooth transitions 
+    to their new schools. Our alumni who have transferred to prestigious institutions like 
+    Ateneo de Manila University and the University of the Philippines Integrated School are 
+    often commended for their proficiency in reading, reflecting the strong academic foundation
+    they built with us.
   </content>
   <image>../../assets/img/about1.png</image> 
+
+  <!-- Mission and Vision Section -->
+  <mission>
+    <header>MISSION</header>
+    <text>FHLC believes in every right of a child which we aim for the following mission:
+    To provide children a joyful and meaningful way of learning experiences.</text>
+  </mission>
+  <vision>
+    <header>VISION</header>
+    <text>Focusing on the gifts and capabilities of a whole child as we allow them to explore experiential activities and develop them fully as a responsible and God-fearing citizen.</text>
+  </vision>
 </about>

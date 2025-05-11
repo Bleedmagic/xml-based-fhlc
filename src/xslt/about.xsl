@@ -29,15 +29,13 @@
         <link rel="icon" href="../../assets/img/favicons/favicon-32x32.png" sizes="32x32"
           type="image/png" />
         <link rel="icon" href="../../assets/img/favicons/favicon-16x16.png" sizes="16x16"
-          type="image/png"
-        />
+          type="image/png" />
         <link rel="icon" href="../../assets/img/favicons/favicon.ico" />
 
         <!-- PAGE TITLE -->
         <title>About / FHLC</title>
 
         <!-- CSS LIB -->
-        <!-- https://bootswatch.com/4/ -->
         <link rel="stylesheet" href="../../assets/css/lib/bootstrap.min.css" />
         <link rel="stylesheet" href="../../assets/css/icons/bootstrap-icons.min.css" />
 
@@ -70,14 +68,54 @@
             </xsl:for-each>
           </div>
           <div class="hero-image">
-      <xsl:element name="img">
-        <xsl:attribute name="src">
-          <xsl:value-of select="$about/image" />
-        </xsl:attribute>
-        <xsl:attribute name="alt">About</xsl:attribute>
-        <xsl:attribute name="class">img-fluid</xsl:attribute>
-      </xsl:element>
-    </div>
+            <xsl:element name="img">
+              <xsl:attribute name="src">
+                <xsl:value-of select="$about/image" />
+              </xsl:attribute>
+              <xsl:attribute name="alt">About</xsl:attribute>
+              <xsl:attribute name="class">img-fluid</xsl:attribute>
+            </xsl:element>
+          </div>
+        </section>
+
+        <!-- Mission and Vision Section -->
+        <section class="mission-vision-section d-flex align-items-center justify-content-between px-5 py-5">
+          <!-- Left Column -->
+          <div class="mission-vision-left">
+            <div class="mission-vision-image">
+              <xsl:element name="img">
+                <xsl:attribute name="src">../../assets/img/MISSION.jpg</xsl:attribute>
+                <xsl:attribute name="alt">Mission</xsl:attribute>
+                <xsl:attribute name="class">img-fluid</xsl:attribute>
+              </xsl:element>
+            </div>
+            <div class="mission-vision-text">
+              <header>
+                <xsl:value-of select="$about/mission/header" />
+              </header>
+              <xsl:for-each select="$about/mission/text">
+                <p><xsl:value-of select="."/></p>
+              </xsl:for-each>
+            </div>
+          </div>
+          <!-- Right Column -->
+          <div class="mission-vision-right">
+            <div class="mission-vision-image">
+              <xsl:element name="img">
+                <xsl:attribute name="src">../../assets/img/VISION.jpg</xsl:attribute>
+                <xsl:attribute name="alt">Vision</xsl:attribute>
+                <xsl:attribute name="class">img-fluid</xsl:attribute>
+              </xsl:element>
+            </div>
+            <div class="mission-vision-text">
+              <header>
+                <xsl:value-of select="$about/vision/header" />
+              </header>
+              <xsl:for-each select="$about/vision/text">
+                <p><xsl:value-of select="."/></p>
+              </xsl:for-each>
+            </div>
+          </div>
         </section>
       </main>
 
@@ -92,7 +130,6 @@
       <script src="../../assets/js/custom.js"></script>
     </html>
   </xsl:template>
-
 
   <!-- Other XSL Templates -->
   <xsl:template match="p">

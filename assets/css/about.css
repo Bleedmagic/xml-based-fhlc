@@ -6,6 +6,7 @@
   justify-content: space-between; /* Space between text and image */
   padding: 5% 5%; /* Padding around the section */
   gap: 30px; /* Space between hero text and image */
+  margin-bottom: 10px;
 }
 
 .hero-text {
@@ -25,7 +26,7 @@
 
 .hero-text h3 {
   font-size: 1.8rem; /* Slightly smaller font size for subheading */
-  color: black; /* Orange for the highlighted text */
+  color: black; /* Black for the main subheading */
   font-weight: 600;
   margin-bottom: 20px; /* Space between subheading and paragraph */
 }
@@ -35,7 +36,7 @@
 }
 
 .hero-text p {
-  font-size: 1rem; /* Body text font size */
+  font-size: 18px; /* Body text font size */
   color: #333; /* Dark text color for readability */
   line-height: 1.6; /* Better line height for readability */
   text-align: justify; /* Justify the text */
@@ -54,6 +55,65 @@
   height: auto;   /* Maintain the aspect ratio of the image */
   border-radius: 10px; /* Optional: rounded corners */
 }
+
+/* Mission and Vision Section Styles */
+.mission-vision-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 5% 5%; /* Adjust the padding as per your requirement */
+  background-color: #fff; /* Background color for section */
+}
+
+.mission-vision-left, .mission-vision-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensure the content is centered */
+  justify-content: center; /* Align both text and image vertically */
+}
+
+.mission-vision-left .mission-vision-image, .mission-vision-right .mission-vision-image {
+  text-align: center; /* Center the image */
+  margin-bottom: 15px; /* Space below the image */
+}
+
+.mission-vision-right img {
+  width: 100%; /* Ensure the image fills the container's width */
+  height: 400px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensures images maintain proper aspect ratio without stretching */
+  border-radius: 50px; /* Optional: rounded corners */
+  margin-top: 35px;
+}
+
+.mission-vision-left img {
+  width: 100%; /* Ensure the image fills the container's width */
+  height: 400px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensures images maintain proper aspect ratio without stretching */
+  border-radius: 50px; /* Optional: rounded corners */
+}
+
+.mission-vision-text {
+  text-align: center; /* Center the text */
+  max-width: 450px;
+
+}
+
+.mission-vision-text header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1A906B; /* Green color */
+  margin-bottom: 10px; /* Space below the header */
+}
+
+.mission-vision-text p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6; /* Space between lines */
+  margin-bottom: 20px; /* Space below the paragraph */
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -78,5 +138,26 @@
 
   .hero-image img {
     max-width: 80%; /* Adjust image size for mobile */
+  }
+
+   .mission-vision-section {
+    flex-direction: column; /* Stack left and right sections vertically */
+    text-align: center; /* Center align content */
+  }
+
+  .mission-vision-left, .mission-vision-right {
+    margin-bottom: 20px; /* Space between the sections */
+  }
+
+  .mission-vision-image img {
+    max-width: 80%; /* Adjust the image size for smaller screens */
+  }
+
+  .mission-vision-text header {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .mission-vision-text p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
   }
 }
