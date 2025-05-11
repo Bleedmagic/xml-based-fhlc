@@ -75,6 +75,11 @@ Feel free to open issues or submit pull requests for improvements or suggestions
 
   `git checkout -b feat-username-task`
 
+  Publish your branch:
+
+  `git push -u origin feat-username-task`
+
+  ---
 
 #### Make Your Changes
 
@@ -96,7 +101,7 @@ Feel free to open issues or submit pull requests for improvements or suggestions
 
 #### Push Your Branch to GitHub
 
-  `git push --set-upstream origin feat-username-task` (Necessary for first time)
+  `git push --set-upstream origin feat-username-task` (For first time)
 
   `git push` or `git pull` afterward
 
@@ -115,13 +120,9 @@ Feel free to open issues or submit pull requests for improvements or suggestions
 
 #### To Update Branch (If Needed)
 
-  `git checkout main`
+  `git checkout feat-username-task`
 
   `git pull origin main`
-
-  `git checkout your-feature-branch`
-
-  `git merge main`
 
 ---
 
@@ -147,12 +148,6 @@ Feel free to open issues or submit pull requests for improvements or suggestions
 
   ---
 
-#### **Pushing a New Branch to Remote**
-
-  `git push -u origin your-branch-name`
-
-  ---
-
 #### **Syncing main After Merging on GitHub**
 
   After merging on the GitHub website:
@@ -160,24 +155,6 @@ Feel free to open issues or submit pull requests for improvements or suggestions
   ```bash
     git checkout main
     git pull origin main             # Sync your local main with remote
-  ```
-
-  ---
-
-#### **If You Switch to a Branch But Don’t Commit**
-
-  ```bash
-    git restore .
-    git clean -fd
-  ```
-
-  ---
-
-#### **Deleting a Branch**
-
-  ```bash
-  git branch -d branchname             # Delete local branch
-  git push origin -d branchname        # Delete remote branch
   ```
 
   ---
@@ -207,6 +184,24 @@ Feel free to open issues or submit pull requests for improvements or suggestions
   git fetch origin
   git merge origin/main                # OR: git rebase origin/main
   git push origin your-branch-name
+  ```
+
+  ---
+
+#### **If You Switch to a Branch But Don’t Commit**
+
+  ```bash
+    git restore .
+    git clean -fd
+  ```
+
+  ---
+
+#### **Deleting a Branch**
+
+  ```bash
+  git branch -d branchname             # Delete local branch
+  git push origin -d branchname        # Delete remote branch
   ```
 
   ---
