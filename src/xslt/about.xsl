@@ -42,7 +42,7 @@
         <link rel="stylesheet" href="../../assets/css/icons/bootstrap-icons.min.css" />
 
         <!-- Custom Styles -->
-        <link rel="stylesheet" href="../../assets/css/custom.css" />
+        <link rel="stylesheet" href="../../assets/css/about.css" />
       </head>
 
       <!-- Header -->
@@ -52,25 +52,33 @@
 
       <!-- Main -->
       <main role="main">
-        <div class="container mt-5">
-          <h1>About Us</h1>
-          <xsl:apply-templates select="$about/description/p" />
+        <!-- Hero Section -->
+        <section class="hero-section d-flex align-items-center justify-content-between px-5 py-5">
+          <div class="hero-text">
+            <h1>
+              <xsl:value-of select="$about/header" />
+            </h1>
+            <h3>
+              Providing <span class="text-yellow">Quality Education And Lifelong Learning Opportunities for Children Since 2001</span>
+            </h3>
 
-          <div class="mission">
-            <p>
-              <xsl:value-of select="$about/mission/intro" />
-            </p>
-            <ul>
-              <xsl:apply-templates select="$about/mission/goals/li" />
-            </ul>
+            <!-- Content Paragraphs -->
+            <xsl:for-each select="$about/content">
+              <p>
+                <xsl:value-of select="." />
+              </p>
+            </xsl:for-each>
           </div>
-
-          <div class="vision">
-            <p>
-              <xsl:value-of select="$about/vision" />
-            </p>
-          </div>
-        </div>
+          <div class="hero-image">
+      <xsl:element name="img">
+        <xsl:attribute name="src">
+          <xsl:value-of select="$about/image" />
+        </xsl:attribute>
+        <xsl:attribute name="alt">About</xsl:attribute>
+        <xsl:attribute name="class">img-fluid</xsl:attribute>
+      </xsl:element>
+    </div>
+        </section>
       </main>
 
       <!-- Footer -->
@@ -85,24 +93,6 @@
     </html>
   </xsl:template>
 
-  <!-- <main role="main" class="container">
-    <xsl:apply-templates select="$about/description/p" />
-
-    <div class="mission">
-      <p>
-        <xsl:value-of select="$about/mission/intro" />
-      </p>
-      <ul>
-        <xsl:apply-templates select="$about/mission/goals/li" />
-      </ul>
-    </div>
-
-    <div class="vision">
-      <p>
-        <xsl:value-of select="$about/vision" />
-      </p>
-    </div>
-  </main> -->
 
   <!-- Other XSL Templates -->
   <xsl:template match="p">
