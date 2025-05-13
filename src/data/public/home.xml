@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/home.xsl"?>
 <home>
   <hero>
-    <header>Welcome to Fullhouse Learning Center</header>
-    <description>
-      <p>Where every child's potential is nurtured.</p>
-      <p>Our mission is to provide children with joyful and meaningful learning experiences.</p>
-      <p>We focus on the unique gifts and capabilities of every child.</p>
-    </description>
-    <cta-button>Enroll Now</cta-button>
+    <heading>Nurturing Young Minds for a Brighter Tomorrow</heading>
+    <paragraph>At Full House Learning Center, we nurture every child's potential <br/> through purposeful learning, a caring environment, and programs that build strong <br/> foundations for future success.</paragraph>
+    <image src="../../assets/img/image.png" alt="Happy Student" />
   </hero>
+
+  <enrollment>
+    <image src="../../assets/img/home1.png" alt="Enrollment" />
+    <h2>Give Your Child the Gift of Early Learning!</h2>
+    <paragraph>Full House Learning Center Inc.'s Early Enrollment Program for SY: 2025-2026</paragraph>
+    <ul>
+      <li>Stable Tuition Rates</li>
+      <li>Flexible Payment Options</li>
+      <li>Exceptional Educational Opportunities</li>
+    </ul>
+    <commitment>We're committed to quality and affordability.</commitment>
+    <enroll_button_text>ENROLL NOW</enroll_button_text>
+    <enroll_button_link>#</enroll_button_link>
+  </enrollment>
+
+  <summer_class>
+    <h2>Looking for Summer Fun for Your Little One?</h2>
+    <paragraph>Full House Learning Center Inc. is offering a special Preschool Summer Class.</paragraph>
+    <additional_info>A wonderful way for children to stay engaged during the break! Our program provides a safe and caring place where children can grow and learn through fun experiences.</additional_info>
+    <inquire_button_text>INQUIRE NOW</inquire_button_text>
+    <inquire_button_link>#</inquire_button_link>
+    <image src="../../assets/img/home2.png" alt="Summer Class" />
+  </summer_class>
 </home>
