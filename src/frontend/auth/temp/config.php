@@ -1,3 +1,5 @@
+<!-- DB Connection, Functions -->
+
 <?php
 $host = 'localhost';
 $dbname = 'fhlc_db';

@@ -49,10 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($role === 'admin') {
       // $redirect = '../admin/dashboard.php';
-      $redirect = '../admin/index.html';
+      $redirect = '../admin/temp/index.html';
     } elseif ($role === 'guardian') {
       // $redirect = '../users/dashboard.php';
-      $redirect = '../users/index.html';
+      $redirect = '../users/temp/index.html';
     } else {
       $redirect = 'login.php';
     }
