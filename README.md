@@ -82,8 +82,6 @@ Publish your branch:
 
 `git push -u origin feat-username-task`
 
----
-
 #### Make Your Changes
 
 - Edit the files you need.
@@ -149,8 +147,6 @@ Publish your branch:
 
 - "Fetch and merge the latest changes from the remote main branch into my local one."
 
----
-
 #### **Test a Pull Request**
 
 ```bash
@@ -168,8 +164,6 @@ git checkout main
 git pull origin main             # Sync your local main with remote
 ```
 
----
-
 #### **Keeping Your Branch Updated with Remote main**
 
 ```bash
@@ -177,8 +171,6 @@ git checkout feat-dashboard
 git pull origin main            # This fetches + merges
 git push origin feat-dashboard  # optional, if you want to push the updated branch
 ```
-
----
 
 #### **Cleaning Up Before Switching Branches**
 
@@ -190,16 +182,12 @@ git clean -fd
 > [!WARNING]
 > These commands are destructive, and you will lose any uncommitted or untracked work.
 
----
-
 #### **Deleting a Branch**
 
 ```bash
 git branch -d branch-name             # Delete local branch
 git push origin -d branch-name        # Delete remote branch
 ```
-
----
 
 #### **Stashing Changes**
 
@@ -212,8 +200,6 @@ git stash pop                        # Reapply stashed changes
 git stash list
 git stash drop
 ```
-
----
 
 #### **Undo all uncommitted changes in the whole project**
 
