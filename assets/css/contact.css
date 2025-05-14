@@ -1,0 +1,41 @@
+.contact-title {
+    color: #16825D; /* dark green to match the image */
+    font-weight: bold;
+  }
+  
+  .contact-box {
+    background-color: #fff3cd; /* light yellow background */
+    border-radius: 12px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .input-custom {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+  }
+  
+  .btn-submit {
+    background-color: #02B875;
+    color: white;
+    padding: 6px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .btn-submit:hover {
+    background-color: #02925D;
+    color: white;
+  }
+  
+  .contact-map {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  
