@@ -138,7 +138,7 @@
         </div>
 
         <div class="image-container">
-          <img src="../../../assets/img/image.png" alt="Decorative image"
+          <img src="../../../assets/img/default.png" alt="Decorative image"
             class="img-fluid w-100 h-100"
             style="object-fit: cover;" />
         </div>

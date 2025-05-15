@@ -1,11 +1,11 @@
 <?php
-http_response_code(404);
+http_response_code(403);
 
 $xml = new DOMDocument();
-$xml->load('../data/public/404.xml');
+$xml->load('../data/public/403.xml');
 
 $xsl = new DOMDocument();
-$xsl->load('../xslt/404.xsl');
+$xsl->load('../xslt/403.xsl');
 
 $proc = new XSLTProcessor();
 $proc->importStylesheet($xsl);

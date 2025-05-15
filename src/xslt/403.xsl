@@ -10,7 +10,7 @@
     indent="yes" />
 
   <!-- Variables to access the database XML files -->
-  <xsl:variable name="error" select="document('../data/public/404.xml')/error" />
+  <xsl:variable name="error" select="document('../data/public/403.xml')/error" />
   <xsl:variable name="assets-path" select="$error/assets" />
 
   <!-- Transform -->
@@ -31,7 +31,7 @@
         <link rel="icon" href="{$assets-path}img/favicons/favicon.ico" />
 
         <!-- PAGE TITLE -->
-        <title>404 / FHLC</title>
+        <title>403 / FHLC</title>
 
         <!-- CSS LIB -->
         <link rel="stylesheet" href="{$assets-path}css/lib/bootstrap.min.css" />
@@ -68,7 +68,7 @@
 
           .quirky {
           font-size: 1.5rem;
-          color: #6C757D;
+          color: #D9534F;
           }
 
           @keyframes glitch {
@@ -110,7 +110,7 @@
         <main role="main" class="container">
           <div class="row">
             <div class="col-md-6 order-md-1 order-2">
-              <img src="{$assets-path}img/default.png" alt="404 Image" class="img-fluid" />
+              <img src="{$assets-path}img/default.png" alt="403 Image" class="img-fluid" />
             </div>
 
             <div class="col-md-6 order-md-2 order-1">

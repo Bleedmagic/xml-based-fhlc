@@ -1,1 +1,3 @@
 ErrorDocument 404 /_XAMPP/XML-FHLC/src/frontend/404.php
+ErrorDocument 403 /_XAMPP/XML-FHLC/src/frontend/403.php
+Options -Indexes
