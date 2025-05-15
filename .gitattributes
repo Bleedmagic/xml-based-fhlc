@@ -2,3 +2,7 @@ bootstrap.min.css linguist-vendored=true
 bootstrap-icons.min.css linguist-vendored=true
 bootstrap.min.js linguist-vendored=true
 jquery.min.js linguist-vendored=true
+fontawesome.all.min.css linguist-vendored=true
+normalize.css linguist-vendored=true
+startbootstrap.min.css linguist-vendored=true
+startbootstrap.min.js linguist-vendored=true
