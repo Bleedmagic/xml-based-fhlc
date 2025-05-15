@@ -41,7 +41,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="./dashboard.php">
         <div class="sidebar-brand-icon">
           <img src="../../../assets/img/fhlc-logo.png" alt="fhlc-logo" width="50" height="50">
         </div>
@@ -53,7 +53,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="./dashboard.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -76,8 +76,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
+            <a class="collapse-item" href="#">Buttons</a>
+            <a class="collapse-item" href="#">Cards</a>
           </div>
         </div>
       </li>
@@ -93,10 +93,10 @@
           data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
+            <a class="collapse-item" href="#">Colors</a>
+            <a class="collapse-item" href="#">Borders</a>
+            <a class="collapse-item" href="#">Animations</a>
+            <a class="collapse-item" href="#">Other</a>
           </div>
         </div>
       </li>
@@ -119,27 +119,27 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+            <a class="collapse-item" href="#">Login</a>
+            <a class="collapse-item" href="#">Register</a>
+            <a class="collapse-item" href="#">Forgot Password</a>
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            <a class="collapse-item" href="#">404 Page</a>
+            <a class="collapse-item" href="#">Blank Page</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Charts</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-table"></i>
           <span>Tables</span></a>
       </li>
@@ -332,9 +332,9 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="mr-2 img-profile rounded-circle"
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">ADMIN</span>
+                <img class="img-profile rounded-circle"
                   src="../../../assets/svg/undraw_profile.svg">
-                <span class="d-none d-lg-inline text-gray-600 small">ADMIN USER</span>
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -358,6 +358,19 @@
                 </a>
               </div>
             </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Sign Out Button -->
+            <li class="nav-item d-flex align-items-center">
+              <a class="nav-link d-flex align-items-center justify-content-center"
+                href="#" data-toggle="modal" data-target="#logoutModal"
+                style="color: black; background-color: #FBCD5F; border: 2px solid black; border-radius: 0.35rem; height: 45px; padding: 0 1rem; margin-left: 1rem;">
+                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2"></i>
+                Sign Out
+              </a>
+            </li>
+
 
           </ul>
 
@@ -733,7 +746,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="#">Logout</a>
         </div>
       </div>
     </div>
