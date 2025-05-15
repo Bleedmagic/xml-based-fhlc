@@ -1,3 +1,0 @@
-id,username,email,password_hash,role_id,created_at
-1,admin_test,admin@example.com,$2y$10$Zy1gH3L7GyEdA4DJc9zZjuUKccf9P9SPzpAsuS1KO6X7wViQ7FlFO,1,"2025-05-15 14:48:09"
-2,guardian_test,guardian@example.com,$2y$10$9JTeUsq0E/El7FgfJo.QoOiHzvVP35ZUsBHuAgFe5bnkuP1XxEGg6,2,"2025-05-15 14:48:09"
