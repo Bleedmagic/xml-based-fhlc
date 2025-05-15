@@ -23,6 +23,7 @@ A web-based portal for guardians and teachers to track learning progress of stud
 - Go to XAMPP's Control Panel.
 - Followed by Apache > Config > php.ini
 - Ctrl+F to find `;extension=xsl` then uncomment it.
+- Similarly, find `;extension=sqlite3` then uncomment it.
 
 ### 2. Clone this repository
 
