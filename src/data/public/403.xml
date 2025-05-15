@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<error>
+  <code>403</code>
+  <message>Page Forbidden</message>
+  <description>
+    <p>You don't have permission to access this resource.</p>
+    <p>This restriction may be due to missing credentials, lack of appropriate access rights, or an
+      attempt to view a restricted area of the system.</p>
+    <p>If you believe this is an error, please contact the site administrator or refer to the
+      documentation for access requirements.</p>
+  </description>
+  <solution>Return to Home</solution>
+  <assets>/_XAMPP/XML-FHLC/assets/</assets>
+</error>
