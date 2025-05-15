@@ -50,8 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($role === 'admin') {
       $redirect = '../admin/dashboard.php';
     } elseif ($role === 'guardian') {
-      // $redirect = '../users/dashboard.php';
-      $redirect = '../users/temp/index.html';
+      $redirect = '../users/dashboard.php';
     } else {
       $redirect = 'login.php';
     }
