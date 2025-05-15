@@ -9,7 +9,7 @@ A web-based portal for guardians and teachers to track learning progress of stud
 - HTML
 - CSS
 - JavaScript
-- Bootstrap
+- Bootstrap 4.6 (Thanks [Bootswatch](https://bootswatch.com/4/) and [Startbootstrap](https://startbootstrap.com/))
 
 > [!NOTE]
 > XSLT rendering and XML transformations may behave differently across browsers. Chrome and Firefox are recommended for consistent results.
