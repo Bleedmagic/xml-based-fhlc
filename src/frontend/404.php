@@ -1,4 +1,7 @@
 <?php
+
+//@TODO logout
+
 http_response_code(404);
 
 $xml = new DOMDocument();
