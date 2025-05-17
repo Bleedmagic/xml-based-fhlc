@@ -44,7 +44,7 @@
         <link rel="stylesheet" href="../../assets/css/icons/bootstrap-icons.min.css" />
 
         <!-- Custom Styles -->
-        <link rel="stylesheet" href="../../assets/css/custom.css" />
+        <link rel="stylesheet" href="../../assets/css/announcement.css" />
       </head>
 
       <!-- Header -->
@@ -52,13 +52,26 @@
         <xsl:with-param name="currentPage" select="'announcement'" />
       </xsl:call-template>
 
-      <!-- Main -->
-      <main role="main">
-        <div class="container mt-5">
-          <h1>Announcement</h1>
-          <p>Details about the announcement will go here.</p>
+       <!-- Main -->
+    <main role="main" class="container">
+      <h2>Announcements</h2>
+
+      <xsl:for-each select="announcements/announcement">
+        <div class="announcement-card">
+          <img>
+            <xsl:attribute name="src"><xsl:value-of select="image/@src" /></xsl:attribute>
+            <xsl:attribute name="alt"><xsl:value-of select="image/@alt" /></xsl:attribute>
+            <xsl:attribute name="class">announcement-img <xsl:value-of select="image/@class" /></xsl:attribute>
+          </img>
+          <div class="card-body">
+            <h5 class="card-title"><xsl:value-of select="title" /></h5>
+            <p class="card-text"><xsl:value-of select="text" /></p>
+          </div>
         </div>
-      </main>
+      </xsl:for-each>
+    </main>
+
+
 
       <!-- Footer -->
       <xsl:call-template name="footer" />

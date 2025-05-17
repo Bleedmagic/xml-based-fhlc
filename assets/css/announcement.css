@@ -1,0 +1,74 @@
+/* Container for the main section */
+main.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title */
+main.container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #007055;
+  margin-bottom: 30px;
+}
+
+/* Card Layout */
+.announcement-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff3cd;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Common image style */
+.announcement-img {
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Individual image sizes */
+.field-trip-img {
+  width: 350px;
+  height: 220px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.card-distribution-img {
+  width: 220px;
+  height: 220px;
+  margin-right: 90px;
+  margin-left: 80px;
+}
+
+.orientation-img {
+  width: 220px;
+  height: 220px;
+  margin-right: 90px;
+  margin-left: 80px;
+}
+
+/* Card Body */
+.card-body {
+  flex: 1;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}
