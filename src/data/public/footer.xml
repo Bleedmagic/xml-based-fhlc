@@ -16,13 +16,28 @@
     </media>
     <media>
       <name>Email</name>
-      <link>mailto:contact@fullhouse.com</link>
+      <link>mailto:fhlc@ymail.com</link>
     </media>
     <media>
       <name>Phone</name>
-      <link>tel:+1234567890</link>
+      <link>tel:+639236809023</link>
     </media>
   </other>
+  <privacy>
+    <text>PRIVACY POLICY</text>
+    <link>privacy-policy.php</link>
+    <slug>privacy-policy</slug>
+  </privacy>
+  <terms>
+    <text>TERMS AND CONDITIONS</text>
+    <link>terms-conditions.php</link>
+    <slug>terms-conditions</slug>
+  </terms>
+  <home>
+    <text>HOME</text>
+    <link>home.php</link>
+    <slug>home</slug>
+  </home>
   <copyright>
     <year>2025</year>
     <name>Full House Learning Center</name>

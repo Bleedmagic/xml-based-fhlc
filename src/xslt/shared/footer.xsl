@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:template name="footer">
-    <xsl:variable name="footer" select="document('../../data/public/footer.xml')/footer" />
-    <xsl:variable
-      name="navbar" select="document('../../data/public/navbar.xml')/navbar" />
+    <xsl:param name="currentPage" />
+    <xsl:variable name="footer"
+      select="document('../../data/public/footer.xml')/footer" />
 
     <style>
       .icon-circle {
@@ -60,13 +60,20 @@
 
       .footer-link:hover {
       color: #ddd;
+      text-decoration: none;
+      }
+
+      .footer-link.active {
+      color: #ddd;
+      font-weight: 400;
+      text-decoration: none;
+      border-bottom: 1px solid #a3c293;
       }
     </style>
 
     <footer
       class="footer py-2 mt-auto">
       <div class="text-center">
-
         <div class="mt-2 text-white" style="background-color: #1A906B;">
           <div class="pt-2">
             <xsl:for-each select="$footer/other/media">
@@ -102,9 +109,25 @@
 
           <div class="mt-2 mb-2 pb-2">
             <span class="h7">
-              <a href="about.php" class="footer-link">ABOUT FHLC</a> | <a href="contact.php"
-                class="footer-link">CONTACT US</a> | <a href="announcement.php" class="footer-link">
-              ANNOUNCEMENTS</a> | <a href="admission.php" class="footer-link">ADMISSIONS</a>
+              <a
+                href="{$footer/home/link}">
+                <xsl:attribute name="class"> footer-link<xsl:if
+                    test="$currentPage = string($footer/home/slug)"> active</xsl:if>
+                </xsl:attribute>
+                <xsl:value-of select="$footer/home/text" />
+              </a> | <a
+                href="{$footer/terms/link}">
+                <xsl:attribute name="class"> footer-link<xsl:if
+                    test="$currentPage = string($footer/terms/slug)"> active</xsl:if>
+                </xsl:attribute>
+                <xsl:value-of select="$footer/terms/text" />
+              </a> | <a
+                href="{$footer/privacy/link}">
+                <xsl:attribute name="class"> footer-link<xsl:if
+                    test="$currentPage = string($footer/privacy/slug)"> active</xsl:if>
+                </xsl:attribute>
+                <xsl:value-of select="$footer/privacy/text" />
+              </a>
             </span>
           </div>
         </div>

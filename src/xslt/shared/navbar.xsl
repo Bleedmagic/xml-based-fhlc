@@ -6,7 +6,19 @@
     <xsl:variable name="navbar"
       select="document('../../data/public/navbar.xml')/navbar" />
 
-    <header class="container">
+      <style>
+      .nav-item.active .nav-link {
+      font-weight: 400;
+      border-bottom: 2px solid #a3c293;
+      }
+
+      .navbar {
+      transition: box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      </style>
+
+    <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-gray">
         <a class="navbar-brand d-flex align-items-center" href="{ $navbar/identity/link }">
           <img src="{ $navbar/identity/logo }" alt="Logo" style="height: 50px; margin-right: 10px;" />
@@ -46,5 +58,4 @@
       </nav>
     </header>
   </xsl:template>
-
 </xsl:stylesheet>
