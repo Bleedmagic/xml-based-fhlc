@@ -5,14 +5,14 @@
   align-items: center; /* Vertically center content */
   justify-content: space-between; /* Space between text and image */
   padding: 5% 5%; /* Padding around the section */
-  gap: 30px; /* Space between hero text and image */
+  gap: 5px; /* Space between hero text and image */
   margin-bottom: 10px;
 }
 
 .hero-text {
   flex: 1 1 50%; /* Hero text takes up 50% of the section */
   max-width: 450px; /* Maximum width of the text section */
-  margin-left: 11%;
+  margin-left: 12%;
 }
 
 .hero-text h1 {
