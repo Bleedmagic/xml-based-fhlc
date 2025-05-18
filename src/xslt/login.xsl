@@ -131,6 +131,14 @@
                 onclick="togglePasswordVisibility()"></i>
             </div>
 
+            <div class="form-check my-3">
+              <input class="form-check-input" type="checkbox" id="termsCheckbox" name="terms"
+                required="required" />
+              <label class="form-check-label" for="termsCheckbox">
+                <xsl:copy-of select="$login/page/checkbox/node()" disable-output-escaping="yes" />
+              </label>
+            </div>
+
             <button class="btn btn-lg btn-primary btn-block" type="submit" id="login-btn">Sign in</button>
             <p class="mt-5 mb-3 text-muted text-center">&#169; <xsl:value-of
                 select="$login/page/copyright" /></p>

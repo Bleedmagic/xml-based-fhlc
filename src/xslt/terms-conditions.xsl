@@ -62,8 +62,12 @@
 
         <!-- Main -->
         <main role="main" class="container my-5">
-          <h1><xsl:value-of select="$terms/section/title"/></h1>
-          <p><xsl:copy-of select="$terms/section/content/node()" /></p>
+          <h1>
+            <xsl:value-of select="$terms/section/title" />
+          </h1>
+          <p>
+            <xsl:copy-of select="$terms/section/content/node()" />
+          </p>
 
           <div class="index">
             <h3>Table of contents</h3>
@@ -132,6 +136,15 @@
             us the license to use, reproduce, adapt, modify, publish or distribute the Content
     created by you or stored in your user account for commercial, marketing or any similar
             purpose.</p>
+          <p>In compliance with Republic Act No. 10173 (Data Privacy Act of 2012), you acknowledge
+    that any personal data submitted through the Website will be processed in accordance
+            with applicable data privacy laws. FHLC Inc. commits to protecting your personal
+    information and ensuring it is handled lawfully and securely.</p>
+          <p>
+            You warrant that you have the legal right to submit all Content and that such
+    Contentcomplies with all applicable laws, including data privacy and intellectual property
+    regulations.
+          </p>
           <h2 id="backups">Backups</h2>
           <p>We are not responsible for the Content residing on the Website. In no event shall we be
     held liable for any loss of any Content. It is your sole responsibility to maintain
@@ -152,20 +165,23 @@
             on the Website. Your linking to any other off-site resources is at your own risk.</p>
           <h2 id="prohibited-uses">Prohibited uses</h2>
           <p>In addition to other terms as set forth in the Agreement, you are prohibited from using
-    the Website and Services or Content: (a) for any unlawful purpose; (b) to solicit others
+            the Website and Services or Content: (a) for any unlawful purpose; (b) to solicit others
             to perform or participate in any unlawful acts; (c) to violate any international,
-    federal, provincial or state regulations, rules, laws, or local ordinances; (d) to
+            federal, provincial or state regulations, rules, laws, or local ordinances; (d) to
             infringe upon or violate our intellectual property rights or the intellectual property
-    rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage,
+            rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage,
             intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity,
-    race, age, national origin, or disability; (f) to submit false or misleading
+            race, age, national origin, or disability; (f) to submit false or misleading
             information; (g) to upload or transmit viruses or any other type of malicious code that
-    will or may be used in any way that will affect the functionality or operation of the
+            will or may be used in any way that will affect the functionality or operation of the
             Website and Services, third party products and services, or the Internet; (h) to spam,
-    phish, pharm, pretext, spider, crawl, or scrape; (i) for any obscene or immoral purpose;
+            phish, pharm, pretext, spider, crawl, or scrape; (i) for any obscene or immoral purpose;
             or (j) to interfere with or circumvent the security features of the Website and
-            Services, third party products and services, or the Internet. We reserve the right to
-    terminate your use of the Website and Services for violating any of the prohibited uses.</p>
+            Services, third party products and services, or the Internet; (k) to engage in any
+            activity prohibited under Republic Act No. 10175 (Cybercrime Prevention Act of 2012),
+            including but not limited to unauthorized access, distribution of malicious code,
+            phishing, identity theft, and other cybercrimes. We reserve the right to
+            terminate your use of the Website and Services for violating any of the prohibited uses.</p>
           <h2 id="indemnification">Indemnification</h2>
           <p>You agree to indemnify and hold FHLC Inc. and its affiliates, directors, officers,
     employees, agents, suppliers and licensors harmless from and against any liabilities,
@@ -185,13 +201,16 @@
             remain in full force and effect.</p>
           <h2 id="dispute-resolution">Dispute resolution</h2>
           <p>The formation, interpretation, and performance of this Agreement and any disputes
-    arising out of it shall be governed by the substantive and procedural laws of
+            arising out of it shall be governed by the substantive and procedural laws of
             Philippines without regard to its rules on conflicts or choice of law and, to the extent
-    applicable, the laws of Philippines. The exclusive jurisdiction and venue for actions
+            applicable, the laws of Philippines. Any disputes arising from alleged violations of the
+            Data Privacy Act (RA 10173) or the Cybercrime Prevention Act (RA 10175) shall also be
+            governed by the laws of the Philippines, with exclusive jurisdiction granted to the
+            courts located within the Philippines. The exclusive jurisdiction and venue for actions
             related to the subject matter hereof shall be the courts located in Philippines, and you
-    hereby submit to the personal jurisdiction of such courts. You hereby waive any right to
+            hereby submit to the personal jurisdiction of such courts. You hereby waive any right to
             a jury trial in any proceeding arising out of or related to this Agreement. The United
-    Nations Convention on Contracts for the International Sale of Goods does not apply to
+            Nations Convention on Contracts for the International Sale of Goods does not apply to
             this Agreement.</p>
           <h2 id="changes-and-amendments">Changes and amendments</h2>
           <p>We reserve the right to modify this Agreement or its terms related to the Website and
