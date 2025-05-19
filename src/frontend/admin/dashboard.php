@@ -396,11 +396,11 @@
           <div class="row">
 
             <!-- Academic Calendar -->
-            <div class="col-xl-6 col-lg-4">
+            <div class="col-xl-4 col-lg-4">
               <div class="card shadow mb-4">
                 <!-- Card Header -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Academic Calendar</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Under Construction</h6>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -416,16 +416,16 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                  <div id="calendar-container"></div>
+                  <span>erm</span>
                   <div class="mt-4 text-center small">
-                    <span>Calendar loaded via calendar-js</span>
+                    <span>Under Construction</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Grades and Remarks -->
-            <div class="col-xl-3 col-lg-4">
+            <div class="col-xl-4 col-lg-4">
               <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Grades and Remarks</h6>
@@ -459,7 +459,7 @@
             </div>
 
             <!-- Complaints/Request -->
-            <div class="col-xl-3 col-lg-4">
+            <div class="col-xl-4 col-lg-4">
               <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Complaints/Request</h6>
