@@ -1,8 +1,16 @@
+# CSS
 bootstrap.min.css linguist-vendored=true
 bootstrap-icons.min.css linguist-vendored=true
-bootstrap.min.js linguist-vendored=true
-jquery.min.js linguist-vendored=true
-fontawesome.all.min.css linguist-vendored=true
-normalize.css linguist-vendored=true
 startbootstrap.min.css linguist-vendored=true
+fontawesome.all.min.css linguist-vendored=true
+calendar.js.css linguist-vendored=true
+normalize.css linguist-vendored=true
+
+# JS
+jquery.min.js linguist-vendored=true
+bootstrap.min.js linguist-vendored=true
 startbootstrap.min.js linguist-vendored=true
+jquery.easing.min.js linguist-vendored=true
+chart.min.js linguist-vendored=true
+jquery.sieve.js linguist-vendored=true
+calendar.js linguist-vendored=true
