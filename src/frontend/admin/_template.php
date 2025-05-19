@@ -13,7 +13,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Guardian / Dashboard</title>
+  <title>Admin / Dashboard</title>
 
   <!-- FAVICONS -->
   <link rel="apple-touch-icon" href="../../../assets/img/favicons/apple-touch-icon.png" sizes="180x180" />
@@ -51,7 +51,7 @@
         <div class="sidebar-brand-icon">
           <img src="../../../assets/img/fhlc-logo.png" alt="fhlc-logo" width="50" height="50">
         </div>
-        <div class="sidebar-brand-text mx-3">Guardian <sup>FHLC</sup></div>
+        <div class="sidebar-brand-text mx-3">Admin <sup>FHLC</sup></div>
       </a>
 
       <!-- Divider -->
@@ -255,7 +255,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">GUARDIAN</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">ADMIN</span>
                 <img class="img-profile rounded-circle"
                   src="../../../assets/svg/undraw_profile.svg">
               </a>
@@ -397,5 +397,4 @@
     });
   </script>
 </body>
-
 </html>

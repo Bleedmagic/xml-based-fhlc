@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+  <event>
+    <title>Meeting with Team</title>
+    <description>Project kickoff</description>
+    <from>2025-05-20T09:00:00</from>
+    <to>2025-05-20T10:00:00</to>
+  </event>
+</events>
+

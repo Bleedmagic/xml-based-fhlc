@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../../assets/css/dashboard.css">
   <!-- ------------- -->
 
-  <!-- <link rel="stylesheet" href="../../../assets/css/lib/calendar.js.css"> -->
+  <link rel="stylesheet" href="../../../assets/css/lib/calendar.js.css">
 </head>
 
 <body id="page-top">
@@ -59,7 +59,8 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <!-- Don't forget to Set list item as active, and set href link -->
+      <li class="nav-item">
         <a class="nav-link" href="./dashboard.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
@@ -92,8 +93,8 @@
       </li>
 
       <!-- Nav Item - Calendar Menu -->
-      <li class="nav-item">
-        <a class="nav-link" href="calendar.php">
+      <li class="nav-item active">
+        <a class="nav-link" href="./calendar.php">
           <i class="fas fa-fw fa-calendar"></i>
           <span>Academic Calendar</span></a>
       </li>
@@ -151,29 +152,17 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <!-- Topbar Search -->
-          <form
-            class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
+          <!-- Topbar Title -->
+          <div class="custom-title d-flex align-items-center mr-auto ml-md-3 my-2 my-md-0">
+            <h6 class="full-text m-0 font-weight-bold text-primary">Full House Learning Center</h6>
+            <h6 class="abbr-text m-0 font-weight-bold text-primary d-none">FHLC</h6>
+          </div>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
             <li class="nav-item dropdown no-arrow d-sm-none">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
               <!-- Dropdown - Messages -->
               <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                 aria-labelledby="searchDropdown">
@@ -294,9 +283,9 @@
             <li class="nav-item d-flex align-items-center">
               <a class="nav-link d-flex align-items-center justify-content-center signout-link"
                 href="#"
-                style="color: black; background-color: #FBCD5F; border: 2px solid black; border-radius: 0.35rem; height: 40px; padding: 0 1rem; margin-left: 1rem;">
+                style="color: black; background-color: #FBCD5F; border: 2px solid black; border-radius: 0.35rem; height: 40px; padding: 0 1rem; margin-left: 1rem; transition: all 0.3s ease;">
                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2"></i>
-                Sign Out
+                <span class="d-none d-sm-inline">Sign Out</span>
               </a>
             </li>
 
@@ -310,110 +299,17 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <h1 class="h3 mb-0 text-gray-800">Academic Calendar</h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                class="fas fa-download fa-sm text-white-50"></i> Generate Events</a>
           </div>
 
           <!-- Content Row -->
-          <div class="row">
-
-            <!-- Total Faculty Card -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                        Total Faculty</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">85</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-user-tie fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Total Students Card -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                        Total Students</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">875</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-id-badge fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Total Sections Card -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                        Total Sections</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">25</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-user-friends fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Upcoming Event Card -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-warning shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                        Upcoming Event</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">Foundation Day</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Content Row -->
-
           <div class="row">
 
             <!-- Academic Calendar -->
-            <div class="col-xl-6 col-lg-4">
+            <div class="container-fluid">
               <div class="card shadow mb-4">
-                <!-- Card Header -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Academic Calendar</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
-                </div>
                 <!-- Card Body -->
                 <div class="card-body">
                   <div id="calendar-container"></div>
@@ -422,156 +318,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Grades and Remarks -->
-            <div class="col-xl-3 col-lg-4">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Grades and Remarks</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="chart-pie pt-4 pb-2">
-                    <canvas id="gradesAndRemarks"></canvas>
-                  </div>
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Submitted
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> Not Submitted
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Complaints/Request -->
-            <div class="col-xl-3 col-lg-4">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Complaints/Request</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="pt-4 pb-2">
-                    <p>1 ...</p>
-                    <p>2 ...</p>
-                    <p>3 ...</p>
-                  </div>
-                  <div class="mt-4 text-center small">
-                    <span>Under Construction</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Content Row -->
-          <div class="row">
-
-            <!-- Content Column -->
-            <div class="col-lg-6 mb-4">
-
-              <!-- Color System -->
-              <div class="row">
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-primary text-white shadow">
-                    <div class="card-body">
-                      Primary
-                      <div class="text-white-50 small">#4e73df</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-success text-white shadow">
-                    <div class="card-body">
-                      Success
-                      <div class="text-white-50 small">#1cc88a</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-info text-white shadow">
-                    <div class="card-body">
-                      Info
-                      <div class="text-white-50 small">#36b9cc</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-warning text-white shadow">
-                    <div class="card-body">
-                      Warning
-                      <div class="text-white-50 small">#f6c23e</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 mb-4">
-              <div class="row">
-
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-danger text-white shadow">
-                    <div class="card-body">
-                      Danger
-                      <div class="text-white-50 small">#e74a3b</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-secondary text-white shadow">
-                    <div class="card-body">
-                      Secondary
-                      <div class="text-white-50 small">#858796</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-light text-black shadow">
-                    <div class="card-body">
-                      Light
-                      <div class="text-black-50 small">#f8f9fc</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-dark text-white shadow">
-                    <div class="card-body">
-                      Dark
-                      <div class="text-white-50 small">#5a5c69</div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
             </div>
 
           </div>
@@ -613,18 +359,39 @@
     <!-- -------------- -->
 
     <!-- SIEVE JS -->
-    <!-- @TODO: Search feature -->
-    <script src="../../../assets/js/lib/jquery.sieve.js"></script>
+    <!-- <script src="../../../assets/js/lib/jquery.sieve.js"></script> -->
 
     <!-- Chart JS -->
-    <script src="../../../assets/js/lib/chart.min.js"></script>
-    <script src="../../../assets/js/chart-area-demo.js"></script>
-    <script src="../../../assets/js/chart-pie-grades.js"></script>
+    <!-- <script src="../../../assets/js/lib/chart.min.js"></script> -->
 
     <!-- Calendar JS -->
-    <!-- <script src="../../../assets/js/lib/calendar.js"></script> -->
+    <script src="../../../assets/js/lib/calendar.js"></script>
+    <script>
+      var calendarInstance1 = new calendarJs("calendar-container", {
+        exportEventsEnabled: true,
+        useAmPmForTimeDisplays: true
+      });
 
-    <!-- SWEETALERT2 JS CDN -->
+      document.title += " v" + calendarInstance1.getVersion();
+
+      var event1 = {
+          from: new Date(),
+          to: new Date(),
+          title: "New Event 1",
+          description: "A description of the new event"
+        },
+        event2 = {
+          from: new Date(),
+          to: new Date(),
+          title: "New Event 2",
+          description: "A description of the new event"
+        };
+
+      calendarInstance1.addEvent(event1);
+      calendarInstance1.addEvent(event2);
+    </script>
+
+    <!-- SweetAlert2 JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
       // Export

@@ -1,0 +1,34 @@
+.signout-link:hover {
+  background-color: #e0b94a;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .signout-link {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .signout-link i {
+    margin-right: 0.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .full-text {
+    display: none !important;
+  }
+  .abbr-text {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .full-text {
+    display: block !important;
+  }
+  .abbr-text {
+    display: none !important;
+  }
+}
