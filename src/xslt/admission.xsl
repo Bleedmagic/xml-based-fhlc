@@ -6,15 +6,14 @@
   <!-- Set Output to XHTML -->
   <xsl:output method="xml"
     doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-    indent="yes" />
+    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes" />
 
   <!-- Includes -->
-  <xsl:include href="./shared/footer.xsl" />
   <xsl:include href="./shared/navbar.xsl" />
+  <xsl:include href="./shared/footer.xsl" />
 
   <!-- Variables to access the database XML files -->
-  <!-- <xsl:variable name="admission" select="document('../data/public/admission.xml')/admission" /> -->
+  <!-- <xsl:variable name="admission" select="document('../data/public/about.xml')/admission" /> -->
 
   <!-- Transform -->
   <xsl:template match="/">
@@ -30,8 +29,7 @@
         <link rel="icon" href="../../assets/img/favicons/favicon-32x32.png" sizes="32x32"
           type="image/png" />
         <link rel="icon" href="../../assets/img/favicons/favicon-16x16.png" sizes="16x16"
-          type="image/png"
-        />
+          type="image/png" />
         <link rel="icon" href="../../assets/img/favicons/favicon.ico" />
 
         <!-- PAGE TITLE -->
@@ -43,35 +41,60 @@
         <link rel="stylesheet" href="../../assets/css/icons/bootstrap-icons.min.css" />
 
         <!-- Custom Styles -->
-        <link rel="stylesheet" href="../../assets/css/custom.css" />
+        <link rel="stylesheet" href="../../assets/css/admission.css" />
       </head>
 
-      <!-- Header -->
-      <xsl:call-template name="navbar">
-        <xsl:with-param name="currentPage" select="'admission'" />
-      </xsl:call-template>
+      <body>
+        <xsl:call-template name="navbar">
+          <xsl:with-param name="currentPage" select="'admission'" />
+        </xsl:call-template>
 
-      <!-- Main -->
-      <main role="main">
-        <div class="container mt-5">
-          <h1>Admission</h1>
-          <p>Welcome to the admission page. Here you can find information about the admission
-    process.</p>
-        </div>
-      </main>
+        <main class="container my-5">
+          <h2>ADMISSIONS</h2>
+          <div class="row justify-content-center">
 
-      <!-- Footer -->
-      <xsl:call-template name="footer" />
+            <div class="col-md-5 m-3 admission-card text-center">
+              <div class="card">
+                <i class="bi bi-gear-wide-connected"></i>
+                <a href="#" class="btn-style">Enrollment Process For New Students</a>
 
-      <!-- JS LIB -->
-      <script type="text/javascript" src="../../assets/js/lib/jquery.min.js"></script>
-      <script type="text/javascript" src="../../assets/js/lib/bootstrap.min.js"></script>
+              </div>
+            </div>
 
-      <!-- Custom Scripts -->
-      <script src="../../assets/js/custom.js"></script>
+            <div class="col-md-5 m-3 admission-card text-center">
+              <div class="card">
+                <i class="bi bi-file-earmark-text"></i>
+                <a href="#" class="btn-style">Enrollment Process For Current Students</a>
+              </div>
+            </div>
+
+            <div class="col-md-5 m-3 admission-card text-center">
+              <div class="card">
+                <i class="bi bi-file-earmark-check"></i>
+                <a href="#" class="btn-style">Grade Levels Offered</a>
+              </div>
+            </div>
+
+            <div class="col-md-5 m-3 admission-card text-center">
+              <div class="card">
+                <i class="bi bi-patch-plus"></i>
+                <a href="#" class="btn-style">Requirements for New Applicants</a>
+              </div>
+            </div>
+
+          </div>
+        </main>
+
+        <!-- Footer -->
+        <xsl:call-template name="footer" />
+
+        <!-- JS LIB -->
+        <script type="text/javascript" src="../../assets/js/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/bootstrap.min.js"></script>
+
+        <!-- Custom Scripts -->
+        <script src="../../assets/js/custom.js"></script>
+      </body>
     </html>
   </xsl:template>
-
-  <!-- Other XSL Templates -->
-  <!-- <xsl:template></xsl:template> -->
 </xsl:stylesheet>

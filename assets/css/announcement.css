@@ -6,13 +6,6 @@ main.container {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Title */
-main.container h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #007055;
-  margin-bottom: 30px;
-}
 
 /* Card Layout */
 .announcement-card {

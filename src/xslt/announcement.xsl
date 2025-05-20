@@ -6,18 +6,18 @@
   <!-- Set Output to XHTML -->
   <xsl:output method="xml"
     doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-    indent="yes" />
+    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes" />
 
   <!-- Includes -->
   <xsl:include href="./shared/footer.xsl" />
   <xsl:include href="./shared/navbar.xsl" />
 
   <!-- Variables to access the database XML files -->
-  <!-- <xsl:variable name="announcement"
-  select="document('../data/public/announcement.xml')/announcement" /> -->
+  <!-- <xsl:variable name="announcement" select="document('../data/public/about.xml')/announcement"
+  /> -->
 
   <!-- Transform -->
+  <!-- Main Template -->
   <xsl:template match="/">
     <html>
       <head>
@@ -31,15 +31,13 @@
         <link rel="icon" href="../../assets/img/favicons/favicon-32x32.png" sizes="32x32"
           type="image/png" />
         <link rel="icon" href="../../assets/img/favicons/favicon-16x16.png" sizes="16x16"
-          type="image/png"
-        />
+          type="image/png" />
         <link rel="icon" href="../../assets/img/favicons/favicon.ico" />
 
         <!-- PAGE TITLE -->
         <title>Announcement / FHLC</title>
 
         <!-- CSS LIB -->
-        <!-- https://bootswatch.com/4/ -->
         <link rel="stylesheet" href="../../assets/css/lib/bootstrap.min.css" />
         <link rel="stylesheet" href="../../assets/css/icons/bootstrap-icons.min.css" />
 
@@ -47,44 +45,45 @@
         <link rel="stylesheet" href="../../assets/css/announcement.css" />
       </head>
 
-      <!-- Header -->
-      <xsl:call-template name="navbar">
-        <xsl:with-param name="currentPage" select="'announcement'" />
-      </xsl:call-template>
+      <body>
+        <!-- Header -->
+        <xsl:call-template name="navbar">
+          <xsl:with-param name="currentPage" select="'announcement'" />
+        </xsl:call-template>
 
-       <!-- Main -->
-    <main role="main" class="container">
-      <h2>Announcements</h2>
+        <!-- Main -->
+        <main role="main" class="container">
+          <h2 style="color: #1A906B;">Announcements</h2>
 
-      <xsl:for-each select="announcements/announcement">
-        <div class="announcement-card">
-          <img>
-            <xsl:attribute name="src"><xsl:value-of select="image/@src" /></xsl:attribute>
-            <xsl:attribute name="alt"><xsl:value-of select="image/@alt" /></xsl:attribute>
-            <xsl:attribute name="class">announcement-img <xsl:value-of select="image/@class" /></xsl:attribute>
-          </img>
-          <div class="card-body">
-            <h5 class="card-title"><xsl:value-of select="title" /></h5>
-            <p class="card-text"><xsl:value-of select="text" /></p>
-          </div>
-        </div>
-      </xsl:for-each>
-    </main>
+          <xsl:for-each select="announcements/announcement">
+            <div class="announcement-card">
+              <img>
+                <xsl:attribute name="src"><xsl:value-of select="image/@src" /></xsl:attribute>
+                <xsl:attribute name="alt"><xsl:value-of select="image/@alt" /></xsl:attribute>
+                <xsl:attribute name="class">announcement-img <xsl:value-of select="image/@class" /></xsl:attribute>
+              </img>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <xsl:value-of select="title" />
+                </h5>
+                <p class="card-text">
+                  <xsl:value-of select="text" />
+                </p>
+              </div>
+            </div>
+          </xsl:for-each>
+        </main>
 
+        <!-- Footer -->
+        <xsl:call-template name="footer" />
 
+        <!-- JS LIB -->
+        <script type="text/javascript" src="../../assets/js/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/lib/bootstrap.min.js"></script>
 
-      <!-- Footer -->
-      <xsl:call-template name="footer" />
-
-      <!-- JS LIB -->
-      <script type="text/javascript" src="../../assets/js/lib/jquery.min.js"></script>
-      <script type="text/javascript" src="../../assets/js/lib/bootstrap.min.js"></script>
-
-      <!-- Custom Scripts -->
-      <script src="../../assets/js/custom.js"></script>
+        <!-- Custom Scripts -->
+        <script src="../../assets/js/custom.js"></script>
+      </body>
     </html>
   </xsl:template>
-
-  <!-- Other XSL Templates -->
-  <!-- <xsl:template></xsl:template> -->
 </xsl:stylesheet>

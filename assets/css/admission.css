@@ -1,0 +1,65 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  color: #1A906B;
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #1A906B;
+  display: block;
+  padding-bottom: 5px;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.admission-card .card {
+  border: 1px solid black;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  padding: 50px 20px;
+  background-color: #fff;
+  min-height: 200px;
+  margin-top: 11%;
+}
+
+.admission-card .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.admission-card i {
+  font-size: 3rem;
+  color: #1A906B;
+  margin-bottom: 40px;
+}
+
+.admission-card .btn-style {
+  background-color: white;
+  color: #1A906B;
+  text-decoration: underline;
+}
+
+
+.admission-card .badge {
+  font-size: 1.3rem;
+  background-color: #1A906B;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 16px;
+}
+
+.icon-new {
+  display: inline-block;
+  background-color: #1A906B;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
