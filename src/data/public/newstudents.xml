@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="newstudents.xsl"?>
 <enrollment>
-  <title>Enrollment Process For New Students</title>
+  <title>Online Enrollment Process For New Students</title>
   <steps>
     <step number="1">
-      <title>Download and print the Enrollment Form</title>
-      <description>Fill it out completely</description>
+      <title>Create an Online Account</title>
+      <description>Register on the school's enrollment portal</description>
     </step>
     <step number="2">
-      <title>Prepare the Required Documents</title>
-      <description>Gather and organize necessary paperwork</description>
+      <title>Fill Out the Enrollment Form Online</title>
+      <description>Complete and submit the digital enrollment form</description>
     </step>
     <step number="3">
-      <title>Bring all completed requirements</title>
-      <description>Submit them to the school</description>
+      <title>Upload Required Documents</title>
+      <description>Scan and upload all necessary documents</description>
     </step>
     <step number="4">
-      <title>Proceed to the cashier</title>
-      <description>Pay the enrollment fee</description>
+      <title>Pay Enrollment Fee</title>
+      <description>Pay online or visit the school to pay in cash</description>
     </step>
     <step number="5">
-      <title>Wait for Account Setup</title>
-      <description>Account will be set up after enrollment</description>
+      <title>Receive Confirmation and Account Setup</title>
+      <description>Wait for email confirmation and system login credentials</description>
     </step>
   </steps>
 </enrollment>

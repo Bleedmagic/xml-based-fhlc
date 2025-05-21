@@ -11,12 +11,12 @@
     <card>
       <icon>bi-file-earmark-text</icon>
       <text>Enrollment Process For Current Students</text>
-      <link>#</link>
+      <link>currentstudents.php</link>
     </card>
     <card>
       <icon>bi-file-earmark-check</icon>
       <text>Grade Levels Offered</text>
-      <link>#</link>
+      <link>gradelevels.php</link>
     </card>
     <card>
       <icon>bi-patch-plus</icon>

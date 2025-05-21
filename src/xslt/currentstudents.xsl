@@ -22,7 +22,7 @@
         <!-- CSS Libraries -->
         <link rel="stylesheet" href="../../assets/css/lib/bootstrap.min.css" />
         <link rel="stylesheet" href="../../assets/css/icons/bootstrap-icons.min.css" />
-        <link rel="stylesheet" href="../../assets/css/newstudents.css" />
+        <link rel="stylesheet" href="../../assets/css/currentstudents.css" />
       </head>
       <body>
         <!-- Navbar -->
@@ -43,19 +43,16 @@
                   <i>
                     <xsl:choose>
                       <xsl:when test="@number='1'">
-                        <xsl:attribute name="class">bi bi-download</xsl:attribute>
+                        <xsl:attribute name="class">bi bi-person-check</xsl:attribute>
                       </xsl:when>
                       <xsl:when test="@number='2'">
                         <xsl:attribute name="class">bi bi-file-earmark-text</xsl:attribute>
                       </xsl:when>
                       <xsl:when test="@number='3'">
-                        <xsl:attribute name="class">bi bi-building</xsl:attribute>
-                      </xsl:when>
-                      <xsl:when test="@number='4'">
                         <xsl:attribute name="class">bi bi-cash-stack</xsl:attribute>
                       </xsl:when>
-                      <xsl:when test="@number='5'">
-                        <xsl:attribute name="class">bi bi-person-circle</xsl:attribute>
+                      <xsl:when test="@number='4'">
+                        <xsl:attribute name="class">bi bi-hourglass-split</xsl:attribute>
                       </xsl:when>
                     </xsl:choose>
                   </i>
@@ -74,13 +71,11 @@
             </xsl:for-each>
           </div>
 
-        <div class="back-icon-container">
+      <div class="back-icon-container">
           <a href="javascript:history.back()" class="back-icon-btn">
             <i class="bi bi-arrow-left"></i>
           </a>
-        </div>
-
-
+      </div>
 
         </main>
 
