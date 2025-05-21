@@ -10,7 +10,7 @@
   <xsl:include href="./shared/navbar.xsl"/>
   <xsl:include href="./shared/footer.xsl"/>
 
-  <xsl:template match="/">
+  <xsl:template match="/admissions">
     <html>
       <head>
         <meta charset="UTF-8"/>
@@ -25,42 +25,26 @@
 
       <body>
         <xsl:call-template name="navbar">
-          <xsl:with-param name="currentPage" select="'admission'"/>
+          <xsl:with-param name="currentPage" select="page"/>
         </xsl:call-template>
 
         <main class="container my-5">
           <h2>ADMISSIONS</h2>
           <div class="row justify-content-center">
-
-            <div class="col-md-5 m-3 admission-card text-center">
-              <div class="card">
-                <i class="bi bi-gear-wide-connected"></i>
-              <a href="#" class="btn-style">Enrollment Process For New Students</a>
-
+            <xsl:for-each select="cards/card">
+              <div class="col-md-5 m-3 admission-card text-center">
+                <div class="card">
+                  <i class="bi">
+                    <xsl:attribute name="class">
+                      <xsl:value-of select="concat('bi ', icon)"/>
+                    </xsl:attribute>
+                  </i>
+                  <a href="{link}" class="btn-style">
+                    <xsl:value-of select="text"/>
+                  </a>
+                </div>
               </div>
-            </div>
-
-            <div class="col-md-5 m-3 admission-card text-center">
-              <div class="card">
-                <i class="bi bi-file-earmark-text"></i>
-                <a href="#" class="btn-style">Enrollment Process For Current Students</a>
-              </div>
-            </div>
-
-            <div class="col-md-5 m-3 admission-card text-center">
-              <div class="card">
-                <i class="bi bi-file-earmark-check"></i>
-                <a href="#" class="btn-style">Grade Levels Offered</a>
-              </div>
-            </div>
-
-            <div class="col-md-5 m-3 admission-card text-center">
-              <div class="card">
-                <i class="bi bi-patch-plus"></i>
-                <a href="#" class="btn-style">Requirements for New Applicants</a>
-              </div>
-            </div>
-
+            </xsl:for-each>
           </div>
         </main>
 
