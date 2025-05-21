@@ -21,7 +21,7 @@
     <card>
       <icon>bi-patch-plus</icon>
       <text>Requirements for New Applicants</text>
-      <link>#</link>
+      <link>requirements.php</link>
     </card>
   </cards>
 </admissions>
