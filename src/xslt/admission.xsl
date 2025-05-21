@@ -6,16 +6,13 @@
   <!-- Set Output to XHTML -->
   <xsl:output method="xml"
     doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes" />
+    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+    indent="yes" />
 
   <!-- Includes -->
   <xsl:include href="./shared/navbar.xsl" />
   <xsl:include href="./shared/footer.xsl" />
 
-  <!-- Variables to access the database XML files -->
-  <!-- <xsl:variable name="admission" select="document('../data/public/about.xml')/admission" /> -->
-
-  <!-- Transform -->
   <xsl:template match="/">
     <html>
       <head>
@@ -24,19 +21,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- FAVICONS -->
-        <link rel="apple-touch-icon" href="../../assets/img/favicons/apple-touch-icon.png"
-          sizes="180x180" />
-        <link rel="icon" href="../../assets/img/favicons/favicon-32x32.png" sizes="32x32"
-          type="image/png" />
-        <link rel="icon" href="../../assets/img/favicons/favicon-16x16.png" sizes="16x16"
-          type="image/png" />
+        <link rel="apple-touch-icon" href="../../assets/img/favicons/apple-touch-icon.png" sizes="180x180" />
+        <link rel="icon" href="../../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="../../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png" />
         <link rel="icon" href="../../assets/img/favicons/favicon.ico" />
 
         <!-- PAGE TITLE -->
         <title>Admission / FHLC</title>
 
         <!-- CSS LIB -->
-        <!-- https://bootswatch.com/4/ -->
         <link rel="stylesheet" href="../../assets/css/lib/bootstrap.min.css" />
         <link rel="stylesheet" href="../../assets/css/icons/bootstrap-icons.min.css" />
 
@@ -45,6 +38,7 @@
       </head>
 
       <body>
+        <!-- Navbar -->
         <xsl:call-template name="navbar">
           <xsl:with-param name="currentPage" select="'admission'" />
         </xsl:call-template>
@@ -52,36 +46,25 @@
         <main class="container my-5">
           <h2>ADMISSIONS</h2>
           <div class="row justify-content-center">
-
-            <div class="col-md-5 m-3 admission-card text-center">
-              <div class="card">
-                <i class="bi bi-gear-wide-connected"></i>
-                <a href="#" class="btn-style">Enrollment Process For New Students</a>
-
+            <xsl:for-each select="/admissions/cards/card">
+              <div class="col-md-5 m-3 admission-card text-center">
+                <div class="card">
+                  <i>
+                    <xsl:attribute name="class">
+                      <xsl:text>bi </xsl:text>
+                      <xsl:value-of select="icon" />
+                    </xsl:attribute>
+                  </i>
+                  <a>
+                    <xsl:attribute name="href">
+                      <xsl:value-of select="link" />
+                    </xsl:attribute>
+                    <xsl:attribute name="class">btn-style</xsl:attribute>
+                    <xsl:value-of select="text" />
+                  </a>
+                </div>
               </div>
-            </div>
-
-            <div class="col-md-5 m-3 admission-card text-center">
-              <div class="card">
-                <i class="bi bi-file-earmark-text"></i>
-                <a href="#" class="btn-style">Enrollment Process For Current Students</a>
-              </div>
-            </div>
-
-            <div class="col-md-5 m-3 admission-card text-center">
-              <div class="card">
-                <i class="bi bi-file-earmark-check"></i>
-                <a href="#" class="btn-style">Grade Levels Offered</a>
-              </div>
-            </div>
-
-            <div class="col-md-5 m-3 admission-card text-center">
-              <div class="card">
-                <i class="bi bi-patch-plus"></i>
-                <a href="#" class="btn-style">Requirements for New Applicants</a>
-              </div>
-            </div>
-
+            </xsl:for-each>
           </div>
         </main>
 

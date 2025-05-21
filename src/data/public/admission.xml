@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<admission>
-  
-</admission>
+<?xml-stylesheet type="text/xsl" href="admission.xsl"?>
+<admissions>
+  <page>admission</page>
+  <cards>
+    <card>
+      <icon>bi-gear-wide-connected</icon>
+      <text>Enrollment Process For New Students</text>
+      <link>newstudents.php</link>
+    </card>
+    <card>
+      <icon>bi-file-earmark-text</icon>
+      <text>Enrollment Process For Current Students</text>
+      <link>#</link>
+    </card>
+    <card>
+      <icon>bi-file-earmark-check</icon>
+      <text>Grade Levels Offered</text>
+      <link>#</link>
+    </card>
+    <card>
+      <icon>bi-patch-plus</icon>
+      <text>Requirements for New Applicants</text>
+      <link>#</link>
+    </card>
+  </cards>
+</admissions>
