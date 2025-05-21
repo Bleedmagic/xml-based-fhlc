@@ -53,8 +53,7 @@
 
         <!-- Main -->
         <main role="main" class="container">
-          <h2 style="color: #1A906B;">Announcements</h2>
-
+         <h2 class="section-title">Announcements</h2>
           <xsl:for-each select="announcements/announcement">
             <div class="announcement-card">
               <img>

@@ -6,6 +6,16 @@ main.container {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.section-title {
+  color: #1A906B;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  display: block;
+}
+
 
 /* Card Layout */
 .announcement-card {
