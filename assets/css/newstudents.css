@@ -1,0 +1,106 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+main h2 {
+  font-weight: 600;
+  color: #1A906B;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.step-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 40px;
+  margin: 0 auto 60px auto;
+  flex-wrap: nowrap;
+}
+
+
+.step-card {
+  flex: 0 0 280px; /* Fixed width for consistent layout */
+  background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+  border-radius: 20px;
+  min-height: 250px;
+  padding: 20px 15px 40px 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 4%;
+}
+
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.step-icon {
+  font-size: 55px;
+  color: #1A906B;
+  margin-bottom: 15px;
+}
+
+.step-card i {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.step-card h5 {
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  color: #333;
+  min-height: 100px;
+}
+
+.step-number {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1A906B;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #FAEC8C;
+  color: #000;
+  text-decoration: none;
+  border: px solid black;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #ffd54f;
+  color: #000;
+}
