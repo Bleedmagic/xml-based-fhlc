@@ -14,7 +14,7 @@
   <xsl:include href="./shared/footer.xsl" />
 
       <!-- Variables to access the database XML files -->
-<!--   <xsl:variable name="requirements" select="document('../data/public/home.xml')/requirements" /> -->
+<!--   <xsl:variable name="requirements" select="document('../data/public/requirements.xml')/requirements" /> -->
 
   <xsl:template match="/enrollment">
     <html>
