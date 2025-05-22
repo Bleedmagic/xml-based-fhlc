@@ -32,7 +32,7 @@
         <link rel="icon" href="../../assets/img/favicons/favicon.ico" />
         
         <!-- PAGE TITLE -->
-        <title>Home / FHLC</title>
+        <title>New Students Enrollment / FHLC</title>
 
         <!-- CSS LIB -->
         <!-- https://bootswatch.com/4/ -->
