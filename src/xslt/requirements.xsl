@@ -14,7 +14,7 @@
   <xsl:include href="./shared/footer.xsl" />
 
       <!-- Variables to access the database XML files -->
-<!--   <xsl:variable name="requirements" select="document('../data/public/requirements.xml')/requirements" /> -->
+<!--   <xsl:variable name="requirements" select="document('../data/public/requirements.xml')/requirements.xml" /> -->
 
   <xsl:template match="/enrollment">
     <html>
@@ -31,7 +31,8 @@
           type="image/png" />
         <link rel="icon" href="../../assets/img/favicons/favicon.ico" />
 
-                <title>Requirements For New Applicants</title>
+        <!-- PAGE TITLE -->
+        <title>New Applicant Requirements / FHLC</title>
 
         <!-- CSS LIB -->
         <!-- https://bootswatch.com/4/ -->
