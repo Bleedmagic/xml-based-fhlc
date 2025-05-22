@@ -14,7 +14,7 @@
   <xsl:include href="./shared/footer.xsl" />
 
     <!-- Variables to access the database XML files -->
-<!--   <xsl:variable name="gradelevel" select="document('../data/public/gradelevels.xml')/gradelevels.xml" /> -->
+<!--   <xsl:variable name="gradelevel" select="document('../data/public/gradelevels.xml')/gradelevels" /> -->
 
     <!-- Transform -->
   <xsl:template match="/gradeLevels">
