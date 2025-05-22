@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="contact.xsl"?>
 <contact>
-  
+  <organization>
+    <name>Full House Learning Center</name>
+    <address>479 Banana St., Napico Manggahan Pasig City</address>
+    <landline>9553498</landline>
+    <mobile>09176382459</mobile>
+    <email>fhlc@gmail.com</email>
+  </organization>
 </contact>

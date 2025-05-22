@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enrollment>
+  <title>Online Enrollment Process for Current Students</title>
+  <steps>
+    <step number="1">
+      <title>Log In to Your Account</title>
+      <description>Log in to your personal guardian account on the school's enrollment portal.</description>
+    </step>
+    <step number="2">
+      <title>Fill Out the Online Enrollment Form</title>
+      <description>Complete the digital enrollment form with your child's updated personal and academic information, then submit it.</description>
+    </step>
+    <step number="3">
+      <title>Pay Enrollment Fee</title>
+      <description>Settle the enrollment fee via the online payment option or pay in person at the school's cashier.</description>
+    </step>
+    <step number="4">
+      <title>Wait for Approval</title>
+      <description>Wait for confirmation of your child's enrollment through your account or registered email address.</description>
+    </step>
+  </steps>
+</enrollment>

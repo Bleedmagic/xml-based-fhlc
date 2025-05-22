@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="requirements.xsl"?>
+<enrollment>
+  <departments>
+    <department type="Preschool">
+      <ageRequirements>
+        <level>Kindergarten 1 – 3 years old</level>
+        <level>Kindergarten 2 – 4 years old</level>
+        <level>Preparatory – 5 years old</level>
+      </ageRequirements>
+      <credentials>
+        <item>Original Form 138 (Report Card)</item>
+        <item>Photocopy of Birth Certificate</item>
+        <item>Photocopy of Baptismal or Dedication Certificate</item>
+      </credentials>
+    </department>
+    <department type="Elementary">
+      <ageRequirements>
+        <level>Grade 1 – 6 years old</level>
+        <level>Grade 2 – 7 years old</level>
+        <level>Grade 3 – 8 years old</level>
+        <level>Grade 4 – 9 years old</level>
+      </ageRequirements>
+      <credentials>
+        <item>Original Form 138 (Report Card)</item>
+        <item>Photocopy of Birth Certificate</item>
+        <item>Photocopy of Baptismal or Dedication Certificate</item>
+        <item>Good Moral Certificate</item>
+        <item>Form 137 (Permanent Record – from previous school)</item>
+        <item>Accomplished Enrollment Form (Download, Print &amp; Submit)</item>
+      </credentials>
+    </department>
+  </departments>
+</enrollment>

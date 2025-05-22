@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="gradelevels.xsl"?>
+<gradeLevels>
+  <section type="Preschool">
+    <image>../../assets/img/nursery.png</image>
+    <levels>
+      <level>Nursery</level>
+      <level>Kindergarten 1 </level>
+      <level>Kindergarten 2 </level>
+    </levels>
+  </section>
+  <section type="Elementary">
+    <image>../../assets/img/elementary.png</image>
+    <levels>
+      <level>Grade 1</level>
+      <level>Grade 2</level>
+      <level>Grade 3</level>
+      <level>Grade 4</level>
+      <level>Grade 5</level>
+      <level>Grade 6</level>
+    </levels>
+  </section>
+</gradeLevels>

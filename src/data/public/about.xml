@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="about.xsl"?>
 <about>
   <header>About Us</header>
   <title> Quality Education and Lifelong Learning Opportunities for Children Since 2001</title>

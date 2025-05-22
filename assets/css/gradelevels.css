@@ -1,0 +1,69 @@
+.grade-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+main {
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  color: #1A906B; 
+  margin-bottom: 1.5rem; 
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 65px;
+}
+
+.grade-card {
+  border: 3px solid #1A906B;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 420px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.grade-card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.grade-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.grade-card h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.back-icon-container {
+  position: absolute;
+  top: -2%;
+  margin-left: -30%;
+}
+
+.back-icon-btn {
+  font-size: 2rem;
+  color: #1A906B;
+  padding: 10px;
+  align-items: left;
+  justify-content: left;
+  transition: 0.3s ease;
+}
+
+.back-icon-btn:hover {
+  color: #1A906B;
+}

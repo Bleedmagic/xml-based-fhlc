@@ -1,0 +1,59 @@
+/* General Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  color: #1A906B;
+  margin-bottom: 30px;
+  margin-top: 80px;
+  font-weight: 600;
+}
+
+/* Shared Box Style */
+.department-box {
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Shared Image Styling */
+.enrollment-image {
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Preschool Specific */
+#Preschool-box {
+  background-color: rgba(250, 236, 140, 0.6);
+  border: 1px solid black;
+  width: 100%;
+  height: auto;
+}
+
+#Preschool-img {
+  max-height: 500px;
+  width: auto;
+}
+
+/* Elementary Specific */
+#Elementary-box {
+  background-color: rgba(250, 236, 140, 0.6);
+  border: 1px solid black;
+  width: 100%;
+}
+
+#Elementary-img {
+  height: 600px;
+  width: auto;
+}
+
+/* Row Layout */
+.row {
+  margin-bottom: 3rem;
+}
+

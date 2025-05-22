@@ -1,41 +1,59 @@
+/* Title styling */
 .contact-title {
-    color: #1A906B; /* dark green to match the image */
-    font-weight: bold;
-  }
-  
-  .contact-box {
-    background-color: #fff3cd; /* light yellow background */
-    border-radius: 12px;
-    border: 1px solid black;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .input-custom {
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    padding: 8px 10px;
-  }
-  
-  .btn-submit {
-    background-color: #02B875;
-    color: white;
-    padding: 6px 18px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-  }
-  
-  .btn-submit:hover {
-    background-color: #02925D;
-    color: white;
-  }
-  
-  .contact-map {
-    width: 100%;
-    height: 200px;
-    border: 0;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  
+  color: #1A906B; /* Dark green to match the brand */
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Contact card box */
+.contact-box {
+  background-color: #fff3cd; /* Light yellow background */
+  border-radius: 12px;
+  border: 1px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 100%;
+  height: 570px;
+  margin-top: 30px;
+}
+
+/* Input field customization */
+.input-custom {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  font-size: 17px;
+  width: 100%;
+}
+
+/* Fix textarea height and prevent resize */
+textarea.input-custom {
+  resize: none;
+  height: 330px; /* Adjust if you want a taller/shorter box */
+}
+
+/* Submit button styling */
+.btn-submit {
+  background-color: #02B875;
+  color: #fff;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #02925D;
+  color: #fff;
+}
+
+/* Embedded Google Map iframe */
+.contact-map {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 8px;
+  margin-top: 15px;
+}
