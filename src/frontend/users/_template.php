@@ -83,24 +83,24 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Academic Management:</h6>
-            <a class="collapse-item" href="#">Faculty</a>
-            <a class="collapse-item" href="#">Students</a>
-            <a class="collapse-item" href="#">Grades and Remarks</a>
-            <a class="collapse-item" href="#">Section</a>
+            <a class="collapse-item" href="./faculty.php">Faculty</a>
+            <a class="collapse-item" href="./students.php">Students</a>
+            <a class="collapse-item" href="./grades-remarks.php">Grades and Remarks</a>
+            <a class="collapse-item" href="./section.php">Section</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Calendar Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="./calendar.php">
           <i class="fas fa-fw fa-calendar"></i>
           <span>Academic Calendar</span></a>
       </li>
 
-      <!-- Nav Item - Calendar Menu -->
+      <!-- Nav Item - Complaints/Requests Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="./complaints-requests.php">
           <i class="fas fa-fw fa-comments"></i>
           <span>Complaints/Requests</span></a>
       </li>
@@ -122,7 +122,7 @@
 
       <!-- Nav Item - Settings -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="./settings.php">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Settings</span></a>
       </li>
@@ -266,7 +266,7 @@
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="./settings.php">
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                   Settings
                 </a>
@@ -397,4 +397,5 @@
     });
   </script>
 </body>
+
 </html>

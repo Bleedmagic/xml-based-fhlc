@@ -53,7 +53,7 @@
 
       <!-- Main -->
       <main role="main">
-        <div class="container contact-container mt-5 mb-5">
+        <div class="container contact-container mt-4 mb-4">
           <h2 class="contact-title text-center mb-4">Contact Us</h2>
           <div class="contact-box p-4">
             <div class="row">
