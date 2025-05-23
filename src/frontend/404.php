@@ -1,16 +1,22 @@
 <?php
 
-//@TODO logout
-
 http_response_code(404);
 
-$xml = new DOMDocument();
-$xml->load('../data/public/404.xml');
+$requestUri = $_SERVER['REQUEST_URI'];
 
-$xsl = new DOMDocument();
-$xsl->load('../xslt/404.xsl');
+if (strpos($requestUri, '/admin/') !== false) {
+  include './admin/404.php';
+} elseif (strpos($requestUri, '/user/') !== false) {
+  include './user/404.php';
+} else {
+  $xml = new DOMDocument();
+  $xml->load('../data/public/404.xml');
 
-$proc = new XSLTProcessor();
-$proc->importStylesheet($xsl);
+  $xsl = new DOMDocument();
+  $xsl->load('../xslt/404.xsl');
 
-echo $proc->transformToXML($xml);
+  $proc = new XSLTProcessor();
+  $proc->importStylesheet($xsl);
+
+  echo $proc->transformToXML($xml);
+}

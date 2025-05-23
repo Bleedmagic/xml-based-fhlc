@@ -160,7 +160,9 @@
         </main>
 
         <!-- Footer -->
-        <xsl:call-template name="footer" />
+        <xsl:call-template name="footer">
+          <xsl:with-param name="currentPage" select="'home'" />
+        </xsl:call-template>
 
         <!-- JS LIB -->
         <script type="text/javascript" src="../../assets/js/lib/jquery.min.js"></script>

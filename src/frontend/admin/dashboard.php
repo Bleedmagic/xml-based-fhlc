@@ -83,10 +83,10 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Academic Management:</h6>
-            <a class="collapse-item" href="#">Faculty</a>
-            <a class="collapse-item" href="#">Students</a>
-            <a class="collapse-item" href="#">Grades and Remarks</a>
-            <a class="collapse-item" href="#">Section</a>
+            <a class="collapse-item" href="faculty.php">Faculty</a>
+            <a class="collapse-item" href="students.php">Students</a>
+            <a class="collapse-item" href="grades-and-remarks.php">Grades and Remarks</a>
+            <a class="collapse-item" href="section.php">Section</a>
           </div>
         </div>
       </li>

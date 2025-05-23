@@ -18,7 +18,7 @@
     </ul>
     <commitment>We're committed to quality and affordability.</commitment>
     <enroll_button_text>ENROLL NOW</enroll_button_text>
-    <enroll_button_link>#</enroll_button_link>
+    <enroll_button_link>admission.php</enroll_button_link>
   </enrollment>
 
   <summer_class>
@@ -26,7 +26,7 @@
     <paragraph>Full House Learning Center Inc. is offering a special Preschool Summer Class.</paragraph>
     <additional_info>A wonderful way for children to stay engaged during the break! Our program provides a safe and caring place where children can grow and learn through fun experiences.</additional_info>
     <inquire_button_text>INQUIRE NOW</inquire_button_text>
-    <inquire_button_link>#</inquire_button_link>
+    <inquire_button_link>contact.php</inquire_button_link>
     <image src="../../assets/img/home2.png" alt="Summer Class" />
   </summer_class>
 </home>

@@ -49,7 +49,7 @@
 
           <xsl:if test="$navbar/menu/button">
             <a href="{ $navbar/menu/button/link }">
-              <button class="btn btn-success my-2 my-sm-0 ml-1 mr-1" type="button">
+              <button class="btn btn-success my-2 my-sm-2 ml-0 mr-1" type="button">
                 <xsl:value-of select="$navbar/menu/button/text" />
               </button>
             </a>
