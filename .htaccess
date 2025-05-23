@@ -1,3 +1,11 @@
+
+# Routing, if I would ever use it. Do see snippets/routing.
+#
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.*)$ index.php [L,QSA]
+
 ErrorDocument 404 /_XAMPP/XML-FHLC/src/frontend/404.php
 ErrorDocument 403 /_XAMPP/XML-FHLC/src/frontend/403.php
 Options -Indexes
