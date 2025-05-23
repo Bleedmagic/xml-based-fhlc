@@ -14,7 +14,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Admin / Dashboard</title>
+  <?php $currentPage = 'dashboard'; ?>
+  <title>Admin / <?= ucwords(str_replace('-', ' ', $currentPage)) ?></title>
 
   <!-- FAVICONS -->
   <link rel="apple-touch-icon" href="../../../assets/img/favicons/apple-touch-icon.png" sizes="180x180" />
@@ -45,96 +46,7 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="./dashboard.php">
-        <div class="sidebar-brand-icon">
-          <img src="../../../assets/img/fhlc-logo.png" alt="fhlc-logo" width="50" height="50">
-        </div>
-        <div class="sidebar-brand-text mx-3">Admin <sup>FHLC</sup></div>
-      </a>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
-
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="./dashboard.php">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Academic Management
-      </div>
-
-      <!-- Nav Item - Academic Management Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-          aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-school"></i>
-          <span>Academic Management</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Academic Management:</h6>
-            <a class="collapse-item" href="faculty.php">Faculty</a>
-            <a class="collapse-item" href="students.php">Students</a>
-            <a class="collapse-item" href="grades-remarks.php">Grades and Remarks</a>
-            <a class="collapse-item" href="section.php">Section</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Nav Item - Calendar Menu -->
-      <li class="nav-item">
-        <a class="nav-link" href="calendar.php">
-          <i class="fas fa-fw fa-calendar"></i>
-          <span>Academic Calendar</span></a>
-      </li>
-
-      <!-- Nav Item - Calendar Menu -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-comments"></i>
-          <span>Complaints/Requests</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        System Tools
-      </div>
-
-      <!-- Nav Item - Export -->
-      <li class="nav-item">
-        <a class="nav-link export-link" href="#">
-          <i class="fas fa-fw fa-file-export"></i>
-          <span>Export</span></a>
-      </li>
-
-      <!-- Nav Item - Settings -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Settings</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
-
-      <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
-    </ul>
+    <?php include __DIR__ . '/partials/sidebar.php'; ?>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -144,7 +56,7 @@
       <div id="content">
 
         <!-- Topbar -->
-        <?php include './partials/topbar.php' ?>
+        <?php include __DIR__ . '/partials/topbar.php'; ?>
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
@@ -423,7 +335,7 @@
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <?php include './partials/footer.php' ?>
+        <?php include __DIR__ . '/partials/footer.php'; ?>
         <!-- End of Footer -->
 
       </div>
