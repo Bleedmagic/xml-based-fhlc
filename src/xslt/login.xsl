@@ -3,174 +3,238 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml">
 
-  <!-- Set Output to XHTML -->
   <xsl:output method="xml"
     doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
     doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
     indent="yes" />
 
-  <!-- Variables to access the database XML files -->
   <xsl:variable name="login" select="document('../data/public/login.xml')/login" />
   <xsl:variable name="users" select="document('../data/private/users.xml')/users" />
 
-  <!-- Transform -->
   <xsl:template match="/">
     <html>
       <head>
-        <!-- META TAGS -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- FAVICONS -->
-        <link rel="apple-touch-icon" href="../../../assets/img/favicons/apple-touch-icon.png"
-          sizes="180x180" />
-        <link rel="icon" href="../../../assets/img/favicons/favicon-32x32.png" sizes="32x32"
-          type="image/png" />
-        <link rel="icon" href="../../../assets/img/favicons/favicon-16x16.png" sizes="16x16"
-          type="image/png"
-        />
-        <link rel="icon" href="../../../assets/img/favicons/favicon.ico" />
-
-        <!-- PAGE TITLE -->
         <title>Login / FHLC</title>
 
-        <!-- CSS LIB -->
         <link rel="stylesheet" href="../../../assets/css/lib/bootstrap.min.css" />
         <link rel="stylesheet" href="../../../assets/css/icons/bootstrap-icons.min.css" />
 
-        <!-- Custom Styles -->
-        <link rel="stylesheet" href="../../../assets/css/custom.css" />
-        <link rel="stylesheet" href="../../../assets/css/floating-labels.css" />
-
         <style>
+          * {
+            box-sizing: border-box;
+          }
+
           body {
-          height: 100vh;
-          margin: 0;
-          display: flex;
-          flex-direction: row;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #ffffff;
           }
 
-          .form-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 50%;
-          padding: 20px;
+          .left-panel, .right-panel {
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
           }
 
-          .image-container {
-          width: 50%;
-          height: 100vh;
-          overflow: hidden;
+          .left-panel {
+            background-color: #fff;
           }
 
-          .image-container img {
-          object-fit: cover;
-          display: block;
+          .logo {
+            width: 150px;
+            height: 150px;
+            margin-top: 20px;
           }
 
-          @media screen and (max-width: 768px) {
-          body {
-          flex-direction: column;
+          h2 {
+            margin-top: 20px;
+            font-weight: bold;
+            margin-bottom: 40px;
           }
-          .form-container, .image-container {
-          width: 100%;
+
+          .form-box {
+            width: 80%;
+            max-width: 400px;
           }
-          .image-container {
-          background-size: contain;
-          display: none;
+
+          .input-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 15px;
           }
+
+          .input-group input[type="text"],
+          .input-group input[type="password"] {
+            width: 100%;
+            padding: 10px 40px 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 16px;
+            height: 45px;
+            box-sizing: border-box;
+            border: 2px solid black;
+          }
+
+          .input-group i {
+            position: absolute;
+            right: 15px;
+            color: #555;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+          }
+
+          .btn-login {
+            background-color: #1A906B;
+            color: #fff;
+            width: 100%;
+            border: none;
+            border-radius: 25px;
+            padding: 10px;
+            font-size: 16px;
+          }
+
+          .btn-register {
+            background-color: #1A906B;;
+            border: 2px solid #1A906B;
+            color: white;
+            width: 100%;
+            border-radius: 25px;
+            padding: 10px;
+            font-size: 16px;
+          }
+
+          .register-text {
+            text-align: center;
+            font-size: 16px;
+            color: black;
+            font-weight: 500;
+            margin-top: 200px;
+          }
+
+
+          .forgot {
+            text-align: right;
+            font-size: 14px;
+            margin-top: -10px;
+            margin-bottom: 20px;
+          }
+
+          .forgot a {
+            color: #1A906B; /* Example: Bootstrap blue */
+            text-decoration: none;
+          }
+
+          .forgot a:hover {
+            color: #166f54
+          }
+
+          .home-icon {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+          }
+
+          .right-panel {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .right-panel .card-box {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 180px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 800px;
+            height: 850px;
+            align-items: center;
+          }
+
+          .right-panel .card-box img {
+            width: 500px;
+            height: auto;
+            border-radius: 0;
+            margin-top: 82px;
           }
         </style>
       </head>
       <body>
-        <div class="form-container">
-          <a href="../home.php" class="home-icon text-primary position-absolute"
-            style="top: 20px; left: 30px;">
-            <i class="bi bi-house-door" style="font-size: 36px;"></i>
-          </a>
+        <!-- Home Button -->
+        <a href="../home.php" class="home-icon">
+          <i class="bi bi-house-door" style="font-size: 32px; color: #1A906B;"></i>
+        </a>
 
-          <form class="form-signin" method="POST" action="login_validate.php">
-            <div class="text-center mb-4">
-              <img class="mb-4">
-                <xsl:attribute name="src">
-                  <xsl:value-of select="$login/page/logo" />
-                </xsl:attribute>
-                <xsl:attribute name="alt">Logo</xsl:attribute>
-                <xsl:attribute name="width">100</xsl:attribute>
-                <xsl:attribute name="height">100</xsl:attribute>
-              </img>
-              <h1 class="h3 mb-3 font-weight-normal">
-                <xsl:value-of select="$login/page/title" />
-              </h1>
-              <p>
-                <xsl:value-of select="$login/page/description" />
-              </p>
+
+        <!-- Left Panel -->
+        <div class="left-panel">
+          <img class="logo">
+            <xsl:attribute name="src"><xsl:value-of select="$login/page/logo" /></xsl:attribute>
+          </img>
+          <h2>Welcome Back!</h2>
+
+          <form method="POST" action="login_validate.php" class="form-box">
+            <div class="input-group">
+              <input type="text" name="username" placeholder="Email" required="required" />
             </div>
 
-            <xsl:if test="$error_message != ''">
-              <div id="login-error" class="alert alert-danger" role="alert">
-                <xsl:value-of select="$error_message" />
-              </div>
-            </xsl:if>
-
-            <div class="form-label-group">
-              <input type="email" id="inputEmail" name="username" class="form-control"
-                placeholder="Email address"
-                required="required" autofocus="autofocus" maxlength="128" autocomplete="on" />
-              <label for="inputEmail">Email address</label>
+            <div class="input-group">
+              <input type="password" name="password" id="inputPassword" placeholder="Password" required="required" />
+              <i class="bi bi-eye-slash" onclick="togglePassword()" id="toggleIcon"></i>
             </div>
 
-            <div class="form-label-group position-relative">
-              <input type="password" id="inputPassword" name="password" class="form-control"
-                placeholder="Password" required="required" maxlength="45" autocomplete="on" />
-              <label for="inputPassword">Password</label>
-              <i class="bi bi-eye-slash toggle-password"
-                style="position:absolute; top:50%; right:15px; transform:translateY(-50%); cursor:pointer;"
-                onclick="togglePasswordVisibility()"></i>
+            <div class="forgot">
+              <a href="#">Forgot Password?</a>
             </div>
 
-            <div class="form-check my-3">
-              <input class="form-check-input" type="checkbox" id="termsCheckbox" name="terms"
-                required="required" />
-              <label class="form-check-label" for="termsCheckbox">
-                <xsl:copy-of select="$login/page/checkbox/node()" disable-output-escaping="yes" />
-              </label>
-            </div>
+            <button type="submit" class="btn-login">Login</button>
+            <p class="register-text">Don’t have an account? Register now!</p>
+            <button type="button" onclick="window.location.href='register.php'" class="btn-register">Register</button>
 
-            <button class="btn btn-lg btn-primary btn-block" type="submit" id="login-btn">Sign in</button>
-            <p class="mt-5 mb-3 text-muted text-center">&#169; <xsl:value-of
-                select="$login/page/copyright" /></p>
           </form>
         </div>
 
-        <div class="image-container">
-          <img src="../../../assets/img/default.png" alt="Decorative image"
-            class="img-fluid w-100 h-100"
-            style="object-fit: cover;" />
+        <!-- Right Panel -->
+        <div class="right-panel">
+          <div class="card-box">
+            <p style="font-size: 24px; font-weight: bold;">
+              Sign in and stay connected to your Full House experience.
+            </p>
+            <img src="../../../assets/img/login.png" alt="Illustration" />
+          </div>
         </div>
 
-        <!-- JS LIB -->
-        <script type="text/javascript" src="../../../assets/js/lib/jquery.min.js"></script>
-        <script type="text/javascript" src="../../../assets/js/lib/bootstrap.min.js"></script>
-
-        <!-- Custom -->
-        <script src="../../../assets/js/password-toggle.js"></script>
-
+        <!-- JS -->
         <script>
-          document.addEventListener('DOMContentLoaded', function () {
-          const errorBox = document.getElementById('login-error');
-          const inputEmail = document.getElementById('inputEmail');
-          const inputPassword = document.getElementById('inputPassword');
-
-          function hideError() {
-          if (errorBox) errorBox.style.display = 'none';
+          function togglePassword() {
+            const pw = document.getElementById("inputPassword");
+            const icon = document.getElementById("toggleIcon");
+            if (pw.type === "password") {
+              pw.type = "text";
+              icon.classList.remove("bi-eye-slash");
+              icon.classList.add("bi-eye");
+            } else {
+              pw.type = "password";
+              icon.classList.remove("bi-eye");
+              icon.classList.add("bi-eye-slash");
+            }
           }
-
-          if (inputEmail) inputEmail.addEventListener('input', hideError);
-          if (inputPassword) inputPassword.addEventListener('input', hideError);
-          });
         </script>
       </body>
     </html>
