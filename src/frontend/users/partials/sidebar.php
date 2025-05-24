@@ -42,7 +42,6 @@
         <a class="collapse-item <?= ($currentPage === 'faculty') ? 'active' : '' ?>" href="grades.php">Grades</a>
         <a class="collapse-item <?= ($currentPage === 'students') ? 'active' : '' ?>" href="assignments.php">Assignments</a>
         <a class="collapse-item <?= ($currentPage === 'grades') ? 'active' : '' ?>" href="payment-enrollment.php">Payment/Enrollment</a>
-        <a class="collapse-item <?= ($currentPage === 'section') ? 'active' : '' ?>" href="section.php">Section</a>
       </div>
     </div>
   </li>
