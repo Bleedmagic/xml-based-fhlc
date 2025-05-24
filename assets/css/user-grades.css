@@ -1,0 +1,74 @@
+.grades-container {
+  padding: 2rem;
+}
+
+.section-title {
+  font-weight: 800;
+  color: #1A906B;
+  margin-bottom: 1rem;
+
+}
+
+.grades-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  height: 650px;
+}
+
+.grades-card-header {
+  background-color: #1A906B;
+  color: white;
+  font-weight: bold;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grades-card-header i {
+  margin-right: 10px;
+}
+
+.quarter-dropdown {
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+}
+
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.grades-table th, .grades-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.grades-table th {
+  background-color: #ffffff;
+  color: #333;
+  border-bottom: 2px solid #ccc;
+}
+
+.grades-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status.passed {
+  color: green;
+}
+
+.status.failed {
+  color: red;
+}

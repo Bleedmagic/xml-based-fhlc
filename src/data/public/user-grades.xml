@@ -1,0 +1,26 @@
+<grades>
+  <subject name="Mathematics" teacher="Mr. Cruz">
+    <q1>88.17</q1>
+    <q2>90.00</q2>
+    <q3>85.75</q3>
+    <q4>86.20</q4>
+  </subject>
+  <subject name="Science" teacher="Ms. Santos">
+    <q1>74.89</q1>
+    <q2>76.00</q2>
+    <q3>70.00</q3>
+    <q4>78.50</q4>
+  </subject>
+  <subject name="English" teacher="Mr. Chavez">
+    <q1>85.79</q1>
+    <q2>86.25</q2>
+    <q3>84.30</q3>
+    <q4>85.10</q4>
+  </subject>
+  <subject name="MAPEH" teacher="Mr. Chavez">
+    <q1>85.79</q1>
+    <q2>86.25</q2>
+    <q3>84.30</q3>
+    <q4>71.10</q4>
+  </subject>
+</grades>

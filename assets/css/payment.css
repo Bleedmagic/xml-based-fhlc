@@ -1,0 +1,102 @@
+/* Existing styles remain unchanged */
+.payment-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1A906B;
+  margin-bottom: 35px;
+  margin-left: 350px;
+  margin-top: 40px;
+}
+
+.payment-form {
+  background-color: #fff;
+  padding: 25px;
+  max-width: 950px;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+
+.form-group-row label {
+  font-weight: 600;
+  margin-top: 15px;
+  display: block;
+  color: #333;
+  padding-left: 2px;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  background-color: #fff;
+  width: 100%;
+  font-size: 1rem;
+  height: 44px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* Select Dropdown Styling */
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='70,100 100,40 40,40' fill='%23333'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 36px;
+}
+
+select.form-control option[disabled] {
+  color: #888;
+}
+
+.form-control:focus {
+  border-color: #1A906B;
+  outline: none;
+  background-color: #f9f9f9;
+}
+
+/* File Input Styling */
+input[type="file"].form-control {
+  height: auto; /* Let it grow based on file name text */
+  padding: 7px;
+  font-size: 0.95rem;
+}
+
+/* Button Styling */
+.proceed-btn {
+  background-color: #FFC107;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 1px solid #d39e00;
+  transition: 0.3s ease;
+}
+
+.proceed-btn:hover {
+  background-color: #e0a800;
+  color: #fff;
+}
+
+/* Back Button Styling */
+.back-link {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #1A906B;
+  margin-top: 50px;
+  margin-left: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.back-link i {
+  margin-right: 6px;
+}
+
+.back-link:hover {
+  color: #157a59;
+  text-decoration: underline;
+}
