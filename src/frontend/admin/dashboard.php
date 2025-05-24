@@ -1,5 +1,4 @@
 <?php
-
 // Sections Card
 $sectionsXmlPath = __DIR__ . '/../../data/private/sections.xml';
 $totalSections = 0;
@@ -53,6 +52,17 @@ $pendingPercentage = $totalSubmissions > 0
   ? round(($pendingComplaintsRequests / $totalSubmissions) * 100, 2)
   : 0;
 
+// Passed/Failed
+$gradesXmlPath = '../../data/private/grades-remarks.xml';
+$xml = file_exists($gradesXmlPath) ? simplexml_load_file($gradesXmlPath) : null;
+$passed = $failed = 0;
+if ($xml) {
+  foreach ($xml->student as $student) {
+    if ((string)$student->remarks === "Passed") $passed++;
+    else $failed++;
+  }
+}
+$remarksData = json_encode([$failed, $passed]);
 ?>
 
 <!DOCTYPE html>
@@ -64,8 +74,8 @@ $pendingPercentage = $totalSubmissions > 0
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Web-Based Guardian and Teacher Portal with Learning Progress and Communication Tools">
+  <meta name="author" content="Bleedmagic, nicoleelliena7, chvzdaniel">
 
   <?php $currentPage = 'dashboard'; ?>
   <title>Admin / <?= ucwords(str_replace('-', ' ', $currentPage)) ?></title>
@@ -89,8 +99,6 @@ $pendingPercentage = $totalSubmissions > 0
   <!-- CUSTOM STYLES -->
   <link rel="stylesheet" href="../../../assets/css/dashboard.css">
   <!-- ------------- -->
-
-  <!-- <link rel="stylesheet" href="../../../assets/css/lib/calendar.js.css"> -->
 </head>
 
 <body id="page-top">
@@ -245,10 +253,10 @@ $pendingPercentage = $totalSubmissions > 0
                   </div>
                   <div class="mt-4 text-center small">
                     <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Submitted
+                      <i class="fas fa-circle text-success"></i> Passed
                     </span>
                     <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> Not Submitted
+                      <i class="fas fa-circle text-primary"></i> Failed
                     </span>
                   </div>
                 </div>
@@ -264,7 +272,7 @@ $pendingPercentage = $totalSubmissions > 0
                 <div class="card-body">
                   <div class="pt-0 pb-1">
                     <?php
-                    $xmlPath = __DIR__ . '/../../data/private/complaints-requests.xml';
+                    $xmlPath = $requestsXmlPath;
                     $xml = simplexml_load_file($xmlPath) or die("Error: Cannot load XML.");
 
                     $pending = [];
@@ -284,7 +292,7 @@ $pendingPercentage = $totalSubmissions > 0
                       echo "<p class='text-muted'>No pending submissions.</p>";
                     } else {
                       for ($i = 0; $i < $maxDisplay; $i++) {
-                        echo "<p class='mb-1 text-truncate'>• " . htmlspecialchars($pending[$i]->subject) . "</p>";
+                        echo "<p class='mb-1 text-truncate' title='" . htmlspecialchars($pending[$i]->subject) . "'>• " . htmlspecialchars($pending[$i]->subject) . "</p>";
                       }
                     }
                     ?>
@@ -328,16 +336,12 @@ $pendingPercentage = $totalSubmissions > 0
     <script src="../../../assets/js/dashboard.js"></script>
     <!-- -------------- -->
 
-    <!-- SIEVE JS -->
-    <!-- @TODO: Search feature -->
-    <script src="../../../assets/js/lib/jquery.sieve.js"></script>
-
     <!-- Chart JS -->
+    <script>
+      const gradesRemarksData = <?php echo $remarksData; ?>;
+    </script>
     <script src="../../../assets/js/lib/chart.min.js"></script>
-    <script src="../../../assets/js/chart-pie-grades.js"></script>
-
-    <!-- Calendar JS -->
-    <!-- <script src="../../../assets/js/lib/calendar.js"></script> -->
+    <script src="../../../assets/js/chart-pie-remarks.js"></script>
 
     <!-- SWEETALERT2 JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

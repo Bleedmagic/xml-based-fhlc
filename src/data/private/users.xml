@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
   <user>
-    <username>admin@gmail.com</username>
+    <username>AdminIsMe</username>
+    <email>admin@gmail.com</email>
     <password>$2y$12$R.IhtrgbcyXFPJ8y2CRlsekqelVeh/qqyMX/XUuOqR.kthqS6GQ86</password>
     <!-- admin@123 -->
     <role>admin</role>
   </user>
   <user>
-    <username>guardian@gmail.com</username>
+    <username>GuardianIsMe</username>
+    <email>guardian@gmail.com</email>
     <password>$2y$12$hZrOhFQ5YxCYmDkAddqcHuK/bFpVwhfLyfFGDYD08KifnHF4T/pLq</password>
     <!-- guardian@123 -->
     <role>guardian</role>
