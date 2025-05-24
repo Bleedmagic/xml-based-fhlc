@@ -1,6 +1,6 @@
 <?php
 // LOAD XML AND PARSE GRADES
-$xml = simplexml_load_file(__DIR__ . '/../../data/public/user-grades.xml');
+$xml = simplexml_load_file(__DIR__ . '/../../data/private/user-grades.xml');
 $grades = [];
 
 foreach ($xml->subject as $subject) {
