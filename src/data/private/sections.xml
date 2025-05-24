@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections>
+  <section>
+    <name>Maple</name>
+    <grade_level>Grade 1</grade_level>
+    <adviser>Mr. Albert Ramos</adviser>
+    <number_of_students>30</number_of_students>
+    <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
+  </section>
+  <section>
+    <name>Oak</name>
+    <grade_level>Grade 2</grade_level>
+    <adviser>Ms. Theresa Lim</adviser>
+    <number_of_students>28</number_of_students>
+    <schedule>Monday to Friday, 8:00 AM - 12:30 PM</schedule>
+  </section>
+  <section>
+    <name>Birch</name>
+    <grade_level>Grade 3</grade_level>
+    <adviser>Mr. Daniel Cruz</adviser>
+    <number_of_students>32</number_of_students>
+    <schedule>Monday to Friday, 1:00 PM - 5:30 PM</schedule>
+  </section>
+  <section>
+    <name>Pine</name>
+    <grade_level>Grade 4</grade_level>
+    <adviser>Ms. Cynthia Morales</adviser>
+    <number_of_students>29</number_of_students>
+    <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
+  </section>
+  <section>
+    <name>Cedar</name>
+    <grade_level>Grade 5</grade_level>
+    <adviser>Mr. Edwin Tan</adviser>
+    <number_of_students>27</number_of_students>
+    <schedule>Monday to Friday, 8:00 AM - 12:30 PM</schedule>
+  </section>
+</sections>

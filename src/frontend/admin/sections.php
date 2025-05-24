@@ -1,6 +1,6 @@
 <?php
 
-$xmlPath = __DIR__ . '/../../data/private/grades-remarks.xml';
+$xmlPath = __DIR__ . '/../../data/private/sections.xml';
 
 if (file_exists($xmlPath)) {
   $xml = simplexml_load_file($xmlPath);
@@ -24,7 +24,7 @@ if (file_exists($xmlPath)) {
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <?php $currentPage = 'grades-remarks'; ?>
+  <?php $currentPage = 'sections'; ?>
   <title>Admin / <?= ucwords(str_replace('-', ' ', $currentPage)) ?></title>
 
   <!-- FAVICONS -->
@@ -72,50 +72,54 @@ if (file_exists($xmlPath)) {
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Grade Remarks</h1>
-          <p class="mb-4">Review and manage general averages and remarks of students by grade level.</p>
+          <h1 class="h3 mb-2 text-gray-800">Sections</h1>
+          <p class="mb-4">View and manage class sections, including their advisers, grade levels, and schedules.</p>
 
           <!-- Data Table -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-info">List of Student Grade Remarks</h6>
+              <h6 class="m-0 font-weight-bold text-info">List of Sections</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
+                  <thead class="thead-light">
                     <tr>
-                      <th>ID</th>
-                      <th>Name</th>
+                      <th>#</th>
+                      <th>Section Name</th>
                       <th>Grade Level</th>
-                      <th>General Average</th>
-                      <th>Remarks</th>
+                      <th>Adviser</th>
+                      <th>Number of Students</th>
+                      <th>Schedule</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
-                  <tfoot>
+                  <tfoot class="thead-light">
                     <tr>
-                      <th>ID</th>
-                      <th>Name</th>
+                      <th>#</th>
+                      <th>Section Name</th>
                       <th>Grade Level</th>
-                      <th>General Average</th>
-                      <th>Remarks</th>
+                      <th>Adviser</th>
+                      <th>Number of Students</th>
+                      <th>Schedule</th>
                       <th>Actions</th>
                     </tr>
                   </tfoot>
                   <tbody>
-                    <?php foreach ($xml->student as $student): ?>
+                    <?php $index = 1; ?>
+                    <?php foreach ($xml->section as $section): ?>
                       <tr>
-                        <td><?= htmlspecialchars($student->id) ?></td>
-                        <td><?= htmlspecialchars($student->name) ?></td>
-                        <td><?= htmlspecialchars($student->grade_level) ?></td>
-                        <td><?= htmlspecialchars($student->general_average) ?></td>
-                        <td><?= htmlspecialchars($student->remarks) ?></td>
+                        <td><?= $index++ ?></td>
+                        <td><?= htmlspecialchars($section->name) ?></td>
+                        <td><?= htmlspecialchars($section->grade_level) ?></td>
+                        <td><?= htmlspecialchars($section->adviser) ?></td>
+                        <td><?= htmlspecialchars($section->number_of_students) ?></td>
+                        <td><?= htmlspecialchars($section->schedule) ?></td>
                         <td class="text-center">
-                          <a href="scripts/edit.php?id=<?= htmlspecialchars($student->id) ?>" class="btn btn-warning btn-sm d-flex justify-content-center align-items-center">
+                          <a href="scripts/edit.php?id=<?= htmlspecialchars($section->id) ?>" class="btn btn-warning btn-sm d-flex justify-content-center align-items-center">
                             <i class="fas fa-edit"></i>
                           </a>
-                          <a href="scripts/delete.php?id=<?= htmlspecialchars($student->id) ?>" class="btn btn-danger btn-sm d-flex justify-content-center align-items-center">
+                          <a href="scripts/delete.php?id=<?= htmlspecialchars($section->id) ?>" class="btn btn-danger btn-sm d-flex justify-content-center align-items-center">
                             <i class="fas fa-archive"></i>
                           </a>
                         </td>
@@ -125,10 +129,11 @@ if (file_exists($xmlPath)) {
                 </table>
               </div>
             </div>
-            <div class="mt-2 mb-4 text-center small">
+            <div class="mt-2 mb-4 text-center small text-muted">
               <span>Table loaded via DataTables</span>
             </div>
           </div>
+
 
         </div>
         <!-- /.container-fluid -->
