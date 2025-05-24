@@ -94,6 +94,7 @@ $remarksData = json_encode([$failed, $passed]);
 
   <!-- CORE SCRIPTS -->
   <link href="../../../assets/css/lib/startbootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/lib/calendar.js.css">
 
   <!-- ------------- -->
   <!-- CUSTOM STYLES -->
@@ -229,13 +230,13 @@ $remarksData = json_encode([$failed, $passed]);
               <div class="card shadow mb-4">
                 <!-- Card Header -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-success">Under Construction</h6>
+                  <h6 class="m-0 font-weight-bold text-success">Events Schedule</h6>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                  <span>erm</span>
+                  <div id="calendarWidget"></div>
                   <div class="mt-4 text-center small">
-                    <span>Under Construction</span>
+                    <span>Calendar loaded via calendar-js</span>
                   </div>
                 </div>
               </div>
@@ -335,6 +336,16 @@ $remarksData = json_encode([$failed, $passed]);
     <!-- Custom Scripts -->
     <script src="../../../assets/js/dashboard.js"></script>
     <!-- -------------- -->
+
+    <!-- Calendar JS -->
+    <script src="../../../assets/js/lib/calendar.js"></script>
+    <script>
+      var calendarInstance1 = new calendarJs("calendarWidget", {
+        isWidget: true,
+        exportEventsEnabled: true,
+        useAmPmForTimeDisplays: true
+      });
+    </script>
 
     <!-- Chart JS -->
     <script>
