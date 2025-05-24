@@ -2,252 +2,227 @@
 <submissions>
   <submission>
     <id>1</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Maria Santos</submitted_by>
     <submitted_date>2025-05-01</submitted_date>
-    <student_id>1001</student_id>
     <subject>Homework Difficulty</subject>
     <message>The homework is too challenging for my child.</message>
-    <status>open</status>
+    <status>Closed</status>
   </submission>
   <submission>
     <id>2</id>
-    <type>request</type>
-    <submitted_by>teacher</submitted_by>
+    <type>Request</type>
+    <submitted_by>Gino Ramos</submitted_by>
     <submitted_date>2025-05-02</submitted_date>
-    <student_id>1002</student_id>
     <subject>Extra Reading Materials</subject>
     <message>Requesting additional resources for advanced learners.</message>
-    <status>pending</status>
+    <status>Pending</status>
   </submission>
   <submission>
     <id>3</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Ligaya Cruz</submitted_by>
     <submitted_date>2025-05-03</submitted_date>
-    <student_id>1003</student_id>
     <subject>Late Grade Updates</subject>
     <message>Grades are not updated frequently enough.</message>
-    <status>open</status>
+    <status>Open</status>
   </submission>
   <submission>
     <id>4</id>
-    <type>request</type>
-    <submitted_by>teacher</submitted_by>
+    <type>Request</type>
+    <submitted_by>Aling Rosario</submitted_by>
     <submitted_date>2025-05-04</submitted_date>
-    <student_id>1004</student_id>
     <subject>Classroom Supplies</subject>
     <message>Requesting more supplies for science experiments.</message>
-    <status>pending</status>
+    <status>Closed</status>
   </submission>
   <submission>
     <id>5</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Jaime Dela Cruz</submitted_by>
     <submitted_date>2025-05-05</submitted_date>
-    <student_id>1005</student_id>
     <subject>Communication Issues</subject>
     <message>Difficulty reaching teachers for updates.</message>
-    <status>open</status>
+    <status>Open</status>
   </submission>
   <submission>
     <id>6</id>
-    <type>request</type>
-    <submitted_by>teacher</submitted_by>
+    <type>Request</type>
+    <submitted_by>Ana Dizon</submitted_by>
     <submitted_date>2025-05-06</submitted_date>
-    <student_id>1006</student_id>
     <subject>Field Trip Approval</subject>
     <message>Requesting approval for an educational field trip.</message>
-    <status>pending</status>
+    <status>Pending</status>
   </submission>
   <submission>
     <id>7</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Domingo Navarro</submitted_by>
     <submitted_date>2025-05-07</submitted_date>
-    <student_id>1007</student_id>
     <subject>Bullying Incident</subject>
     <message>Concern about bullying in the classroom.</message>
-    <status>open</status>
+    <status>Closed</status>
   </submission>
   <submission>
     <id>8</id>
-    <type>request</type>
-    <submitted_by>teacher</submitted_by>
+    <type>Request</type>
+    <submitted_by>Tony Manalansan</submitted_by>
     <submitted_date>2025-05-08</submitted_date>
-    <student_id>1008</student_id>
     <subject>Additional Tutoring</subject>
     <message>Requesting tutoring support for struggling students.</message>
-    <status>pending</status>
+    <status>Pending</status>
   </submission>
   <submission>
     <id>9</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Rosalinda Villanueva</submitted_by>
     <submitted_date>2025-05-09</submitted_date>
-    <student_id>1009</student_id>
     <subject>Grade Discrepancy</subject>
     <message>Discrepancy noticed in recent test grades.</message>
-    <status>open</status>
+    <status>Closed</status>
   </submission>
   <submission>
     <id>10</id>
-    <type>request</type>
-    <submitted_by>teacher</submitted_by>
+    <type>Request</type>
+    <submitted_by>Carmela Bautista</submitted_by>
     <submitted_date>2025-05-10</submitted_date>
-    <student_id>1010</student_id>
     <subject>Parent-Teacher Meeting</subject>
     <message>Request to schedule additional meetings for progress discussion.</message>
-    <status>pending</status>
+    <status>Pending</status>
   </submission>
   <submission>
     <id>11</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Fernando Aguilar</submitted_by>
     <submitted_date>2025-05-11</submitted_date>
-    <student_id>1011</student_id>
     <subject>School Bus Delay</subject>
     <message>Frequent delays in the school bus schedule.</message>
-    <status>open</status>
+    <status>Closed</status>
   </submission>
   <submission>
     <id>12</id>
-    <type>request</type>
-    <submitted_by>teacher</submitted_by>
+    <type>Request</type>
+    <submitted_by>Eduardo Tan</submitted_by>
     <submitted_date>2025-05-12</submitted_date>
-    <student_id>1012</student_id>
     <subject>Technology Upgrade</subject>
     <message>Requesting updated computers for the classroom.</message>
-    <status>pending</status>
+    <status>Pending</status>
   </submission>
   <submission>
     <id>13</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Veronica Reyes</submitted_by>
     <submitted_date>2025-05-13</submitted_date>
-    <student_id>1013</student_id>
     <subject>Unclear Instructions</subject>
     <message>Homework instructions are unclear and confusing.</message>
-    <status>open</status>
+    <status>Open</status>
   </submission>
   <submission>
     <id>14</id>
-    <type>request</type>
-    <submitted_by>teacher</submitted_by>
+    <type>Request</type>
+    <submitted_by>Isabel De Leon</submitted_by>
     <submitted_date>2025-05-14</submitted_date>
-    <student_id>1014</student_id>
     <subject>Extra-curricular Funding</subject>
     <message>Request for additional funding for extra-curricular activities.</message>
-    <status>pending</status>
+    <status>Pending</status>
   </submission>
   <submission>
     <id>15</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Ramon Castillo</submitted_by>
     <submitted_date>2025-05-15</submitted_date>
-    <student_id>1015</student_id>
     <subject>Noise in Classroom</subject>
     <message>Classroom noise level affects learning environment.</message>
-    <status>open</status>
+    <status>Closed</status>
   </submission>
   <submission>
     <id>16</id>
-    <type>request</type>
-    <submitted_by>teacher</submitted_by>
+    <type>Request</type>
+    <submitted_by>Minerva Lopez</submitted_by>
     <submitted_date>2025-05-16</submitted_date>
-    <student_id>1016</student_id>
     <subject>Library Books</subject>
     <message>Request to purchase new books for the library.</message>
-    <status>pending</status>
+    <status>Pending</status>
   </submission>
   <submission>
     <id>17</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Estrella Mendoza</submitted_by>
     <submitted_date>2025-05-17</submitted_date>
-    <student_id>1017</student_id>
     <subject>Inconsistent Attendance Records</subject>
     <message>Attendance records seem inconsistent with actual attendance.</message>
-    <status>open</status>
+    <status>Open</status>
   </submission>
   <submission>
     <id>18</id>
-    <type>request</type>
-    <submitted_by>teacher</submitted_by>
+    <type>Request</type>
+    <submitted_by>Enrico Salazar</submitted_by>
     <submitted_date>2025-05-18</submitted_date>
-    <student_id>1018</student_id>
     <subject>Professional Development</subject>
     <message>Request for training workshops for teachers.</message>
-    <status>pending</status>
+    <status>Pending</status>
   </submission>
   <submission>
     <id>19</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Dolores Garcia</submitted_by>
     <submitted_date>2025-05-19</submitted_date>
-    <student_id>1019</student_id>
     <subject>Lunch Quality</subject>
     <message>Concerns about the quality of school lunches.</message>
-    <status>open</status>
+    <status>Closed</status>
   </submission>
   <submission>
     <id>20</id>
-    <type>request</type>
-    <submitted_by>teacher</submitted_by>
+    <type>Request</type>
+    <submitted_by>Leticia Flores</submitted_by>
     <submitted_date>2025-05-20</submitted_date>
-    <student_id>1020</student_id>
     <subject>Sports Equipment</subject>
     <message>Request to update sports equipment for physical education.</message>
-    <status>pending</status>
+    <status>Pending</status>
   </submission>
   <submission>
     <id>21</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Andres Pascual</submitted_by>
     <submitted_date>2025-05-21</submitted_date>
-    <student_id>1021</student_id>
     <subject>Website Downtime</subject>
     <message>Portal is frequently inaccessible.</message>
-    <status>open</status>
+    <status>Open</status>
   </submission>
   <submission>
     <id>22</id>
-    <type>request</type>
-    <submitted_by>teacher</submitted_by>
+    <type>Request</type>
+    <submitted_by>Benito Francisco</submitted_by>
     <submitted_date>2025-05-22</submitted_date>
-    <student_id>1022</student_id>
     <subject>Classroom Assistants</subject>
     <message>Requesting additional teaching assistants.</message>
-    <status>pending</status>
+    <status>Pending</status>
   </submission>
   <submission>
     <id>23</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Luningning Javier</submitted_by>
     <submitted_date>2025-05-23</submitted_date>
-    <student_id>1023</student_id>
     <subject>Transportation Safety</subject>
     <message>Concerns about bus safety standards.</message>
-    <status>open</status>
+    <status>Closed</status>
   </submission>
   <submission>
     <id>24</id>
-    <type>request</type>
-    <submitted_by>teacher</submitted_by>
+    <type>Request</type>
+    <submitted_by>Lourdes Perez</submitted_by>
     <submitted_date>2025-05-24</submitted_date>
-    <student_id>1024</student_id>
     <subject>Classroom Renovation</subject>
     <message>Request for classroom repainting and repairs.</message>
-    <status>pending</status>
+    <status>Pending</status>
   </submission>
   <submission>
     <id>25</id>
-    <type>complaint</type>
-    <submitted_by>guardian</submitted_by>
+    <type>Complaint</type>
+    <submitted_by>Cristina Aquino</submitted_by>
     <submitted_date>2025-05-25</submitted_date>
-    <student_id>1025</student_id>
     <subject>Insufficient Feedback</subject>
     <message>Not receiving enough feedback on child's progress.</message>
-    <status>open</status>
+    <status>Open</status>
   </submission>
 </submissions>

@@ -1,15 +1,5 @@
 <?php
 
-$xmlPath = __DIR__ . '/../../data/private/faculty.xml';
-
-if (file_exists($xmlPath)) {
-  $xml = simplexml_load_file($xmlPath);
-  if ($xml === false) {
-    die('Failed to parse XML file.');
-  }
-} else {
-  die('XML file not found at path: ' . $xmlPath);
-}
 
 ?>
 
@@ -24,7 +14,7 @@ if (file_exists($xmlPath)) {
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <?php $currentPage = 'faculty'; ?>
+  <?php $currentPage = 'useful-links'; ?>
   <title>Admin / <?= ucwords(str_replace('-', ' ', $currentPage)) ?></title>
 
   <!-- FAVICONS -->
@@ -41,12 +31,13 @@ if (file_exists($xmlPath)) {
 
   <!-- CORE SCRIPTS -->
   <link href="../../../assets/css/lib/startbootstrap.min.css" rel="stylesheet">
-  <link href="../../../assets/css/lib/dataTables.bootstrap4.min.css" rel="stylesheet">
 
   <!-- ------------- -->
   <!-- CUSTOM STYLES -->
   <link rel="stylesheet" href="../../../assets/css/dashboard.css">
   <!-- ------------- -->
+
+  <!-- <link rel="stylesheet" href="../../../assets/css/lib/calendar.js.css"> -->
 </head>
 
 <body id="page-top">
@@ -72,63 +63,7 @@ if (file_exists($xmlPath)) {
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Faculty</h1>
-          <p class="mb-4">Review and manage information about faculty members, including their subjects, grade levels, and employment type.</p>
-
-          <!-- Data Table -->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-info">List of Faculty Members</h6>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Subjects Handled</th>
-                      <th>Grade Levels</th>
-                      <th>Type</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Subjects Handled</th>
-                      <th>Grade Levels</th>
-                      <th>Type</th>
-                      <th>Actions</th>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                    <?php foreach ($xml->teachers->teacher as $teacher): ?>
-                      <tr>
-                        <td><?= htmlspecialchars($teacher->id) ?></td>
-                        <td><?= htmlspecialchars($teacher->name) ?></td>
-                        <td><?= htmlspecialchars($teacher->subject_handled) ?></td>
-                        <td><?= htmlspecialchars($teacher->grade_levels) ?></td>
-                        <td><?= htmlspecialchars($teacher->type) ?></td>
-                        <td class="text-center">
-                          <a href="scripts/edit.php?id=<?= htmlspecialchars($teacher->id) ?>" class="btn btn-warning btn-sm d-flex justify-content-center align-items-center">
-                            <i class="fas fa-edit"></i>
-                          </a>
-                          <a href="scripts/delete.php?id=<?= htmlspecialchars($teacher->id) ?>" class="btn btn-danger btn-sm d-flex justify-content-center align-items-center">
-                            <i class="fas fa-archive"></i>
-                          </a>
-                        </td>
-                      </tr>
-                    <?php endforeach; ?>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="mt-2 mb-4 text-center small">
-              <span>Table loaded via DataTables</span>
-            </div>
-          </div>
+          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
 
         </div>
         <!-- /.container-fluid -->
@@ -170,24 +105,6 @@ if (file_exists($xmlPath)) {
 
   <!-- Calendar JS -->
   <!-- <script src="../../../assets/js/lib/calendar.js"></script> -->
-
-  <!-- DataTables JS -->
-  <script src="../../../assets/js/lib/jquery.dataTables.min.js"></script>
-  <script src="../../../assets/js/lib/dataTables.bootstrap4.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      var table = $('#dataTable').DataTable();
-
-      var addButton = $('<button>')
-        .text('Add New')
-        .addClass('btn btn-primary btn-sm ml-2')
-        .on('click', function() {
-          window.location.href = './scripts/add.php';
-        });
-
-      $('#dataTable_filter').append(addButton);
-    });
-  </script>
 
   <!-- SweetAlert2 JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

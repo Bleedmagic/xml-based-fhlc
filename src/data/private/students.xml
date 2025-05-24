@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+  <student>
+    <id>485563-001</id>
+    <name>Juan Dela Cruz</name>
+    <guardian_name>Maria Dela Cruz</guardian_name>
+    <guardian_contact>09171234567</guardian_contact>
+    <grade>Grade 1</grade>
+    <section>Rizal</section>
+    <status>Active</status>
+  </student>
+  <student>
+    <id>485563-002</id>
+    <name>Anna Santos</name>
+    <guardian_name>Carlos Santos</guardian_name>
+    <guardian_contact>09281234567</guardian_contact>
+    <grade>Grade 2</grade>
+    <section>Luna</section>
+    <status>Inactive</status>
+  </student>
+  <student>
+    <id>485563-003</id>
+    <name>Mark Reyes</name>
+    <guardian_name>Lorna Reyes</guardian_name>
+    <guardian_contact>09391234567</guardian_contact>
+    <grade>Grade 3</grade>
+    <section>Mabini</section>
+    <status>Active</status>
+  </student>
+  <student>
+    <id>485563-004</id>
+    <name>Isabel Garcia</name>
+    <guardian_name>Roberto Garcia</guardian_name>
+    <guardian_contact>09451234567</guardian_contact>
+    <grade>Grade 4</grade>
+    <section>Bonifacio</section>
+    <status>Inactive</status>
+  </student>
+  <student>
+    <id>485563-005</id>
+    <name>Leo Mendoza</name>
+    <guardian_name>Jenny Mendoza</guardian_name>
+    <guardian_contact>09561234567</guardian_contact>
+    <grade>Grade 5</grade>
+    <section>Del Pilar</section>
+    <status>Active</status>
+  </student>
+  <student>
+    <id>485563-006</id>
+    <name>Trisha Cruz</name>
+    <guardian_name>Benjamin Cruz</guardian_name>
+    <guardian_contact>09173456789</guardian_contact>
+    <grade>Grade 6</grade>
+    <section>Lapu-Lapu</section>
+    <status>Inactive</status>
+  </student>
+  <student>
+    <id>485563-007</id>
+    <name>Enzo Lim</name>
+    <guardian_name>Angela Lim</guardian_name>
+    <guardian_contact>09273456789</guardian_contact>
+    <grade>Grade 1</grade>
+    <section>Rizal</section>
+    <status>Active</status>
+  </student>
+  <student>
+    <id>485563-008</id>
+    <name>Sofia Torres</name>
+    <guardian_name>Mario Torres</guardian_name>
+    <guardian_contact>09383456789</guardian_contact>
+    <grade>Grade 2</grade>
+    <section>Luna</section>
+    <status>Inactive</status>
+  </student>
+  <student>
+    <id>485563-009</id>
+    <name>Paolo Ramos</name>
+    <guardian_name>Nina Ramos</guardian_name>
+    <guardian_contact>09493456789</guardian_contact>
+    <grade>Grade 3</grade>
+    <section>Mabini</section>
+    <status>Active</status>
+  </student>
+  <student>
+    <id>485563-010</id>
+    <name>Kathleen Ong</name>
+    <guardian_name>Ricky Ong</guardian_name>
+    <guardian_contact>09503456789</guardian_contact>
+    <grade>Grade 4</grade>
+    <section>Bonifacio</section>
+    <status>Inactive</status>
+  </student>
+  <student>
+    <id>485563-011</id>
+    <name>Diego Fernandez</name>
+    <guardian_name>Camille Fernandez</guardian_name>
+    <guardian_contact>09174567890</guardian_contact>
+    <grade>Grade 5</grade>
+    <section>Del Pilar</section>
+    <status>Active</status>
+  </student>
+  <student>
+    <id>485563-012</id>
+    <name>Mae Villanueva</name>
+    <guardian_name>Arturo Villanueva</guardian_name>
+    <guardian_contact>09284567890</guardian_contact>
+    <grade>Grade 6</grade>
+    <section>Lapu-Lapu</section>
+    <status>Inactive</status>
+  </student>
+  <student>
+    <id>485563-013</id>
+    <name>Lance Navarro</name>
+    <guardian_name>Susan Navarro</guardian_name>
+    <guardian_contact>09394567890</guardian_contact>
+    <grade>Grade 1</grade>
+    <section>Rizal</section>
+    <status>Active</status>
+  </student>
+  <student>
+    <id>485563-014</id>
+    <name>Nadine Co</name>
+    <guardian_name>Peter Co</guardian_name>
+    <guardian_contact>09404567890</guardian_contact>
+    <grade>Grade 2</grade>
+    <section>Luna</section>
+    <status>Inactive</status>
+  </student>
+  <student>
+    <id>485563-015</id>
+    <name>Carlo Uy</name>
+    <guardian_name>Helen Uy</guardian_name>
+    <guardian_contact>09514567890</guardian_contact>
+    <grade>Grade 3</grade>
+    <section>Mabini</section>
+    <status>Active</status>
+  </student>
+  <student>
+    <id>485563-016</id>
+    <name>Ella Chua</name>
+    <guardian_name>Joseph Chua</guardian_name>
+    <guardian_contact>09624567890</guardian_contact>
+    <grade>Grade 4</grade>
+    <section>Bonifacio</section>
+    <status>Inactive</status>
+  </student>
+  <student>
+    <id>485563-017</id>
+    <name>Miguel Tan</name>
+    <guardian_name>Rosa Tan</guardian_name>
+    <guardian_contact>09175678901</guardian_contact>
+    <grade>Grade 5</grade>
+    <section>Del Pilar</section>
+    <status>Active</status>
+  </student>
+  <student>
+    <id>485563-018</id>
+    <name>Bea Mercado</name>
+    <guardian_name>Samuel Mercado</guardian_name>
+    <guardian_contact>09285678901</guardian_contact>
+    <grade>Grade 6</grade>
+    <section>Lapu-Lapu</section>
+    <status>Inactive</status>
+  </student>
+  <student>
+    <id>485563-019</id>
+    <name>Josh Bautista</name>
+    <guardian_name>Cynthia Bautista</guardian_name>
+    <guardian_contact>09395678901</guardian_contact>
+    <grade>Grade 1</grade>
+    <section>Rizal</section>
+    <status>Active</status>
+  </student>
+  <student>
+    <id>485563-020</id>
+    <name>Alexis Sy</name>
+    <guardian_name>Francis Sy</guardian_name>
+    <guardian_contact>09405678901</guardian_contact>
+    <grade>Grade 2</grade>
+    <section>Luna</section>
+    <status>Inactive</status>
+  </student>
+  <student>
+    <id>485563-021</id>
+    <name>Nico Sison</name>
+    <guardian_name>Gina Sison</guardian_name>
+    <guardian_contact>09515678901</guardian_contact>
+    <grade>Grade 3</grade>
+    <section>Mabini</section>
+    <status>Active</status>
+  </student>
+  <student>
+    <id>485563-022</id>
+    <name>Clarisse Dy</name>
+    <guardian_name>Erwin Dy</guardian_name>
+    <guardian_contact>09625678901</guardian_contact>
+    <grade>Grade 4</grade>
+    <section>Bonifacio</section>
+    <status>Inactive</status>
+  </student>
+  <student>
+    <id>485563-023</id>
+    <name>Jared Aquino</name>
+    <guardian_name>Jasmine Aquino</guardian_name>
+    <guardian_contact>09176789012</guardian_contact>
+    <grade>Grade 5</grade>
+    <section>Del Pilar</section>
+    <status>Active</status>
+  </student>
+  <student>
+    <id>485563-024</id>
+    <name>Faith Lao</name>
+    <guardian_name>Leonard Lao</guardian_name>
+    <guardian_contact>09286789012</guardian_contact>
+    <grade>Grade 6</grade>
+    <section>Lapu-Lapu</section>
+    <status>Inactive</status>
+  </student>
+  <student>
+    <id>485563-025</id>
+    <name>Kyle Manalo</name>
+    <guardian_name>Rita Manalo</guardian_name>
+    <guardian_contact>09396789012</guardian_contact>
+    <grade>Grade 2</grade>
+    <section>Luna</section>
+    <status>Active</status>
+  </student>
+</students>

@@ -66,8 +66,15 @@
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    System Tools
+    Tools
   </div>
+
+  <!-- Nav Item - Links -->
+  <li class="nav-item <?= ($currentPage === 'useful-links') ? 'active' : '' ?>">
+    <a class="nav-link" href="useful-links.php">
+      <i class="fas fa-fw fa-file-export"></i>
+      <span>Useful Links</span></a>
+  </li>
 
   <!-- Nav Item - Export -->
   <li class="nav-item <?= ($currentPage === 'export') ? 'active' : '' ?>">
