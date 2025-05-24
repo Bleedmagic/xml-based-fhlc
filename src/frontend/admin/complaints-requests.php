@@ -72,7 +72,7 @@ $xml = simplexml_load_file($xmlPath) or die('Failed to load XML');
           <!-- Data Table -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">List of Submissions</h6>
+              <h6 class="m-0 font-weight-bold text-info">List of Submissions</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -115,10 +115,12 @@ $xml = simplexml_load_file($xmlPath) or die('Failed to load XML');
                         <td><?= htmlspecialchars($submission->message) ?></td>
                         <td><?= htmlspecialchars($submission->status) ?></td>
                         <td class="text-center">
-                          <a href="view.php?id=<?= urlencode($submission->id) ?>" title="View"><i class="fas fa-eye"></i></a>
-                          <a href="edit.php?id=<?= urlencode($submission->id) ?>" title="Edit" class="ml-2"><i class="fas fa-pen"></i></a>
-                          <a href="delete.php?id=<?= urlencode($submission->id) ?>" title="Delete" class="ml-2 text-danger" onclick="return confirm('Are you sure you want to delete this submission?');"><i class="fas fa-trash"></i></a>
-                          <a href="status.php?id=<?= urlencode($submission->id) ?>" title="Change Status" class="ml-2"><i class="fas fa-check-circle"></i></a>
+                          <a href="scripts/edit.php?id=<?= htmlspecialchars($submission->id) ?>" class="btn btn-warning btn-sm d-flex justify-content-center align-items-center">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a href="scripts/delete.php?id=<?= htmlspecialchars($submission->id) ?>" class="btn btn-danger btn-sm d-flex justify-content-center align-items-center">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
                         </td>
                       </tr>
                     <?php endforeach; ?>
@@ -127,7 +129,7 @@ $xml = simplexml_load_file($xmlPath) or die('Failed to load XML');
               </div>
             </div>
             <div class="mt-2 mb-4 text-center small">
-              <span>Calendar loaded via calendar-js</span>
+              <span>Table loaded via DataTables</span>
             </div>
           </div>
 
@@ -177,7 +179,16 @@ $xml = simplexml_load_file($xmlPath) or die('Failed to load XML');
   <script src="../../../assets/js/lib/dataTables.bootstrap4.min.js"></script>
   <script>
     $(document).ready(function() {
-      $('#dataTable').DataTable();
+      var table = $('#dataTable').DataTable();
+
+      var addButton = $('<button>')
+        .text('Add New')
+        .addClass('btn btn-primary btn-sm ml-2')
+        .on('click', function() {
+          window.location.href = './scripts/add.php';
+        });
+
+      $('#dataTable_filter').append(addButton);
     });
   </script>
 
