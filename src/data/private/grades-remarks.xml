@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grades-remarks>
+  <student>
+    <id>485563-001</id>
+    <name>Juan Dela Cruz</name>
+    <grade_level>Grade 1</grade_level>
+    <general_average>83</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-002</id>
+    <name>Anna Santos</name>
+    <grade_level>Grade 2</grade_level>
+    <general_average>88</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-003</id>
+    <name>Mark Reyes</name>
+    <grade_level>Grade 3</grade_level>
+    <general_average>79</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-004</id>
+    <name>Isabel Garcia</name>
+    <grade_level>Grade 4</grade_level>
+    <general_average>91</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-005</id>
+    <name>Leo Mendoza</name>
+    <grade_level>Grade 5</grade_level>
+    <general_average>67</general_average>
+    <remarks>Failed</remarks>
+  </student>
+  <student>
+    <id>485563-006</id>
+    <name>Trisha Cruz</name>
+    <grade_level>Grade 6</grade_level>
+    <general_average>72</general_average>
+    <remarks>Failed</remarks>
+  </student>
+  <student>
+    <id>485563-007</id>
+    <name>Enzo Lim</name>
+    <grade_level>Grade 1</grade_level>
+    <general_average>85</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-008</id>
+    <name>Sofia Torres</name>
+    <grade_level>Grade 2</grade_level>
+    <general_average>78</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-009</id>
+    <name>Paolo Ramos</name>
+    <grade_level>Grade 3</grade_level>
+    <general_average>87</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-010</id>
+    <name>Kathleen Ong</name>
+    <grade_level>Grade 4</grade_level>
+    <general_average>69</general_average>
+    <remarks>Failed</remarks>
+  </student>
+  <student>
+    <id>485563-011</id>
+    <name>Diego Fernandez</name>
+    <grade_level>Grade 5</grade_level>
+    <general_average>92</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-012</id>
+    <name>Mae Villanueva</name>
+    <grade_level>Grade 6</grade_level>
+    <general_average>74</general_average>
+    <remarks>Failed</remarks>
+  </student>
+  <student>
+    <id>485563-013</id>
+    <name>Lance Navarro</name>
+    <grade_level>Grade 1</grade_level>
+    <general_average>90</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-014</id>
+    <name>Nadine Co</name>
+    <grade_level>Grade 2</grade_level>
+    <general_average>76</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-015</id>
+    <name>Carlo Uy</name>
+    <grade_level>Grade 3</grade_level>
+    <general_average>82</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-016</id>
+    <name>Ella Chua</name>
+    <grade_level>Grade 4</grade_level>
+    <general_average>65</general_average>
+    <remarks>Failed</remarks>
+  </student>
+  <student>
+    <id>485563-017</id>
+    <name>Miguel Tan</name>
+    <grade_level>Grade 5</grade_level>
+    <general_average>88</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-018</id>
+    <name>Bea Mercado</name>
+    <grade_level>Grade 6</grade_level>
+    <general_average>70</general_average>
+    <remarks>Failed</remarks>
+  </student>
+  <student>
+    <id>485563-019</id>
+    <name>Josh Bautista</name>
+    <grade_level>Grade 1</grade_level>
+    <general_average>84</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-020</id>
+    <name>Alexis Sy</name>
+    <grade_level>Grade 2</grade_level>
+    <general_average>77</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-021</id>
+    <name>Nico Sison</name>
+    <grade_level>Grade 3</grade_level>
+    <general_average>73</general_average>
+    <remarks>Failed</remarks>
+  </student>
+  <student>
+    <id>485563-022</id>
+    <name>Clarisse Dy</name>
+    <grade_level>Grade 4</grade_level>
+    <general_average>79</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-023</id>
+    <name>Jared Aquino</name>
+    <grade_level>Grade 5</grade_level>
+    <general_average>81</general_average>
+    <remarks>Passed</remarks>
+  </student>
+  <student>
+    <id>485563-024</id>
+    <name>Faith Lao</name>
+    <grade_level>Grade 6</grade_level>
+    <general_average>68</general_average>
+    <remarks>Failed</remarks>
+  </student>
+  <student>
+    <id>485563-025</id>
+    <name>Kyle Manalo</name>
+    <grade_level>Grade 2</grade_level>
+    <general_average>86</general_average>
+    <remarks>Passed</remarks>
+  </student>
+</grades-remarks>

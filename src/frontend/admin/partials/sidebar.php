@@ -28,21 +28,21 @@
   </div>
 
   <!-- Nav Item - Academic Management Menu -->
-  <li class="nav-item <?= in_array($currentPage, ['faculty', 'students', 'grades', 'section']) ? 'active' : '' ?>">
+  <li class="nav-item <?= in_array($currentPage, ['faculty', 'students', 'grades-remarks', 'sections']) ? 'active' : '' ?>">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-      aria-expanded="<?= in_array($currentPage, ['faculty', 'students', 'grades', 'section']) ? 'true' : 'false' ?>"
+      aria-expanded="<?= in_array($currentPage, ['faculty', 'students', 'grades-remarks', 'sections']) ? 'true' : 'false' ?>"
       aria-controls="collapseTwo">
       <i class="fas fa-fw fa-school"></i>
       <span>Academic Management</span>
     </a>
-    <div id="collapseTwo" class="collapse <?= in_array($currentPage, ['faculty', 'students', 'grades', 'section']) ? 'show' : '' ?>"
+    <div id="collapseTwo" class="collapse <?= in_array($currentPage, ['faculty', 'students', 'grades-remarks', 'sections']) ? 'show' : '' ?>"
       aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Academic Management:</h6>
         <a class="collapse-item <?= ($currentPage === 'faculty') ? 'active' : '' ?>" href="faculty.php">Faculty</a>
         <a class="collapse-item <?= ($currentPage === 'students') ? 'active' : '' ?>" href="students.php">Students</a>
-        <a class="collapse-item <?= ($currentPage === 'grades') ? 'active' : '' ?>" href="grades-remarks.php">Grades and Remarks</a>
-        <a class="collapse-item <?= ($currentPage === 'section') ? 'active' : '' ?>" href="section.php">Section</a>
+        <a class="collapse-item <?= ($currentPage === 'grades-remarks') ? 'active' : '' ?>" href="grades-remarks.php">Grades and Remarks</a>
+        <a class="collapse-item <?= ($currentPage === 'sections') ? 'active' : '' ?>" href="sections.php">Sections</a>
       </div>
     </div>
   </li>
@@ -66,8 +66,15 @@
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    System Tools
+    Tools
   </div>
+
+  <!-- Nav Item - Links -->
+  <li class="nav-item <?= ($currentPage === 'useful-links') ? 'active' : '' ?>">
+    <a class="nav-link" href="useful-links.php">
+      <i class="fas fa-fw fa-file-export"></i>
+      <span>Useful Links</span></a>
+  </li>
 
   <!-- Nav Item - Export -->
   <li class="nav-item <?= ($currentPage === 'export') ? 'active' : '' ?>">

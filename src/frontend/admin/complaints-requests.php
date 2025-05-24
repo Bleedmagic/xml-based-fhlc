@@ -1,7 +1,15 @@
 <?php
 
 $xmlPath = __DIR__ . '/../../data/private/complaints-requests.xml';
-$xml = simplexml_load_file($xmlPath) or die('Failed to load XML');
+
+if (file_exists($xmlPath)) {
+  $xml = simplexml_load_file($xmlPath);
+  if ($xml === false) {
+    die('Failed to parse XML file.');
+  }
+} else {
+  die('XML file not found at path: ' . $xmlPath);
+}
 
 ?>
 
@@ -39,8 +47,6 @@ $xml = simplexml_load_file($xmlPath) or die('Failed to load XML');
   <!-- CUSTOM STYLES -->
   <link rel="stylesheet" href="../../../assets/css/dashboard.css">
   <!-- ------------- -->
-
-  <!-- <link rel="stylesheet" href="../../../assets/css/lib/calendar.js.css"> -->
 </head>
 
 <body id="page-top">
@@ -83,7 +89,6 @@ $xml = simplexml_load_file($xmlPath) or die('Failed to load XML');
                       <th>Type</th>
                       <th>Submitted By</th>
                       <th>Submission Date</th>
-                      <th>Student ID</th>
                       <th>Subject</th>
                       <th>Message</th>
                       <th>Status</th>
@@ -96,7 +101,6 @@ $xml = simplexml_load_file($xmlPath) or die('Failed to load XML');
                       <th>Type</th>
                       <th>Submitted By</th>
                       <th>Submitted Date</th>
-                      <th>Student ID</th>
                       <th>Subject</th>
                       <th>Message</th>
                       <th>Status</th>
@@ -105,24 +109,25 @@ $xml = simplexml_load_file($xmlPath) or die('Failed to load XML');
                   </tfoot>
                   <tbody>
                     <?php foreach ($xml->submission as $submission): ?>
-                      <tr>
-                        <td><?= htmlspecialchars($submission->id) ?></td>
-                        <td><?= htmlspecialchars($submission->type) ?></td>
-                        <td><?= htmlspecialchars($submission->submitted_by) ?></td>
-                        <td><?= htmlspecialchars($submission->submitted_date) ?></td>
-                        <td><?= htmlspecialchars($submission->student_id) ?></td>
-                        <td><?= htmlspecialchars($submission->subject) ?></td>
-                        <td><?= htmlspecialchars($submission->message) ?></td>
-                        <td><?= htmlspecialchars($submission->status) ?></td>
-                        <td class="text-center">
-                          <a href="scripts/edit.php?id=<?= htmlspecialchars($submission->id) ?>" class="btn btn-warning btn-sm d-flex justify-content-center align-items-center">
-                            <i class="fas fa-edit"></i>
-                          </a>
-                          <a href="scripts/delete.php?id=<?= htmlspecialchars($submission->id) ?>" class="btn btn-danger btn-sm d-flex justify-content-center align-items-center">
-                            <i class="fas fa-trash-alt"></i>
-                          </a>
-                        </td>
-                      </tr>
+                      <?php if ((string)$submission->status !== 'Closed'): ?>
+                        <tr>
+                          <td><?= htmlspecialchars($submission->id) ?></td>
+                          <td><?= htmlspecialchars($submission->type) ?></td>
+                          <td><?= htmlspecialchars($submission->submitted_by) ?></td>
+                          <td><?= htmlspecialchars($submission->submitted_date) ?></td>
+                          <td><?= htmlspecialchars($submission->subject) ?></td>
+                          <td><?= htmlspecialchars($submission->message) ?></td>
+                          <td><?= htmlspecialchars($submission->status) ?></td>
+                          <td class="text-center">
+                            <a href="scripts/edit.php?id=<?= htmlspecialchars($submission->id) ?>" class="btn btn-warning btn-sm d-flex justify-content-center align-items-center">
+                              <i class="fas fa-edit"></i>
+                            </a>
+                            <a href="scripts/delete.php?id=<?= htmlspecialchars($submission->id) ?>" class="btn btn-danger btn-sm d-flex justify-content-center align-items-center">
+                              <i class="fas fa-archive"></i>
+                            </a>
+                          </td>
+                        </tr>
+                      <?php endif; ?>
                     <?php endforeach; ?>
                   </tbody>
                 </table>

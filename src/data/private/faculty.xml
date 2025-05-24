@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faculty>
+  <teachers>
+    <teacher>
+      <id>T001</id>
+      <name>Anna Reyes</name>
+      <subject_handled>Mathematics, Science</subject_handled>
+      <grade_levels>Kinder, Grade 1</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T002</id>
+      <name>John Cruz</name>
+      <subject_handled>English, Reading</subject_handled>
+      <grade_levels>Grade 2, Grade 3</grade_levels>
+      <type>Part Time</type>
+    </teacher>
+    <teacher>
+      <id>T003</id>
+      <name>Maria Santos</name>
+      <subject_handled>Filipino, Araling Panlipunan</subject_handled>
+      <grade_levels>Grade 4, Grade 5</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T004</id>
+      <name>Carlos Dela Rosa</name>
+      <subject_handled>Science</subject_handled>
+      <grade_levels>Grade 6</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T005</id>
+      <name>Lucia Mendoza</name>
+      <subject_handled>Music, Arts</subject_handled>
+      <grade_levels>Kinder, Grade 1, Grade 2</grade_levels>
+      <type>Part Time</type>
+    </teacher>
+    <teacher>
+      <id>T006</id>
+      <name>Mark Villanueva</name>
+      <subject_handled>Mathematics</subject_handled>
+      <grade_levels>Grade 3, Grade 4</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T007</id>
+      <name>Jennifer Lim</name>
+      <subject_handled>English</subject_handled>
+      <grade_levels>Grade 5, Grade 6</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T008</id>
+      <name>Samuel Tan</name>
+      <subject_handled>Physical Education</subject_handled>
+      <grade_levels>Kinder to Grade 6</grade_levels>
+      <type>Part Time</type>
+    </teacher>
+    <teacher>
+      <id>T009</id>
+      <name>Grace Bautista</name>
+      <subject_handled>Reading, Filipino</subject_handled>
+      <grade_levels>Grade 1, Grade 2</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T010</id>
+      <name>Daniel Ramos</name>
+      <subject_handled>Araling Panlipunan</subject_handled>
+      <grade_levels>Grade 3, Grade 4</grade_levels>
+      <type>Part Time</type>
+    </teacher>
+    <teacher>
+      <id>T011</id>
+      <name>Rosa Garcia</name>
+      <subject_handled>Science, Health</subject_handled>
+      <grade_levels>Grade 5, Grade 6</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T012</id>
+      <name>Enrique Navarro</name>
+      <subject_handled>English, Mathematics</subject_handled>
+      <grade_levels>Kinder, Grade 1</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T013</id>
+      <name>Patricia Uy</name>
+      <subject_handled>Art</subject_handled>
+      <grade_levels>Grade 2, Grade 3</grade_levels>
+      <type>Part Time</type>
+    </teacher>
+    <teacher>
+      <id>T014</id>
+      <name>Adrian Flores</name>
+      <subject_handled>Music</subject_handled>
+      <grade_levels>Grade 4 to Grade 6</grade_levels>
+      <type>Part Time</type>
+    </teacher>
+    <teacher>
+      <id>T015</id>
+      <name>Sophia Martinez</name>
+      <subject_handled>Mathematics, Science</subject_handled>
+      <grade_levels>Grade 2, Grade 5</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T016</id>
+      <name>Francis Chua</name>
+      <subject_handled>Computer Education</subject_handled>
+      <grade_levels>Grade 3 to Grade 6</grade_levels>
+      <type>Part Time</type>
+    </teacher>
+    <teacher>
+      <id>T017</id>
+      <name>Isabelle Torres</name>
+      <subject_handled>Filipino, Reading</subject_handled>
+      <grade_levels>Grade 1, Grade 2</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T018</id>
+      <name>Leo Gutierrez</name>
+      <subject_handled>English</subject_handled>
+      <grade_levels>Grade 4 to Grade 6</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T019</id>
+      <name>Theresa Diaz</name>
+      <subject_handled>Mathematics</subject_handled>
+      <grade_levels>Kinder to Grade 3</grade_levels>
+      <type>Part Time</type>
+    </teacher>
+    <teacher>
+      <id>T020</id>
+      <name>Allan David</name>
+      <subject_handled>Science, Health</subject_handled>
+      <grade_levels>Grade 5, Grade 6</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T021</id>
+      <name>Jasmine Ong</name>
+      <subject_handled>English, Reading</subject_handled>
+      <grade_levels>Grade 1 to Grade 3</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T022</id>
+      <name>Victor Santos</name>
+      <subject_handled>Filipino, Araling Panlipunan</subject_handled>
+      <grade_levels>Grade 4 to Grade 6</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+    <teacher>
+      <id>T023</id>
+      <name>Elaine Rivera</name>
+      <subject_handled>Art, Music</subject_handled>
+      <grade_levels>Kinder to Grade 2</grade_levels>
+      <type>Part Time</type>
+    </teacher>
+    <teacher>
+      <id>T024</id>
+      <name>Nathaniel Perez</name>
+      <subject_handled>Computer Education</subject_handled>
+      <grade_levels>Grade 1 to Grade 6</grade_levels>
+      <type>Part Time</type>
+    </teacher>
+    <teacher>
+      <id>T025</id>
+      <name>Bianca Robles</name>
+      <subject_handled>Science</subject_handled>
+      <grade_levels>Grade 3 to Grade 6</grade_levels>
+      <type>Full Time</type>
+    </teacher>
+  </teachers>
+</faculty>
