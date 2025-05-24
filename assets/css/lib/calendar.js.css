@@ -59,7 +59,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --calendar-js-dark-color: #282828;
+    --calendar-js-dark-color: #1A906B;
     --calendar-js-input-hover-color: var(--calendar-js-dark-color);
     --calendar-js-primary-button-color: var(--calendar-js-dark-color);
     --calendar-js-secondary-button-color: var(--calendar-js-dark-color);
