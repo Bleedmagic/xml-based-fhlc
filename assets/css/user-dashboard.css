@@ -1,0 +1,79 @@
+.row .card.h-100 {
+  min-height: 300px;  
+}
+
+#gradesLineChart {
+  height: 300px !important;
+}
+
+#taskCompletionPieChart {
+  height: 250px !important;
+  margin-top: 20px;
+}
+
+/* Reduce padding inside card-body for charts */
+.card-body {
+  padding: 0.75rem 1rem;
+}
+
+/* Equal-width fix for Payments and Events cards */
+.fixed-col {
+  flex: 0 0 820px;
+  max-width: 1000px;
+  margin-left: 15px;
+  margin-bottom: -20px;
+}
+
+.row-margin-top {
+  margin-top: -19px; /* adjust this value as needed */
+}
+
+/* Headers & Text */
+.card-header {
+  font-weight: bold;
+}
+
+h1.text-success {
+  font-weight: 700;
+}
+
+.card-body p {
+  margin: 0;
+  font-weight: 500;
+  height: 12px;
+}
+
+
+/* Homework Section Styling */
+.homework-card {
+  background-color: #1A906B;
+  border-radius: 0.5rem;
+}
+
+.homework-card .card-header {
+  background-color: transparent;
+  border-bottom: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Assignment List Styling */
+.homework-card .list-group-item {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 8px 10px;
+  padding: 10px 15px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.homework-card .list-group-item:hover {
+  background-color: #f4f4f4;
+}

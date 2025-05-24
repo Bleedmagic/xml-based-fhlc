@@ -1,5 +1,4 @@
 <?php
-
 ?>
 
 <!DOCTYPE html>
@@ -23,66 +22,43 @@
     <div id="content">
       <?php include __DIR__ . '/partials/topbar.php'; ?>
       <!--content starts here-->
+
 <div class="container-fluid">
   <h4 class="payment-heading">Payment/Tagging</h4>
 
-<div class="payment-buttons">
-  <a href="payment-enrollment.php" class="btn-summary">Payment Summary</a>
-  <a href="payment-enrollment-history.php" class="btn-summary">Payment History</a>
-</div>
+  <div class="payment-buttons">
+    <a href="payment-enrollment.php" class="btn-summary">Payment Summary</a>
+    <a href="payment-enrollment-history.php" class="btn-summary">Payment History</a>
+  </div>
 
   <div class="table-responsive">
     <table class="table payment-table">
       <thead>
         <tr>
-          <th>FEE CATEGORY</th>
-          <th>STATUS</th>
-          <th>AMOUNT DUE</th>
+          <th>DATE</th>
+          <th>PAYMENT FOR</th>
           <th>AMOUNT PAID</th>
-          <th>DUE DATE</th>
-          <th>ACTION</th>
+          <th>MODE OF PAYMENT</th>
+          <th>UPLOAD STATUS</th>
+          <th>STATUS</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Tuition Fee</td>
-          <td><span class="status unpaid">❌ Unpaid</span></td>
-          <td>₱10,000.00</td>
-          <td>₱0.00</td>
-          <td>May 15, 2025</td>
-          <td><a href="payment.php" class="btn-history">PAY NOW</a>
-        </tr>
-        <tr>
-          <td>Enrollment Fee</td>
-          <td><span class="status paid">✅ Paid</span></td>
-          <td>₱1,000.00</td>
-          <td>₱1,000.00</td>
           <td>April 10, 2025</td>
-          <td class="dash">-</td>
+          <td>Enrollment Fee</td>
+          <td>₱1,000.00</td>
+          <td>GCash</td>
+          <td><span class="status paid">✅ Uploaded</span></td>
+          <td>Confirmed</td>
         </tr>
         <tr>
-          <td>Miscellaneous</td>
-          <td><span class="status partial">❗ Partial</span></td>
-          <td>₱500.00</td>
+          <td>April 22, 2025</td>
+          <td>Miscellaneous<br>(Partial)</td>
           <td>₱200.00</td>
-          <td>June 1, 2025</td>
-          <td><a href="payment.php" class="btn-history">PAY NOW</a>
-        </tr>
-        <tr>
-          <td>Laboratory Fee</td>
-          <td><span class="status unpaid">❌ Unpaid</span></td>
-          <td>₱3,000.00</td>
-          <td>₱0.00</td>
-          <td>May 1, 2025</td>
-          <td><a href="payment.php" class="btn-history">PAY NOW</a>
-        </tr>
-        <tr>
-          <td>Field Trip</td>
-          <td><span class="status unpaid">❌ Unpaid</span></td>
-          <td>₱2,000.00</td>
-          <td>₱0.00</td>
-          <td>May 25, 2025</td>
-          <td><a href="payment.php" class="btn-history">PAY NOW</a>
+          <td>Bank Transfer</td>
+          <td><span class="status paid">✅ Uploaded</span></td>
+          <td>Confirmed</td>
         </tr>
       </tbody>
     </table>
@@ -107,10 +83,6 @@
 const finalGrades = <?= json_encode(array_values($finalGrades)) ?>;
 const submitted = <?= $submittedCount ?>;
 const notSubmitted = <?= $notSubmittedCount ?>;
-
-
-
- 
 </script>
 </body>
 </html>

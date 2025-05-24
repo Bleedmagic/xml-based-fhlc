@@ -1,0 +1,88 @@
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #018558;
+}
+
+.container-fluid {
+  height: 760px;
+}
+
+.assignment-card {
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.assignment-card-header {
+  border-bottom: 2px solid #444;
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.assignment-card-body {
+  flex: 1;
+  font-weight: 500;
+  font-size: 0.95rem;
+  overflow-y: auto;
+}
+
+.assignment-card-body ul {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+.assignment-card-body li {
+  list-style-type: disc;
+  margin-bottom: 4px;
+}
+
+.not-done {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.passed-deadline {
+  color: #f39c12;
+  font-style: italic;
+}
+
+.text-success {
+  color: #1abc9c !important;
+}
+
+.form-select {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+}
+
+#assignmentFilter {
+  padding: 0.45rem 0.85rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  color: #343a40;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+#assignmentFilter:focus {
+  outline: none;
+  border-color: #1a906b;
+  box-shadow: 0 0 0 0.15rem rgba(26, 144, 107, 0.25);
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,..."); /* optional custom caret icon */
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}

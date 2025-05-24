@@ -1,176 +1,266 @@
 <?php
+$xml = simplexml_load_file(__DIR__ . '/../../data/public/user-grades.xml');
 
+// Grades calculation
+$qTotals = ['q1' => 0, 'q2' => 0, 'q3' => 0, 'q4' => 0];
+$count = 0;
+foreach ($xml->subject as $subject) {
+    $qTotals['q1'] += floatval($subject->q1);
+    $qTotals['q2'] += floatval($subject->q2);
+    $qTotals['q3'] += floatval($subject->q3);
+    $qTotals['q4'] += floatval($subject->q4);
+    $count++;
+}
+$finalGrades = [
+    'q1' => round($qTotals['q1'] / $count, 2),
+    'q2' => round($qTotals['q2'] / $count, 2),
+    'q3' => round($qTotals['q3'] / $count, 2),
+    'q4' => round($qTotals['q4'] / $count, 2),
+];
 
+// Assignments
+$assignments = [
+    "Mathematics" => [],
+    "Science" => [
+        ["task" => "What are the layers of the Earth?", "status" => "not done"],
+        ["task" => "Deadline Tomorrow", "status" => "passed"]
+    ],
+    "Filipino" => [
+        ["task" => "Mga halimbawa ng pambansang Prutas?", "status" => "not done"],
+        ["task" => "Deadline Tomorrow", "status" => "passed"]
+    ],
+    "Values Education" => [],
+    "Physical Education" => [],
+    "MAPEH" => [],
+    "Araling Panlipunan" => [],
+    "English" => []
+];
+
+$submittedCount = 0;
+$notSubmittedCount = 0;
+foreach ($assignments as $tasks) {
+    $hasNotDone = false;
+    foreach ($tasks as $task) {
+        if ($task['status'] === 'not done') {
+            $hasNotDone = true;
+            break;
+        }
+    }
+    if ($hasNotDone) {
+        $notSubmittedCount++;
+    } else {
+        $submittedCount++;
+    }
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- META TAGS -->
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <?php $currentPage = 'dashboard'; ?>
-  <title>User / <?= ucwords(str_replace('-', ' ', $currentPage)) ?></title>
-
-  <!-- FAVICONS -->
+  <title>User / Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="../../../assets/img/favicons/apple-touch-icon.png" sizes="180x180" />
-  <link rel="icon" href="../../../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png" />
-  <link rel="icon" href="../../../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png" />
   <link rel="icon" href="../../../assets/img/favicons/favicon.ico" />
-
-  <!-- CUSTOM FONTS -->
-  <link href="../../../assets/css/lib/fontawesome.all.min.css" rel="stylesheet" type="text/css">
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
-
-  <!-- CORE SCRIPTS -->
+  <link href="../../../assets/css/lib/fontawesome.all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
   <link href="../../../assets/css/lib/startbootstrap.min.css" rel="stylesheet">
-
-  <!-- ------------- -->
-  <!-- CUSTOM STYLES -->
-  <link rel="stylesheet" href="../../../assets/css/dashboard.css">
-  <!-- ------------- -->
-
-  <!-- <link rel="stylesheet" href="../../../assets/css/lib/calendar.js.css"> -->
+  <link rel="stylesheet" href="../../../assets/css/user-dashboard.css">
 </head>
 
 <body id="page-top">
+<div id="wrapper">
+  <?php include __DIR__ . '/partials/sidebar.php'; ?>
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+      <?php include __DIR__ . '/partials/topbar.php'; ?>
+      <div class="container-fluid">
 
-  <!-- Page Wrapper -->
-  <div id="wrapper">
-
-    <!-- Sidebar -->
-    <?php include __DIR__ . '/partials/sidebar.php'; ?>
-    <!-- End of Sidebar -->
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-      <!-- Main Content -->
-      <div id="content">
-
-        <!-- Topbar -->
-        <?php include __DIR__ . '/partials/topbar.php'; ?>
-        <!-- End of Topbar -->
-
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-          </div>
-
-          <!-- Content Row -->
-          <div class="row">
-
-            <!-- here -->
-
-            <!-- Content Row -->
-
-            <div class="row">
-
-              <!-- here -->
-
-            </div>
-
-          </div>
-          <!-- /.container-fluid -->
-
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+          <h1 class="h3 mb-0 text-success font-weight-bold">Dashboard</h1>
         </div>
-        <!-- End of Main Content -->
 
-        <!-- Footer -->
-        <?php include __DIR__ . '/partials/footer.php' ?>
-        <!-- End of Footer -->
+        <div class="row row-margin-top">
+          <!-- Grades Line Chart -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-header font-weight-bold text-success">Grades Graph Analysis</div>
+              <div class="card-body">
+                <canvas id="gradesLineChart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Assignment Pie Chart -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm text-center">
+              <div class="card-body">
+                <p class="text-success mb-1">✔ Submitted</p>
+                <p class="text-danger mb-1">✘ Not Submitted</p>
+                <div class="chart-pie mb-2">
+                  <canvas id="taskCompletionPieChart"></canvas>
+                </div>
+                <strong><?= $submittedCount + $notSubmittedCount > 0 ? round(($submittedCount / ($submittedCount + $notSubmittedCount)) * 100) : 0 ?>%</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Homework -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm homework-card text-white">
+              <div class="card-header">TO DO!</div>
+              <ul class="list-group list-group-flush">
+                <?php
+                $counter = 1;
+                foreach ($assignments as $subject => $tasks) {
+                    foreach ($tasks as $task) {
+                        if ($task['status'] === 'not done') {
+                            echo '<li class="list-group-item d-flex justify-content-between align-items-center">';
+                            echo '<span>' . $counter++ . '. ' . htmlspecialchars($task['task']) . '</span>';
+                            echo '<span class="text-danger"><i class="fas fa-times-circle"></i></span>';
+                            echo '</li>';
+                        }
+                    }
+                }
+                if ($counter === 1) {
+                    echo '<li class="list-group-item text-muted">No pending assignments</li>';
+                }
+                ?>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <!-- Payments -->
+          <div class="col-lg-6 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-header font-weight-bold">
+                Payments <span class="float-right text-success">Current Balance: PHP 15,300</span>
+              </div>
+              <div class="card-body p-0">
+                <table class="table mb-0">
+                  <thead>
+                    <tr><th>Fee Category</th><th class="text-right">Amount Due</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Tuition Fee</td><td class="text-right">₱10,000.00</td></tr>
+                    <tr><td>Miscellaneous</td><td class="text-right">₱500.00</td></tr>
+                    <tr><td>Laboratory Fee</td><td class="text-right">₱3,000.00</td></tr>
+                    <tr><td>Field Trip</td><td class="text-right">₱2,000.00</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Events -->
+          <div class="col-lg-6 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-header font-weight-bold">Upcoming Events</div>
+              <div class="card-body text-center">
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                  <button class="btn btn-outline-secondary btn-sm mx-2"><i class="fas fa-chevron-left"></i></button>
+                  <strong>July, 2025</strong>
+                  <button class="btn btn-outline-secondary btn-sm mx-2"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="mb-2">
+                  <div class="btn btn-primary w-100 mb-2"><i class="fas fa-calendar"></i> Foundation Day</div>
+                  <div class="btn btn-success w-100 mb-2"><i class="fas fa-futbol"></i> Sports Intramurals</div>
+                  <div class="btn btn-warning w-100"><i class="fas fa-users"></i> Family Day</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
-      <!-- End of Content Wrapper -->
-
+      <?php include __DIR__ . '/partials/footer.php'; ?>
     </div>
-    <!-- End of Page Wrapper -->
+  </div>
+</div>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
+<a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
 
-    <!-- Core Scripts-->
-    <script src="../../../assets/js/lib/jquery.min.js"></script>
-    <script src="../../../assets/js/lib/bootstrap.bundle.min.js"></script>
-    <script src="../../../assets/js/lib/jquery.easing.min.js"></script>
-    <script src="../../../assets/js/lib/startbootstrap.min.js"></script>
+<!-- Scripts -->
+<script src="../../../assets/js/lib/jquery.min.js"></script>
+<script src="../../../assets/js/lib/bootstrap.bundle.min.js"></script>
+<script src="../../../assets/js/lib/jquery.easing.min.js"></script>
+<script src="../../../assets/js/lib/startbootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- -------------- -->
-    <!-- Custom Scripts -->
-    <script src="../../../assets/js/dashboard.js"></script>
-    <!-- -------------- -->
-
-    <!-- SIEVE JS -->
-    <!-- <script src="../../../assets/js/lib/jquery.sieve.js"></script> -->
-
-    <!-- Chart JS -->
-    <!-- <script src="../../../assets/js/lib/chart.min.js"></script> -->
-
-    <!-- Calendar JS -->
-    <!-- <script src="../../../assets/js/lib/calendar.js"></script> -->
-
-    <!-- SweetAlert2 JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-      // Export
-      document.querySelector('.export-link').addEventListener('click', function(event) {
-        event.preventDefault();
-
-        Swal.fire({
-          title: 'Export Data',
-          text: 'Do you want to export your data?',
-          icon: 'question',
-          showCancelButton: true,
-          confirmButtonText: 'Yes, export it!',
-          cancelButtonText: 'Cancel'
-        }).then((result) => {
-          if (result.isConfirmed) {
-            fetch('export.php')
-              .then(response => {
-                if (response.ok) {
-                  Swal.fire('Exported!', 'Your data has been exported.', 'success');
-                } else {
-                  Swal.fire('Failed', 'Export failed. Please try again.', 'error');
-                }
-              })
-              .catch(() => {
-                Swal.fire('Error', 'Could not connect to export script.', 'error');
-              });
-          }
-        });
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Sign Out functionality
+  const signoutLink = document.querySelector('.signout-link');
+  if (signoutLink) {
+    signoutLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      Swal.fire({
+        title: 'Sign Out',
+        text: 'Are you sure you want to sign out?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, sign out',
+        cancelButtonText: 'Cancel',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = '../auth/logout.php';
+        }
       });
+    });
+  }
 
-      // Sign Out
-      document.querySelector('.signout-link').addEventListener('click', function(event) {
-        event.preventDefault();
+  // Line Chart
+  const ctx = document.getElementById("gradesLineChart");
+  if (ctx) {
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['1st Quarter', '2nd Quarter', '3rd Quarter', '4th Quarter'],
+        datasets: [{
+          label: "Final Grade",
+          data: <?= json_encode(array_values($finalGrades)) ?>,
+          backgroundColor: 'rgba(40,167,69,0.2)',
+          borderColor: 'rgba(40,167,69,1)',
+          borderWidth: 2,
+          fill: true,
+          tension: 0.3,
+          pointRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: { y: { beginAtZero: true, suggestedMax: 100 } },
+        plugins: { legend: { display: true, position: 'bottom' } }
+      }
+    });
+  }
 
-        Swal.fire({
-          title: 'Sign Out',
-          text: 'Are you sure you want to sign out?',
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonText: 'Yes, sign out',
-          cancelButtonText: 'Cancel',
-          reverseButtons: true
-        }).then((result) => {
-          if (result.isConfirmed) {
-            window.location.href = '../auth/logout.php';
-          }
-        });
-      });
-    </script>
+  // Pie Chart
+  const pie = document.getElementById("taskCompletionPieChart");
+  if (pie) {
+    new Chart(pie, {
+      type: 'doughnut',
+      data: {
+        labels: ["Submitted", "Not Submitted"],
+        datasets: [{
+          data: [<?= $submittedCount ?>, <?= $notSubmittedCount ?>],
+          backgroundColor: ['#28a745', '#FBCD5F'],
+          hoverBackgroundColor: ['#218838', '#c82333'],
+          hoverBorderColor: "rgba(234, 236, 244, 1)"
+        }]
+      },
+      options: {
+        maintainAspectRatio: false,
+        cutout: '70%',
+        plugins: { legend: { display: false } }
+      }
+    });
+  }
+});
+</script>
 </body>
-
 </html>
