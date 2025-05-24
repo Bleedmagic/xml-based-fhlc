@@ -5,7 +5,7 @@
     <div class="sidebar-brand-icon">
       <img src="../../../assets/img/fhlc-logo.png" alt="fhlc-logo" width="50" height="50">
     </div>
-    <div class="sidebar-brand-text mx-3">Admin <sup>FHLC</sup></div>
+    <div class="sidebar-brand-text mx-3">User <sup>FHLC</sup></div>
   </a>
 
   <!-- Divider -->
@@ -33,15 +33,15 @@
       aria-expanded="<?= in_array($currentPage, ['faculty', 'students', 'grades', 'section']) ? 'true' : 'false' ?>"
       aria-controls="collapseTwo">
       <i class="fas fa-fw fa-school"></i>
-      <span>Academic Management</span>
+      <span>Academics</span>
     </a>
     <div id="collapseTwo" class="collapse <?= in_array($currentPage, ['faculty', 'students', 'grades', 'section']) ? 'show' : '' ?>"
       aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Academic Management:</h6>
-        <a class="collapse-item <?= ($currentPage === 'faculty') ? 'active' : '' ?>" href="faculty.php">Faculty</a>
-        <a class="collapse-item <?= ($currentPage === 'students') ? 'active' : '' ?>" href="students.php">Students</a>
-        <a class="collapse-item <?= ($currentPage === 'grades') ? 'active' : '' ?>" href="grades-remarks.php">Grades and Remarks</a>
+        <a class="collapse-item <?= ($currentPage === 'faculty') ? 'active' : '' ?>" href="grades.php">Grades</a>
+        <a class="collapse-item <?= ($currentPage === 'students') ? 'active' : '' ?>" href="assignments.php">Assignments</a>
+        <a class="collapse-item <?= ($currentPage === 'grades') ? 'active' : '' ?>" href="payment-enrollment.php">Payment/Enrollment</a>
         <a class="collapse-item <?= ($currentPage === 'section') ? 'active' : '' ?>" href="section.php">Section</a>
       </div>
     </div>

@@ -149,7 +149,7 @@
 
           <div class="row">
 
-            <!-- Academic Calendar -->
+            <!-- @TODO New -->
             <div class="col-xl-4 col-lg-4">
               <div class="card shadow mb-4">
                 <!-- Card Header -->
