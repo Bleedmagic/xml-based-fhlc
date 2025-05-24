@@ -73,7 +73,7 @@ if (file_exists($xmlPath)) {
 
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800">Sections</h1>
-          <p class="mb-4">View and manage class sections, including their advisers, grade levels, and schedules.</p>
+          <p class="mb-4">Review and manage class sections, including their advisers, grade levels, and schedules.</p>
 
           <!-- Data Table -->
           <div class="card shadow mb-4">
@@ -83,26 +83,26 @@ if (file_exists($xmlPath)) {
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead class="thead-light">
-                    <tr>
+                  <thead>
+                    <tr class="table-success">
                       <th>#</th>
                       <th>Section Name</th>
                       <th>Grade Level</th>
                       <th>Adviser</th>
                       <th>Number of Students</th>
                       <th>Schedule</th>
-                      <th>Actions</th>
+                      <th class="text-center">Actions</th>
                     </tr>
                   </thead>
-                  <tfoot class="thead-light">
-                    <tr>
+                  <tfoot>
+                    <tr class="table-success">
                       <th>#</th>
                       <th>Section Name</th>
                       <th>Grade Level</th>
                       <th>Adviser</th>
                       <th>Number of Students</th>
                       <th>Schedule</th>
-                      <th>Actions</th>
+                      <th class="text-center">Actions</th>
                     </tr>
                   </tfoot>
                   <tbody>
@@ -181,7 +181,12 @@ if (file_exists($xmlPath)) {
   <script src="../../../assets/js/lib/dataTables.bootstrap4.min.js"></script>
   <script>
     $(document).ready(function() {
-      var table = $('#dataTable').DataTable();
+      var table = $('#dataTable').DataTable({
+        columnDefs: [{
+          orderable: false,
+          targets: -1
+        }]
+      });
 
       var addButton = $('<button>')
         .text('Add New')

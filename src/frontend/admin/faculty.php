@@ -84,23 +84,23 @@ if (file_exists($xmlPath)) {
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
-                    <tr>
+                    <tr class="table-success">
                       <th>ID</th>
                       <th>Name</th>
                       <th>Subjects Handled</th>
                       <th>Grade Levels</th>
                       <th>Type</th>
-                      <th>Actions</th>
+                      <th class="text-center">Actions</th>
                     </tr>
                   </thead>
                   <tfoot>
-                    <tr>
+                    <tr class="table-success">
                       <th>ID</th>
                       <th>Name</th>
                       <th>Subjects Handled</th>
                       <th>Grade Levels</th>
                       <th>Type</th>
-                      <th>Actions</th>
+                      <th class="text-center">Actions</th>
                     </tr>
                   </tfoot>
                   <tbody>
@@ -176,7 +176,13 @@ if (file_exists($xmlPath)) {
   <script src="../../../assets/js/lib/dataTables.bootstrap4.min.js"></script>
   <script>
     $(document).ready(function() {
-      var table = $('#dataTable').DataTable();
+      var table = $('#dataTable').DataTable({
+        columnDefs: [{
+            orderable: false,
+            targets: -1
+          }
+        ]
+      });
 
       var addButton = $('<button>')
         .text('Add New')

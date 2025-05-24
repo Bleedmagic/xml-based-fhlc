@@ -84,23 +84,23 @@ if (file_exists($xmlPath)) {
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
-                    <tr>
+                    <tr class="table-success">
                       <th>ID</th>
                       <th>Name</th>
                       <th>Guardian Name</th>
                       <th>Guardian Contact No.</th>
                       <th>Status</th>
-                      <th>Actions</th>
+                      <th class="text-center">Actions</th>
                     </tr>
                   </thead>
                   <tfoot>
-                    <tr>
+                    <tr class="table-success">
                       <th>ID</th>
                       <th>Name</th>
                       <th>Guardian Name</th>
                       <th>Guardian Contact No.</th>
                       <th>Status</th>
-                      <th>Actions</th>
+                      <th class="text-center">Actions</th>
                     </tr>
                   </tfoot>
                   <tbody>
@@ -113,7 +113,7 @@ if (file_exists($xmlPath)) {
                         <td><?= htmlspecialchars($student->status) ?></td>
                         <td class="text-center" style="width: 75px; max-width: 75px;">
                           <a href=" scripts/edit.php?id=<?= htmlspecialchars($student->id) ?>" class="btn btn-info btn-sm d-flex justify-content-center align-items-center">
-                          <i class="fas fa-edit"></i>
+                            <i class="fas fa-edit"></i>
                           </a>
                           <a href="scripts/delete.php?id=<?= htmlspecialchars($student->id) ?>" class="btn btn-danger btn-sm d-flex justify-content-center align-items-center">
                             <i class="fas fa-archive"></i>
@@ -176,7 +176,13 @@ if (file_exists($xmlPath)) {
   <script src="../../../assets/js/lib/dataTables.bootstrap4.min.js"></script>
   <script>
     $(document).ready(function() {
-      var table = $('#dataTable').DataTable();
+      var table = $('#dataTable').DataTable({
+        columnDefs: [{
+            orderable: false,
+            targets: -1
+          }
+        ]
+      });
 
       var addButton = $('<button>')
         .text('Add New')
