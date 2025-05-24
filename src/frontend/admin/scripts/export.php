@@ -1,83 +1,96 @@
 <?php
+$backupBaseDir = __DIR__ . '/../../../data/backup';
 
-// @TODO Put a gatekeeper here.
+// Get 'page' parameter safely
+$page = isset($_GET['page']) ? basename($_GET['page']) : null;
+if (!$page) {
+  http_response_code(400);
+  echo json_encode(['error' => 'Page parameter missing']);
+  exit;
+}
 
-$dbPath = 'C:/xampp/htdocs/_XAMPP/XML-FHLC/src/data/private/database.sqlite';
-$backupBaseDir = 'C:/xampp/htdocs/_XAMPP/XML-FHLC/src/data/backup';
+// Source XML file path
+$sourceXmlFile = __DIR__ . "/../../../data/private/{$page}.xml";
 
-if (!file_exists($dbPath)) {
+if (!file_exists($sourceXmlFile)) {
   http_response_code(404);
-  echo "Database file not found.";
+  echo json_encode(['error' => 'Source XML file not found']);
   exit;
 }
 
-// Create timestamped backup folder
-$timestamp = date('Y-m-d_H-i-s');
-$backupDir = $backupBaseDir . DIRECTORY_SEPARATOR . 'backup_' . $timestamp;
+// Create backup folder with timestamp inside base dir
+$timestamp = date('Ymd_His');
+$backupFolder = $backupBaseDir . "/backup_{$page}_{$timestamp}";
 
-if (!is_dir($backupDir) && !mkdir($backupDir, 0755, true)) {
+if (!is_dir($backupFolder)) {
+  if (!mkdir($backupFolder, 0777, true)) {
+    http_response_code(500);
+    echo json_encode(['error' => 'Failed to create backup directory']);
+    exit;
+  }
+}
+
+// Copy original XML to backup folder as .xml
+if (!copy($sourceXmlFile, $backupFolder . "/{$page}.xml")) {
   http_response_code(500);
-  echo "Failed to create backup directory.";
+  echo json_encode(['error' => 'Failed to backup XML file']);
   exit;
 }
 
-// Copy .sqlite file
-$backupSqlite = $backupDir . DIRECTORY_SEPARATOR . 'database.sqlite';
-if (!copy($dbPath, $backupSqlite)) {
+// Save XML content as .txt backup
+$xmlContent = file_get_contents($sourceXmlFile);
+if (file_put_contents($backupFolder . "/{$page}.txt", $xmlContent) === false) {
   http_response_code(500);
-  echo "Failed to backup .sqlite file.";
+  echo json_encode(['error' => 'Failed to save TXT backup']);
   exit;
 }
 
-// Open DB for dump and CSV exports
-$db = new SQLite3($dbPath);
-
-// Create SQL dump (.txt)
-$sqlDump = '';
-$results = $db->query("SELECT sql FROM sqlite_master WHERE sql NOT NULL ORDER BY type, name");
-while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
-  $sqlDump .= $row['sql'] . ";\n\n";
+// Load XML and convert to CSV
+$xml = simplexml_load_file($sourceXmlFile);
+if ($xml === false) {
+  http_response_code(500);
+  echo json_encode(['error' => 'Failed to load XML']);
+  exit;
 }
 
-$tables = $db->query("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'");
-while ($table = $tables->fetchArray(SQLITE3_ASSOC)) {
-  $tableName = $table['name'];
-  $rows = $db->query("SELECT * FROM \"$tableName\"");
-  while ($row = $rows->fetchArray(SQLITE3_ASSOC)) {
-    $columns = array_keys($row);
-    $values = array_map(function ($value) use ($db) {
-      if ($value === null) return 'NULL';
-      return "'" . $db->escapeString($value) . "'";
-    }, array_values($row));
-    $sqlDump .= "INSERT INTO \"$tableName\" (" . implode(', ', $columns) . ") VALUES (" . implode(', ', $values) . ");\n";
+$csvRows = [];
+$headers = [];
+
+// Extract all <student> elements
+foreach ($xml->student as $student) {
+  $row = [];
+  foreach ($student->children() as $field) {
+    $fieldName = $field->getName();
+    if (!in_array($fieldName, $headers)) {
+      $headers[] = $fieldName;
+    }
+    $row[$fieldName] = (string)$field;
   }
-  $sqlDump .= "\n";
+  $csvRows[] = $row;
 }
 
-file_put_contents($backupDir . DIRECTORY_SEPARATOR . 'database_export.txt', $sqlDump);
-
-// Export each table as CSV
-$tables = $db->query("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'");
-while ($table = $tables->fetchArray(SQLITE3_ASSOC)) {
-  $tableName = $table['name'];
-  $csvFile = fopen($backupDir . DIRECTORY_SEPARATOR . $tableName . '.csv', 'w');
-
-  // Get column names for CSV header
-  $columnsRes = $db->query("PRAGMA table_info('$tableName')");
-  $columns = [];
-  while ($col = $columnsRes->fetchArray(SQLITE3_ASSOC)) {
-    $columns[] = $col['name'];
-  }
-  fputcsv($csvFile, $columns);
-
-  // Get rows
-  $rows = $db->query("SELECT * FROM \"$tableName\"");
-  while ($row = $rows->fetchArray(SQLITE3_ASSOC)) {
-    // Write row to CSV
-    fputcsv($csvFile, $row);
-  }
-  fclose($csvFile);
+// Prepare CSV file
+$csvFile = $backupFolder . "/{$page}.csv";
+$fp = fopen($csvFile, 'w');
+if ($fp === false) {
+  http_response_code(500);
+  echo json_encode(['error' => 'Failed to create CSV file']);
+  exit;
 }
 
-$db->close();
-exit;
+// Write headers
+fputcsv($fp, $headers);
+
+// Write data rows
+foreach ($csvRows as $row) {
+  $line = [];
+  foreach ($headers as $header) {
+    $line[] = isset($row[$header]) ? $row[$header] : '';
+  }
+  fputcsv($fp, $line);
+}
+
+fclose($fp);
+
+// Success response
+echo json_encode(['success' => true, 'backup_folder' => $backupFolder]);

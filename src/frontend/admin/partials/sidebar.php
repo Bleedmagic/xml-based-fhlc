@@ -72,7 +72,7 @@
   <!-- Nav Item - Links -->
   <li class="nav-item <?= ($currentPage === 'useful-links') ? 'active' : '' ?>">
     <a class="nav-link" href="useful-links.php">
-      <i class="fas fa-fw fa-file-export"></i>
+      <i class="fas fa-fw fa-link"></i>
       <span>Useful Links</span></a>
   </li>
 

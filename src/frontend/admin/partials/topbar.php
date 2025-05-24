@@ -7,8 +7,8 @@
 
   <!-- Topbar Title -->
   <div class="custom-title d-flex align-items-center mr-auto ml-md-3 my-2 my-md-0">
-    <h6 class="full-text m-0 font-weight-bold text-primary">Full House Learning Center</h6>
-    <h6 class="abbr-text m-0 font-weight-bold text-primary d-none">FHLC</h6>
+    <h6 class="full-text m-0 font-weight-bold text-success">Full House Learning Center</h6>
+    <h6 class="abbr-text m-0 font-weight-bold text-success d-none">FHLC</h6>
   </div>
 
   <!-- Topbar Navbar -->

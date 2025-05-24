@@ -64,9 +64,8 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4 text-center">
-            <h1 class="h3 mb-0 text-gray-800">Academic Calendar</h1>
-          </div>
+          <h1 class="h3 mb-2 text-gray-800">Calendar</h1>
+          <p class="mb-4">Use this calendar to efficiently track and manage all guardian submissions related to student concerns, academic support needs, and special requests.</p>
 
           <!-- Content Row -->
           <div class="row">
@@ -74,6 +73,9 @@
             <!-- Academic Calendar -->
             <div class="container-fluid">
               <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Important Dates & Events</h6>
+                </div>
                 <!-- Card Body -->
                 <div class="card-body">
                   <div id="calendar-container"></div>

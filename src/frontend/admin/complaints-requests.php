@@ -78,7 +78,7 @@ if (file_exists($xmlPath)) {
           <!-- Data Table -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-info">List of Submissions</h6>
+              <h6 class="m-0 font-weight-bold text-primary">List of Submissions</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -118,8 +118,8 @@ if (file_exists($xmlPath)) {
                           <td><?= htmlspecialchars($submission->subject) ?></td>
                           <td><?= htmlspecialchars($submission->message) ?></td>
                           <td><?= htmlspecialchars($submission->status) ?></td>
-                          <td class="text-center">
-                            <a href="scripts/edit.php?id=<?= htmlspecialchars($submission->id) ?>" class="btn btn-warning btn-sm d-flex justify-content-center align-items-center">
+                          <td class="text-center" style="width: 75px; max-width: 75px;">
+                            <a href="scripts/edit.php?id=<?= htmlspecialchars($submission->id) ?>" class="btn btn-info btn-sm d-flex justify-content-center align-items-center">
                               <i class="fas fa-edit"></i>
                             </a>
                             <a href="scripts/delete.php?id=<?= htmlspecialchars($submission->id) ?>" class="btn btn-danger btn-sm d-flex justify-content-center align-items-center">
@@ -201,19 +201,21 @@ if (file_exists($xmlPath)) {
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     // Export
+    const currentPage = <?php echo json_encode($currentPage); ?>;
+
     document.querySelector('.export-link').addEventListener('click', function(event) {
       event.preventDefault();
 
       Swal.fire({
         title: 'Export Data',
-        text: 'Do you want to export your data?',
+        text: `Do you want to export the data for "${currentPage}"?`,
         icon: 'question',
         showCancelButton: true,
         confirmButtonText: 'Yes, export it!',
         cancelButtonText: 'Cancel'
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch('export.php')
+          fetch('scripts/export.php?page=' + encodeURIComponent(currentPage))
             .then(response => {
               if (response.ok) {
                 Swal.fire('Exported!', 'Your data has been exported.', 'success');
