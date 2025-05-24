@@ -143,6 +143,13 @@
               </xsl:choose>
             </div>
           </xsl:for-each>
+
+        <div class="back-icon-container">
+          <a href="javascript:history.back()" class="back-icon-btn">
+            <i class="bi bi-arrow-left"></i>
+          </a>
+      </div>
+      
         </main>
 
         <!-- Footer -->
