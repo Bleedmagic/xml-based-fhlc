@@ -5,12 +5,18 @@ body {
   color: #333;
 }
 
+main {
+  position: relative;
+}
+
+
 h2 {
   text-align: center;
-  color: #1A906B;
-  margin-bottom: 30px;
-  margin-top: 80px;
-  font-weight: 600;
+  color: #1A906B; 
+  margin-bottom: 1.5rem; 
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 65px;
 }
 
 /* Shared Box Style */
@@ -57,3 +63,22 @@ h2 {
   margin-bottom: 3rem;
 }
 
+.back-icon-container {
+  position: absolute;
+  top: -2%;
+  margin-left: -30%;
+  margin-top: 8px;
+}
+
+.back-icon-btn {
+  font-size: 2rem;
+  color: #1A906B;
+  padding: 10px;
+  align-items: left;
+  justify-content: left;
+  transition: 0.3s ease;
+}
+
+.back-icon-btn:hover {
+  color: #1A906B;
+}

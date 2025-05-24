@@ -46,21 +46,17 @@
   height: auto;
 }
 
-.Enrollment {
-  flex: 1 1 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.Enrollment img {
-  max-width: 60%;
-  height: auto;
-}
-
+.Enrollment,
 .Summer {
-  flex: 1 1 40%;
+  flex: 1;
+  max-width: 45%; /* Restrict width to allow space for text */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.Enrollment img,
+.Summer img {
+  width: 65%;
+  height: auto;
 }
