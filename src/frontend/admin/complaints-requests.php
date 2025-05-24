@@ -21,8 +21,8 @@ if (file_exists($xmlPath)) {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Web-Based Guardian and Teacher Portal with Learning Progress and Communication Tools">
+  <meta name="author" content="Bleedmagic, nicoleelliena7, chvzdaniel">
 
   <?php $currentPage = 'complaints-requests'; ?>
   <title>Admin / <?= ucwords(str_replace('-', ' & ', $currentPage)) ?></title>
@@ -202,15 +202,6 @@ if (file_exists($xmlPath)) {
   <!-- Custom Scripts -->
   <script src="../../../assets/js/dashboard.js"></script>
   <!-- -------------- -->
-
-  <!-- SIEVE JS -->
-  <!-- <script src="../../../assets/js/lib/jquery.sieve.js"></script> -->
-
-  <!-- Chart JS -->
-  <!-- <script src="../../../assets/js/lib/chart.min.js"></script> -->
-
-  <!-- Calendar JS -->
-  <!-- <script src="../../../assets/js/lib/calendar.js"></script> -->
 
   <!-- DataTables JS -->
   <script src="../../../assets/js/lib/jquery.dataTables.min.js"></script>

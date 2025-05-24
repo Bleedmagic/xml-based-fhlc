@@ -36,8 +36,6 @@
   <!-- CUSTOM STYLES -->
   <link rel="stylesheet" href="../../../assets/css/dashboard.css">
   <!-- ------------- -->
-
-  <!-- <link rel="stylesheet" href="../../../assets/css/lib/calendar.js.css"> -->
 </head>
 
 <body id="page-top">
@@ -100,12 +98,6 @@
 
   <!-- SIEVE JS -->
   <!-- <script src="../../../assets/js/lib/jquery.sieve.js"></script> -->
-
-  <!-- Chart JS -->
-  <!-- <script src="../../../assets/js/lib/chart.min.js"></script> -->
-
-  <!-- Calendar JS -->
-  <!-- <script src="../../../assets/js/lib/calendar.js"></script> -->
 
   <!-- SweetAlert2 JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
