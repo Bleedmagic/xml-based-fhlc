@@ -63,7 +63,8 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+          <h1 class="h3 mb-2 text-gray-800">Useful Links</h1>
+          <p class="mb-4">Below are useful links to educational tools and resources designed to support teaching, learning, and classroom management.</p>
 
         </div>
         <!-- /.container-fluid -->

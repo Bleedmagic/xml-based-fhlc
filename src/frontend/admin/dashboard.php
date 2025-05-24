@@ -1,5 +1,38 @@
 <?php
 
+$sectionsXmlPath = __DIR__ . '/../../data/private/sections.xml';
+$totalSections = 0;
+if (file_exists($sectionsXmlPath)) {
+  $sectionsXml = simplexml_load_file($sectionsXmlPath);
+  if ($sectionsXml !== false) {
+    $totalSections = count($sectionsXml->section);
+  }
+}
+
+$facultyXmlPath = __DIR__ . '/../../data/private/faculty.xml';
+$totalFaculty = 0;
+if (file_exists($facultyXmlPath)) {
+  $facultyXml = simplexml_load_file($facultyXmlPath);
+  if ($facultyXml !== false) {
+    // Adjust this path based on your actual XML structure
+    $totalFaculty = count($facultyXml->teachers->teacher);
+  }
+}
+
+$studentsXmlPath = __DIR__ . '/../../data/private/students.xml';
+$totalStudents = 0;
+if (file_exists($studentsXmlPath)) {
+  $studentsXml = simplexml_load_file($studentsXmlPath);
+  if ($studentsXml !== false) {
+    foreach ($studentsXml->student as $student) {
+      if (strtolower(trim((string)$student->status)) === 'active') {
+        $totalStudents++;
+      }
+    }
+  }
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -65,8 +98,6 @@
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
           </div>
 
           <!-- Content Row -->
@@ -80,7 +111,7 @@
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                         Total Faculty</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">85</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $totalFaculty ?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-user-tie fa-2x text-gray-300"></i>
@@ -98,7 +129,7 @@
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                         Total Students</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">875</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $totalStudents ?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-id-badge fa-2x text-gray-300"></i>
@@ -116,7 +147,7 @@
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                         Total Sections</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">25</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $totalSections ?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-user-friends fa-2x text-gray-300"></i>
