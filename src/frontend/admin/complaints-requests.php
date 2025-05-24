@@ -84,27 +84,27 @@ if (file_exists($xmlPath)) {
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
-                    <tr>
+                    <tr class="table-success">
                       <th>ID</th>
-                      <th>Type</th>
-                      <th>Submitted By</th>
-                      <th>Submission Date</th>
+                      <th>Via</th>
+                      <th>Author</th>
+                      <th>Date</th>
                       <th>Subject</th>
                       <th>Message</th>
                       <th>Status</th>
-                      <th>Actions</th>
+                      <th class="text-center">Actions</th>
                     </tr>
                   </thead>
                   <tfoot>
-                    <tr>
+                    <tr class="table-success">
                       <th>ID</th>
-                      <th>Type</th>
-                      <th>Submitted By</th>
-                      <th>Submitted Date</th>
+                      <th>Via</th>
+                      <th>Author</th>
+                      <th>Date</th>
                       <th>Subject</th>
                       <th>Message</th>
                       <th>Status</th>
-                      <th>Actions</th>
+                      <th class="text-center">Actions</th>
                     </tr>
                   </tfoot>
                   <tbody>
@@ -112,7 +112,7 @@ if (file_exists($xmlPath)) {
                       <?php if ((string)$submission->status !== 'Closed'): ?>
                         <tr>
                           <td><?= htmlspecialchars($submission->id) ?></td>
-                          <td><?= htmlspecialchars($submission->type) ?></td>
+                          <td><?= htmlspecialchars($submission->via) ?></td>
                           <td><?= htmlspecialchars($submission->submitted_by) ?></td>
                           <td><?= htmlspecialchars($submission->submitted_date) ?></td>
                           <td><?= htmlspecialchars($submission->subject) ?></td>
@@ -147,6 +147,39 @@ if (file_exists($xmlPath)) {
       <!-- Footer -->
       <?php include __DIR__ . '/partials/footer.php' ?>
       <!-- End of Footer -->
+
+      <!-- Archive Modal -->
+      <div class="modal fade" id="archiveModal" tabindex="-1" role="dialog" aria-labelledby="archiveModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="archiveModalLabel">Archived Complaints (Closed)</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table id="archiveTable" class="table table-bordered table-striped" style="width:100%">
+                <thead>
+                  <tr class="table-success">
+                    <th>Complaint ID</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <!-- <th class="text-center">Actions</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Filled dynamically -->
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
     <!-- End of Content Wrapper -->
@@ -184,16 +217,61 @@ if (file_exists($xmlPath)) {
   <script src="../../../assets/js/lib/dataTables.bootstrap4.min.js"></script>
   <script>
     $(document).ready(function() {
-      var table = $('#dataTable').DataTable();
+      // Initialize main DataTable
+      var table = $('#dataTable').DataTable({
+        columnDefs: [{
+          orderable: false,
+          targets: -1
+        }]
+      });
 
-      var addButton = $('<button>')
-        .text('Add New')
-        .addClass('btn btn-primary btn-sm ml-2')
-        .on('click', function() {
-          window.location.href = './scripts/add.php';
+      // Append Archive button to the right of search box
+      $('<button type="button" id="archiveBtn" class="btn btn-warning ml-2" data-toggle="modal" data-target="#archiveModal" title="View Archive">' +
+        '<i class="fas fa-archive"></i>' +
+        '</button>').appendTo($('#dataTable_filter'));
+
+      // Initialize DataTable for archive modal table (empty for now)
+      var archiveTable = $('#archiveTable').DataTable({
+        destroy: true,
+        searching: false,
+        paging: true,
+        info: false,
+        order: []
+      });
+
+      // Load Closed complaints from XML when modal is opened
+      $('#archiveModal').on('show.bs.modal', function() {
+        $.ajax({
+          type: "GET",
+          url: "/_XAMPP/XML-FHLC/src/data/private/complaints-requests.xml",
+          dataType: "xml",
+          success: function(xml) {
+            archiveTable.clear();
+
+            $(xml).find('submission').each(function() {
+              var status = $(this).find('status').text().toLowerCase();
+              if (status === 'closed') {
+                var id = $(this).find('id').text();
+                var subject = $(this).find('subject').text();
+                var date = $(this).find('submitted_date').text();
+
+                archiveTable.row.add([
+                  id,
+                  subject,
+                  status.charAt(0).toUpperCase() + status.slice(1),
+                  date
+                ]);
+              }
+            });
+
+            archiveTable.draw();
+          },
+          error: function() {
+            alert("Failed to load archive data.");
+          }
         });
+      });
 
-      $('#dataTable_filter').append(addButton);
     });
   </script>
 

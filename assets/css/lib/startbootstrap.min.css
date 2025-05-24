@@ -3000,7 +3000,7 @@ input[type='submit'].btn-block {
 .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #4e73df;
+  background-color: #1cc88a;
 }
 .dropdown-item.disabled,
 .dropdown-item:disabled {

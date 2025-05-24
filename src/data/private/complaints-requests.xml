@@ -2,7 +2,7 @@
 <submissions>
   <submission>
     <id>1</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Maria Santos</submitted_by>
     <submitted_date>2025-05-01</submitted_date>
     <subject>Homework Difficulty</subject>
@@ -11,7 +11,7 @@
   </submission>
   <submission>
     <id>2</id>
-    <type>Request</type>
+    <via>Dashboard</via>
     <submitted_by>Gino Ramos</submitted_by>
     <submitted_date>2025-05-02</submitted_date>
     <subject>Extra Reading Materials</subject>
@@ -20,7 +20,7 @@
   </submission>
   <submission>
     <id>3</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Ligaya Cruz</submitted_by>
     <submitted_date>2025-05-03</submitted_date>
     <subject>Late Grade Updates</subject>
@@ -29,7 +29,7 @@
   </submission>
   <submission>
     <id>4</id>
-    <type>Request</type>
+    <via>Dashboard</via>
     <submitted_by>Aling Rosario</submitted_by>
     <submitted_date>2025-05-04</submitted_date>
     <subject>Classroom Supplies</subject>
@@ -38,7 +38,7 @@
   </submission>
   <submission>
     <id>5</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Jaime Dela Cruz</submitted_by>
     <submitted_date>2025-05-05</submitted_date>
     <subject>Communication Issues</subject>
@@ -47,7 +47,7 @@
   </submission>
   <submission>
     <id>6</id>
-    <type>Request</type>
+    <via>Dashboard</via>
     <submitted_by>Ana Dizon</submitted_by>
     <submitted_date>2025-05-06</submitted_date>
     <subject>Field Trip Approval</subject>
@@ -56,7 +56,7 @@
   </submission>
   <submission>
     <id>7</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Domingo Navarro</submitted_by>
     <submitted_date>2025-05-07</submitted_date>
     <subject>Bullying Incident</subject>
@@ -65,7 +65,7 @@
   </submission>
   <submission>
     <id>8</id>
-    <type>Request</type>
+    <via>Dashboard</via>
     <submitted_by>Tony Manalansan</submitted_by>
     <submitted_date>2025-05-08</submitted_date>
     <subject>Additional Tutoring</subject>
@@ -74,7 +74,7 @@
   </submission>
   <submission>
     <id>9</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Rosalinda Villanueva</submitted_by>
     <submitted_date>2025-05-09</submitted_date>
     <subject>Grade Discrepancy</subject>
@@ -83,7 +83,7 @@
   </submission>
   <submission>
     <id>10</id>
-    <type>Request</type>
+    <via>Dashboard</via>
     <submitted_by>Carmela Bautista</submitted_by>
     <submitted_date>2025-05-10</submitted_date>
     <subject>Parent-Teacher Meeting</subject>
@@ -92,7 +92,7 @@
   </submission>
   <submission>
     <id>11</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Fernando Aguilar</submitted_by>
     <submitted_date>2025-05-11</submitted_date>
     <subject>School Bus Delay</subject>
@@ -101,7 +101,7 @@
   </submission>
   <submission>
     <id>12</id>
-    <type>Request</type>
+    <via>Dashboard</via>
     <submitted_by>Eduardo Tan</submitted_by>
     <submitted_date>2025-05-12</submitted_date>
     <subject>Technology Upgrade</subject>
@@ -110,7 +110,7 @@
   </submission>
   <submission>
     <id>13</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Veronica Reyes</submitted_by>
     <submitted_date>2025-05-13</submitted_date>
     <subject>Unclear Instructions</subject>
@@ -119,7 +119,7 @@
   </submission>
   <submission>
     <id>14</id>
-    <type>Request</type>
+    <via>Dashboard</via>
     <submitted_by>Isabel De Leon</submitted_by>
     <submitted_date>2025-05-14</submitted_date>
     <subject>Extra-curricular Funding</subject>
@@ -128,7 +128,7 @@
   </submission>
   <submission>
     <id>15</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Ramon Castillo</submitted_by>
     <submitted_date>2025-05-15</submitted_date>
     <subject>Noise in Classroom</subject>
@@ -137,7 +137,7 @@
   </submission>
   <submission>
     <id>16</id>
-    <type>Request</type>
+    <via>Dashboard</via>
     <submitted_by>Minerva Lopez</submitted_by>
     <submitted_date>2025-05-16</submitted_date>
     <subject>Library Books</subject>
@@ -146,7 +146,7 @@
   </submission>
   <submission>
     <id>17</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Estrella Mendoza</submitted_by>
     <submitted_date>2025-05-17</submitted_date>
     <subject>Inconsistent Attendance Records</subject>
@@ -155,7 +155,7 @@
   </submission>
   <submission>
     <id>18</id>
-    <type>Request</type>
+    <via>Dashboard</via>
     <submitted_by>Enrico Salazar</submitted_by>
     <submitted_date>2025-05-18</submitted_date>
     <subject>Professional Development</subject>
@@ -164,7 +164,7 @@
   </submission>
   <submission>
     <id>19</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Dolores Garcia</submitted_by>
     <submitted_date>2025-05-19</submitted_date>
     <subject>Lunch Quality</subject>
@@ -173,7 +173,7 @@
   </submission>
   <submission>
     <id>20</id>
-    <type>Request</type>
+    <via>Dashboard</via>
     <submitted_by>Leticia Flores</submitted_by>
     <submitted_date>2025-05-20</submitted_date>
     <subject>Sports Equipment</subject>
@@ -182,7 +182,7 @@
   </submission>
   <submission>
     <id>21</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Andres Pascual</submitted_by>
     <submitted_date>2025-05-21</submitted_date>
     <subject>Website Downtime</subject>
@@ -191,7 +191,7 @@
   </submission>
   <submission>
     <id>22</id>
-    <type>Request</type>
+    <via>Dashboard</via>
     <submitted_by>Benito Francisco</submitted_by>
     <submitted_date>2025-05-22</submitted_date>
     <subject>Classroom Assistants</subject>
@@ -200,7 +200,7 @@
   </submission>
   <submission>
     <id>23</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Luningning Javier</submitted_by>
     <submitted_date>2025-05-23</submitted_date>
     <subject>Transportation Safety</subject>
@@ -209,7 +209,7 @@
   </submission>
   <submission>
     <id>24</id>
-    <type>Request</type>
+    <via>Dashboard</via>
     <submitted_by>Lourdes Perez</submitted_by>
     <submitted_date>2025-05-24</submitted_date>
     <subject>Classroom Renovation</subject>
@@ -218,7 +218,7 @@
   </submission>
   <submission>
     <id>25</id>
-    <type>Complaint</type>
+    <via>Contact</via>
     <submitted_by>Cristina Aquino</submitted_by>
     <submitted_date>2025-05-25</submitted_date>
     <subject>Insufficient Feedback</subject>
