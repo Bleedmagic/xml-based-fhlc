@@ -122,7 +122,7 @@
             font-size: 16px;
             color: black;
             font-weight: 500;
-            margin-top: 200px;
+            margin-top: 180px;
           }
 
 
@@ -159,7 +159,7 @@
             background-color: white;
             border: 1px solid #ccc;
             border-radius: 20px;
-            padding: 180px;
+            padding: 150px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
             width: 800px;
@@ -168,7 +168,7 @@
           }
 
           .right-panel .card-box img {
-            width: 500px;
+            width: 533px;
             height: auto;
             border-radius: 0;
             margin-top: 82px;
