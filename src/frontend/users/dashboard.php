@@ -1,5 +1,5 @@
 <?php
-$xml = simplexml_load_file(__DIR__ . '/../../data/public/user-grades.xml');
+$xml = simplexml_load_file(__DIR__ . '/../../data/private/user-grades.xml');
 
 // Grades calculation
 $qTotals = ['q1' => 0, 'q2' => 0, 'q3' => 0, 'q4' => 0];
