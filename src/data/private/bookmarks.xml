@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookmarks>
+  <user email="admin1@example.com">
+    <link>
+      <title>W3Schools</title>
+      <url>https://www.w3schools.com</url>
+    </link>
+    <link>
+      <title>Stack Overflow</title>
+      <url>https://stackoverflow.com</url>
+    </link>
+  </user>
+  <user email="admin2@example.com">
+    <link>
+      <title>MDN Web Docs</title>
+      <url>https://developer.mozilla.org</url>
+    </link>
+  </user>
+  <user email="bleedmagic@proton.me">
+    <link>
+      <title>Github</title>
+      <url>https://github.com/Bleedmagic</url>
+    </link>
+  </user>
+  <user email="admin@gmail.com">
+    <link>
+      <title>Wheel of Names</title>
+      <url>https://wheelofnames.com/</url>
+    </link>
+  </user>
+</bookmarks>
