@@ -42,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ) {
       $isAuthenticated = true;
       $_SESSION['username'] = $storedUsername;
+      $_SESSION['email'] = $storedEmail;
       $_SESSION['role'] = $user->getElementsByTagName('role')[0]->nodeValue;
       break;
     }
@@ -49,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if ($isAuthenticated) {
     $role = $_SESSION['role'];
+    $_SESSION['email'] = $storedEmail;
 
     if ($role === 'admin') {
       $redirect = '../admin/dashboard.php';

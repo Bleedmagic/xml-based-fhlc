@@ -1,5 +1,10 @@
 <?php
-
+// Gatekeeper
+session_start();
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+  header('Location: ../auth/login.php');
+  exit();
+}
 
 ?>
 
@@ -61,7 +66,8 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+          <h1 class="h3 mb-2 text-gray-800">Settings</h1>
+          <p class="mb-4">Customize your profile!</p>
 
         </div>
         <!-- /.container-fluid -->
