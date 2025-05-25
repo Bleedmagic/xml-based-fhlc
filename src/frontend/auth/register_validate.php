@@ -12,7 +12,7 @@ $usernameBlacklistPatterns = [
   '/admin/i',
   '/test/i',
   '/user/i',
-  '/^\d+$/',        // usernames with only digits
+  '/^\d+$/',
   '/guest/i'
 ];
 
