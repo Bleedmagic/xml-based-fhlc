@@ -1,6 +1,7 @@
-function togglePasswordVisibility() {
-  const passwordInput = document.getElementById('inputPassword');
-  const icon = document.querySelector('.toggle-password');
+function togglePasswordVisibility(inputId, iconId) {
+  const passwordInput = document.getElementById(inputId);
+  const icon = document.getElementById(iconId);
+
   if (passwordInput.type === 'password') {
     passwordInput.type = 'text';
     icon.classList.remove('bi-eye-slash');

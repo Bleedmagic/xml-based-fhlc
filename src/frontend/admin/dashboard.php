@@ -63,6 +63,22 @@ if ($xml) {
   }
 }
 $remarksData = json_encode([$failed, $passed]);
+
+// Load events from XML into PHP array
+$events = [];
+$xmlFilePath = __DIR__ . '/../../data/private/events.xml';
+
+if (file_exists($xmlFilePath)) {
+  $xml = simplexml_load_file($xmlFilePath);
+  foreach ($xml->event as $event) {
+    $events[] = [
+      'from' => (string)$event->from,
+      'to' => (string)$event->to,
+      'title' => (string)$event->title,
+      'description' => (string)$event->description,
+    ];
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -235,9 +251,6 @@ $remarksData = json_encode([$failed, $passed]);
                 <!-- Card Body -->
                 <div class="card-body">
                   <div id="calendarWidget"></div>
-                  <div class="mt-4 text-center small">
-                    <span>Calendar loaded via calendar-js</span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -340,10 +353,19 @@ $remarksData = json_encode([$failed, $passed]);
     <!-- Calendar JS -->
     <script src="../../../assets/js/lib/calendar.js"></script>
     <script>
-      var calendarInstance1 = new calendarJs("calendarWidget", {
+      var savedEvents = <?= json_encode($events) ?>;
+
+      var calendarInstance = new calendarJs("calendarWidget", {
         isWidget: true,
         exportEventsEnabled: true,
-        useAmPmForTimeDisplays: true
+        useAmPmForTimeDisplays: true,
+        autoRefreshEvents: true,
+      });
+
+      savedEvents.forEach(function(event) {
+        event.from = new Date(event.from);
+        event.to = new Date(event.to);
+        calendarInstance.addEvent(event);
       });
     </script>
 

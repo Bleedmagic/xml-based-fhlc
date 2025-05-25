@@ -41,114 +41,86 @@
         <!-- Custom Styles -->
         <link rel="stylesheet" href="../../../assets/css/custom.css" />
         <link rel="stylesheet" href="../../../assets/css/floating-labels.css" />
-
-        <style>
-          body {
-          height: 100vh;
-          margin: 0;
-          display: flex;
-          flex-direction: row;
-          }
-
-          .form-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 50%;
-          padding: 20px;
-          }
-
-          .image-container {
-          width: 50%;
-          height: 100vh;
-          overflow: hidden;
-          }
-
-          .image-container img {
-          object-fit: cover;
-          display: block;
-          }
-
-          @media screen and (max-width: 768px) {
-          body {
-          flex-direction: column;
-          }
-          .form-container, .image-container {
-          width: 100%;
-          }
-          .image-container {
-          background-size: contain;
-          display: none;
-          }
-          }
-        </style>
       </head>
       <body>
-        <div class="form-container">
-          <a href="../home.php" class="home-icon text-primary position-absolute"
+
+        <div class="container">
+          <a href="../home.php" class="home-icon text-success position-absolute"
             style="top: 20px; left: 30px;">
             <i class="bi bi-house-door" style="font-size: 36px;"></i>
           </a>
 
-          <form class="form-signin" method="POST" action="login_validate.php">
-            <div class="text-center mb-4">
-              <img class="mb-4">
-                <xsl:attribute name="src">
-                  <xsl:value-of select="$login/page/logo" />
-                </xsl:attribute>
-                <xsl:attribute name="alt">Logo</xsl:attribute>
-                <xsl:attribute name="width">100</xsl:attribute>
-                <xsl:attribute name="height">100</xsl:attribute>
-              </img>
-              <h1 class="h3 mb-3 font-weight-normal">
-                <xsl:value-of select="$login/page/title" />
-              </h1>
-              <p>
-                <xsl:value-of select="$login/page/description" />
-              </p>
+          <div class="row">
+
+            <!-- Form -->
+            <div class="col-lg-6">
+                <form class="form-signin" method="POST" action="login_validate.php">
+                  <div class="text-center mb-4">
+                    <img
+                      src="{ $login/page/logo }"
+                      alt="Logo"
+                      width="100"
+                      height="100" />
+                    <h1 class="h3 mb-3 font-weight-normal">
+                      <xsl:value-of select="$login/page/title" />
+                    </h1>
+                  </div>
+
+                  <xsl:if test="$error_message != ''">
+                    <div id="login-error" class="alert alert-danger" role="alert">
+                      <xsl:value-of select="$error_message" />
+                    </div>
+                  </xsl:if>
+
+                  <div class="form-label-group">
+                    <input type="text" id="inputEmailPassword" name="email-username"
+                      class="form-control"
+                      placeholder="Email address or Username"
+                      required="required" autofocus="autofocus" maxlength="128" autocomplete="on" />
+                    <label for="inputEmailPassword">Email address or Username</label>
+                  </div>
+
+                  <div class="form-label-group position-relative">
+                    <input type="password" id="inputPassword" name="password" class="form-control"
+                      placeholder="Password" required="required" maxlength="45" autocomplete="on" />
+                    <label for="inputPassword">Password</label>
+                  <i id="togglePasswordIcon" class="bi bi-eye-slash toggle-password"
+                    onclick="togglePasswordVisibility('inputPassword', 'togglePasswordIcon')"
+                    style="position:absolute; top:50%; right:15px; transform:translateY(-50%); cursor:pointer;"></i>
+                  </div>
+
+                  <div class="form-check my-3">
+                    <input class="form-check-input" type="checkbox" id="termsCheckbox" name="terms"
+                      required="required" />
+                    <label class="form-check-label" for="termsCheckbox">
+                      <xsl:copy-of select="$login/page/checkbox/node()"
+                        disable-output-escaping="yes" />
+                    </label>
+                  </div>
+
+                  <button class="btn btn-lg btn-primary btn-block btn-success" type="submit"
+                    id="login-btn">Login</button>
+
+                  <p class="mt-5 mb-0 text-muted text-center">
+                    <xsl:copy-of select="$login/page/forgot-password/node()"
+                      disable-output-escaping="yes" />
+                  </p>
+
+                  <p class="mt-1 mb-3 text-muted text-center">
+                    <xsl:copy-of select="$login/page/call-to-action/node()"
+                      disable-output-escaping="yes" />
+                  </p>
+                </form>
             </div>
 
-            <xsl:if test="$error_message != ''">
-              <div id="login-error" class="alert alert-danger" role="alert">
-                <xsl:value-of select="$error_message" />
-              </div>
-            </xsl:if>
-
-            <div class="form-label-group">
-              <input type="text" id="inputIdentifier" name="email-username" class="form-control"
-                placeholder="Email address or Username"
-                required="required" autofocus="autofocus" maxlength="128" autocomplete="on" />
-              <label for="inputEmailUsername">Email address or Username</label>
+            <!-- Image -->
+            <div class="col-lg-6 d-none d-lg-block shadow-lg">
+              <img src="{ $login/page/decorative-image }" alt="Decorative image"
+                class="img-fluid w-100 h-100"
+                style="object-fit: contain;" />
             </div>
 
-            <div class="form-label-group position-relative">
-              <input type="password" id="inputPassword" name="password" class="form-control"
-                placeholder="Password" required="required" maxlength="45" autocomplete="on" />
-              <label for="inputPassword">Password</label>
-              <i class="bi bi-eye-slash toggle-password"
-                style="position:absolute; top:50%; right:15px; transform:translateY(-50%); cursor:pointer;"
-                onclick="togglePasswordVisibility()"></i>
-            </div>
-
-            <div class="form-check my-3">
-              <input class="form-check-input" type="checkbox" id="termsCheckbox" name="terms"
-                required="required" />
-              <label class="form-check-label" for="termsCheckbox">
-                <xsl:copy-of select="$login/page/checkbox/node()" disable-output-escaping="yes" />
-              </label>
-            </div>
-
-            <button class="btn btn-lg btn-primary btn-block" type="submit" id="login-btn">Sign in</button>
-            <p class="mt-5 mb-3 text-muted text-center">&#169; <xsl:value-of
-                select="$login/page/copyright" /></p>
-          </form>
-        </div>
-
-        <div class="image-container">
-          <img src="../../../assets/img/default.png" alt="Decorative image"
-            class="img-fluid w-100 h-100"
-            style="object-fit: cover;" />
+          </div>
         </div>
 
         <!-- JS LIB -->
@@ -161,14 +133,14 @@
         <script>
           document.addEventListener('DOMContentLoaded', function () {
           const errorBox = document.getElementById('login-error');
-          const inputEmail = document.getElementById('inputEmail');
+          const inputEmailPassword = document.getElementById('inputEmailPassword');
           const inputPassword = document.getElementById('inputPassword');
 
           function hideError() {
           if (errorBox) errorBox.style.display = 'none';
           }
 
-          if (inputEmail) inputEmail.addEventListener('input', hideError);
+          if (inputEmailPassword) inputEmailPassword.addEventListener('input', hideError);
           if (inputPassword) inputPassword.addEventListener('input', hideError);
           });
         </script>

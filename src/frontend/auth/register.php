@@ -8,17 +8,11 @@ if (isset($_SESSION['error_notif'])) {
   $error_message = '';
 }
 
-if (isset($_SESSION['register_success'])) {
-  $msg = $_SESSION['register_success'];
-  unset($_SESSION['register_success']);
-  echo "<script>alert(" . json_encode($msg) . ");</script>";
-}
-
 $xml = new DOMDocument();
-$xml->load('../../data/public/login.xml');
+$xml->load('../../data/public/register.xml');
 
 $xsl = new DOMDocument();
-$xsl->load('../../xslt/login.xsl');
+$xsl->load('../../xslt/register.xsl');
 
 $proc = new XSLTProcessor();
 $proc->importStylesheet($xsl);

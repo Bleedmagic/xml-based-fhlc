@@ -1,5 +1,19 @@
 <?php
+// Load events from XML into PHP array
+$events = [];
+$xmlFilePath = __DIR__ . '/../../data/private/events.xml';
 
+if (file_exists($xmlFilePath)) {
+  $xml = simplexml_load_file($xmlFilePath);
+  foreach ($xml->event as $event) {
+    $events[] = [
+      'from' => (string)$event->from,
+      'to' => (string)$event->to,
+      'title' => (string)$event->title,
+      'description' => (string)$event->description,
+    ];
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -119,26 +133,19 @@
     <!-- Calendar JS -->
     <script src="../../../assets/js/lib/calendar.js"></script>
     <script>
-      var calendarInstance1 = new calendarJs("calendar-container", {
+      var savedEvents = <?= json_encode($events) ?>;
+
+      var calendarInstance = new calendarJs("calendar-container", {
         exportEventsEnabled: true,
-        useAmPmForTimeDisplays: true
+        useAmPmForTimeDisplays: true,
+        manualEditingEnabled: true
       });
 
-      var event1 = {
-          from: new Date(),
-          to: new Date(),
-          title: "New Event 1",
-          description: "A description of the new event"
-        },
-        event2 = {
-          from: new Date(),
-          to: new Date(),
-          title: "New Event 2",
-          description: "A description of the new event"
-        };
-
-      calendarInstance1.addEvent(event1);
-      calendarInstance1.addEvent(event2);
+      savedEvents.forEach(function(event) {
+        event.from = new Date(event.from);
+        event.to = new Date(event.to);
+        calendarInstance.addEvent(event);
+      });
     </script>
 
     <!-- SweetAlert2 JS CDN -->

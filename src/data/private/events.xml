@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+  <event>
+    <title>Staff Meeting</title>
+    <description>Discuss monthly goals and updates</description>
+    <from>2025-05-23T09:00:00</from>
+    <to>2025-05-23T10:00:00</to>
+  </event>
+  <event>
+    <title>Parent-Teacher Conference</title>
+    <description>Discuss student progress and concerns</description>
+    <from>2025-05-24T13:00:00</from>
+    <to>2025-05-24T15:00:00</to>
+  </event>
+  <event>
+    <title>Curriculum Review</title>
+    <description>Review syllabus for next semester</description>
+    <from>2025-05-27T10:00:00</from>
+    <to>2025-05-27T11:30:00</to>
+  </event>
+  <event>
+    <title>Workshop: Classroom Technology</title>
+    <description>Training on new educational software</description>
+    <from>2025-05-28T09:30:00</from>
+    <to>2025-05-28T12:00:00</to>
+  </event>
+  <event>
+    <title>Team Building Activity</title>
+    <description>Outdoor activities to boost collaboration</description>
+    <from>2025-05-29T14:00:00</from>
+    <to>2025-05-29T16:00:00</to>
+  </event>
+</events>
