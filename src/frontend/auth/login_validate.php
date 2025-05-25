@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $redirect = 'login.php';
     }
 
-    echo "<script>window.location.href = '$redirect';</script>";
+    header("Location: $redirect");
     exit();
   } else {
     $_SESSION['error_notif'] = "Invalid email/username or password.";
