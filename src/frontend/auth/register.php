@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if (isset($_SESSION['error_email'])) {
-  $error_message = $_SESSION['error_email'];
-  unset($_SESSION['error_email']);
+if (isset($_SESSION['error_notif'])) {
+  $error_message = $_SESSION['error_notif'];
+  unset($_SESSION['error_notif']);
 } else {
   $error_message = '';
 }

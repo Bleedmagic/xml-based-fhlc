@@ -6,6 +6,8 @@
     <password>$2y$12$R.IhtrgbcyXFPJ8y2CRlsekqelVeh/qqyMX/XUuOqR.kthqS6GQ86</password>
     <!-- admin@123 -->
     <role>admin</role>
+    <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\default_profile.svg</picture>
+    <student />
   </user>
   <user>
     <username>GuardianIsMe</username>
@@ -13,13 +15,15 @@
     <password>$2y$12$hZrOhFQ5YxCYmDkAddqcHuK/bFpVwhfLyfFGDYD08KifnHF4T/pLq</password>
     <!-- guardian@123 -->
     <role>guardian</role>
+    <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\default_profile.svg</picture>
+    <student />
+  </user>
+  <user>
+    <username>DanielVasquez265</username>
+    <email>bleedmagic@proton.me</email>
+    <password>$2y$10$bJRvNxn9icL734FGu5vFxuwE4AzlBCBwKz537QX3pRA8.jwY1Hisa</password>
+    <role>guardian</role>
+    <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\default_profile.svg</picture>
+    <student />
   </user>
 </users>
-
-<!--
-
-Email or Username (Auto-generated at first, changeable at settings.php)
-
-Register, hashed password
-
--->

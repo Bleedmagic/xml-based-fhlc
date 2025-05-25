@@ -52,9 +52,8 @@
 
           <div class="row">
 
+            <!-- Form -->
             <div class="col-lg-6">
-              <div class="form-container">
-
                 <form class="form-signin" method="POST" action="login_validate.php">
                   <div class="text-center mb-4">
                     <img
@@ -74,20 +73,20 @@
                   </xsl:if>
 
                   <div class="form-label-group">
-                    <input type="text" id="inputIdentifier" name="email-username"
+                    <input type="text" id="inputEmailPassword" name="email-username"
                       class="form-control"
                       placeholder="Email address or Username"
                       required="required" autofocus="autofocus" maxlength="128" autocomplete="on" />
-                    <label for="inputIdentifier">Email address or Username</label>
+                    <label for="inputEmailPassword">Email address or Username</label>
                   </div>
 
                   <div class="form-label-group position-relative">
                     <input type="password" id="inputPassword" name="password" class="form-control"
                       placeholder="Password" required="required" maxlength="45" autocomplete="on" />
                     <label for="inputPassword">Password</label>
-                    <i class="bi bi-eye-slash toggle-password"
-                      style="position:absolute; top:50%; right:15px; transform:translateY(-50%); cursor:pointer;"
-                      onclick="togglePasswordVisibility()"></i>
+                  <i id="togglePasswordIcon" class="bi bi-eye-slash toggle-password"
+                    onclick="togglePasswordVisibility('inputPassword', 'togglePasswordIcon')"
+                    style="position:absolute; top:50%; right:15px; transform:translateY(-50%); cursor:pointer;"></i>
                   </div>
 
                   <div class="form-check my-3">
@@ -112,9 +111,9 @@
                       disable-output-escaping="yes" />
                   </p>
                 </form>
-              </div>
             </div>
 
+            <!-- Image -->
             <div class="col-lg-6 d-none d-lg-block shadow-lg">
               <img src="{ $login/page/decorative-image }" alt="Decorative image"
                 class="img-fluid w-100 h-100"
@@ -134,14 +133,14 @@
         <script>
           document.addEventListener('DOMContentLoaded', function () {
           const errorBox = document.getElementById('login-error');
-          const inputEmail = document.getElementById('inputEmail');
+          const inputEmailPassword = document.getElementById('inputEmailPassword');
           const inputPassword = document.getElementById('inputPassword');
 
           function hideError() {
           if (errorBox) errorBox.style.display = 'none';
           }
 
-          if (inputEmail) inputEmail.addEventListener('input', hideError);
+          if (inputEmailPassword) inputEmailPassword.addEventListener('input', hideError);
           if (inputPassword) inputPassword.addEventListener('input', hideError);
           });
         </script>
