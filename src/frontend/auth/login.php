@@ -14,6 +14,12 @@ if (isset($_SESSION['register_success'])) {
   echo "<script>alert(" . json_encode($msg) . ");</script>";
 }
 
+if (isset($_SESSION['reset_success'])) {
+  $msg = $_SESSION['reset_success'];
+  unset($_SESSION['reset_success']);
+  echo "<script>alert(" . json_encode($msg) . ");</script>";
+}
+
 $xml = new DOMDocument();
 $xml->load('../../data/public/login.xml');
 

@@ -7,7 +7,7 @@
     <description>Register now and be part of a nurturing learning experience.</description>
     <checkbox> I have carefully read and fully agree to the <a href="../terms-conditions.php">Terms
     and Conditions</a> and <a href="../privacy-policy.php">Privacy Policy</a> of this website.</checkbox>
-    <forgot-password><a href="forgot_password.php">Forgot Password?</a></forgot-password>
+    <forgot-password><a href="forgot-password.php">Forgot Password?</a></forgot-password>
     <call-to-action>Already have an account? <a href="login.php">Login!</a></call-to-action>
   </page>
 </register>
