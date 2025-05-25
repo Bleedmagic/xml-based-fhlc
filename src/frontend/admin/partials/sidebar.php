@@ -1,3 +1,11 @@
+<?php
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+  http_response_code(403);
+  echo "Unauthorized access.";
+  exit();
+}
+?>
+
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
   <!-- Sidebar - Brand -->

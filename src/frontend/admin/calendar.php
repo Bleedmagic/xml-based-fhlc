@@ -1,4 +1,11 @@
 <?php
+// Gatekeeper
+session_start();
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+  header('Location: ../auth/login.php');
+  exit();
+}
+
 // Load events from XML into PHP array
 $events = [];
 $xmlFilePath = __DIR__ . '/../../data/private/events.xml';
