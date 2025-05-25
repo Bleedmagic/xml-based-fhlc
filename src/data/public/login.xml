@@ -2,10 +2,14 @@
 <login>
   <page>
     <logo>../../../assets/img/fhlc-logo.png</logo>
-    <title>Login</title>
+    <decorative-image>../../../assets/img/login.jpg</decorative-image>
+    <title>Sign in to Account</title>
     <description>Enter your username and password</description>
     <checkbox> I have carefully read and fully agree to the <a href="../terms-conditions.php">Terms
       and Conditions</a> and <a href="../privacy-policy.php">Privacy Policy</a> of this website.</checkbox>
-    <copyright>2001-2025</copyright>
+    <forgot-password>
+      <a href="forgot_password.php">Forgot Password?</a>
+    </forgot-password>
+    <call-to-action>Don't have an account? <a href="register.php">Register now!</a></call-to-action>
   </page>
 </login>

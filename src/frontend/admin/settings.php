@@ -36,8 +36,6 @@
   <!-- CUSTOM STYLES -->
   <link rel="stylesheet" href="../../../assets/css/dashboard.css">
   <!-- ------------- -->
-
-  <!-- <link rel="stylesheet" href="../../../assets/css/lib/calendar.js.css"> -->
 </head>
 
 <body id="page-top">
