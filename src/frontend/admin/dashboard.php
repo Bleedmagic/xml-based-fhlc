@@ -42,21 +42,21 @@ if (file_exists($studentsXmlPath)) {
 
 // Complaints/Requests Card
 $requestsXmlPath = __DIR__ . '/../../data/private/complaints-requests.xml';
-$pendingComplaintsRequests = 0;
+$openComplaintsRequests = 0;
 $totalSubmissions = 0;
 if (file_exists($requestsXmlPath)) {
   $requestsXml = simplexml_load_file($requestsXmlPath);
   if ($requestsXml !== false) {
     foreach ($requestsXml->submission as $submission) {
       $totalSubmissions++;
-      if (strtolower(trim((string)$submission->status)) === 'pending') {
-        $pendingComplaintsRequests++;
+      if (strtolower(trim((string)$submission->status)) === 'open') {
+        $openComplaintsRequests++;
       }
     }
   }
 }
-$pendingPercentage = $totalSubmissions > 0
-  ? round(($pendingComplaintsRequests / $totalSubmissions) * 100, 2)
+$openPercentage = $totalSubmissions > 0
+  ? round(($openComplaintsRequests / $totalSubmissions) * 100, 2)
   : 0;
 
 // Passed/Failed
@@ -209,26 +209,26 @@ if (file_exists($xmlFilePath)) {
               </div>
             </div>
 
-            <!-- Pending Complaints/Requests Card -->
+            <!-- Open Complaints/Requests Card -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                        Pending Complaints/Requests
+                        Open Complaints/Requests
                       </div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                           <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
-                            <?= $pendingComplaintsRequests ?> (<?= $pendingPercentage ?>%)
+                            <?= $openComplaintsRequests ?> (<?= $openPercentage ?>%)
                           </div>
                         </div>
                         <div class="col">
                           <div class="progress progress-sm mr-2">
                             <div class="progress-bar bg-warning" role="progressbar"
-                              style="width: <?= $pendingPercentage ?>%;"
-                              aria-valuenow="<?= $pendingPercentage ?>" aria-valuemin="0" aria-valuemax="100">
+                              style="width: <?= $openPercentage ?>%;"
+                              aria-valuenow="<?= $openPercentage ?>" aria-valuemin="0" aria-valuemax="100">
                             </div>
                           </div>
                         </div>
@@ -296,30 +296,30 @@ if (file_exists($xmlFilePath)) {
                     $xmlPath = $requestsXmlPath;
                     $xml = simplexml_load_file($xmlPath) or die("Error: Cannot load XML.");
 
-                    $pending = [];
+                    $open = [];
 
                     foreach ($xml->submission as $s) {
-                      if (strtolower((string)$s->status) === 'pending') {
-                        $pending[] = $s;
+                      if (strtolower((string)$s->status) === 'open') {
+                        $open[] = $s;
                       }
                     }
 
-                    usort($pending, function ($a, $b) {
+                    usort($open, function ($a, $b) {
                       return strtotime($b->submitted_date) - strtotime($a->submitted_date);
                     });
 
-                    $maxDisplay = min(10, count($pending));
+                    $maxDisplay = min(10, count($open));
                     if ($maxDisplay === 0) {
-                      echo "<p class='text-muted'>No pending submissions.</p>";
+                      echo "<p class='text-muted'>No open submissions.</p>";
                     } else {
                       for ($i = 0; $i < $maxDisplay; $i++) {
-                        echo "<p class='mb-1 text-truncate' title='" . htmlspecialchars($pending[$i]->subject) . "'>• " . htmlspecialchars($pending[$i]->subject) . "</p>";
+                        echo "<p class='mb-1 text-truncate' title='" . htmlspecialchars($open[$i]->subject) . "'>• " . htmlspecialchars($open[$i]->subject) . "</p>";
                       }
                     }
                     ?>
                   </div>
                   <div class="mt-3 text-center small">
-                    <span class="text-muted">Showing 10 latest and pending</span>
+                    <span class="text-muted">Showing 10 latest and open</span>
                   </div>
                 </div>
               </div>

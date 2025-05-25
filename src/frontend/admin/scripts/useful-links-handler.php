@@ -61,7 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit();
   }
 
-  // Sanitize input
   $title = htmlspecialchars(trim($input['title']), ENT_QUOTES, 'UTF-8');
   $url = filter_var(trim($input['url']), FILTER_VALIDATE_URL);
 
@@ -71,12 +70,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit();
   }
 
-  // Add new link to user's node
   $newLink = $userNode->addChild('link');
   $newLink->addChild('title', $title);
   $newLink->addChild('url', $url);
 
-  // Save XML file with proper locking to prevent race conditions
   $dom = new DOMDocument('1.0', 'UTF-8');
   $dom->preserveWhiteSpace = false;
   $dom->formatOutput = true;
@@ -85,6 +82,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (file_put_contents($xmlFile, $dom->saveXML(), LOCK_EX) === false) {
     http_response_code(500);
     echo json_encode(['error' => 'Failed to save bookmark']);
+    exit();
+  }
+
+  echo json_encode(['success' => true]);
+  exit();
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+  $input = json_decode(file_get_contents('php://input'), true);
+  $index = isset($input['index']) ? (int)$input['index'] : -1;
+
+  if ($index < 0 || $index >= count($userNode->link)) {
+    http_response_code(400);
+    echo json_encode(['error' => 'Invalid link index']);
+    exit();
+  }
+
+  $domUser = dom_import_simplexml($userNode);
+  $domLink = dom_import_simplexml($userNode->link[$index]);
+
+  if ($domUser && $domLink) {
+    $domUser->removeChild($domLink);
+  } else {
+    http_response_code(500);
+    echo json_encode(['error' => 'Failed to access link for deletion']);
+    exit();
+  }
+
+  $dom = new DOMDocument('1.0', 'UTF-8');
+  $dom->preserveWhiteSpace = false;
+  $dom->formatOutput = true;
+  $dom->loadXML($xml->asXML());
+
+  if (file_put_contents($xmlFile, $dom->saveXML(), LOCK_EX) === false) {
+    http_response_code(500);
+    echo json_encode(['error' => 'Failed to delete bookmark']);
     exit();
   }
 
