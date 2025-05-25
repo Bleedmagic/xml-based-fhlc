@@ -25,7 +25,8 @@ $profilePicture = '../../../assets/svg/default_profile.svg';
 foreach ($usersXml->user as $user) {
   if ((string)$user->email === $currentEmail) {
     $username = (string)$user->username;
-    $profilePicture = str_replace('C:\\xampp\\htdocs\\_XAMPP\\XML-FHLC\\', '../../../', (string)$user->picture);
+    $relativePath = str_replace('\\', '/', (string)$user->picture);
+    $profilePicture = '../../../' . ltrim($relativePath, '/');
     break;
   }
 }

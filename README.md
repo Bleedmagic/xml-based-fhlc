@@ -5,9 +5,8 @@ A web-based portal for guardians and teachers to track learning progress of stud
 ## Tech Used
 
 - XML/XSL/DTD/XSD
-- PHP [PHPMailer](https://github.com/PHPMailer/PHPMailer) and [phpdotenv](https://github.com/vlucas/phpdotenv)
-- HTML
-- CSS
+- PHP (with [PHPMailer](https://github.com/PHPMailer/PHPMailer) and [phpdotenv](https://github.com/vlucas/phpdotenv))
+- HTML + CSS
 - JavaScript
 - Bootstrap 4.6 (Thanks [Bootswatch](https://bootswatch.com/4/) and [Startbootstrap](https://startbootstrap.com/))
 - SMTP ([mailtrap](https://mailtrap.io/) is pretty cool.)

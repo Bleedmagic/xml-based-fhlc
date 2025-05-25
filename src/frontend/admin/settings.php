@@ -6,6 +6,23 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
   exit();
 }
 
+$xmlPath = __DIR__ . '/../../data/private/users.xml';
+
+if (file_exists($xmlPath)) {
+  $xml = simplexml_load_file($xmlPath);
+  if ($xml === false) {
+    die('Failed to parse XML file.');
+  }
+} else {
+  die('XML file not found at path: ' . $xmlPath);
+}
+$currentUser = null;
+foreach ($xml->user as $user) {
+  if ((string)$user->email === $_SESSION['email']) {
+    $currentUser = $user;
+    break;
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -69,6 +86,85 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
           <h1 class="h3 mb-2 text-gray-800">Settings</h1>
           <p class="mb-4">Manage and customize your profile to enhance your portal experience.</p>
 
+          <?php if (isset($_GET['updated'])): ?>
+            <script>
+              document.addEventListener('DOMContentLoaded', () => {
+                Swal.fire({
+                  icon: '<?= $_GET['updated'] == 1 ? 'success' : 'error' ?>',
+                  title: '<?= $_GET['updated'] == 1 ? 'Profile Updated' : 'Update Failed' ?>',
+                  text: '<?= $_GET['updated'] == 1 ? 'Your profile has been saved successfully.' : 'There was an error saving your profile.' ?>',
+                  confirmButtonText: 'OK'
+                }).then(() => {
+                  if (window.history.replaceState) {
+                    const cleanUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+                    window.history.replaceState({}, document.title, cleanUrl);
+                  }
+                });
+              });
+            </script>
+          <?php endif; ?>
+
+          <?php if ($currentUser): ?>
+            <form method="post" action="scripts/update-profile.php" enctype="multipart/form-data" class="mt-4">
+
+              <div class="row mb-4 align-items-center">
+                <div class="col-md-4">
+                  <label for="profile_picture" class="form-label d-block">Profile Picture</label>
+                  <img id="profilePreview" src="<?= htmlspecialchars($currentUser->picture) ?>" alt="Profile Picture" class="img-thumbnail mb-2" style="width: 100px; height: 100px; object-fit: cover;">
+                  <input type="file" name="profile_picture" id="profile_picture" class="form-control-file">
+                </div>
+
+                <div class="col-md-4 d-none d-md-block"></div>
+
+                <div class="col-md-4">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" name="username" class="form-control" value="<?= htmlspecialchars($currentUser->username ?? '') ?>">
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-4">
+                  <label>First Name</label>
+                  <input type="text" name="first_name" class="form-control" value="<?= htmlspecialchars($currentUser->first_name) ?>">
+                </div>
+                <div class="col-md-4">
+                  <label>Middle Name</label>
+                  <input type="text" name="middle_name" class="form-control" value="<?= htmlspecialchars($currentUser->middle_name) ?>">
+                </div>
+                <div class="col-md-4">
+                  <label>Last Name</label>
+                  <input type="text" name="last_name" class="form-control" value="<?= htmlspecialchars($currentUser->last_name) ?>">
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-4">
+                  <label>Email (read-only)</label>
+                  <input type="email" class="form-control" value="<?= htmlspecialchars($currentUser->email) ?>" readonly>
+                </div>
+                <div class="col-md-4">
+                  <label>Phone Number</label>
+                  <input type="text" name="phone_number" class="form-control" value="<?= htmlspecialchars($currentUser->phone_number) ?>">
+                </div>
+                <div class="col-md-4">
+                  <label>Age</label>
+                  <input type="number" name="age" class="form-control" value="<?= htmlspecialchars($currentUser->age) ?>">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Address</label>
+                <textarea name="address" class="form-control" rows="2"><?= htmlspecialchars($currentUser->address) ?></textarea>
+              </div>
+
+              <div class="d-flex justify-content-end mt-4">
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+              </div>
+            </form>
+          <?php else: ?>
+            <p>User not found.</p>
+          <?php endif; ?>
+
         </div>
         <!-- /.container-fluid -->
 
@@ -99,7 +195,17 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
   <!-- -------------- -->
   <!-- Custom Scripts -->
   <script src="../../../assets/js/dashboard.js"></script>
+  <script>
+    document.getElementById('profile_picture').addEventListener('change', function(event) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById('profilePreview').src = e.target.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    });
+  </script>
   <!-- -------------- -->
+
 
   <!-- SweetAlert2 JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

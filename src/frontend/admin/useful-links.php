@@ -69,6 +69,23 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
           <h1 class="h3 mb-2 text-gray-800">Useful Links</h1>
           <p class="mb-4">Below are useful links to educational tools and resources designed to support teaching, learning, and classroom management.</p>
 
+          <!-- Add useful links form -->
+          <form id="link-form" class="mb-4">
+            <div class="form-group">
+              <label for="title">Link Title</label>
+              <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+              <label for="url">Link URL</label>
+              <input type="url" class="form-control" id="url" name="url" required placeholder="https://example.com">
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Add Link</button>
+          </form>
+
+          <!-- List of saved links -->
+          <h5>Your Saved Links</h5>
+          <ul id="link-list" class="list-unstyled"></ul>
+
         </div>
         <!-- /.container-fluid -->
 
@@ -99,6 +116,65 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
   <!-- -------------- -->
   <!-- Custom Scripts -->
   <script src="../../../assets/js/dashboard.js"></script>
+  <script>
+    $(document).ready(function() {
+      const $linkList = $('#link-list');
+      const $form = $('#link-form');
+
+      // Fetch saved links from backend (to be created)
+      function fetchLinks() {
+        $.ajax({
+          url: 'scripts/useful-links-handler.php',
+          method: 'GET',
+          dataType: 'json',
+          success: function(data) {
+            $linkList.empty();
+            if (data.length === 0) {
+              $linkList.append('<li>No links saved yet.</li>');
+              return;
+            }
+            data.forEach(link => {
+              $linkList.append(`<li><a href="${link.url}" target="_blank">${link.title}</a></li>`);
+            });
+          },
+          error: function() {
+            $linkList.html('<li>Error loading links.</li>');
+          }
+        });
+      }
+
+      // Handle form submission to add new link
+      $form.submit(function(e) {
+        e.preventDefault();
+        const title = $('#title').val();
+        const url = $('#url').val();
+
+        $.ajax({
+          url: 'scripts/useful-links-handler.php',
+          method: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({
+            title,
+            url
+          }),
+          success: function(response) {
+            if (response.success) {
+              $form[0].reset();
+              fetchLinks();
+            } else {
+              alert(response.error || 'Failed to save link');
+            }
+          },
+          error: function() {
+            alert('Error saving link.');
+          }
+        });
+      });
+
+      // Initial fetch on page load
+      fetchLinks();
+    });
+  </script>
   <!-- -------------- -->
 
   <!-- SIEVE JS -->

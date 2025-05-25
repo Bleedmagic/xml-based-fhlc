@@ -6,7 +6,13 @@
     <password>$2y$10$wbHdvcuFFb1wU3.pmRJRa.6vWd/UKDCDAdSZb/6i2bM6AU5hU7hwq</password>
     <!-- Admin@123 -->
     <role>admin</role>
-    <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\default_profile.svg</picture>
+    <first_name>Admin</first_name>
+    <middle_name />
+    <last_name>IsMe</last_name>
+    <phone_number />
+    <age>0</age>
+    <address />
+    <picture>assets\svg\default_profile.svg</picture>
     <student />
   </user>
   <user>
@@ -15,7 +21,13 @@
     <password>$2y$10$oHVYN5jdeKffrFpNFPU9/uMHYOwQQRSJEHoDJaIL7Mmoy8n7eFecG</password>
     <!-- Guardian@123 -->
     <role>guardian</role>
-    <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\default_profile.svg</picture>
+    <first_name>Guardian</first_name>
+    <middle_name />
+    <last_name>IsMe</last_name>
+    <phone_number />
+    <age>0</age>
+    <address />
+    <picture>assets\svg\default_profile.svg</picture>
     <student />
   </user>
   <user>
@@ -24,12 +36,12 @@
     <password>$2y$10$IXxwhuV.YukFilDvjACyOO/AJpgGe.vXNCwbX2X/WPGWzBdZdqelu</password>
     <role>admin</role>
     <first_name>Victor</first_name>
-    <middle_name />
+    <middle_name/>
     <last_name>Vasquez</last_name>
-    <phone_number />
-    <age />
-    <address />
-    <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\default_profile.svg</picture>
-    <student />
+    <phone_number/>
+    <age>20</age>
+    <address/>
+    <picture>assets/img/uploads/prof_68330d3fa373f3.75206734.jpg</picture>
+    <student/>
   </user>
 </users>
