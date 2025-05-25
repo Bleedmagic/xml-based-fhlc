@@ -30,9 +30,13 @@ $passwordBlacklist = [
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Collect and sanitize inputs
   $firstName = sanitize($_POST['first_name'] ?? '');
+  $middleName = sanitize($_POST['middle_name'] ?? '');
   $lastName = sanitize($_POST['last_name'] ?? '');
   $rawEmail = $_POST['email'] ?? '';
   $email = filter_var($rawEmail, FILTER_VALIDATE_EMAIL);
+  $phoneNumber = sanitize($_POST['phone_number'] ?? '');
+  $age = sanitize($_POST['age'] ?? '');
+  $address = sanitize($_POST['address'] ?? '');
   $password = $_POST['password'] ?? '';
   $confirmPassword = $_POST['confirm_password'] ?? '';
   $terms = isset($_POST['terms']) ? true : false;
@@ -42,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   // Required fields
   if (empty($firstName)) $errors[] = "First name is required.";
+  // Middle name optional, no required check
   if (empty($lastName)) $errors[] = "Last name is required.";
   if (empty($rawEmail)) {
     $errors[] = "Email is required.";
@@ -54,8 +59,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
   }
 
+  // Phone number validation (basic)
+  if (!empty($phoneNumber) && !preg_match('/^\+?[0-9\s\-]{7,20}$/', $phoneNumber)) {
+    $errors[] = "Phone number format is invalid.";
+  }
+
+  // Age validation (optional, but if provided must be a valid positive integer and reasonable range)
+  if (!empty($age)) {
+    if (!filter_var($age, FILTER_VALIDATE_INT, ["options" => ["min_range" => 1, "max_range" => 120]])) {
+      $errors[] = "Age must be a valid number between 1 and 120.";
+    }
+  }
+
+  // Address optional, length limit check
+  if (!empty($address) && strlen($address) > 255) {
+    $errors[] = "Address must be 255 characters or less.";
+  }
+
   // Length checks
   if (strlen($firstName) > 64) $errors[] = "First name must be 64 characters or less.";
+  if (strlen($middleName) > 64) $errors[] = "Middle name must be 64 characters or less.";
   if (strlen($lastName) > 64) $errors[] = "Last name must be 64 characters or less.";
   if (strlen($rawEmail) > 128) $errors[] = "Email must be 128 characters or less.";
 
@@ -155,6 +178,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $newUser->addChild('email', $email);
   $newUser->addChild('password', $hashedPassword);
   $newUser->addChild('role', 'guardian');
+
+  // Add new fields
+  $newUser->addChild('first_name', $firstName);
+  $newUser->addChild('middle_name', $middleName);
+  $newUser->addChild('last_name', $lastName);
+  $newUser->addChild('phone_number', $phoneNumber);
+  $newUser->addChild('age', $age);
+  $newUser->addChild('address', $address);
 
   // Add default picture element
   $defaultPicturePath = "C:\\xampp\\htdocs\\_XAMPP\\XML-FHLC\\assets\\svg\\default_profile.svg";

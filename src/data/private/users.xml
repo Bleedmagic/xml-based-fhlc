@@ -7,7 +7,7 @@
     <!-- Admin@123 -->
     <role>admin</role>
     <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\default_profile.svg</picture>
-    <student/>
+    <student />
   </user>
   <user>
     <username>GuardianIsMe</username>
@@ -16,14 +16,20 @@
     <!-- Guardian@123 -->
     <role>guardian</role>
     <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\default_profile.svg</picture>
-    <student/>
+    <student />
   </user>
   <user>
-    <username>DanielVasquez265</username>
+    <username>VictorVasquez987</username>
     <email>bleedmagic@proton.me</email>
-    <password>$2y$10$bJRvNxn9icL734FGu5vFxuwE4AzlBCBwKz537QX3pRA8.jwY1Hisa</password>
+    <password>$2y$10$IXxwhuV.YukFilDvjACyOO/AJpgGe.vXNCwbX2X/WPGWzBdZdqelu</password>
     <role>admin</role>
+    <first_name>Victor</first_name>
+    <middle_name />
+    <last_name>Vasquez</last_name>
+    <phone_number />
+    <age />
+    <address />
     <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\default_profile.svg</picture>
-    <student/>
+    <student />
   </user>
 </users>

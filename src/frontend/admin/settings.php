@@ -67,7 +67,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800">Settings</h1>
-          <p class="mb-4">Customize your profile!</p>
+          <p class="mb-4">Manage and customize your profile to enhance your portal experience.</p>
 
         </div>
         <!-- /.container-fluid -->
