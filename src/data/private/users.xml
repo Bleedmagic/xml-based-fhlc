@@ -3,27 +3,27 @@
   <user>
     <username>AdminIsMe</username>
     <email>admin@gmail.com</email>
-    <password>$2y$12$R.IhtrgbcyXFPJ8y2CRlsekqelVeh/qqyMX/XUuOqR.kthqS6GQ86</password>
-    <!-- admin@123 -->
+    <password>$2y$10$wbHdvcuFFb1wU3.pmRJRa.6vWd/UKDCDAdSZb/6i2bM6AU5hU7hwq</password>
+    <!-- Admin@123 -->
     <role>admin</role>
     <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\default_profile.svg</picture>
-    <student />
+    <student/>
   </user>
   <user>
     <username>GuardianIsMe</username>
     <email>guardian@gmail.com</email>
-    <password>$2y$12$hZrOhFQ5YxCYmDkAddqcHuK/bFpVwhfLyfFGDYD08KifnHF4T/pLq</password>
-    <!-- guardian@123 -->
+    <password>$2y$10$oHVYN5jdeKffrFpNFPU9/uMHYOwQQRSJEHoDJaIL7Mmoy8n7eFecG</password>
+    <!-- Guardian@123 -->
     <role>guardian</role>
     <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\default_profile.svg</picture>
-    <student />
+    <student/>
   </user>
   <user>
-    <username>DanielVasquez987</username>
+    <username>DanielVasquez265</username>
     <email>bleedmagic@proton.me</email>
     <password>$2y$10$bJRvNxn9icL734FGu5vFxuwE4AzlBCBwKz537QX3pRA8.jwY1Hisa</password>
     <role>admin</role>
-    <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\undraw_profile_2.svg</picture>
-    <student />
+    <picture>C:\xampp\htdocs\_XAMPP\XML-FHLC\assets\svg\default_profile.svg</picture>
+    <student/>
   </user>
 </users>

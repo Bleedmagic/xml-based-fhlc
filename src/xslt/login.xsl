@@ -54,7 +54,7 @@
 
             <!-- Form -->
             <div class="col-lg-6">
-                <form class="form-signin" method="POST" action="login_validate.php">
+                <form class="form-signin" method="POST" action="login-validate.php">
                   <div class="text-center mb-4">
                     <img
                       src="{ $login/page/logo }"
@@ -73,11 +73,11 @@
                   </xsl:if>
 
                   <div class="form-label-group">
-                    <input type="text" id="inputEmailPassword" name="email-username"
+                    <input type="text" id="inputEmailUsername" name="email-username"
                       class="form-control"
                       placeholder="Email address or Username"
                       required="required" autofocus="autofocus" maxlength="128" autocomplete="on" />
-                    <label for="inputEmailPassword">Email address or Username</label>
+                    <label for="inputEmailUsername">Email address or Username</label>
                   </div>
 
                   <div class="form-label-group position-relative">
@@ -133,14 +133,14 @@
         <script>
           document.addEventListener('DOMContentLoaded', function () {
           const errorBox = document.getElementById('login-error');
-          const inputEmailPassword = document.getElementById('inputEmailPassword');
+          const inputEmailUsername = document.getElementById('inputEmailUsername');
           const inputPassword = document.getElementById('inputPassword');
 
           function hideError() {
           if (errorBox) errorBox.style.display = 'none';
           }
 
-          if (inputEmailPassword) inputEmailPassword.addEventListener('input', hideError);
+          if (inputEmailUsername) inputEmailUsername.addEventListener('input', hideError);
           if (inputPassword) inputPassword.addEventListener('input', hideError);
           });
         </script>

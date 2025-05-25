@@ -62,7 +62,7 @@
 
             <!-- Form -->
             <div class="col-lg-6">
-              <form class="form-signin" method="POST" action="register_validate.php"
+              <form class="form-signin" method="POST" action="register-validate.php"
                 autocomplete="off">
                 <div class="text-center mb-4">
                   <img src="{ $register/page/logo }" alt="Logo" width="100" height="100" />
@@ -162,6 +162,7 @@
           const inputLastName = document.getElementById('inputLastName');
           const inputEmail = document.getElementById('inputEmail');
           const inputPassword = document.getElementById('inputPassword');
+          const inputConfirmPassword = document.getElementById('inputConfirmPassword');
 
           function hideError() {
           if (errorBox) errorBox.style.display = 'none';
@@ -171,6 +172,7 @@
           if (inputLastName) inputLastName.addEventListener('input', hideError);
           if (inputEmail) inputEmail.addEventListener('input', hideError);
           if (inputPassword) inputPassword.addEventListener('input', hideError);
+          if (inputConfirmPassword) inputConfirmPassword.addEventListener('input', hideError);
           });
         </script>
       </body>

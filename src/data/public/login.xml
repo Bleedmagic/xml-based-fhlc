@@ -8,7 +8,7 @@
     <checkbox> I have carefully read and fully agree to the <a href="../terms-conditions.php">Terms
       and Conditions</a> and <a href="../privacy-policy.php">Privacy Policy</a> of this website.</checkbox>
     <forgot-password>
-      <a href="forgot_password.php">Forgot Password?</a>
+      <a href="forgot-password.php">Forgot Password?</a>
     </forgot-password>
     <call-to-action>Don't have an account? <a href="register.php">Register now!</a></call-to-action>
   </page>
