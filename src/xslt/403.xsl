@@ -110,7 +110,7 @@
         <main role="main" class="container">
           <div class="row">
             <div class="col-md-6 order-md-1 order-2">
-              <img src="{$assets-path}img/default.png" alt="403 Image" class="img-fluid" />
+              <img src="{$assets-path}img/error.png" alt="403 Image" class="img-fluid" />
             </div>
 
             <div class="col-md-6 order-md-2 order-1">

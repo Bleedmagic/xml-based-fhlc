@@ -10,6 +10,7 @@ A web-based portal for guardians and teachers to track learning progress of stud
 - JavaScript
 - Bootstrap 4.6 (Thanks [Bootswatch](https://bootswatch.com/4/) and [Startbootstrap](https://startbootstrap.com/))
 - SMTP ([mailtrap](https://mailtrap.io/) is pretty cool.)
+- Python to generate XML entries.
 
 > [!NOTE]
 > XSLT rendering and XML transformations may behave differently across browsers. Chrome and Firefox are recommended for consistent results.

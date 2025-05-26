@@ -129,14 +129,13 @@ if (file_exists($xmlPath)) {
                           <td><?= htmlspecialchars($submission->status) ?></td>
                           <td class="text-center">
                             <button class="btn btn-info btn-sm d-flex justify-content-center align-items-center respond-btn" style="width: 75px; max-width: 75px;"
-                              data-id=" <?= htmlspecialchars($submission->id) ?>"
+                              data-id="<?= htmlspecialchars($submission->id) ?>"
                               data-email="<?= htmlspecialchars($submission->email) ?>"
-                              data-subject="<?= htmlspecialchars($submission->subject) ?>"
-                              data-author="<?= htmlspecialchars($submission->submitted_by) ?>">
+                              data-subject="<?= htmlspecialchars($submission->subject) ?>">
                               <i class="fas fa-reply"></i>
                             </button>
                             <button type="button"
-                              class="btn btn-danger btn-sm d-flex justify-content-center align-items-center archive-btn" style="width: 75px; max-width: 75px;"
+                              class="btn btn-danger btn-sm d-flex justify-content-center align-items-center archive-btn" style="width: 75px; max-width: 75px;" style="width: 75px; max-width: 75px;"
                               data-id="<?= htmlspecialchars($submission->id) ?>" title="Archive Submission">
                               <i class="fas fa-archive"></i>
                             </button>
@@ -199,6 +198,41 @@ if (file_exists($xmlPath)) {
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Respond Modal -->
+  <div class="modal fade" id="respondModal" tabindex="-1" role="dialog" aria-labelledby="respondModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <form id="respondForm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Respond to Submission</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" name="id" id="resp-id">
+            <div class="form-group">
+              <label for="resp-email">To (Email)</label>
+              <input type="email" class="form-control" name="email" id="resp-email" readonly>
+            </div>
+            <div class="form-group">
+              <label for="resp-subject">Subject</label>
+              <input type="text" class="form-control" name="subject" id="resp-subject" readonly>
+            </div>
+            <div class="form-group">
+              <label for="resp-message">Your Response</label>
+              <textarea class="form-control" name="message" id="resp-message" rows="6" required></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Send Response</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 
@@ -294,6 +328,45 @@ if (file_exists($xmlPath)) {
           error: function() {
             alert("Failed to load archive data.");
           }
+        });
+      });
+
+      $(function() {
+        // Open the modal
+        $('.respond-btn').on('click', function() {
+          const id = $(this).data('id');
+          const email = $(this).data('email');
+          const subject = $(this).data('subject');
+
+          $('#resp-id').val(id);
+          $('#resp-email').val(email);
+          $('#resp-subject').val('RE: ' + subject);
+          $('#resp-message').val('');
+          $('#respondModal').modal('show');
+        });
+
+        // Submit via fetch
+        $('#respondForm').on('submit', function(e) {
+          e.preventDefault();
+          const formData = $(this).serialize();
+
+          fetch('scripts/respond-sub.php', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+              },
+              body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+              if (data.success) {
+                Swal.fire('Sent!', data.message, 'success')
+                  .then(() => location.reload());
+              } else {
+                Swal.fire('Error', data.message, 'error');
+              }
+            })
+            .catch(() => Swal.fire('Error', 'Request failed.', 'error'));
         });
       });
 
