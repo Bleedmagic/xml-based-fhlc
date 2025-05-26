@@ -72,7 +72,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
           <!-- Add useful links form -->
           <form id="link-form" class="mb-4">
             <div class="form-group">
-              <label for="title">Link Title</label>
+              <label for="title">Link Title - Feel free to add a description.</label>
               <input type="text" class="form-control" id="title" name="title" required>
             </div>
             <div class="form-group">
@@ -84,7 +84,18 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 
           <!-- List of saved links -->
           <h5>Your Saved Links</h5>
-          <ul id="link-list" class="list-unstyled"></ul>
+          <table id="link-list" class="table table-striped table-bordered" style="width: 100%;">
+            <thead>
+              <tr>
+                <th style="width: 80%;">Link</th>
+                <th style="width: 20%;" class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Links appended here -->
+            </tbody>
+          </table>
+
 
         </div>
         <!-- /.container-fluid -->
@@ -128,13 +139,25 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
           method: 'GET',
           dataType: 'json',
           success: function(data) {
-            $linkList.empty();
+            const $linkListBody = $('#link-list tbody');
+            $linkListBody.empty(); // Clear only tbody, not entire table
+
             if (data.length === 0) {
-              $linkList.append('<li>No links saved yet.</li>');
+              $linkListBody.append('<tr><td colspan="2" class="text-center">No links saved yet.</td></tr>');
               return;
             }
-            data.forEach(link => {
-              $linkList.append(`<li><a href="${link.url}" target="_blank">${link.title}</a></li>`);
+
+            data.forEach((link, index) => {
+              $linkListBody.append(`
+                <tr>
+                  <td><a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.title}</a></td>
+                  <td class="text-center align-middle">
+                    <button class="btn btn-sm btn-danger delete-link" data-index="${index}" title="Delete">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </td>
+                </tr>
+              `);
             });
           },
           error: function() {
@@ -142,6 +165,48 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
           }
         });
       }
+
+      $linkList.on('click', '.delete-link', function() {
+        const index = $(this).data('index');
+
+        Swal.fire({
+          title: 'Are you sure?',
+          text: 'This link will be permanently deleted.',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#d33',
+          cancelButtonColor: '#6c757d',
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $.ajax({
+              url: 'scripts/useful-links-handler.php',
+              method: 'DELETE',
+              contentType: 'application/json',
+              data: JSON.stringify({
+                index
+              }),
+              success: function(response) {
+                if (response.success) {
+                  fetchLinks();
+                  Swal.fire({
+                    title: 'Deleted!',
+                    text: 'The link has been removed.',
+                    icon: 'success',
+                    timer: 1500,
+                    showConfirmButton: false
+                  });
+                } else {
+                  Swal.fire('Error', response.error || 'Failed to delete link.', 'error');
+                }
+              },
+              error: function() {
+                Swal.fire('Error', 'Error deleting link.', 'error');
+              }
+            });
+          }
+        });
+      });
 
       // Handle form submission to add new link
       $form.submit(function(e) {

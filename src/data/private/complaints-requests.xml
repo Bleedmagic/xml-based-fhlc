@@ -4,225 +4,740 @@
     <id>1</id>
     <via>Contact</via>
     <submitted_by>Maria Santos</submitted_by>
+    <email>maria.santos@gmail.com</email>
     <submitted_date>2025-05-01</submitted_date>
     <subject>Homework Difficulty</subject>
     <message>The homework is too challenging for my child.</message>
-    <status>Closed</status>
+    <status>Open</status>
   </submission>
   <submission>
     <id>2</id>
-    <via>Dashboard</via>
-    <submitted_by>Gino Ramos</submitted_by>
+    <via>Contact</via>
+    <submitted_by>Aling Rosario</submitted_by>
+    <email>aling.rosario@gmail.com</email>
     <submitted_date>2025-05-02</submitted_date>
-    <subject>Extra Reading Materials</subject>
-    <message>Requesting additional resources for advanced learners.</message>
-    <status>Pending</status>
+    <subject>Classroom Supplies</subject>
+    <message>Requesting more supplies for science experiments.</message>
+    <status>Open</status>
   </submission>
   <submission>
     <id>3</id>
-    <via>Contact</via>
-    <submitted_by>Ligaya Cruz</submitted_by>
+    <via>Dashboard</via>
+    <submitted_by>Ana Dizon</submitted_by>
+    <email>ana.dizon@gmail.com</email>
     <submitted_date>2025-05-03</submitted_date>
-    <subject>Late Grade Updates</subject>
-    <message>Grades are not updated frequently enough.</message>
-    <status>Open</status>
+    <subject>Field Trip Approval</subject>
+    <message>Requesting approval for an educational field trip.</message>
+    <status>Closed</status>
   </submission>
   <submission>
     <id>4</id>
     <via>Dashboard</via>
-    <submitted_by>Aling Rosario</submitted_by>
+    <submitted_by>Domingo Navarro</submitted_by>
+    <email>domingo.navarro@gmail.com</email>
     <submitted_date>2025-05-04</submitted_date>
-    <subject>Classroom Supplies</subject>
-    <message>Requesting more supplies for science experiments.</message>
-    <status>Closed</status>
+    <subject>Bullying Incident</subject>
+    <message>Concern about bullying in the classroom.</message>
+    <status>Open</status>
   </submission>
   <submission>
     <id>5</id>
     <via>Contact</via>
-    <submitted_by>Jaime Dela Cruz</submitted_by>
-    <submitted_date>2025-05-05</submitted_date>
-    <subject>Communication Issues</subject>
-    <message>Difficulty reaching teachers for updates.</message>
-    <status>Open</status>
-  </submission>
-  <submission>
-    <id>6</id>
-    <via>Dashboard</via>
-    <submitted_by>Ana Dizon</submitted_by>
-    <submitted_date>2025-05-06</submitted_date>
-    <subject>Field Trip Approval</subject>
-    <message>Requesting approval for an educational field trip.</message>
-    <status>Pending</status>
-  </submission>
-  <submission>
-    <id>7</id>
-    <via>Contact</via>
-    <submitted_by>Domingo Navarro</submitted_by>
-    <submitted_date>2025-05-07</submitted_date>
-    <subject>Bullying Incident</subject>
-    <message>Concern about bullying in the classroom.</message>
-    <status>Closed</status>
-  </submission>
-  <submission>
-    <id>8</id>
-    <via>Dashboard</via>
-    <submitted_by>Tony Manalansan</submitted_by>
-    <submitted_date>2025-05-08</submitted_date>
-    <subject>Additional Tutoring</subject>
-    <message>Requesting tutoring support for struggling students.</message>
-    <status>Pending</status>
-  </submission>
-  <submission>
-    <id>9</id>
-    <via>Contact</via>
     <submitted_by>Rosalinda Villanueva</submitted_by>
-    <submitted_date>2025-05-09</submitted_date>
+    <email>rosalinda.villanueva@gmail.com</email>
+    <submitted_date>2025-05-05</submitted_date>
     <subject>Grade Discrepancy</subject>
     <message>Discrepancy noticed in recent test grades.</message>
     <status>Closed</status>
   </submission>
   <submission>
-    <id>10</id>
-    <via>Dashboard</via>
+    <id>6</id>
+    <via>Contact</via>
     <submitted_by>Carmela Bautista</submitted_by>
-    <submitted_date>2025-05-10</submitted_date>
+    <email>carmela.bautista@gmail.com</email>
+    <submitted_date>2025-05-06</submitted_date>
     <subject>Parent-Teacher Meeting</subject>
     <message>Request to schedule additional meetings for progress discussion.</message>
-    <status>Pending</status>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>7</id>
+    <via>Dashboard</via>
+    <submitted_by>Fernando Aguilar</submitted_by>
+    <email>fernando.aguilar@gmail.com</email>
+    <submitted_date>2025-05-07</submitted_date>
+    <subject>School Bus Delay</subject>
+    <message>Frequent delays in the school bus schedule.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>8</id>
+    <via>Contact</via>
+    <submitted_by>Eduardo Tan</submitted_by>
+    <email>eduardo.tan@gmail.com</email>
+    <submitted_date>2025-05-08</submitted_date>
+    <subject>Technology Upgrade</subject>
+    <message>Requesting updated computers for the classroom.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>9</id>
+    <via>Dashboard</via>
+    <submitted_by>Veronica Reyes</submitted_by>
+    <email>veronica.reyes@gmail.com</email>
+    <submitted_date>2025-05-09</submitted_date>
+    <subject>Unclear Instructions</subject>
+    <message>Homework instructions are unclear and confusing.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>10</id>
+    <via>Contact</via>
+    <submitted_by>Isabel De Leon</submitted_by>
+    <email>isabel.de.leon@gmail.com</email>
+    <submitted_date>2025-05-10</submitted_date>
+    <subject>Extra-curricular Funding</subject>
+    <message>Request for additional funding for extra-curricular activities.</message>
+    <status>Closed</status>
   </submission>
   <submission>
     <id>11</id>
-    <via>Contact</via>
-    <submitted_by>Fernando Aguilar</submitted_by>
+    <via>Dashboard</via>
+    <submitted_by>Ramon Castillo</submitted_by>
+    <email>ramon.castillo@gmail.com</email>
     <submitted_date>2025-05-11</submitted_date>
-    <subject>School Bus Delay</subject>
-    <message>Frequent delays in the school bus schedule.</message>
-    <status>Closed</status>
+    <subject>Noise in Classroom</subject>
+    <message>Classroom noise level affects learning environment.</message>
+    <status>Open</status>
   </submission>
   <submission>
     <id>12</id>
     <via>Dashboard</via>
-    <submitted_by>Eduardo Tan</submitted_by>
+    <submitted_by>Minerva Lopez</submitted_by>
+    <email>minerva.lopez@gmail.com</email>
     <submitted_date>2025-05-12</submitted_date>
-    <subject>Technology Upgrade</subject>
-    <message>Requesting updated computers for the classroom.</message>
-    <status>Pending</status>
+    <subject>Library Books</subject>
+    <message>Request to purchase new books for the library.</message>
+    <status>Closed</status>
   </submission>
   <submission>
     <id>13</id>
     <via>Contact</via>
-    <submitted_by>Veronica Reyes</submitted_by>
-    <submitted_date>2025-05-13</submitted_date>
-    <subject>Unclear Instructions</subject>
-    <message>Homework instructions are unclear and confusing.</message>
-    <status>Open</status>
-  </submission>
-  <submission>
-    <id>14</id>
-    <via>Dashboard</via>
-    <submitted_by>Isabel De Leon</submitted_by>
-    <submitted_date>2025-05-14</submitted_date>
-    <subject>Extra-curricular Funding</subject>
-    <message>Request for additional funding for extra-curricular activities.</message>
-    <status>Pending</status>
-  </submission>
-  <submission>
-    <id>15</id>
-    <via>Contact</via>
-    <submitted_by>Ramon Castillo</submitted_by>
-    <submitted_date>2025-05-15</submitted_date>
-    <subject>Noise in Classroom</subject>
-    <message>Classroom noise level affects learning environment.</message>
-    <status>Closed</status>
-  </submission>
-  <submission>
-    <id>16</id>
-    <via>Dashboard</via>
-    <submitted_by>Minerva Lopez</submitted_by>
-    <submitted_date>2025-05-16</submitted_date>
-    <subject>Library Books</subject>
-    <message>Request to purchase new books for the library.</message>
-    <status>Pending</status>
-  </submission>
-  <submission>
-    <id>17</id>
-    <via>Contact</via>
     <submitted_by>Estrella Mendoza</submitted_by>
-    <submitted_date>2025-05-17</submitted_date>
+    <email>estrella.mendoza@gmail.com</email>
+    <submitted_date>2025-05-13</submitted_date>
     <subject>Inconsistent Attendance Records</subject>
     <message>Attendance records seem inconsistent with actual attendance.</message>
     <status>Open</status>
   </submission>
   <submission>
-    <id>18</id>
+    <id>14</id>
     <via>Dashboard</via>
     <submitted_by>Enrico Salazar</submitted_by>
-    <submitted_date>2025-05-18</submitted_date>
+    <email>enrico.salazar@gmail.com</email>
+    <submitted_date>2025-05-14</submitted_date>
     <subject>Professional Development</subject>
     <message>Request for training workshops for teachers.</message>
-    <status>Pending</status>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>15</id>
+    <via>Dashboard</via>
+    <submitted_by>Dolores Garcia</submitted_by>
+    <email>dolores.garcia@gmail.com</email>
+    <submitted_date>2025-05-15</submitted_date>
+    <subject>Lunch Quality</subject>
+    <message>Concerns about the quality of school lunches.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>16</id>
+    <via>Contact</via>
+    <submitted_by>Leticia Flores</submitted_by>
+    <email>leticia.flores@gmail.com</email>
+    <submitted_date>2025-05-16</submitted_date>
+    <subject>Sports Equipment</subject>
+    <message>Request to update sports equipment for physical education.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>17</id>
+    <via>Contact</via>
+    <submitted_by>Andres Pascual</submitted_by>
+    <email>andres.pascual@gmail.com</email>
+    <submitted_date>2025-05-17</submitted_date>
+    <subject>Website Downtime</subject>
+    <message>Portal is frequently inaccessible.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>18</id>
+    <via>Dashboard</via>
+    <submitted_by>Benito Francisco</submitted_by>
+    <email>benito.francisco@gmail.com</email>
+    <submitted_date>2025-05-18</submitted_date>
+    <subject>Classroom Assistants</subject>
+    <message>Requesting additional teaching assistants.</message>
+    <status>Open</status>
   </submission>
   <submission>
     <id>19</id>
     <via>Contact</via>
-    <submitted_by>Dolores Garcia</submitted_by>
+    <submitted_by>Luningning Javier</submitted_by>
+    <email>luningning.javier@gmail.com</email>
     <submitted_date>2025-05-19</submitted_date>
-    <subject>Lunch Quality</subject>
-    <message>Concerns about the quality of school lunches.</message>
-    <status>Closed</status>
+    <subject>Transportation Safety</subject>
+    <message>Concerns about bus safety standards.</message>
+    <status>Open</status>
   </submission>
   <submission>
     <id>20</id>
-    <via>Dashboard</via>
-    <submitted_by>Leticia Flores</submitted_by>
+    <via>Contact</via>
+    <submitted_by>Lourdes Perez</submitted_by>
+    <email>lourdes.perez@gmail.com</email>
     <submitted_date>2025-05-20</submitted_date>
-    <subject>Sports Equipment</subject>
-    <message>Request to update sports equipment for physical education.</message>
-    <status>Pending</status>
+    <subject>Classroom Renovation</subject>
+    <message>Request for classroom repainting and repairs.</message>
+    <status>Open</status>
   </submission>
   <submission>
     <id>21</id>
     <via>Contact</via>
-    <submitted_by>Andres Pascual</submitted_by>
+    <submitted_by>Cristina Aquino</submitted_by>
+    <email>cristina.aquino@gmail.com</email>
     <submitted_date>2025-05-21</submitted_date>
-    <subject>Website Downtime</subject>
-    <message>Portal is frequently inaccessible.</message>
+    <subject>Insufficient Feedback</subject>
+    <message>Not receiving enough feedback on child's progress.</message>
     <status>Open</status>
   </submission>
   <submission>
     <id>22</id>
-    <via>Dashboard</via>
-    <submitted_by>Benito Francisco</submitted_by>
+    <via>Contact</via>
+    <submitted_by>Juan Dela Cruz</submitted_by>
+    <email>juan.dela.cruz@gmail.com</email>
     <submitted_date>2025-05-22</submitted_date>
-    <subject>Classroom Assistants</subject>
-    <message>Requesting additional teaching assistants.</message>
-    <status>Pending</status>
+    <subject>New Computer Lab</subject>
+    <message>Request to set up a new computer lab for students.</message>
+    <status>Open</status>
   </submission>
   <submission>
     <id>23</id>
     <via>Contact</via>
-    <submitted_by>Luningning Javier</submitted_by>
+    <submitted_by>Maria Clara</submitted_by>
+    <email>maria.clara@gmail.com</email>
     <submitted_date>2025-05-23</submitted_date>
-    <subject>Transportation Safety</subject>
-    <message>Concerns about bus safety standards.</message>
+    <subject>Homework Difficulty</subject>
+    <message>The homework is too challenging for my child.</message>
     <status>Closed</status>
   </submission>
   <submission>
     <id>24</id>
     <via>Dashboard</via>
-    <submitted_by>Lourdes Perez</submitted_by>
+    <submitted_by>Jose Rizal</submitted_by>
+    <email>jose.rizal@gmail.com</email>
     <submitted_date>2025-05-24</submitted_date>
-    <subject>Classroom Renovation</subject>
-    <message>Request for classroom repainting and repairs.</message>
-    <status>Pending</status>
+    <subject>Classroom Supplies</subject>
+    <message>Requesting more supplies for science experiments.</message>
+    <status>Closed</status>
   </submission>
   <submission>
     <id>25</id>
-    <via>Contact</via>
-    <submitted_by>Cristina Aquino</submitted_by>
+    <via>Dashboard</via>
+    <submitted_by>Emilio Aguinaldo</submitted_by>
+    <email>emilio.aguinaldo@gmail.com</email>
     <submitted_date>2025-05-25</submitted_date>
+    <subject>Field Trip Approval</subject>
+    <message>Requesting approval for an educational field trip.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>26</id>
+    <via>Contact</via>
+    <submitted_by>Maria Santos</submitted_by>
+    <email>maria.santos@gmail.com</email>
+    <submitted_date>2025-05-26</submitted_date>
+    <subject>Bullying Incident</subject>
+    <message>Concern about bullying in the classroom.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>27</id>
+    <via>Contact</via>
+    <submitted_by>Aling Rosario</submitted_by>
+    <email>aling.rosario@gmail.com</email>
+    <submitted_date>2025-05-27</submitted_date>
+    <subject>Grade Discrepancy</subject>
+    <message>Discrepancy noticed in recent test grades.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>28</id>
+    <via>Contact</via>
+    <submitted_by>Ana Dizon</submitted_by>
+    <email>ana.dizon@gmail.com</email>
+    <submitted_date>2025-05-28</submitted_date>
+    <subject>Parent-Teacher Meeting</subject>
+    <message>Request to schedule additional meetings for progress discussion.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>29</id>
+    <via>Contact</via>
+    <submitted_by>Domingo Navarro</submitted_by>
+    <email>domingo.navarro@gmail.com</email>
+    <submitted_date>2025-05-29</submitted_date>
+    <subject>School Bus Delay</subject>
+    <message>Frequent delays in the school bus schedule.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>30</id>
+    <via>Contact</via>
+    <submitted_by>Rosalinda Villanueva</submitted_by>
+    <email>rosalinda.villanueva@gmail.com</email>
+    <submitted_date>2025-05-30</submitted_date>
+    <subject>Technology Upgrade</subject>
+    <message>Requesting updated computers for the classroom.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>31</id>
+    <via>Dashboard</via>
+    <submitted_by>Carmela Bautista</submitted_by>
+    <email>carmela.bautista@gmail.com</email>
+    <submitted_date>2025-05-31</submitted_date>
+    <subject>Unclear Instructions</subject>
+    <message>Homework instructions are unclear and confusing.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>32</id>
+    <via>Dashboard</via>
+    <submitted_by>Fernando Aguilar</submitted_by>
+    <email>fernando.aguilar@gmail.com</email>
+    <submitted_date>2025-06-01</submitted_date>
+    <subject>Extra-curricular Funding</subject>
+    <message>Request for additional funding for extra-curricular activities.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>33</id>
+    <via>Contact</via>
+    <submitted_by>Eduardo Tan</submitted_by>
+    <email>eduardo.tan@gmail.com</email>
+    <submitted_date>2025-06-02</submitted_date>
+    <subject>Noise in Classroom</subject>
+    <message>Classroom noise level affects learning environment.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>34</id>
+    <via>Dashboard</via>
+    <submitted_by>Veronica Reyes</submitted_by>
+    <email>veronica.reyes@gmail.com</email>
+    <submitted_date>2025-06-03</submitted_date>
+    <subject>Library Books</subject>
+    <message>Request to purchase new books for the library.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>35</id>
+    <via>Dashboard</via>
+    <submitted_by>Isabel De Leon</submitted_by>
+    <email>isabel.de.leon@gmail.com</email>
+    <submitted_date>2025-06-04</submitted_date>
+    <subject>Inconsistent Attendance Records</subject>
+    <message>Attendance records seem inconsistent with actual attendance.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>36</id>
+    <via>Contact</via>
+    <submitted_by>Ramon Castillo</submitted_by>
+    <email>ramon.castillo@gmail.com</email>
+    <submitted_date>2025-06-05</submitted_date>
+    <subject>Professional Development</subject>
+    <message>Request for training workshops for teachers.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>37</id>
+    <via>Contact</via>
+    <submitted_by>Minerva Lopez</submitted_by>
+    <email>minerva.lopez@gmail.com</email>
+    <submitted_date>2025-06-06</submitted_date>
+    <subject>Lunch Quality</subject>
+    <message>Concerns about the quality of school lunches.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>38</id>
+    <via>Dashboard</via>
+    <submitted_by>Estrella Mendoza</submitted_by>
+    <email>estrella.mendoza@gmail.com</email>
+    <submitted_date>2025-06-07</submitted_date>
+    <subject>Sports Equipment</subject>
+    <message>Request to update sports equipment for physical education.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>39</id>
+    <via>Dashboard</via>
+    <submitted_by>Enrico Salazar</submitted_by>
+    <email>enrico.salazar@gmail.com</email>
+    <submitted_date>2025-06-08</submitted_date>
+    <subject>Website Downtime</subject>
+    <message>Portal is frequently inaccessible.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>40</id>
+    <via>Contact</via>
+    <submitted_by>Dolores Garcia</submitted_by>
+    <email>dolores.garcia@gmail.com</email>
+    <submitted_date>2025-06-09</submitted_date>
+    <subject>Classroom Assistants</subject>
+    <message>Requesting additional teaching assistants.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>41</id>
+    <via>Dashboard</via>
+    <submitted_by>Leticia Flores</submitted_by>
+    <email>leticia.flores@gmail.com</email>
+    <submitted_date>2025-06-10</submitted_date>
+    <subject>Transportation Safety</subject>
+    <message>Concerns about bus safety standards.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>42</id>
+    <via>Dashboard</via>
+    <submitted_by>Andres Pascual</submitted_by>
+    <email>andres.pascual@gmail.com</email>
+    <submitted_date>2025-06-11</submitted_date>
+    <subject>Classroom Renovation</subject>
+    <message>Request for classroom repainting and repairs.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>43</id>
+    <via>Contact</via>
+    <submitted_by>Benito Francisco</submitted_by>
+    <email>benito.francisco@gmail.com</email>
+    <submitted_date>2025-06-12</submitted_date>
     <subject>Insufficient Feedback</subject>
     <message>Not receiving enough feedback on child's progress.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>44</id>
+    <via>Contact</via>
+    <submitted_by>Luningning Javier</submitted_by>
+    <email>luningning.javier@gmail.com</email>
+    <submitted_date>2025-06-13</submitted_date>
+    <subject>New Computer Lab</subject>
+    <message>Request to set up a new computer lab for students.</message>
     <status>Open</status>
+  </submission>
+  <submission>
+    <id>45</id>
+    <via>Contact</via>
+    <submitted_by>Lourdes Perez</submitted_by>
+    <email>lourdes.perez@gmail.com</email>
+    <submitted_date>2025-06-14</submitted_date>
+    <subject>Homework Difficulty</subject>
+    <message>The homework is too challenging for my child.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>46</id>
+    <via>Dashboard</via>
+    <submitted_by>Cristina Aquino</submitted_by>
+    <email>cristina.aquino@gmail.com</email>
+    <submitted_date>2025-06-15</submitted_date>
+    <subject>Classroom Supplies</subject>
+    <message>Requesting more supplies for science experiments.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>47</id>
+    <via>Dashboard</via>
+    <submitted_by>Juan Dela Cruz</submitted_by>
+    <email>juan.dela.cruz@gmail.com</email>
+    <submitted_date>2025-06-16</submitted_date>
+    <subject>Field Trip Approval</subject>
+    <message>Requesting approval for an educational field trip.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>48</id>
+    <via>Contact</via>
+    <submitted_by>Maria Clara</submitted_by>
+    <email>maria.clara@gmail.com</email>
+    <submitted_date>2025-06-17</submitted_date>
+    <subject>Bullying Incident</subject>
+    <message>Concern about bullying in the classroom.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>49</id>
+    <via>Dashboard</via>
+    <submitted_by>Jose Rizal</submitted_by>
+    <email>jose.rizal@gmail.com</email>
+    <submitted_date>2025-06-18</submitted_date>
+    <subject>Grade Discrepancy</subject>
+    <message>Discrepancy noticed in recent test grades.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>50</id>
+    <via>Contact</via>
+    <submitted_by>Emilio Aguinaldo</submitted_by>
+    <email>emilio.aguinaldo@gmail.com</email>
+    <submitted_date>2025-06-19</submitted_date>
+    <subject>Parent-Teacher Meeting</subject>
+    <message>Request to schedule additional meetings for progress discussion.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>51</id>
+    <via>Dashboard</via>
+    <submitted_by>Maria Santos</submitted_by>
+    <email>maria.santos@gmail.com</email>
+    <submitted_date>2025-06-20</submitted_date>
+    <subject>School Bus Delay</subject>
+    <message>Frequent delays in the school bus schedule.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>52</id>
+    <via>Dashboard</via>
+    <submitted_by>Aling Rosario</submitted_by>
+    <email>aling.rosario@gmail.com</email>
+    <submitted_date>2025-06-21</submitted_date>
+    <subject>Technology Upgrade</subject>
+    <message>Requesting updated computers for the classroom.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>53</id>
+    <via>Contact</via>
+    <submitted_by>Ana Dizon</submitted_by>
+    <email>ana.dizon@gmail.com</email>
+    <submitted_date>2025-06-22</submitted_date>
+    <subject>Unclear Instructions</subject>
+    <message>Homework instructions are unclear and confusing.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>54</id>
+    <via>Contact</via>
+    <submitted_by>Domingo Navarro</submitted_by>
+    <email>domingo.navarro@gmail.com</email>
+    <submitted_date>2025-06-23</submitted_date>
+    <subject>Extra-curricular Funding</subject>
+    <message>Request for additional funding for extra-curricular activities.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>55</id>
+    <via>Contact</via>
+    <submitted_by>Rosalinda Villanueva</submitted_by>
+    <email>rosalinda.villanueva@gmail.com</email>
+    <submitted_date>2025-06-24</submitted_date>
+    <subject>Noise in Classroom</subject>
+    <message>Classroom noise level affects learning environment.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>56</id>
+    <via>Dashboard</via>
+    <submitted_by>Carmela Bautista</submitted_by>
+    <email>carmela.bautista@gmail.com</email>
+    <submitted_date>2025-06-25</submitted_date>
+    <subject>Library Books</subject>
+    <message>Request to purchase new books for the library.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>57</id>
+    <via>Contact</via>
+    <submitted_by>Fernando Aguilar</submitted_by>
+    <email>fernando.aguilar@gmail.com</email>
+    <submitted_date>2025-06-26</submitted_date>
+    <subject>Inconsistent Attendance Records</subject>
+    <message>Attendance records seem inconsistent with actual attendance.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>58</id>
+    <via>Contact</via>
+    <submitted_by>Eduardo Tan</submitted_by>
+    <email>eduardo.tan@gmail.com</email>
+    <submitted_date>2025-06-27</submitted_date>
+    <subject>Professional Development</subject>
+    <message>Request for training workshops for teachers.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>59</id>
+    <via>Contact</via>
+    <submitted_by>Veronica Reyes</submitted_by>
+    <email>veronica.reyes@gmail.com</email>
+    <submitted_date>2025-06-28</submitted_date>
+    <subject>Lunch Quality</subject>
+    <message>Concerns about the quality of school lunches.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>60</id>
+    <via>Dashboard</via>
+    <submitted_by>Isabel De Leon</submitted_by>
+    <email>isabel.de.leon@gmail.com</email>
+    <submitted_date>2025-06-29</submitted_date>
+    <subject>Sports Equipment</subject>
+    <message>Request to update sports equipment for physical education.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>61</id>
+    <via>Contact</via>
+    <submitted_by>Ramon Castillo</submitted_by>
+    <email>ramon.castillo@gmail.com</email>
+    <submitted_date>2025-06-30</submitted_date>
+    <subject>Website Downtime</subject>
+    <message>Portal is frequently inaccessible.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>62</id>
+    <via>Contact</via>
+    <submitted_by>Minerva Lopez</submitted_by>
+    <email>minerva.lopez@gmail.com</email>
+    <submitted_date>2025-07-01</submitted_date>
+    <subject>Classroom Assistants</subject>
+    <message>Requesting additional teaching assistants.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>63</id>
+    <via>Dashboard</via>
+    <submitted_by>Estrella Mendoza</submitted_by>
+    <email>estrella.mendoza@gmail.com</email>
+    <submitted_date>2025-07-02</submitted_date>
+    <subject>Transportation Safety</subject>
+    <message>Concerns about bus safety standards.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>64</id>
+    <via>Dashboard</via>
+    <submitted_by>Enrico Salazar</submitted_by>
+    <email>enrico.salazar@gmail.com</email>
+    <submitted_date>2025-07-03</submitted_date>
+    <subject>Classroom Renovation</subject>
+    <message>Request for classroom repainting and repairs.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>65</id>
+    <via>Contact</via>
+    <submitted_by>Dolores Garcia</submitted_by>
+    <email>dolores.garcia@gmail.com</email>
+    <submitted_date>2025-07-04</submitted_date>
+    <subject>Insufficient Feedback</subject>
+    <message>Not receiving enough feedback on child's progress.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>66</id>
+    <via>Dashboard</via>
+    <submitted_by>Leticia Flores</submitted_by>
+    <email>leticia.flores@gmail.com</email>
+    <submitted_date>2025-07-05</submitted_date>
+    <subject>New Computer Lab</subject>
+    <message>Request to set up a new computer lab for students.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>67</id>
+    <via>Dashboard</via>
+    <submitted_by>Andres Pascual</submitted_by>
+    <email>andres.pascual@gmail.com</email>
+    <submitted_date>2025-07-06</submitted_date>
+    <subject>Homework Difficulty</subject>
+    <message>The homework is too challenging for my child.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>68</id>
+    <via>Dashboard</via>
+    <submitted_by>Benito Francisco</submitted_by>
+    <email>benito.francisco@gmail.com</email>
+    <submitted_date>2025-07-07</submitted_date>
+    <subject>Classroom Supplies</subject>
+    <message>Requesting more supplies for science experiments.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>69</id>
+    <via>Contact</via>
+    <submitted_by>Luningning Javier</submitted_by>
+    <email>luningning.javier@gmail.com</email>
+    <submitted_date>2025-07-08</submitted_date>
+    <subject>Field Trip Approval</subject>
+    <message>Requesting approval for an educational field trip.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>70</id>
+    <via>Dashboard</via>
+    <submitted_by>Lourdes Perez</submitted_by>
+    <email>lourdes.perez@gmail.com</email>
+    <submitted_date>2025-07-09</submitted_date>
+    <subject>Bullying Incident</subject>
+    <message>Concern about bullying in the classroom.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>71</id>
+    <via>Dashboard</via>
+    <submitted_by>Cristina Aquino</submitted_by>
+    <email>cristina.aquino@gmail.com</email>
+    <submitted_date>2025-07-10</submitted_date>
+    <subject>Grade Discrepancy</subject>
+    <message>Discrepancy noticed in recent test grades.</message>
+    <status>Open</status>
+  </submission>
+  <submission>
+    <id>72</id>
+    <via>Dashboard</via>
+    <submitted_by>Juan Dela Cruz</submitted_by>
+    <email>juan.dela.cruz@gmail.com</email>
+    <submitted_date>2025-07-11</submitted_date>
+    <subject>Parent-Teacher Meeting</subject>
+    <message>Request to schedule additional meetings for progress discussion.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>73</id>
+    <via>Dashboard</via>
+    <submitted_by>Maria Clara</submitted_by>
+    <email>maria.clara@gmail.com</email>
+    <submitted_date>2025-07-12</submitted_date>
+    <subject>School Bus Delay</subject>
+    <message>Frequent delays in the school bus schedule.</message>
+    <status>Closed</status>
+  </submission>
+  <submission>
+    <id>74</id>
+    <via>Contact</via>
+    <submitted_by>Jose Rizal</submitted_by>
+    <email>jose.rizal@gmail.com</email>
+    <submitted_date>2025-07-13</submitted_date>
+    <subject>Technology Upgrade</subject>
+    <message>Requesting updated computers for the classroom.</message>
+    <status>Closed</status>
   </submission>
 </submissions>

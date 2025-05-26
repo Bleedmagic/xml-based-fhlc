@@ -121,7 +121,7 @@
                 <xsl:value-of select="$error/message" />
               </h2>
               <xsl:apply-templates select="$error/description/p" />
-              <a href="/_XAMPP/XML-FHLC/index.php" class="return-link">
+              <a href="/_XAMPP/XML-FHLC/src/frontend/auth/logout.php" class="return-link">
                 <xsl:value-of select="$error/solution" /> &gt; </a>
             </div>
           </div>

@@ -1,38 +1,178 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <sections>
   <section>
     <name>Maple</name>
     <grade_level>Grade 1</grade_level>
-    <adviser>Mr. Albert Ramos</adviser>
-    <number_of_students>30</number_of_students>
+    <adviser>Adrian Flores</adviser>
+    <number_of_students>33</number_of_students>
     <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
   </section>
   <section>
     <name>Oak</name>
     <grade_level>Grade 2</grade_level>
-    <adviser>Ms. Theresa Lim</adviser>
-    <number_of_students>28</number_of_students>
+    <adviser>Enrique Navarro</adviser>
+    <number_of_students>21</number_of_students>
     <schedule>Monday to Friday, 8:00 AM - 12:30 PM</schedule>
   </section>
   <section>
     <name>Birch</name>
     <grade_level>Grade 3</grade_level>
-    <adviser>Mr. Daniel Cruz</adviser>
-    <number_of_students>32</number_of_students>
+    <adviser>Leo Gutierrez</adviser>
+    <number_of_students>20</number_of_students>
     <schedule>Monday to Friday, 1:00 PM - 5:30 PM</schedule>
   </section>
   <section>
     <name>Pine</name>
     <grade_level>Grade 4</grade_level>
-    <adviser>Ms. Cynthia Morales</adviser>
-    <number_of_students>29</number_of_students>
-    <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
+    <adviser>Nathaniel Perez</adviser>
+    <number_of_students>31</number_of_students>
+    <schedule>Monday to Friday, 7:30 AM - 1:00 PM</schedule>
   </section>
   <section>
     <name>Cedar</name>
     <grade_level>Grade 5</grade_level>
-    <adviser>Mr. Edwin Tan</adviser>
+    <adviser>Carlos Dela Rosa</adviser>
     <number_of_students>27</number_of_students>
+    <schedule>Monday to Friday, 8:30 AM - 12:30 PM</schedule>
+  </section>
+  <section>
+    <name>Elm</name>
+    <grade_level>Grade 6</grade_level>
+    <adviser>Allan David</adviser>
+    <number_of_students>26</number_of_students>
+    <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
+  </section>
+  <section>
+    <name>Aspen</name>
+    <grade_level>Grade 1</grade_level>
+    <adviser>Anna Reyes</adviser>
+    <number_of_students>29</number_of_students>
     <schedule>Monday to Friday, 8:00 AM - 12:30 PM</schedule>
+  </section>
+  <section>
+    <name>Spruce</name>
+    <grade_level>Grade 2</grade_level>
+    <adviser>Francis Chua</adviser>
+    <number_of_students>35</number_of_students>
+    <schedule>Monday to Friday, 1:00 PM - 5:30 PM</schedule>
+  </section>
+  <section>
+    <name>Willow</name>
+    <grade_level>Grade 3</grade_level>
+    <adviser>Leo Gutierrez</adviser>
+    <number_of_students>23</number_of_students>
+    <schedule>Monday to Friday, 7:30 AM - 1:00 PM</schedule>
+  </section>
+  <section>
+    <name>Chestnut</name>
+    <grade_level>Grade 4</grade_level>
+    <adviser>Enrique Navarro</adviser>
+    <number_of_students>34</number_of_students>
+    <schedule>Monday to Friday, 8:30 AM - 12:30 PM</schedule>
+  </section>
+  <section>
+    <name>Fir</name>
+    <grade_level>Grade 5</grade_level>
+    <adviser>Jennifer Lim</adviser>
+    <number_of_students>31</number_of_students>
+    <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
+  </section>
+  <section>
+    <name>Redwood</name>
+    <grade_level>Grade 6</grade_level>
+    <adviser>Anna Reyes</adviser>
+    <number_of_students>33</number_of_students>
+    <schedule>Monday to Friday, 8:00 AM - 12:30 PM</schedule>
+  </section>
+  <section>
+    <name>Poplar</name>
+    <grade_level>Grade 1</grade_level>
+    <adviser>Leo Gutierrez</adviser>
+    <number_of_students>25</number_of_students>
+    <schedule>Monday to Friday, 1:00 PM - 5:30 PM</schedule>
+  </section>
+  <section>
+    <name>Sequoia</name>
+    <grade_level>Grade 2</grade_level>
+    <adviser>Adrian Flores</adviser>
+    <number_of_students>29</number_of_students>
+    <schedule>Monday to Friday, 7:30 AM - 1:00 PM</schedule>
+  </section>
+  <section>
+    <name>Sycamore</name>
+    <grade_level>Grade 3</grade_level>
+    <adviser>Samuel Tan</adviser>
+    <number_of_students>20</number_of_students>
+    <schedule>Monday to Friday, 8:30 AM - 12:30 PM</schedule>
+  </section>
+  <section>
+    <name>Walnut</name>
+    <grade_level>Grade 4</grade_level>
+    <adviser>Isabelle Torres</adviser>
+    <number_of_students>27</number_of_students>
+    <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
+  </section>
+  <section>
+    <name>Beech</name>
+    <grade_level>Grade 5</grade_level>
+    <adviser>Leo Gutierrez</adviser>
+    <number_of_students>24</number_of_students>
+    <schedule>Monday to Friday, 8:00 AM - 12:30 PM</schedule>
+  </section>
+  <section>
+    <name>Hickory</name>
+    <grade_level>Grade 6</grade_level>
+    <adviser>Sophia Martinez</adviser>
+    <number_of_students>20</number_of_students>
+    <schedule>Monday to Friday, 1:00 PM - 5:30 PM</schedule>
+  </section>
+  <section>
+    <name>Alder</name>
+    <grade_level>Grade 1</grade_level>
+    <adviser>Elaine Rivera</adviser>
+    <number_of_students>25</number_of_students>
+    <schedule>Monday to Friday, 7:30 AM - 1:00 PM</schedule>
+  </section>
+  <section>
+    <name>Magnolia</name>
+    <grade_level>Grade 2</grade_level>
+    <adviser>Maria Santos</adviser>
+    <number_of_students>29</number_of_students>
+    <schedule>Monday to Friday, 8:30 AM - 12:30 PM</schedule>
+  </section>
+  <section>
+    <name>Maple 2</name>
+    <grade_level>Grade 3</grade_level>
+    <adviser>Grace Bautista</adviser>
+    <number_of_students>27</number_of_students>
+    <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
+  </section>
+  <section>
+    <name>Oak 2</name>
+    <grade_level>Grade 4</grade_level>
+    <adviser>Theresa Diaz</adviser>
+    <number_of_students>34</number_of_students>
+    <schedule>Monday to Friday, 8:00 AM - 12:30 PM</schedule>
+  </section>
+  <section>
+    <name>Birch 2</name>
+    <grade_level>Grade 5</grade_level>
+    <adviser>Maria Santos</adviser>
+    <number_of_students>31</number_of_students>
+    <schedule>Monday to Friday, 1:00 PM - 5:30 PM</schedule>
+  </section>
+  <section>
+    <name>Pine 2</name>
+    <grade_level>Grade 6</grade_level>
+    <adviser>Leo Gutierrez</adviser>
+    <number_of_students>33</number_of_students>
+    <schedule>Monday to Friday, 7:30 AM - 1:00 PM</schedule>
+  </section>
+  <section>
+    <name>Cedar 2</name>
+    <grade_level>Grade 1</grade_level>
+    <adviser>Carlos Dela Rosa</adviser>
+    <number_of_students>33</number_of_students>
+    <schedule>Monday to Friday, 8:30 AM - 12:30 PM</schedule>
   </section>
 </sections>

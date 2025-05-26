@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bookmarks>
-  <user email="admin1@example.com">
+  <user email="admin@gmail.com">
     <link>
       <title>W3Schools</title>
       <url>https://www.w3schools.com</url>
@@ -9,23 +9,55 @@
       <title>Stack Overflow</title>
       <url>https://stackoverflow.com</url>
     </link>
-  </user>
-  <user email="admin2@example.com">
     <link>
-      <title>MDN Web Docs</title>
-      <url>https://developer.mozilla.org</url>
+      <title>Mozilla Developer Network</title>
+      <url>https://developer.mozilla.org/</url>
     </link>
   </user>
   <user email="bleedmagic@proton.me">
     <link>
-      <title>Github</title>
-      <url>https://github.com/Bleedmagic</url>
+      <title>Google Classroom</title>
+      <url>https://classroom.google.com/</url>
     </link>
-  </user>
-  <user email="admin@gmail.com">
     <link>
       <title>Wheel of Names</title>
       <url>https://wheelofnames.com/</url>
+    </link>
+    <link>
+      <title>Stack Overflow</title>
+      <url>https://stackoverflow.com/</url>
+    </link>
+    <link>
+      <title>GitHub</title>
+      <url>https://github.com/</url>
+    </link>
+    <link>
+      <title>W3Schools</title>
+      <url>https://www.w3schools.com</url>
+    </link>
+    <link>
+      <title>Kahoot!</title>
+      <url>https://kahoot.com/</url>
+    </link>
+    <link>
+      <title>Padlet</title>
+      <url>https://padlet.com/</url>
+    </link>
+    <link>
+      <title>Nearpod</title>
+      <url>https://nearpod.com/</url>
+    </link>
+    <link>
+      <title>Edpuzzle</title>
+      <url>https://edpuzzle.com/</url>
+    </link>
+    <link>
+      <title>Quizizz</title>
+      <url>https://quizizz.com/</url>
+    </link>
+    <link>
+      <title>Neal.fun</title>
+      <url>https://neal.fun/</url>
     </link>
   </user>
 </bookmarks>

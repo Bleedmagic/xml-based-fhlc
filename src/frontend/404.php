@@ -4,7 +4,7 @@ $requestUri = $_SERVER['REQUEST_URI'];
 if (strpos($requestUri, '/admin/') !== false) {
   include './admin/404.php';
 } elseif (strpos($requestUri, '/user/') !== false) {
-  include './user/404.php';
+  include './users/404.php';
 } else {
 
   http_response_code(404);

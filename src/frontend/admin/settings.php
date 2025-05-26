@@ -110,7 +110,7 @@ foreach ($xml->user as $user) {
               <div class="row mb-4 align-items-center">
                 <div class="col-md-4">
                   <label for="profile_picture" class="form-label d-block">Profile Picture</label>
-                  <img id="profilePreview" src="<?= htmlspecialchars($currentUser->picture) ?>" alt="Profile Picture" class="img-thumbnail mb-2" style="width: 100px; height: 100px; object-fit: cover;">
+                  <img id="profilePreview" src="<?= '../../../' . ltrim(htmlspecialchars($currentUser->picture), '/') ?>" alt="Profile Picture" class="img-thumbnail mb-2" style="width: 100px; height: 100px; object-fit: cover;">
                   <input type="file" name="profile_picture" id="profile_picture" class="form-control-file">
                 </div>
 

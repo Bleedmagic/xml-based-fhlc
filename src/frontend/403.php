@@ -1,6 +1,5 @@
 <?php
 
-//@TODO logout
 http_response_code(403);
 
 libxml_use_internal_errors(true);
