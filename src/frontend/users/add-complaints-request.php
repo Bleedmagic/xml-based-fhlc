@@ -30,26 +30,16 @@ session_start();
           <div class="form-group">
             <label class="form-label">Type of Concern</label>
             <div class="radio-group">
-              <label><input type="radio" name="type" value="Complain" required> Complain</label>
+              <label><input type="radio" name="type" value="Complaint" required> Complaint</label>
               <label><input type="radio" name="type" value="Request" required> Request</label>
             </div>
           </div>
 
           <div class="form-group">
             <label class="form-label">Date Submitted</label>
-            <input type="date" name="submitted_date" class="input-text" required>
+            <input type="date" name="date" class="input-text" required>
           </div>
 
-          <div class="form-group">
-            <label class="form-label">Guardian’s Full Name</label>
-            <div class="name-group">
-              <input type="text" name="first_name" placeholder="First Name" required>
-              <input type="text" name="middle_name" placeholder="Middle Name">
-              <input type="text" name="last_name" placeholder="Last Name" required>
-            </div>
-          </div>
-
-          <!-- ✅ NEW SUBJECT FIELD -->
           <div class="form-group">
             <label class="form-label">Subject</label>
             <input type="text" name="subject" class="input-text" placeholder="Enter subject" required>

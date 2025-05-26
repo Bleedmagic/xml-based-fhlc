@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<complaints>
+  <complaint id="1">
+    <type>Request</type>
+    <subject>Form 138</subject>
+    <date>2025-05-25</date>
+    <status>Pending</status>
+    <message>For application</message>
+  </complaint>
+  <complaint id="2">
+    <type>Complaint</type>
+    <subject>Noise issue</subject>
+    <date>2025-05-24</date>
+    <status>Archived</status>
+    <message>Loud noise coming from construction early in the morning. n</message>
+  </complaint>
+<complaint id="3"><type>Request</type><subject>Poor kadmndsn noh lah</subject><date>2025-05-14</date><status>Archived</status><message>xnjnasxasmmn</message></complaint><complaint id="4"><type>Complaint</type><subject>Broken light</subject><date>2025-05-26</date><status>Pending</status><message>In 6th Floor need fixing</message></complaint></complaints>
