@@ -6,7 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: complaints-requests.php');
     exit;
 }
-
 $id = $_POST['id'] ?? '';
 $type = $_POST['type'] ?? '';
 $date = $_POST['date'] ?? '';
