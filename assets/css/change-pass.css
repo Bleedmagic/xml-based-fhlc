@@ -1,0 +1,65 @@
+.change-password-container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 120px;
+  font-family: 'Nunito', sans-serif;
+  margin-right: 700px ;
+
+}
+
+.change-password-title {
+  margin-top: 0.5rem;        
+  color: black;            
+  font-weight: 700;           
+  text-align: center;         
+  margin-top: 20px;
+}
+
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 40px;
+}
+
+.password-wrapper .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+}
+
+button[type="submit"] {
+  background-color: #FBCD5F;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  color: #000;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  margin-top: 30px;
+  margin-bottom: 150px;
+}
+
+/* Toast container styling */
+.custom-swal-toast {
+  border-radius: 10px !important;
+  padding: 1rem 1.25rem !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-size: 0.95rem !important;
+  text-align: center !important; /* Center align all content */
+}
+
+/* Specifically center the toast title text */
+.swal2-toast .swal2-title {
+  width: 100%;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+
+

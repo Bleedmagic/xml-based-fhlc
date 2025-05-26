@@ -41,9 +41,16 @@
         <h6 class="collapse-header">Academic Management:</h6>
         <a class="collapse-item <?= ($currentPage === 'faculty') ? 'active' : '' ?>" href="grades.php">Grades</a>
         <a class="collapse-item <?= ($currentPage === 'students') ? 'active' : '' ?>" href="assignments.php">Assignments</a>
-        <a class="collapse-item <?= ($currentPage === 'grades') ? 'active' : '' ?>" href="payment-enrollment.php">Payment/Enrollment</a>
+        <a class="collapse-item <?= ($currentPage === 'grades') ? 'active' : '' ?>" href="payment-enrollment.php">Payment/Tagging</a>
       </div>
     </div>
+  </li>
+
+  <!-- Nav Item - Enrollment Menu -->
+  <li class="nav-item <?= ($currentPage === 'enrollment') ? 'active' : '' ?>">
+    <a class="nav-link" href="./enrollment.php">
+      <i class="fas fa-fw fa-user-graduate"></i>
+      <span>Enrollment</span></a>
   </li>
 
   <!-- Nav Item - Calendar Menu -->
@@ -81,7 +88,7 @@
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">User Settings:</h6>
       <a class="collapse-item <?= ($currentPage === 'account-info') ? 'active' : '' ?>" href="account-settings.php">Account Information</a>
-      <a class="collapse-item <?= ($currentPage === 'change-password') ? 'active' : '' ?>" href="change-password.php">Change Password</a>
+      <a class="collapse-item <?= ($currentPage === 'change-password') ? 'active' : '' ?>" href="change-pass.php">Change Password</a>
     </div>
   </div>
 </li>

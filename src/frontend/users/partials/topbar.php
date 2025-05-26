@@ -25,10 +25,14 @@
       <!-- Dropdown - User Information -->
       <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
         aria-labelledby="userDropdown">
-        <a class="dropdown-item" href="./settings.php">
+        <a class="dropdown-item" href="./account-settings.php">
           <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-          Settings
+          Account Information
         </a>
+        <a class="dropdown-item" href="./change-pass.php">
+          <i class="fas fa-lock fa-sm fa-fw mr-2 text-gray-400"></i>
+          Change Password
+       </a>
     </li>
 
     <div class="topbar-divider d-none d-sm-block"></div>
