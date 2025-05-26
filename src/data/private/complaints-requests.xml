@@ -8,7 +8,7 @@
     <submitted_date>2025-05-01</submitted_date>
     <subject>Homework Difficulty</subject>
     <message>The homework is too challenging for my child.</message>
-    <status>Closed</status>
+    <status>Open</status>
   </submission>
   <submission>
     <id>2</id>
@@ -18,7 +18,7 @@
     <submitted_date>2025-05-02</submitted_date>
     <subject>Classroom Supplies</subject>
     <message>Requesting more supplies for science experiments.</message>
-    <status>Closed</status>
+    <status>Open</status>
   </submission>
   <submission>
     <id>3</id>
@@ -258,7 +258,7 @@
     <submitted_date>2025-05-26</submitted_date>
     <subject>Bullying Incident</subject>
     <message>Concern about bullying in the classroom.</message>
-    <status>Closed</status>
+    <status>Open</status>
   </submission>
   <submission>
     <id>27</id>
