@@ -127,14 +127,19 @@ if (file_exists($xmlPath)) {
                           <td><?= htmlspecialchars($submission->subject) ?></td>
                           <td><?= htmlspecialchars($submission->message) ?></td>
                           <td><?= htmlspecialchars($submission->status) ?></td>
-                          <td class="text-center" style="width: 75px; max-width: 75px;">
-                            <a href="scripts/edit.php?id=<?= htmlspecialchars($submission->id) ?>" class="btn btn-info btn-sm d-flex justify-content-center align-items-center">
-                              <i class="fas fa-edit"></i>
-                            </a>
-                            <a href="scripts/archive-sub.php?id=<?= htmlspecialchars($submission->id) ?>" class="btn btn-danger btn-sm d-flex justify-content-center align-items-center archive-btn"
+                          <td class="text-center">
+                            <button class="btn btn-info btn-sm d-flex justify-content-center align-items-center respond-btn" style="width: 75px; max-width: 75px;"
+                              data-id=" <?= htmlspecialchars($submission->id) ?>"
+                              data-email="<?= htmlspecialchars($submission->email) ?>"
+                              data-subject="<?= htmlspecialchars($submission->subject) ?>"
+                              data-author="<?= htmlspecialchars($submission->submitted_by) ?>">
+                              <i class="fas fa-reply"></i>
+                            </button>
+                            <button type="button"
+                              class="btn btn-danger btn-sm d-flex justify-content-center align-items-center archive-btn" style="width: 75px; max-width: 75px;"
                               data-id="<?= htmlspecialchars($submission->id) ?>" title="Archive Submission">
                               <i class="fas fa-archive"></i>
-                            </a>
+                            </button>
                           </td>
                         </tr>
                       <?php endif; ?>
