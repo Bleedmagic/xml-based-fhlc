@@ -82,14 +82,28 @@ if ($users->length === 1) {
     $mail->SMTPSecure = 'tls';
     $mail->Port       = $_ENV['MAIL_PORT'];
 
-    $mail->setFrom('no-reply@example.com', 'FHLC Support');
+    $mail->setFrom('no-reply@fhlc.com', 'Full House Learning Center');
     $mail->addAddress($email);
 
     $mail->isHTML(true);
     $mail->Subject = 'FHLC Password Reset Request';
-    $link = "http://localhost/_XAMPP/XML-FHLC/src/frontend/auth/reset-password.php?token=$token";
-    $mail->Body    = "Click this link to reset your password:<br/><a href=\"$link\">$link</a>";
-    $mail->AltBody = "Copy/paste this URL to reset your password: $link";
+
+    $resetLink = "http://localhost/_XAMPP/XML-FHLC/src/frontend/auth/reset-password.php?token=$token";
+
+    $mail->Body = "
+    <p>Dear User,</p>
+    <p>We received a request to reset your password for your FHLC account.</p>
+    <p>Please click the link below to reset your password. This link will expire in 1 hour.</p>
+    <p><a href=\"$resetLink\">Reset Your Password</a></p>
+    <p>If you did not request this, please ignore this email or contact our support team.</p>
+    <p>Best regards,<br/>Full House Learning Center Support Team</p>
+    ";
+
+    $mail->AltBody = "Dear User,\n\nWe received a request to reset your password for your Full House Learning Center account.\n\n"
+      . "Reset your password using the link below (expires in 1 hour):\n"
+      . "$resetLink\n\n"
+      . "If you did not request this, please ignore this email or contact support.\n\n"
+      . "Best regards,\nFull House Learning Center Support Team";
 
     $mail->send();
     $_SESSION['success_notif'] = 'A reset link has been sent.';
