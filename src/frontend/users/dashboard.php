@@ -52,6 +52,21 @@ foreach ($assignments as $tasks) {
         $submittedCount++;
     }
 }
+
+// Load user events for Upcoming Events box
+$userEvents = [];
+$eventsXmlPath = __DIR__ . '/../../data/private/events-user.xml';
+if (file_exists($eventsXmlPath)) {
+    $eventsXml = simplexml_load_file($eventsXmlPath);
+    foreach ($eventsXml->event as $event) {
+        $userEvents[] = [
+            'title' => (string)$event->title,
+            'from' => (string)$event->from,
+            'to' => (string)$event->to,
+            'description' => (string)$event->description,
+        ];
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -159,16 +174,46 @@ foreach ($assignments as $tasks) {
             <div class="card h-100 shadow-sm">
               <div class="card-header font-weight-bold">Upcoming Events</div>
               <div class="card-body text-center">
+
                 <div class="d-flex justify-content-center align-items-center mb-3">
+                  <?php
+                    if (count($userEvents) > 0) {
+                      $firstEventDate = new DateTime($userEvents[0]['from']);
+                      $monthYear = $firstEventDate->format('F, Y');
+                    } else {
+                      $monthYear = date('F, Y');
+                    }
+                  ?>
                   <button class="btn btn-outline-secondary btn-sm mx-2"><i class="fas fa-chevron-left"></i></button>
-                  <strong>July, 2025</strong>
+                  <strong><?= htmlspecialchars($monthYear) ?></strong>
                   <button class="btn btn-outline-secondary btn-sm mx-2"><i class="fas fa-chevron-right"></i></button>
                 </div>
+
                 <div class="mb-2">
-                  <div class="btn btn-primary w-100 mb-2"><i class="fas fa-calendar"></i> Foundation Day</div>
-                  <div class="btn btn-success w-100 mb-2"><i class="fas fa-futbol"></i> Sports Intramurals</div>
-                  <div class="btn btn-warning w-100"><i class="fas fa-users"></i> Family Day</div>
+                  <?php if (count($userEvents) === 0): ?>
+                    <div class="text-muted">No upcoming events at this time.</div>
+                  <?php else: ?>
+                    <?php foreach ($userEvents as $evt): ?>
+                      <?php
+                        // Determine button color & icon by keywords in title or just default
+                        $titleLower = strtolower($evt['title']);
+                        $btnClass = "btn-primary";
+                        $iconClass = "fas fa-calendar";
+                        if (strpos($titleLower, 'sports') !== false || strpos($titleLower, 'intramurals') !== false) {
+                          $btnClass = "btn-success";
+                          $iconClass = "fas fa-futbol";
+                        } elseif (strpos($titleLower, 'family') !== false) {
+                          $btnClass = "btn-warning";
+                          $iconClass = "fas fa-users";
+                        }
+                      ?>
+                      <div class="btn <?= $btnClass ?> w-100 mb-2" title="<?= htmlspecialchars($evt['description']) ?>">
+                        <i class="<?= $iconClass ?>"></i> <?= htmlspecialchars($evt['title']) ?>
+                      </div>
+                    <?php endforeach; ?>
+                  <?php endif; ?>
                 </div>
+
               </div>
             </div>
           </div>

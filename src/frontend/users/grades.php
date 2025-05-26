@@ -38,11 +38,11 @@ $finalGrades = [
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
   <?php $currentPage = 'dashboard'; ?>
   <title>User / <?= ucwords(str_replace('-', ' ', $currentPage)) ?></title>
@@ -54,13 +54,14 @@ $finalGrades = [
   <link rel="icon" href="../../../assets/img/favicons/favicon.ico" />
 
   <!-- CUSTOM FONTS -->
-  <link href="../../../assets/css/lib/fontawesome.all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+  <link href="../../../assets/css/lib/fontawesome.all.min.css" rel="stylesheet" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
 
   <!-- CORE STYLES -->
-  <link href="../../../assets/css/lib/startbootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../../assets/css/user-grades.css">
+  <link href="../../../assets/css/lib/startbootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../assets/css/user-grades.css" />
 </head>
 
 <body id="page-top">
@@ -116,7 +117,6 @@ $finalGrades = [
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <!-- GRADES DROPDOWN FUNCTION -->
   <script>
     const grades = <?= json_encode($grades) ?>;
     const finalGrades = <?= json_encode($finalGrades) ?>;
@@ -165,6 +165,27 @@ $finalGrades = [
     });
 
     renderGrades("q1"); // default load
+
+    // Sign Out functionality
+    const signoutLink = document.querySelector('.signout-link');
+    if (signoutLink) {
+      signoutLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        Swal.fire({
+          title: 'Sign Out',
+          text: 'Are you sure you want to sign out?',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, sign out',
+          cancelButtonText: 'Cancel',
+          reverseButtons: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = '../auth/logout.php';
+          }
+        });
+      });
+    }
   </script>
 </body>
 

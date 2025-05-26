@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+  <event>
+    <title>School Holiday</title>
+    <description>No classes due to national holiday</description>
+    <from>2025-05-23T00:00:00</from>
+    <to>2025-05-23T23:59:59</to>
+  </event>
+  <event>
+    <title>Midterm Exams</title>
+    <description>Midterm exam week for all subjects</description>
+    <from>2025-05-26T08:00:00</from>
+    <to>2025-05-30T17:00:00</to>
+  </event>
+  <event>
+    <title>Enrollment Period</title>
+    <description>Online enrollment for next semester opens</description>
+    <from>2025-06-01T08:00:00</from>
+    <to>2025-06-10T17:00:00</to>
+  </event>
+  <event>
+    <title>School Festival</title>
+    <description>Annual school festival with games and activities</description>
+    <from>2025-06-15T09:00:00</from>
+    <to>2025-06-15T16:00:00</to>
+  </event>
+  <event>
+    <title>Parent-Teacher Meeting</title>
+    <description>Parents and students meet teachers for progress update</description>
+    <from>2025-06-20T13:00:00</from>
+    <to>2025-06-20T15:00:00</to>
+  </event>
+</events>

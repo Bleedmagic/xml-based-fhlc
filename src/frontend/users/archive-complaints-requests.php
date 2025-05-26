@@ -1,21 +1,36 @@
 <?php
-session_start();
+$xmlFile = __DIR__ . '/../../data/private/complaints-requests-user.xml';
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
+if (!isset($_GET['id'])) {
+    header('Location: complaints-requests.php');
+    exit;
+}
 
-    if (isset($_SESSION['complaints'][$id])) {
-        if (!isset($_SESSION['archived_complaints'])) {
-            $_SESSION['archived_complaints'] = [];
-        }
+$id = $_GET['id'];
 
-        $_SESSION['archived_complaints'][] = $_SESSION['complaints'][$id];
-        unset($_SESSION['complaints'][$id]);
+if (!file_exists($xmlFile)) {
+    die('Data file not found.');
+}
 
-        // Reindex session
-        $_SESSION['complaints'] = array_values($_SESSION['complaints']);
+$xml = simplexml_load_file($xmlFile);
+if ($xml === false) {
+    die('Failed to load XML file.');
+}
+
+$found = false;
+foreach ($xml->complaint as $complaint) {
+    if ((string)$complaint['id'] === (string)$id) {
+        $complaint->status = 'Archived';
+        $found = true;
+        break;
     }
 }
+
+if (!$found) {
+    die('Complaint not found.');
+}
+
+$xml->asXML($xmlFile);
 
 header('Location: complaints-requests.php');
 exit;
