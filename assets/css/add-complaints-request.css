@@ -1,0 +1,84 @@
+.complaints-form {
+  margin-top: 100px;
+  font-family: 'Nunito', sans-serif;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #1A906B;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 6px;
+  accent-color: black;
+}
+
+.input-text,
+.name-group input,
+textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 15px;
+  width: 100%;
+}
+
+.name-group {
+  display: flex;
+  gap: 10px;
+}
+
+.name-group input {
+  flex: 1;
+}
+
+textarea {
+  resize: vertical;
+  height: 140px;
+}
+
+.button-group {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.submit-btn,
+.cancel-btn {
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  font-weight: 600;
+  background: linear-gradient(to bottom, #fbd46d, #f4c542);
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.submit-btn:hover,
+.cancel-btn:hover {
+  opacity: 0.85;
+}
+
+
+

@@ -82,6 +82,13 @@
       <span>Settings</span></a>
   </li>
 
+  <!-- Nav Item - Archives -->
+  <li class="nav-item <?= ($currentPage === 'archives') ? 'active' : '' ?>">
+    <a class="nav-link" href="./archives.php">
+      <i class='fas fa-archive'></i>
+      <span>Archives</span></a>
+  </li>
+
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">
 
