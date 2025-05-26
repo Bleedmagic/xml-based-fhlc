@@ -46,8 +46,8 @@ $entry = $_SESSION['complaints'][$id];
           </div>
 
           <div class="form-group">
-            <label class="form-label">Date of Incident</label>
-            <input type="date" name="incident_date" class="input-text" value="<?= htmlspecialchars($entry['date']) ?>" required>
+            <label class="form-label">Date Submitted</label>
+            <input type="date" name="submitted_date" class="input-text" value="<?= htmlspecialchars($entry['date']) ?>" required>
           </div>
 
           <div class="form-group">

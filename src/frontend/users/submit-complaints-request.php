@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $entry = [
         'type' => $_POST['type'],
-        'date' => $_POST['incident_date'],
+        'date' => $_POST['submitted_date'],
         'subject' => $_POST['subject'],
         'message' => $_POST['message'],
         'guardian' => $fullName,

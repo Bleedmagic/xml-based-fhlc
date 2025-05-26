@@ -36,8 +36,8 @@ session_start();
           </div>
 
           <div class="form-group">
-            <label class="form-label">Date of Incident</label>
-            <input type="date" name="incident_date" class="input-text" required>
+            <label class="form-label">Date Submitted</label>
+            <input type="date" name="submitted_date" class="input-text" required>
           </div>
 
           <div class="form-group">
