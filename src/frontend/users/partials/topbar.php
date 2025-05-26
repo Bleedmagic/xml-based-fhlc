@@ -40,8 +40,7 @@
     <!-- Sign Out Button -->
     <li class="nav-item d-flex align-items-center">
       <a class="nav-link d-flex align-items-center justify-content-center signout-link"
-        href="#"
-        style="color: black; background-color: #FBCD5F; border: 2px solid black; border-radius: 0.35rem; height: 40px; padding: 0 1rem; margin-left: 1rem; transition: all 0.3s ease;">
+        href="../auth/login.php" style="color: black; background-color: #FBCD5F; border: 2px solid black; border-radius: 0.35rem; height: 40px; padding: 0 1rem; margin-left: 1rem; transition: all 0.3s ease;">
         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2"></i>
         <span class="d-none d-sm-inline">Sign Out</span>
       </a>

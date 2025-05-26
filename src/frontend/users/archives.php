@@ -85,5 +85,33 @@ foreach ($xml->complaint as $complaint) {
   <script src="../../../assets/js/lib/bootstrap.bundle.min.js"></script>
   <script src="../../../assets/js/lib/jquery.easing.min.js"></script>
   <script src="../../../assets/js/lib/startbootstrap.min.js"></script>
+
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Sign Out functionality
+    const signoutLink = document.querySelector('.signout-link');
+    if (signoutLink) {
+      signoutLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        Swal.fire({
+          title: 'Sign Out',
+          text: 'Are you sure you want to sign out?',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, sign out',
+          cancelButtonText: 'Cancel',
+          reverseButtons: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = '../auth/logout.php';
+          }
+        });
+      });
+    }
+  });
+  </script>
 </body>
 </html>

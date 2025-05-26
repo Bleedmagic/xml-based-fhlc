@@ -49,80 +49,78 @@ $finalGrades = [
 
         <!--start here-->
         <div class="container-fluid">
-  <h4 class="section-title text-success">Assignments</h4>
+          <h4 class="section-title text-success">Assignments</h4>
 
-<div class="d-flex justify-content-between align-items-center mb-3">
-  <span class="text-muted"></span>
-  <select id="assignmentFilter" class="form-select w-auto">
-    <option value="all">All Assignments</option>
-    <option value="submitted">Submitted</option>
-    <option value="todo">Need to Do</option>
-  </select>
-</div>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted"></span>
+            <select id="assignmentFilter" class="form-select w-auto">
+              <option value="all">All Assignments</option>
+              <option value="submitted">Submitted</option>
+              <option value="todo">Need to Do</option>
+            </select>
+          </div>
 
-<div class="row">
-  <?php
-  $assignments = [
-    "Mathematics" => [],
-    "Science" => [
-      ["task" => "What are the layers of the Earth?", "status" => "not done"],
-      ["task" => "Deadline Tomorrow", "status" => "passed"]
-    ],
-    "Filipino" => [
-      ["task" => "Mga halimbawa ng pambansang Prutas?", "status" => "not done"],
-      ["task" => "Deadline Tomorrow", "status" => "passed"]
-    ],
-    "Values Education" => [],
-    "Physical Education" => [],
-    "MAPEH" => [],
-    "Araling Panlipunan" => [],
-    "English" => []
-  ];
+          <div class="row">
+            <?php
+            $assignments = [
+              "Mathematics" => [],
+              "Science" => [
+                ["task" => "What are the layers of the Earth?", "status" => "not done"],
+                ["task" => "Deadline Tomorrow", "status" => "passed"]
+              ],
+              "Filipino" => [
+                ["task" => "Mga halimbawa ng pambansang Prutas?", "status" => "not done"],
+                ["task" => "Deadline Tomorrow", "status" => "passed"]
+              ],
+              "Values Education" => [],
+              "Physical Education" => [],
+              "MAPEH" => [],
+              "Araling Panlipunan" => [],
+              "English" => []
+            ];
 
-  $colors = [
-    "Mathematics" => "#dbe9ff",
-    "Science" => "#e6b8b8",
-    "Filipino" => "#dcb3cb",
-    "Values Education" => "#bdecb6",
-    "Physical Education" => "#f3d9a4",
-    "MAPEH" => "#f9f2bd",
-    "Araling Panlipunan" => "#f7c6a3",
-    "English" => "#b8d2e6"
-  ];
+            $colors = [
+              "Mathematics" => "#dbe9ff",
+              "Science" => "#e6b8b8",
+              "Filipino" => "#dcb3cb",
+              "Values Education" => "#bdecb6",
+              "Physical Education" => "#f3d9a4",
+              "MAPEH" => "#f9f2bd",
+              "Araling Panlipunan" => "#f7c6a3",
+              "English" => "#b8d2e6"
+            ];
 
-  foreach ($assignments as $subject => $tasks) {
-    $status = 'submitted';
-    foreach ($tasks as $task) {
-      if ($task['status'] === 'not done') {
-        $status = 'todo';
-        break;
-      }
-    }
+            foreach ($assignments as $subject => $tasks) {
+              $status = 'submitted';
+              foreach ($tasks as $task) {
+                if ($task['status'] === 'not done') {
+                  $status = 'todo';
+                  break;
+                }
+              }
 
-    echo '<div class="col-md-3 mb-4 assignment-item" data-status="' . $status . '">';
-    echo '<div class="assignment-card" style="background-color:' . $colors[$subject] . '">';
-    echo '<div class="assignment-card-header"><strong>' . htmlspecialchars($subject) . '</strong></div>';
-    echo '<div class="assignment-card-body">';
-    if (!empty($tasks)) {
-      echo '<ul>';
-      foreach ($tasks as $task) {
-        $taskClass = '';
-        if ($task['status'] === 'not done') $taskClass = 'not-done';
-        elseif ($task['status'] === 'passed') $taskClass = 'passed-deadline';
+              echo '<div class="col-md-3 mb-4 assignment-item" data-status="' . $status . '">';
+              echo '<div class="assignment-card" style="background-color:' . $colors[$subject] . '">';
+              echo '<div class="assignment-card-header"><strong>' . htmlspecialchars($subject) . '</strong></div>';
+              echo '<div class="assignment-card-body">';
+              if (!empty($tasks)) {
+                echo '<ul>';
+                foreach ($tasks as $task) {
+                  $taskClass = '';
+                  if ($task['status'] === 'not done') $taskClass = 'not-done';
+                  elseif ($task['status'] === 'passed') $taskClass = 'passed-deadline';
 
-        echo '<li class="' . $taskClass . '">' . htmlspecialchars($task['task']) . '</li>';
-      }
-      echo '</ul>';
-    } else {
-      echo '<p class="text-success">All Assignments Completed!</p>';
-    }
-    echo '</div></div></div>';
-  }
-  ?>
-</div>
-
-</div>
-
+                  echo '<li class="' . $taskClass . '">' . htmlspecialchars($task['task']) . '</li>';
+                }
+                echo '</ul>';
+              } else {
+                echo '<p class="text-success">All Assignments Completed!</p>';
+              }
+              echo '</div></div></div>';
+            }
+            ?>
+          </div>
+        </div>
 
         <?php include __DIR__ . '/partials/footer.php'; ?>
       </div>
@@ -136,22 +134,46 @@ $finalGrades = [
   <script src="../../../assets/js/lib/jquery.easing.min.js"></script>
   <script src="../../../assets/js/lib/startbootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script>
-  document.getElementById('assignmentFilter').addEventListener('change', function () {
-    const value = this.value;
-    const cards = document.querySelectorAll('.assignment-item');
+    document.getElementById('assignmentFilter').addEventListener('change', function () {
+      const value = this.value;
+      const cards = document.querySelectorAll('.assignment-item');
 
-    cards.forEach(card => {
-      const status = card.getAttribute('data-status');
-      if (value === 'all' || status === value) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
+      cards.forEach(card => {
+        const status = card.getAttribute('data-status');
+        if (value === 'all' || status === value) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Sign Out functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const signoutLink = document.querySelector('.signout-link');
+      if (signoutLink) {
+        signoutLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          Swal.fire({
+            title: 'Sign Out',
+            text: 'Are you sure you want to sign out?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, sign out',
+            cancelButtonText: 'Cancel',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = '../auth/logout.php';
+            }
+          });
+        });
       }
     });
-  });
-</script>
+  </script>
 
 </body>
 </html>

@@ -92,6 +92,27 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+// Sign Out functionality
+  const signoutLink = document.querySelector('.signout-link');
+  if (signoutLink) {
+    signoutLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      Swal.fire({
+        title: 'Sign Out',
+        text: 'Are you sure you want to sign out?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, sign out',
+        cancelButtonText: 'Cancel',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = '../auth/logout.php';
+        }
+      });
+    });
+  }
 });
 </script>
 </body>

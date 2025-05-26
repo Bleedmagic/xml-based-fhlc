@@ -119,25 +119,47 @@ $entry = $complaints[$id];
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    form.addEventListener("submit", function (e) {
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    Swal.fire({
+      title: 'Update Complaint/Request?',
+      text: 'Are you sure you want to update this entry?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, update',
+      cancelButtonText: 'Cancel',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        form.submit();
+      }
+    });
+  });
+
+  // Sign Out functionality
+  const signoutLink = document.querySelector('.signout-link');
+  if (signoutLink) {
+    signoutLink.addEventListener('click', function (e) {
       e.preventDefault();
       Swal.fire({
-        title: 'Update Complaint/Request?',
-        text: 'Are you sure you want to update this entry?',
-        icon: 'question',
+        title: 'Sign Out',
+        text: 'Are you sure you want to sign out?',
+        icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: 'Yes, update',
+        confirmButtonText: 'Yes, sign out',
         cancelButtonText: 'Cancel',
         reverseButtons: true
       }).then((result) => {
         if (result.isConfirmed) {
-          form.submit();
+          window.location.href = '../auth/logout.php';
         }
       });
     });
-  });
-  </script>
+  }
+});
+</script>
+
 </body>
 </html>
