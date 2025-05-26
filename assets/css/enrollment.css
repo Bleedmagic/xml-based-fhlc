@@ -1,0 +1,145 @@
+/* ===== Topbar fixed and styled ===== */
+
+nav.navbar.topbar {
+  position: fixed;
+  top: 0;
+  left: 225px;
+  width: 89%;
+  height: 56px; /* Bootstrap default topbar height */
+  background-color: #fff; /* keep original white */
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58,59,69,.15); /* bootstrap shadow */
+  z-index: 1040; /* above sidebar */
+  padding: 0 1rem; /* optional, adjust if needed */
+}
+
+/* ===== Sidebar fixed and scrollable ===== */
+
+#accordionSidebar {
+  position: fixed;
+  top: 0px; /* below topbar */
+  left: 0;
+  width: 250px; /* adjust width if your sidebar differs */
+  height: calc(100vh - 56px); /* full height minus topbar */
+  overflow-y: auto; /* scroll if sidebar too long */
+  background-color: #4e73df; /* your sidebar bg color or keep your current */
+  z-index: 1030;
+}
+
+/* ===== Content wrapper shifted to avoid sidebar and topbar ===== */
+
+#content-wrapper {
+  margin-left: 220px; /* same as sidebar width */
+  margin-top: 56px; /* same as topbar height */
+  min-height: calc(100vh - 56px);
+  overflow-y: auto; /* allow content scrolling */
+  padding: 20px;
+  background: #f8f9fc; /* content bg color */
+}
+
+/* ===== Enrollment page styles (your original styles) ===== */
+
+.enrollment-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1A906B;
+  margin-bottom: 20px;
+}
+
+.enrollment-buttons {
+  margin-bottom: 20px;
+}
+
+.btn-summary,
+.btn-history {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-summary {
+  background-color: #1A906B;
+  color: white;
+  border: none;
+}
+
+.btn-summary:hover {
+  background-color: #157a59;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Enrollment Fee Guide Styles */
+
+.fee-section {
+  margin: 30px 0;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+}
+
+.fee-section h5 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1A906B;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #1A906B;
+  padding-bottom: 6px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.fee-table thead tr {
+  background-color: #1A906B;
+  color: white;
+}
+
+.fee-table th,
+.fee-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.fee-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.fee-table tbody tr:hover {
+  background-color: #e6f2e6;
+}
+
+/* ===== Responsive adjustments ===== */
+
+@media (max-width: 768px) {
+  #accordionSidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+  }
+  nav.navbar.topbar {
+    position: relative;
+    height: auto;
+  }
+  #content-wrapper {
+    margin-left: 0;
+    margin-top: 0;
+    min-height: auto;
+  }
+}
+
+

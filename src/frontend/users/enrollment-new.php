@@ -37,13 +37,12 @@
       <a class="dropdown-item" href="enrollment-others.php">Other Fees</a>
     </div>
   </div>
-  <a href="enroll-current.php" class="btn-summary">Enroll Current Students</a>
-  <a href="enroll-new.php" class="btn-summary">Enroll New Students</a>
+  <a href="enrollment-current.php" class="btn-summary">Enroll Current Students</a>
+  <a href="enrollment-new.php" class="btn-summary">Enroll New Students</a>
 </div>
 
-<!-- Enrollment Fee Guide - Current Students-->
 <section class="fee-section">
-  <h5>Enrollment Fee Guide - Current Students</h5>
+  <h5>Enrollment Fee Guide - New Students</h5>
   <div class="table-responsive">
     <table class="fee-table">
       <thead>
@@ -57,125 +56,48 @@
       <tbody>
         <tr>
           <td>Kinder 1</td>
-          <td>₱28,000</td>
+          <td>₱30,500</td>
           <td>
-            Annual: ₱28,000<br>
-            Semi-Annual: ₱14,000 x 2<br>
-            Quarterly: ₱7,000 x 4<br>
-            Monthly: ₱2,800 x 10
+            Annual: ₱30,500<br>
+            Semi-Annual: ₱15,250 x 2<br>
+            Quarterly: ₱7,625 x 4<br>
+            Monthly: ₱3,050 x 10
           </td>
           <td>
             Tuition: ₱18,000<br>
             Miscellaneous: ₱4,000<br>
             Learning Materials: ₱3,000<br>
             Activity Fee: ₱2,000<br>
-            Development Fee: ₱1,000
+            Development Fee: ₱1,000<br>
+            Registration Fee: ₱500<br>
+            ID & Forms: ₱500<br>
+            Entrance Exam: ₱500<br>
+            Uniform Set: ₱1,000
           </td>
         </tr>
         <tr>
           <td>Kinder 2</td>
-          <td>₱29,000</td>
+          <td>₱31,500</td>
           <td>
-            Annual: ₱29,000<br>
-            Semi-Annual: ₱14,500 x 2<br>
-            Quarterly: ₱7,250 x 4<br>
-            Monthly: ₱2,900 x 10
+            Annual: ₱31,500<br>
+            Semi-Annual: ₱15,750 x 2<br>
+            Quarterly: ₱7,875 x 4<br>
+            Monthly: ₱3,150 x 10
           </td>
           <td>
             Tuition: ₱19,000<br>
             Miscellaneous: ₱4,000<br>
             Learning Materials: ₱3,000<br>
             Activity Fee: ₱2,000<br>
-            Development Fee: ₱1,000
+            Development Fee: ₱1,000<br>
+            Registration Fee: ₱500<br>
+            ID & Forms: ₱500<br>
+            Entrance Exam: ₱500<br>
+            Uniform Set: ₱1,000
           </td>
         </tr>
         <tr>
           <td>Grade 1</td>
-          <td>₱32,000</td>
-          <td>
-            Annual: ₱32,000<br>
-            Semi-Annual: ₱16,000 x 2<br>
-            Quarterly: ₱8,000 x 4<br>
-            Monthly: ₱3,200 x 10
-          </td>
-          <td>
-            Tuition: ₱21,000<br>
-            Miscellaneous: ₱5,000<br>
-            Learning Materials: ₱3,000<br>
-            Activity Fee: ₱2,000<br>
-            Development Fee: ₱1,000
-          </td>
-        </tr>
-        <tr>
-          <td>Grade 2</td>
-          <td>₱32,500</td>
-          <td>
-            Annual: ₱32,500<br>
-            Semi-Annual: ₱16,250 x 2<br>
-            Quarterly: ₱8,125 x 4<br>
-            Monthly: ₱3,250 x 10
-          </td>
-          <td>
-            Tuition: ₱21,500<br>
-            Miscellaneous: ₱5,000<br>
-            Learning Materials: ₱3,000<br>
-            Activity Fee: ₱2,000<br>
-            Development Fee: ₱1,000
-          </td>
-        </tr>
-        <tr>
-          <td>Grade 3</td>
-          <td>₱33,000</td>
-          <td>
-            Annual: ₱33,000<br>
-            Semi-Annual: ₱16,500 x 2<br>
-            Quarterly: ₱8,250 x 4<br>
-            Monthly: ₱3,300 x 10
-          </td>
-          <td>
-            Tuition: ₱22,000<br>
-            Miscellaneous: ₱5,000<br>
-            Learning Materials: ₱3,000<br>
-            Activity Fee: ₱2,000<br>
-            Development Fee: ₱1,000
-          </td>
-        </tr>
-        <tr>
-          <td>Grade 4</td>
-          <td>₱34,000</td>
-          <td>
-            Annual: ₱34,000<br>
-            Semi-Annual: ₱17,000 x 2<br>
-            Quarterly: ₱8,500 x 4<br>
-            Monthly: ₱3,400 x 10
-          </td>
-          <td>
-            Tuition: ₱23,000<br>
-            Miscellaneous: ₱5,000<br>
-            Learning Materials: ₱3,000<br>
-            Activity Fee: ₱2,000<br>
-            Development Fee: ₱1,000
-          </td>
-        </tr>
-        <tr>
-          <td>Grade 5</td>
-          <td>₱34,500</td>
-          <td>
-            Annual: ₱34,500<br>
-            Semi-Annual: ₱17,250 x 2<br>
-            Quarterly: ₱8,625 x 4<br>
-            Monthly: ₱3,450 x 10
-          </td>
-          <td>
-            Tuition: ₱23,500<br>
-            Miscellaneous: ₱5,000<br>
-            Learning Materials: ₱3,000<br>
-            Activity Fee: ₱2,000<br>
-            Development Fee: ₱1,000
-          </td>
-        </tr>
-        <tr>
-          <td>Grade 6</td>
           <td>₱35,000</td>
           <td>
             Annual: ₱35,000<br>
@@ -184,28 +106,137 @@
             Monthly: ₱3,500 x 10
           </td>
           <td>
+            Tuition: ₱21,000<br>
+            Miscellaneous: ₱5,000<br>
+            Learning Materials: ₱3,000<br>
+            Activity Fee: ₱2,000<br>
+            Development Fee: ₱1,000<br>
+            Registration Fee: ₱1,000<br>
+            ID & Forms: ₱500<br>
+            Entrance Exam: ₱500<br>
+            Uniform Set: ₱1,000
+          </td>
+        </tr>
+        <tr>
+          <td>Grade 2</td>
+          <td>₱35,500</td>
+          <td>
+            Annual: ₱35,500<br>
+            Semi-Annual: ₱17,750 x 2<br>
+            Quarterly: ₱8,875 x 4<br>
+            Monthly: ₱3,550 x 10
+          </td>
+          <td>
+            Tuition: ₱21,500<br>
+            Miscellaneous: ₱5,000<br>
+            Learning Materials: ₱3,000<br>
+            Activity Fee: ₱2,000<br>
+            Development Fee: ₱1,000<br>
+            Registration Fee: ₱1,000<br>
+            ID & Forms: ₱500<br>
+            Entrance Exam: ₱500<br>
+            Uniform Set: ₱1,000
+          </td>
+        </tr>
+        <tr>
+          <td>Grade 3</td>
+          <td>₱36,000</td>
+          <td>
+            Annual: ₱36,000<br>
+            Semi-Annual: ₱18,000 x 2<br>
+            Quarterly: ₱9,000 x 4<br>
+            Monthly: ₱3,600 x 10
+          </td>
+          <td>
+            Tuition: ₱22,000<br>
+            Miscellaneous: ₱5,000<br>
+            Learning Materials: ₱3,000<br>
+            Activity Fee: ₱2,000<br>
+            Development Fee: ₱1,000<br>
+            Registration Fee: ₱1,000<br>
+            ID & Forms: ₱500<br>
+            Entrance Exam: ₱500<br>
+            Uniform Set: ₱1,000
+          </td>
+        </tr>
+        <tr>
+          <td>Grade 4</td>
+          <td>₱37,000</td>
+          <td>
+            Annual: ₱37,000<br>
+            Semi-Annual: ₱18,500 x 2<br>
+            Quarterly: ₱9,250 x 4<br>
+            Monthly: ₱3,700 x 10
+          </td>
+          <td>
+            Tuition: ₱23,000<br>
+            Miscellaneous: ₱5,000<br>
+            Learning Materials: ₱3,000<br>
+            Activity Fee: ₱2,000<br>
+            Development Fee: ₱1,000<br>
+            Registration Fee: ₱1,000<br>
+            ID & Forms: ₱500<br>
+            Entrance Exam: ₱500<br>
+            Uniform Set: ₱1,000
+          </td>
+        </tr>
+        <tr>
+          <td>Grade 5</td>
+          <td>₱37,500</td>
+          <td>
+            Annual: ₱37,500<br>
+            Semi-Annual: ₱18,750 x 2<br>
+            Quarterly: ₱9,375 x 4<br>
+            Monthly: ₱3,750 x 10
+          </td>
+          <td>
+            Tuition: ₱23,500<br>
+            Miscellaneous: ₱5,000<br>
+            Learning Materials: ₱3,000<br>
+            Activity Fee: ₱2,000<br>
+            Development Fee: ₱1,000<br>
+            Registration Fee: ₱1,000<br>
+            ID & Forms: ₱500<br>
+            Entrance Exam: ₱500<br>
+            Uniform Set: ₱1,000
+          </td>
+        </tr>
+        <tr>
+          <td>Grade 6</td>
+          <td>₱38,000</td>
+          <td>
+            Annual: ₱38,000<br>
+            Semi-Annual: ₱19,000 x 2<br>
+            Quarterly: ₱9,500 x 4<br>
+            Monthly: ₱3,800 x 10
+          </td>
+          <td>
             Tuition: ₱24,000<br>
             Miscellaneous: ₱5,000<br>
             Learning Materials: ₱3,000<br>
             Activity Fee: ₱2,000<br>
-            Development Fee: ₱1,000
+            Development Fee: ₱1,000<br>
+            Registration Fee: ₱1,000<br>
+            ID & Forms: ₱500<br>
+            Entrance Exam: ₱500<br>
+            Uniform Set: ₱1,000
           </td>
         </tr>
       </tbody>
     </table>
   </div>
 </section>
-<!-- ends section -->
 
-<!-- Notes -->
+<!-- ends content -->
+
+<!-- Notes Section -->
 <section class="fee-section">
-  <h5>📌 Note that:</h5>
+  <h5>📌 Notes:</h5>
   <ul style="list-style-type: disc; margin-left: 20px; color: #333; font-family: 'Nunito', sans-serif; font-size: 0.95rem;">
-    <li><strong>Tuition</strong> – Classroom instruction & academic support</li>
-    <li><strong>Miscellaneous</strong> – ID, medical/dental, facilities, library, etc.</li>
-    <li><strong>Learning Materials</strong> – Modules, worksheets, workbooks</li>
-    <li><strong>Activity Fee</strong> – Events, programs, contests, etc.</li>
-    <li><strong>Development Fee</strong> – School upgrades, maintenance</li>
+    <li>The additional ₱2,500–₱3,000 covers new student needs like registration, ID, entrance test, and uniforms.</li>
+    <li>Monthly payments run July to April.</li>
+    <li>Quarterly payments: July, October, January, April.</li>
+    <li>Annual and first installment due upon enrollment.</li>
   </ul>
 </section>
   

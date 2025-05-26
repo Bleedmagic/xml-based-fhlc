@@ -42,9 +42,15 @@
         <a class="collapse-item <?= ($currentPage === 'faculty') ? 'active' : '' ?>" href="grades.php">Grades</a>
         <a class="collapse-item <?= ($currentPage === 'students') ? 'active' : '' ?>" href="assignments.php">Assignments</a>
         <a class="collapse-item <?= ($currentPage === 'grades') ? 'active' : '' ?>" href="payment-enrollment.php">Payment/Tagging</a>
-        <a class="collapse-item <?= ($currentPage === 'enrollment') ? 'active' : '' ?>" href="enrollment.php">Enrollment</a>
       </div>
     </div>
+  </li>
+
+  <!-- Nav Item - Enrollment Menu -->
+  <li class="nav-item <?= ($currentPage === 'enrollment') ? 'active' : '' ?>">
+    <a class="nav-link" href="./enrollment.php">
+      <i class="fas fa-fw fa-user-graduate"></i>
+      <span>Enrollment</span></a>
   </li>
 
   <!-- Nav Item - Calendar Menu -->
