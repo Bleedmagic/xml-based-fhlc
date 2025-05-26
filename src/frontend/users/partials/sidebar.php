@@ -68,12 +68,24 @@
     System Tools
   </div>
 
-  <!-- Nav Item - Settings -->
-  <li class="nav-item <?= ($currentPage === 'settings') ? 'active' : '' ?>">
-    <a class="nav-link" href="./settings.php">
-      <i class="fas fa-fw fa-wrench"></i>
-      <span>Settings</span></a>
-  </li>
+  <!-- Nav Item - User Settings Menu -->
+<li class="nav-item <?= in_array($currentPage, ['account-info', 'change-password']) ? 'active' : '' ?>">
+  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings"
+    aria-expanded="<?= in_array($currentPage, ['account-info', 'change-password']) ? 'true' : 'false' ?>"
+    aria-controls="collapseSettings">
+    <i class="fas fa-fw fa-user-cog"></i>
+    <span>Settings</span>
+  </a>
+  <div id="collapseSettings" class="collapse <?= in_array($currentPage, ['account-info', 'change-password']) ? 'show' : '' ?>"
+    aria-labelledby="headingSettings" data-parent="#accordionSidebar">
+    <div class="bg-white py-2 collapse-inner rounded">
+      <h6 class="collapse-header">User Settings:</h6>
+      <a class="collapse-item <?= ($currentPage === 'account-info') ? 'active' : '' ?>" href="account-settings.php">Account Information</a>
+      <a class="collapse-item <?= ($currentPage === 'change-password') ? 'active' : '' ?>" href="change-password.php">Change Password</a>
+    </div>
+  </div>
+</li>
+
 
   <!-- Nav Item - Archives -->
   <li class="nav-item <?= ($currentPage === 'archives') ? 'active' : '' ?>">
