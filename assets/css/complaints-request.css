@@ -1,0 +1,187 @@
+.complains-request {
+  margin-top: 30px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #1A906B;
+  margin-bottom: 20px;
+}
+
+.controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.filter-btn {
+  background-color: #1A906B;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-btn i {
+  font-size: 14px;
+}
+
+/* Fix extra arrow from Bootstrap or base styles */
+.dropdown-toggle::after {
+  content: none !important;
+  display: none !important;
+}
+
+.search-add-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.add-btn {
+  background-color: #FBCD5F;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: white;
+}
+
+.custom-table thead {
+  background-color: #1A906B;
+  color: white;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.status.in-progress {
+  color: #198754;
+  font-weight: 600;
+}
+
+.status.pending {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.status.resolved {
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.edit-btn {
+  background-color: #e8f5e9;
+  color: #1A906B;
+  border: 1px solid #1A906B;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #d0ecde;
+  color: #157a59;
+  text-decoration: none;
+}
+
+.archive-btn {
+  background-color: #eef4f8;
+  color: #0c4e74;
+  border: 1px solid #0c4e74;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.archive-btn:hover {
+  background-color: #d5e9f5;
+  color: #083954;
+  text-decoration: none;
+}
+
+.action a.edit-btn,
+.action a.archive-btn {
+  margin-right: 6px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.action a.archive-btn:last-child {
+  margin-right: 0;
+}
+
+/* Dropdown for sorting */
+.sort-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.sort-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  min-width: 220px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+  margin-top: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.sort-dropdown .dropdown-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.sort-dropdown .dropdown-menu li:hover {
+  background-color: #f2f2f2;
+}
+
+.sort-dropdown .dropdown-menu li.selected {
+  background-color: #e3f2fd;
+  font-weight: 600;
+  position: relative;
+}
+
+.sort-dropdown .dropdown-menu li.selected::before {
+  position: absolute;
+  left: 12px;
+}

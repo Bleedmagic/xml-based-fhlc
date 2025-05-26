@@ -68,18 +68,18 @@
     System Tools
   </div>
 
-  <!-- Nav Item - Export -->
-  <li class="nav-item <?= ($currentPage === 'export') ? 'active' : '' ?>">
-    <a class="nav-link export-link" href="#">
-      <i class="fas fa-fw fa-file-export"></i>
-      <span>Export</span></a>
-  </li>
-
   <!-- Nav Item - Settings -->
   <li class="nav-item <?= ($currentPage === 'settings') ? 'active' : '' ?>">
     <a class="nav-link" href="./settings.php">
       <i class="fas fa-fw fa-wrench"></i>
       <span>Settings</span></a>
+  </li>
+
+  <!-- Nav Item - Archives -->
+  <li class="nav-item <?= ($currentPage === 'archives') ? 'active' : '' ?>">
+    <a class="nav-link" href="./archives.php">
+      <i class='fas fa-archive'></i>
+      <span>Archives</span></a>
   </li>
 
   <!-- Divider -->
