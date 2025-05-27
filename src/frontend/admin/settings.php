@@ -23,6 +23,9 @@ foreach ($xml->user as $user) {
     break;
   }
 }
+
+// For Export
+$exportPage  = 'users';
 ?>
 
 <!DOCTYPE html>
@@ -211,19 +214,23 @@ foreach ($xml->user as $user) {
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     // Export
+    const currentPage = <?= json_encode($currentPage) ?>;
+    const exportPage = <?= json_encode($exportPage) ?>;
+
     document.querySelector('.export-link').addEventListener('click', function(event) {
       event.preventDefault();
 
       Swal.fire({
         title: 'Export Data',
-        text: 'Do you want to export your data?',
+        text: `Do you want to export the data for "${currentPage}"?`,
         icon: 'question',
         showCancelButton: true,
         confirmButtonText: 'Yes, export it!',
         cancelButtonText: 'Cancel'
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch('export.php')
+          // Use exportPage here instead of currentPage
+          fetch('scripts/export.php?page=' + encodeURIComponent(exportPage))
             .then(response => {
               if (response.ok) {
                 Swal.fire('Exported!', 'Your data has been exported.', 'success');
