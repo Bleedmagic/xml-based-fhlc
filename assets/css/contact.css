@@ -30,7 +30,7 @@
 /* Fix textarea height and prevent resize */
 textarea.input-custom {
   resize: none;
-  height: 330px; /* Adjust if you want a taller/shorter box */
+  height: 250px; /* Adjust if you want a taller/shorter box */
 }
 
 /* Submit button styling */

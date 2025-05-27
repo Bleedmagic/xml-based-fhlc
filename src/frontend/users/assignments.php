@@ -1,4 +1,11 @@
 <?php
+// Gatekeeper
+session_start();
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'guardian') {
+  header('Location: ../auth/login.php');
+  exit();
+}
+
 $xml = simplexml_load_file(__DIR__ . '/../../data/private/user-grades.xml');
 
 // Calculate final average per quarter
@@ -6,23 +13,24 @@ $qTotals = ['q1' => 0, 'q2' => 0, 'q3' => 0, 'q4' => 0];
 $count = 0;
 
 foreach ($xml->subject as $subject) {
-    $qTotals['q1'] += floatval($subject->q1);
-    $qTotals['q2'] += floatval($subject->q2);
-    $qTotals['q3'] += floatval($subject->q3);
-    $qTotals['q4'] += floatval($subject->q4);
-    $count++;
+  $qTotals['q1'] += floatval($subject->q1);
+  $qTotals['q2'] += floatval($subject->q2);
+  $qTotals['q3'] += floatval($subject->q3);
+  $qTotals['q4'] += floatval($subject->q4);
+  $count++;
 }
 
 $finalGrades = [
-    'q1' => round($qTotals['q1'] / $count, 2),
-    'q2' => round($qTotals['q2'] / $count, 2),
-    'q3' => round($qTotals['q3'] / $count, 2),
-    'q4' => round($qTotals['q4'] / $count, 2),
+  'q1' => round($qTotals['q1'] / $count, 2),
+  'q2' => round($qTotals['q2'] / $count, 2),
+  'q3' => round($qTotals['q3'] / $count, 2),
+  'q4' => round($qTotals['q4'] / $count, 2),
 ];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>User / Dashboard</title>
@@ -137,7 +145,7 @@ $finalGrades = [
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script>
-    document.getElementById('assignmentFilter').addEventListener('change', function () {
+    document.getElementById('assignmentFilter').addEventListener('change', function() {
       const value = this.value;
       const cards = document.querySelectorAll('.assignment-item');
 
@@ -155,7 +163,7 @@ $finalGrades = [
     document.addEventListener('DOMContentLoaded', () => {
       const signoutLink = document.querySelector('.signout-link');
       if (signoutLink) {
-        signoutLink.addEventListener('click', function (e) {
+        signoutLink.addEventListener('click', function(e) {
           e.preventDefault();
           Swal.fire({
             title: 'Sign Out',
@@ -176,4 +184,5 @@ $finalGrades = [
   </script>
 
 </body>
+
 </html>

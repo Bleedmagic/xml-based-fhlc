@@ -1,31 +1,39 @@
 <?php
+// Gatekeeper
+session_start();
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'guardian') {
+  header('Location: ../auth/login.php');
+  exit();
+}
+
 // archives.php
 $xmlFile = __DIR__ . '/../../data/private/complaints-requests-user.xml';
 
 if (!file_exists($xmlFile)) {
-    die('Data file not found.');
+  die('Data file not found.');
 }
 
 $xml = simplexml_load_file($xmlFile);
 if ($xml === false) {
-    die('Failed to load XML file.');
+  die('Failed to load XML file.');
 }
 
 $archived = [];
 foreach ($xml->complaint as $complaint) {
-    if (strtolower((string)$complaint->status) === 'archived') {
-        $archived[] = [
-            'type' => (string)$complaint->type,
-            'subject' => (string)$complaint->subject,
-            'date' => (string)$complaint->date,
-            'status' => (string)$complaint->status,
-        ];
-    }
+  if (strtolower((string)$complaint->status) === 'archived') {
+    $archived[] = [
+      'type' => (string)$complaint->type,
+      'subject' => (string)$complaint->subject,
+      'date' => (string)$complaint->date,
+      'status' => (string)$complaint->status,
+    ];
+  }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <title>Archived Complaints</title>
@@ -37,6 +45,7 @@ foreach ($xml->complaint as $complaint) {
   <link href="../../../assets/css/lib/startbootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../../assets/css/complaints-request.css" />
 </head>
+
 <body id="page-top">
   <div id="wrapper">
     <?php include __DIR__ . '/partials/sidebar.php'; ?>
@@ -68,7 +77,9 @@ foreach ($xml->complaint as $complaint) {
                     </tr>
                   <?php endforeach; ?>
                 <?php else: ?>
-                  <tr><td colspan="4">No archived complaints or requests yet.</td></tr>
+                  <tr>
+                    <td colspan="4">No archived complaints or requests yet.</td>
+                  </tr>
                 <?php endif; ?>
               </tbody>
             </table>
@@ -90,28 +101,29 @@ foreach ($xml->complaint as $complaint) {
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Sign Out functionality
-    const signoutLink = document.querySelector('.signout-link');
-    if (signoutLink) {
-      signoutLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        Swal.fire({
-          title: 'Sign Out',
-          text: 'Are you sure you want to sign out?',
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonText: 'Yes, sign out',
-          cancelButtonText: 'Cancel',
-          reverseButtons: true
-        }).then((result) => {
-          if (result.isConfirmed) {
-            window.location.href = '../auth/logout.php';
-          }
+    document.addEventListener("DOMContentLoaded", function() {
+      // Sign Out functionality
+      const signoutLink = document.querySelector('.signout-link');
+      if (signoutLink) {
+        signoutLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          Swal.fire({
+            title: 'Sign Out',
+            text: 'Are you sure you want to sign out?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, sign out',
+            cancelButtonText: 'Cancel',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = '../auth/logout.php';
+            }
+          });
         });
-      });
-    }
-  });
+      }
+    });
   </script>
 </body>
+
 </html>

@@ -1,6 +1,11 @@
 <?php
 http_response_code(404);
-
+// Gatekeeper
+session_start();
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'guardian') {
+  header('Location: ../auth/login.php');
+  exit();
+}
 ?>
 
 <!DOCTYPE html>
