@@ -145,13 +145,25 @@ if (file_exists($xmlFilePath)) {
       var calendarInstance = new calendarJs("calendar-container", {
         exportEventsEnabled: true,
         useAmPmForTimeDisplays: true,
-        manualEditingEnabled: true
+        manualEditingEnabled: true,
+        manualEditingEnabled: true,
+        useLocalStorageForEvents: true
       });
 
       savedEvents.forEach(function(event) {
         event.from = new Date(event.from);
         event.to = new Date(event.to);
-        calendarInstance.addEvent(event);
+
+        const existingEvents = calendarInstance.getEvents();
+        const isDuplicate = existingEvents.some(e =>
+          e.title === event.title &&
+          e.from.getTime() === event.from.getTime() &&
+          e.to.getTime() === event.to.getTime()
+        );
+
+        if (!isDuplicate) {
+          calendarInstance.addEvent(event);
+        }
       });
     </script>
 
