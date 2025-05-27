@@ -146,7 +146,6 @@ if (file_exists($xmlFilePath)) {
         exportEventsEnabled: true,
         useAmPmForTimeDisplays: true,
         manualEditingEnabled: true,
-        manualEditingEnabled: true,
         useLocalStorageForEvents: true
       });
 
