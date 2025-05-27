@@ -1,4 +1,11 @@
 <?php
+// Gatekeeper
+session_start();
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'guardian') {
+  header('Location: ../auth/login.php');
+  exit();
+}
+
 // submit-complaints-request.php
 $xmlFile = __DIR__ . '/../../data/private/complaints-requests-user.xml';
 

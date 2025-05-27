@@ -60,29 +60,39 @@
               <!-- Left Column: Form -->
               <div class="col-md-6">
                 <h5 class="mb-3">Leave us a message...</h5>
-                <form>
+                <form method="POST" action="add-sub.php">
                   <div class="form-group mb-2">
-                    <input type="text" class="form-control input-custom" placeholder="Your Name" />
+                    <input type="text" name="submitted_by" class="form-control input-custom"
+                      placeholder="Your Name" required="required" />
                   </div>
                   <div class="form-group mb-2">
-                    <input type="email" class="form-control input-custom" placeholder="Email Address" />
+                    <input type="email" name="email" class="form-control input-custom"
+                      placeholder="Email Address" required="required" />
                   </div>
                   <div class="form-group mb-3">
-                    <textarea class="form-control input-custom" rows="4" placeholder="Your message..."></textarea>
+                    <input type="text" name="subject" class="form-control input-custom"
+                      placeholder="Subject" required="required" />
                   </div>
-                  <button type="submit" class="btn btn-submit">SUBMIT</button>
+                  <div class="form-group mb-3">
+                    <textarea name="message" class="form-control input-custom" rows="4"
+                      placeholder="Your message..." required="required"></textarea>
+                  </div>
+                  <div class="form-group mb-1">
+                    <button type="submit" class="btn btn-submit">SUBMIT</button>
+                  </div>
                 </form>
               </div>
 
               <!-- Right Column: Contact Info from XML -->
               <div class="col-md-6 mt-4 mt-md-0">
-                <p><strong><xsl:value-of select="$contact/organization/name" /></strong></p>
-                <p>Address: <xsl:value-of select="$contact/organization/address" /></p>
                 <p>
-                  Contact Numbers:
-                  <xsl:value-of select="$contact/organization/landline" /> (Landline) |
-                  <xsl:value-of select="$contact/organization/mobile" /> (Mobile)
+                  <strong>
+                    <xsl:value-of select="$contact/organization/name" />
+                  </strong>
                 </p>
+                <p>Address: <xsl:value-of select="$contact/organization/address" /></p>
+                <p> Contact Numbers: <xsl:value-of select="$contact/organization/landline" />
+    (Landline) | <xsl:value-of select="$contact/organization/mobile" /> (Mobile) </p>
                 <p>Email: <xsl:value-of select="$contact/organization/email" /></p>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.0394550612705!2d121.09285357487269!3d14.5943686858913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b80bbadebcd7%3A0x32e8d0e0ce21ba66!2sFull%20House%20Learning%20Center%20Inc.!5e1!3m2!1sen!2sph!4v1747131196405!5m2!1sen!2sph"

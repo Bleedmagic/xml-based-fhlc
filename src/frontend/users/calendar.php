@@ -1,4 +1,11 @@
 <?php
+// Gatekeeper
+session_start();
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'guardian') {
+  header('Location: ../auth/login.php');
+  exit();
+}
+
 // Load events from XML into PHP array
 $events = [];
 $xmlFilePath = __DIR__ . '/../../data/private/events-user.xml';
@@ -128,46 +135,46 @@ if (file_exists($xmlFilePath)) {
 
   <!-- Calendar JS -->
   <script src="../../../assets/js/lib/calendar.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script>
-  var savedEvents = <?= json_encode($events) ?>;
+  <script>
+    var savedEvents = <?= json_encode($events) ?>;
 
-  var calendarInstance = new calendarJs("calendar-container", {
-    exportEventsEnabled: false,
-    useAmPmForTimeDisplays: true,
-    manualEditingEnabled: false,  // User cannot edit events
-    showEventDeleteButtons: false,
-    showEventEditButtons: false,
-  });
-
-  savedEvents.forEach(function(event) {
-    event.from = new Date(event.from);
-    event.to = new Date(event.to);
-    calendarInstance.addEvent(event);
-  });
-
-  // Sign Out functionality
-  const signoutLink = document.querySelector('.signout-link');
-  if (signoutLink) {
-    signoutLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      Swal.fire({
-        title: 'Sign Out',
-        text: 'Are you sure you want to sign out?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonText: 'Yes, sign out',
-        cancelButtonText: 'Cancel',
-        reverseButtons: true
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = '../auth/logout.php';
-        }
-      });
+    var calendarInstance = new calendarJs("calendar-container", {
+      exportEventsEnabled: false,
+      useAmPmForTimeDisplays: true,
+      manualEditingEnabled: false, // User cannot edit events
+      showEventDeleteButtons: false,
+      showEventEditButtons: false,
     });
-  }
-</script>
+
+    savedEvents.forEach(function(event) {
+      event.from = new Date(event.from);
+      event.to = new Date(event.to);
+      calendarInstance.addEvent(event);
+    });
+
+    // Sign Out functionality
+    const signoutLink = document.querySelector('.signout-link');
+    if (signoutLink) {
+      signoutLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        Swal.fire({
+          title: 'Sign Out',
+          text: 'Are you sure you want to sign out?',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, sign out',
+          cancelButtonText: 'Cancel',
+          reverseButtons: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = '../auth/logout.php';
+          }
+        });
+      });
+    }
+  </script>
 
 
 </body>

@@ -1,18 +1,25 @@
 <?php
+// Gatekeeper
+session_start();
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'guardian') {
+  header('Location: ../auth/login.php');
+  exit();
+}
+
 // LOAD XML AND PARSE GRADES
 $xml = simplexml_load_file(__DIR__ . '/../../data/private/user-grades.xml');
 $grades = [];
 
 foreach ($xml->subject as $subject) {
-    $name = (string)$subject['name'];
-    $teacher = (string)$subject['teacher'];
-    $grades[$name] = [
-        'teacher' => $teacher,
-        'q1' => floatval($subject->q1),
-        'q2' => floatval($subject->q2),
-        'q3' => floatval($subject->q3),
-        'q4' => floatval($subject->q4),
-    ];
+  $name = (string)$subject['name'];
+  $teacher = (string)$subject['teacher'];
+  $grades[$name] = [
+    'teacher' => $teacher,
+    'q1' => floatval($subject->q1),
+    'q2' => floatval($subject->q2),
+    'q3' => floatval($subject->q3),
+    'q4' => floatval($subject->q4),
+  ];
 }
 
 // Compute final grade per quarter (average of all subjects)
@@ -160,7 +167,7 @@ $finalGrades = [
       tableBody.insertAdjacentHTML('beforeend', summaryRow);
     }
 
-    quarterDropdown.addEventListener('change', function () {
+    quarterDropdown.addEventListener('change', function() {
       renderGrades(this.value);
     });
 
@@ -169,7 +176,7 @@ $finalGrades = [
     // Sign Out functionality
     const signoutLink = document.querySelector('.signout-link');
     if (signoutLink) {
-      signoutLink.addEventListener('click', function (e) {
+      signoutLink.addEventListener('click', function(e) {
         e.preventDefault();
         Swal.fire({
           title: 'Sign Out',
