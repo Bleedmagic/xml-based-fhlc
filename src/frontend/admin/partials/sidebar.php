@@ -78,10 +78,10 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
   </div>
 
   <!-- Nav Item - Links -->
-  <li class="nav-item <?= ($currentPage === 'useful-links') ? 'active' : '' ?>">
-    <a class="nav-link" href="useful-links.php">
+  <li class="nav-item <?= ($currentPage === 'bookmarks') ? 'active' : '' ?>">
+    <a class="nav-link" href="bookmarks.php">
       <i class="fas fa-fw fa-link"></i>
-      <span>Useful Links</span></a>
+      <span>Bookmarks</span></a>
   </li>
 
   <!-- Nav Item - Export -->

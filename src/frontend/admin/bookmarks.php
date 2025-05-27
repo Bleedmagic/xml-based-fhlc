@@ -19,7 +19,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <?php $currentPage = 'useful-links'; ?>
+  <?php $currentPage = 'bookmarks'; ?>
   <title>Admin / <?= ucwords(str_replace('-', ' ', $currentPage)) ?></title>
 
   <!-- FAVICONS -->
@@ -66,10 +66,10 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Useful Links</h1>
+          <h1 class="h3 mb-2 text-gray-800">Bookmarks</h1>
           <p class="mb-4">Below are useful links to educational tools and resources designed to support teaching, learning, and classroom management.</p>
 
-          <!-- Add useful links form -->
+          <!-- Add Bookmarks form -->
           <form id="link-form" class="mb-4">
             <div class="form-group">
               <label for="title">Link Title - Feel free to add a description.</label>
@@ -135,7 +135,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
       // Fetch saved links from backend (to be created)
       function fetchLinks() {
         $.ajax({
-          url: 'scripts/useful-links-handler.php',
+          url: 'scripts/bookmarks-handler.php',
           method: 'GET',
           dataType: 'json',
           success: function(data) {
@@ -180,7 +180,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
         }).then((result) => {
           if (result.isConfirmed) {
             $.ajax({
-              url: 'scripts/useful-links-handler.php',
+              url: 'scripts/bookmarks-handler.php',
               method: 'DELETE',
               contentType: 'application/json',
               data: JSON.stringify({
@@ -215,7 +215,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
         const url = $('#url').val();
 
         $.ajax({
-          url: 'scripts/useful-links-handler.php',
+          url: 'scripts/bookmarks-handler.php',
           method: 'POST',
           contentType: 'application/json',
           data: JSON.stringify({
@@ -249,19 +249,21 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     // Export
+    const currentPage = <?php echo json_encode($currentPage); ?>;
+
     document.querySelector('.export-link').addEventListener('click', function(event) {
       event.preventDefault();
 
       Swal.fire({
         title: 'Export Data',
-        text: 'Do you want to export your data?',
+        text: `Do you want to export the data for "${currentPage}"?`,
         icon: 'question',
         showCancelButton: true,
         confirmButtonText: 'Yes, export it!',
         cancelButtonText: 'Cancel'
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch('export.php')
+          fetch('scripts/export.php?page=' + encodeURIComponent(currentPage))
             .then(response => {
               if (response.ok) {
                 Swal.fire('Exported!', 'Your data has been exported.', 'success');

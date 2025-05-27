@@ -1,65 +1,74 @@
 <?php
+header('Content-Type: application/json');
+
 $backupBaseDir = __DIR__ . '/../../../data/backup';
 
-// Get 'page' parameter safely
 $page = isset($_GET['page']) ? basename($_GET['page']) : null;
-if (!$page) {
+if (!$page || !preg_match('/^[a-zA-Z0-9_-]+$/', $page)) {
   http_response_code(400);
-  echo json_encode(['error' => 'Page parameter missing']);
+  echo json_encode(['error' => 'Invalid or missing page parameter']);
   exit;
 }
 
-// Source XML file path
 $sourceXmlFile = __DIR__ . "/../../../data/private/{$page}.xml";
-
 if (!file_exists($sourceXmlFile)) {
   http_response_code(404);
   echo json_encode(['error' => 'Source XML file not found']);
   exit;
 }
 
-// Create backup folder with timestamp inside base dir
 $timestamp = date('Ymd_His');
-$backupFolder = $backupBaseDir . "/backup_{$page}_{$timestamp}";
+$backupFolder = "{$backupBaseDir}/backup_{$page}_{$timestamp}";
 
 if (!is_dir($backupFolder)) {
-  if (!mkdir($backupFolder, 0777, true)) {
+  if (!mkdir($backupFolder, 0755, true)) {
     http_response_code(500);
     echo json_encode(['error' => 'Failed to create backup directory']);
     exit;
   }
 }
 
-// Copy original XML to backup folder as .xml
-if (!copy($sourceXmlFile, $backupFolder . "/{$page}.xml")) {
+$xmlContent = file_get_contents($sourceXmlFile);
+if ($xmlContent === false) {
   http_response_code(500);
-  echo json_encode(['error' => 'Failed to backup XML file']);
+  echo json_encode(['error' => 'Failed to read XML file']);
   exit;
 }
 
-// Save XML content as .txt backup
-$xmlContent = file_get_contents($sourceXmlFile);
-if (file_put_contents($backupFolder . "/{$page}.txt", $xmlContent) === false) {
+$xmlFilePath = "{$backupFolder}/{$page}.xml";
+$txtFilePath = "{$backupFolder}/{$page}.txt";
+$csvFilePath = "{$backupFolder}/{$page}.csv";
+$zipFilePath = "{$backupFolder}.zip";
+
+// Save XML
+if (!copy($sourceXmlFile, $xmlFilePath)) {
+  http_response_code(500);
+  echo json_encode(['error' => 'Failed to copy XML file']);
+  exit;
+}
+
+// Save TXT
+if (file_put_contents($txtFilePath, $xmlContent) === false) {
   http_response_code(500);
   echo json_encode(['error' => 'Failed to save TXT backup']);
   exit;
 }
 
-// Load XML and convert to CSV
-$xml = simplexml_load_file($sourceXmlFile);
+// Parse XML
+$xml = simplexml_load_string($xmlContent);
 if ($xml === false) {
   http_response_code(500);
-  echo json_encode(['error' => 'Failed to load XML']);
+  echo json_encode(['error' => 'Failed to parse XML content']);
   exit;
 }
 
+// Extract CSV
 $csvRows = [];
 $headers = [];
 
-// Extract all <student> elements
-foreach ($xml->student as $student) {
+foreach ($xml->children() as $record) {
   $row = [];
-  foreach ($student->children() as $field) {
+  foreach ($record->children() as $field) {
     $fieldName = $field->getName();
     if (!in_array($fieldName, $headers)) {
       $headers[] = $fieldName;
@@ -69,19 +78,15 @@ foreach ($xml->student as $student) {
   $csvRows[] = $row;
 }
 
-// Prepare CSV file
-$csvFile = $backupFolder . "/{$page}.csv";
-$fp = fopen($csvFile, 'w');
+// Write CSV
+$fp = fopen($csvFilePath, 'w');
 if ($fp === false) {
   http_response_code(500);
   echo json_encode(['error' => 'Failed to create CSV file']);
   exit;
 }
-
-// Write headers
+fwrite($fp, "\xEF\xBB\xBF");
 fputcsv($fp, $headers);
-
-// Write data rows
 foreach ($csvRows as $row) {
   $line = [];
   foreach ($headers as $header) {
@@ -89,8 +94,29 @@ foreach ($csvRows as $row) {
   }
   fputcsv($fp, $line);
 }
-
 fclose($fp);
 
-// Success response
-echo json_encode(['success' => true, 'backup_folder' => $backupFolder]);
+// Create ZIP archive
+$zip = new ZipArchive();
+if ($zip->open($zipFilePath, ZipArchive::CREATE | ZipArchive::OVERWRITE) !== true) {
+  http_response_code(500);
+  echo json_encode(['error' => 'Failed to create ZIP archive']);
+  exit;
+}
+
+$zip->addFile($xmlFilePath, "{$page}.xml");
+$zip->addFile($txtFilePath, "{$page}.txt");
+$zip->addFile($csvFilePath, "{$page}.csv");
+
+$zip->close();
+
+// Clean up uncompressed backup folder
+array_map('unlink', glob("$backupFolder/*.*"));
+rmdir($backupFolder);
+
+// Respond
+echo json_encode([
+  'success' => true,
+  'message' => 'Backup ZIP created successfully.',
+  'zip_path' => str_replace(__DIR__ . '/../../../', '', $zipFilePath)
+]);
