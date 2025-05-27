@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<users>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/users.xsd">
   <user>
     <username>AdminIsMe</username>
     <email>admin@gmail.com</email>
@@ -7,13 +8,13 @@
     <!-- Admin@123 -->
     <role>admin</role>
     <first_name>Admin</first_name>
-    <middle_name/>
+    <middle_name />
     <last_name>IsMe</last_name>
-    <phone_number/>
+    <phone_number />
     <age>0</age>
-    <address/>
+    <address />
     <picture>assets\svg\default_profile.svg</picture>
-    <student/>
+    <student />
   </user>
   <user>
     <username>GuardianIsMe</username>
@@ -22,13 +23,13 @@
     <!-- Guardian@123 -->
     <role>guardian</role>
     <first_name>Guardian</first_name>
-    <middle_name/>
+    <middle_name />
     <last_name>IsMe</last_name>
-    <phone_number/>
+    <phone_number />
     <age>0</age>
-    <address/>
+    <address />
     <picture>assets\svg\default_profile.svg</picture>
-    <student/>
+    <student />
   </user>
   <user>
     <username>VictorVasquez987</username>
@@ -36,12 +37,12 @@
     <password>$2y$10$IXxwhuV.YukFilDvjACyOO/AJpgGe.vXNCwbX2X/WPGWzBdZdqelu</password>
     <role>admin</role>
     <first_name>Victor</first_name>
-    <middle_name/>
+    <middle_name />
     <last_name>Vasquez</last_name>
-    <phone_number/>
+    <phone_number />
     <age>20</age>
-    <address/>
+    <address />
     <picture>assets/img/uploads/prof_6833b240da3bb5.18182054.jpg</picture>
-    <student/>
+    <student />
   </user>
 </users>

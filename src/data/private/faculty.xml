@@ -1,5 +1,6 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<faculty>
+<?xml version="1.0" encoding="UTF-8"?>
+<faculty xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/faculty.xsd">
   <teachers>
     <teacher>
       <id>T001</id>
@@ -316,12 +317,6 @@
       <grade_levels>Kinder to Grade 2</grade_levels>
       <type>Full Time</type>
     </teacher>
-    <teacher>
-      <id>T046</id>
-      <name>Enrique Navarro</name>
-      <subject_handled>Filipino, Araling Panlipunan</subject_handled>
-      <grade_levels>Grade 3 to Grade 6</grade_levels>
-      <type>Full Time</type>
-    </teacher>
+
   </teachers>
 </faculty>

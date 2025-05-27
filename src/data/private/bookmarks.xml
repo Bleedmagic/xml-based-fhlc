@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bookmarks>
+<bookmarks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/bookmarks.xsd">
   <user email="admin@gmail.com">
     <link>
       <title>W3Schools</title>
