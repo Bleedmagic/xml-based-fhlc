@@ -118,10 +118,10 @@ if (file_exists($xmlPath)) {
                         <td><?= htmlspecialchars($teacher->grade_levels) ?></td>
                         <td><?= htmlspecialchars($teacher->type) ?></td>
                         <td class="text-center" style="width: 75px; max-width: 75px;">
-                          <a href="scripts/edit.php?id=<?= htmlspecialchars($teacher->id) ?>" class="btn btn-info btn-sm d-flex justify-content-center align-items-center">
+                          <a href="scripts/edit-faculty.php?id=<?= htmlspecialchars($teacher->id) ?>" class="btn btn-info btn-sm d-flex justify-content-center align-items-center">
                             <i class="fas fa-edit"></i>
                           </a>
-                          <a href="scripts/delete.php?id=<?= htmlspecialchars($teacher->id) ?>" class="btn btn-danger btn-sm d-flex justify-content-center align-items-center">
+                          <a href="scripts/delete-faculty.php?id=<?= htmlspecialchars($teacher->id) ?>" class="btn btn-danger btn-sm d-flex justify-content-center align-items-center">
                             <i class="fas fa-archive"></i>
                           </a>
                         </td>
@@ -184,7 +184,7 @@ if (file_exists($xmlPath)) {
         .text('Add New')
         .addClass('btn btn-primary btn-sm ml-2')
         .on('click', function() {
-          window.location.href = './scripts/add.php';
+          window.location.href = './scripts/add-faculty.php';
         });
 
       $('#dataTable_filter').append(addButton);

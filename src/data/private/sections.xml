@@ -1,13 +1,16 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<sections>
+<?xml version="1.0" encoding="UTF-8"?>
+<sections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/sections.xsd">
   <section>
+    <id>1</id>
     <name>Maple</name>
     <grade_level>Grade 1</grade_level>
     <adviser>Adrian Flores</adviser>
-    <number_of_students>33</number_of_students>
+    <number_of_students>34</number_of_students>
     <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
   </section>
   <section>
+    <id>2</id>
     <name>Oak</name>
     <grade_level>Grade 2</grade_level>
     <adviser>Enrique Navarro</adviser>
@@ -15,6 +18,7 @@
     <schedule>Monday to Friday, 8:00 AM - 12:30 PM</schedule>
   </section>
   <section>
+    <id>3</id>
     <name>Birch</name>
     <grade_level>Grade 3</grade_level>
     <adviser>Leo Gutierrez</adviser>
@@ -22,6 +26,7 @@
     <schedule>Monday to Friday, 1:00 PM - 5:30 PM</schedule>
   </section>
   <section>
+    <id>4</id>
     <name>Pine</name>
     <grade_level>Grade 4</grade_level>
     <adviser>Nathaniel Perez</adviser>
@@ -29,6 +34,7 @@
     <schedule>Monday to Friday, 7:30 AM - 1:00 PM</schedule>
   </section>
   <section>
+    <id>5</id>
     <name>Cedar</name>
     <grade_level>Grade 5</grade_level>
     <adviser>Carlos Dela Rosa</adviser>
@@ -36,6 +42,7 @@
     <schedule>Monday to Friday, 8:30 AM - 12:30 PM</schedule>
   </section>
   <section>
+    <id>6</id>
     <name>Elm</name>
     <grade_level>Grade 6</grade_level>
     <adviser>Allan David</adviser>
@@ -43,6 +50,7 @@
     <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
   </section>
   <section>
+    <id>7</id>
     <name>Aspen</name>
     <grade_level>Grade 1</grade_level>
     <adviser>Anna Reyes</adviser>
@@ -50,6 +58,7 @@
     <schedule>Monday to Friday, 8:00 AM - 12:30 PM</schedule>
   </section>
   <section>
+    <id>8</id>
     <name>Spruce</name>
     <grade_level>Grade 2</grade_level>
     <adviser>Francis Chua</adviser>
@@ -57,6 +66,7 @@
     <schedule>Monday to Friday, 1:00 PM - 5:30 PM</schedule>
   </section>
   <section>
+    <id>9</id>
     <name>Willow</name>
     <grade_level>Grade 3</grade_level>
     <adviser>Leo Gutierrez</adviser>
@@ -64,6 +74,7 @@
     <schedule>Monday to Friday, 7:30 AM - 1:00 PM</schedule>
   </section>
   <section>
+    <id>10</id>
     <name>Chestnut</name>
     <grade_level>Grade 4</grade_level>
     <adviser>Enrique Navarro</adviser>
@@ -71,6 +82,7 @@
     <schedule>Monday to Friday, 8:30 AM - 12:30 PM</schedule>
   </section>
   <section>
+    <id>11</id>
     <name>Fir</name>
     <grade_level>Grade 5</grade_level>
     <adviser>Jennifer Lim</adviser>
@@ -78,6 +90,7 @@
     <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
   </section>
   <section>
+    <id>12</id>
     <name>Redwood</name>
     <grade_level>Grade 6</grade_level>
     <adviser>Anna Reyes</adviser>
@@ -85,6 +98,7 @@
     <schedule>Monday to Friday, 8:00 AM - 12:30 PM</schedule>
   </section>
   <section>
+    <id>13</id>
     <name>Poplar</name>
     <grade_level>Grade 1</grade_level>
     <adviser>Leo Gutierrez</adviser>
@@ -92,6 +106,7 @@
     <schedule>Monday to Friday, 1:00 PM - 5:30 PM</schedule>
   </section>
   <section>
+    <id>14</id>
     <name>Sequoia</name>
     <grade_level>Grade 2</grade_level>
     <adviser>Adrian Flores</adviser>
@@ -99,6 +114,7 @@
     <schedule>Monday to Friday, 7:30 AM - 1:00 PM</schedule>
   </section>
   <section>
+    <id>15</id>
     <name>Sycamore</name>
     <grade_level>Grade 3</grade_level>
     <adviser>Samuel Tan</adviser>
@@ -106,6 +122,7 @@
     <schedule>Monday to Friday, 8:30 AM - 12:30 PM</schedule>
   </section>
   <section>
+    <id>16</id>
     <name>Walnut</name>
     <grade_level>Grade 4</grade_level>
     <adviser>Isabelle Torres</adviser>
@@ -113,6 +130,7 @@
     <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
   </section>
   <section>
+    <id>17</id>
     <name>Beech</name>
     <grade_level>Grade 5</grade_level>
     <adviser>Leo Gutierrez</adviser>
@@ -120,6 +138,7 @@
     <schedule>Monday to Friday, 8:00 AM - 12:30 PM</schedule>
   </section>
   <section>
+    <id>18</id>
     <name>Hickory</name>
     <grade_level>Grade 6</grade_level>
     <adviser>Sophia Martinez</adviser>
@@ -127,6 +146,7 @@
     <schedule>Monday to Friday, 1:00 PM - 5:30 PM</schedule>
   </section>
   <section>
+    <id>19</id>
     <name>Alder</name>
     <grade_level>Grade 1</grade_level>
     <adviser>Elaine Rivera</adviser>
@@ -134,6 +154,7 @@
     <schedule>Monday to Friday, 7:30 AM - 1:00 PM</schedule>
   </section>
   <section>
+    <id>20</id>
     <name>Magnolia</name>
     <grade_level>Grade 2</grade_level>
     <adviser>Maria Santos</adviser>
@@ -141,6 +162,7 @@
     <schedule>Monday to Friday, 8:30 AM - 12:30 PM</schedule>
   </section>
   <section>
+    <id>21</id>
     <name>Maple 2</name>
     <grade_level>Grade 3</grade_level>
     <adviser>Grace Bautista</adviser>
@@ -148,6 +170,7 @@
     <schedule>Monday to Friday, 7:30 AM - 12:00 PM</schedule>
   </section>
   <section>
+    <id>22</id>
     <name>Oak 2</name>
     <grade_level>Grade 4</grade_level>
     <adviser>Theresa Diaz</adviser>
@@ -155,6 +178,7 @@
     <schedule>Monday to Friday, 8:00 AM - 12:30 PM</schedule>
   </section>
   <section>
+    <id>23</id>
     <name>Birch 2</name>
     <grade_level>Grade 5</grade_level>
     <adviser>Maria Santos</adviser>
@@ -162,17 +186,11 @@
     <schedule>Monday to Friday, 1:00 PM - 5:30 PM</schedule>
   </section>
   <section>
+    <id>24</id>
     <name>Pine 2</name>
     <grade_level>Grade 6</grade_level>
     <adviser>Leo Gutierrez</adviser>
     <number_of_students>33</number_of_students>
     <schedule>Monday to Friday, 7:30 AM - 1:00 PM</schedule>
-  </section>
-  <section>
-    <name>Cedar 2</name>
-    <grade_level>Grade 1</grade_level>
-    <adviser>Carlos Dela Rosa</adviser>
-    <number_of_students>33</number_of_students>
-    <schedule>Monday to Friday, 8:30 AM - 12:30 PM</schedule>
   </section>
 </sections>

@@ -1,5 +1,6 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<students>
+<?xml version="1.0" encoding="UTF-8"?>
+<students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/students.xsd">
   <student>
     <id>485563-001</id>
     <name>Ella Villanueva</name>
@@ -2151,13 +2152,5 @@
     <section>Lapu-Lapu</section>
     <status>Active</status>
   </student>
-  <student>
-    <id>485563-240</id>
-    <name>Faith Uy</name>
-    <guardian_name>Carmen Uy</guardian_name>
-    <guardian_contact>092317629547</guardian_contact>
-    <grade>Grade 3</grade>
-    <section>Mabini</section>
-    <status>Active</status>
-  </student>
+
 </students>

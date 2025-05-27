@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<submissions>
+<submissions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/complaints-requests.xsd">
   <submission>
     <id>1</id>
     <via>Contact</via>

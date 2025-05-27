@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<grades-remarks>
+<?xml version="1.0" encoding="UTF-8"?>
+<grades-remarks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/grades-remarks.xsd">
   <student>
     <id>485563-001</id>
     <name>Ella Villanueva</name>
     <grade_level>Grade 3</grade_level>
-    <general_average>93</general_average>
+    <general_average>94</general_average>
     <remarks>Passed</remarks>
   </student>
   <student>
@@ -1673,11 +1674,5 @@
     <general_average>92</general_average>
     <remarks>Passed</remarks>
   </student>
-  <student>
-    <id>485563-240</id>
-    <name>Faith Uy</name>
-    <grade_level>Grade 3</grade_level>
-    <general_average>70</general_average>
-    <remarks>Failed</remarks>
-  </student>
+
 </grades-remarks>
