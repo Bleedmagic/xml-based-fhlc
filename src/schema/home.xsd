@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="home">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="hero">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="heading" type="xs:string" />
+              <xs:element name="paragraph">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="br" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="image">
+                <xs:complexType>
+                  <xs:attribute name="src" type="xs:string" use="required" />
+                  <xs:attribute name="alt" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="enrollment">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="image">
+                <xs:complexType>
+                  <xs:attribute name="src" type="xs:string" use="required" />
+                  <xs:attribute name="alt" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="h2" type="xs:string" />
+              <xs:element name="paragraph" type="xs:string" />
+              <xs:element name="ul">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="li" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="commitment" type="xs:string" />
+              <xs:element name="enroll_button_text" type="xs:string" />
+              <xs:element name="enroll_button_link" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="summer_class">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="h2" type="xs:string" />
+              <xs:element name="paragraph" type="xs:string" />
+              <xs:element name="additional_info" type="xs:string" />
+              <xs:element name="inquire_button_text" type="xs:string" />
+              <xs:element name="inquire_button_link" type="xs:string" />
+              <xs:element name="image">
+                <xs:complexType>
+                  <xs:attribute name="src" type="xs:string" use="required" />
+                  <xs:attribute name="alt" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

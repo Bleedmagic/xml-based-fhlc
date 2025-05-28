@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="home.xsl"?>
-<home>
+<home xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/home.xsd">
   <hero>
     <heading>Nurturing Young Minds for a Brighter Tomorrow</heading>
     <paragraph>At Full House Learning Center, we nurture every child's potential <br/> through purposeful learning, a caring environment, and programs that build strong <br/> foundations for future success.</paragraph>

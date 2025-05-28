@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<privacy-policy>
+<privacy-policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/privacy-policy.xsd">
   <section>
     <title>Privacy Policy</title>
     <content>We respect your privacy and are committed to protecting it through our compliance with
