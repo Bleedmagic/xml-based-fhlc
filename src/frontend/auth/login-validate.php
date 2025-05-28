@@ -47,6 +47,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       password_verify($password, $storedPassword)
     ) {
 
+      // Detect environment
+      $appEnv = $_ENV['APP_ENV'] ?? 'production';
+
+      if ($appEnv === 'local') {
+        // Local mode: skip OTP, log in immediately
+        $_SESSION['username'] = $storedUsername;
+        $_SESSION['email']    = $storedEmail;
+        $_SESSION['role']     = $user->getElementsByTagName('role')[0]->nodeValue;
+
+        // Redirect based on role
+        switch ($_SESSION['role']) {
+          case 'admin':
+            header("Location: ../admin/dashboard.php");
+            break;
+          case 'guardian':
+            header("Location: ../users/dashboard.php");
+            break;
+          default:
+            header("Location: login.php");
+            break;
+        }
+        exit();
+      }
+
       // Generate and store OTP
       $otp = random_int(100000, 999999);
       $_SESSION['otp'] = $otp;
