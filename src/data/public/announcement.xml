@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="announcement.xsl"?>
-<announcements>
+<announcements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/announcement.xsd">
   <announcement>
     <title>FIELD TRIP</title>
     <image src="../../assets/img/fieldtrip.png" alt="Field Trip" class="field-trip-img" />
-    <text>We're excited to announce our upcoming Field Trip! This is a wonderful 
-    opportunity for our students to explore, learn, and have fun outside the 
-    classroom. The trip will include educational activities, guided tours, 
+    <text>We're excited to announce our upcoming Field Trip! This is a wonderful
+    opportunity for our students to explore, learn, and have fun outside the
+    classroom. The trip will include educational activities, guided tours,
     and hands-on experiences that support our curriculum. Details on the destination,
-    date, and reminders will be sent home soon. We look forward to a memorable and enriching 
+    date, and reminders will be sent home soon. We look forward to a memorable and enriching
     adventure with our young learners!</text>
   </announcement>
 
   <announcement>
     <title>CARD DISTRIBUTION</title>
     <image src="../../assets/img/card.png" alt="Card Distribution" class="card-distribution-img" />
-    <text>Card Distribution coming up! Receive your child’s progress report 
+    <text>Card Distribution coming up! Receive your child’s progress report
     and connect with teachers. Details to follow.</text>
   </announcement>
 
   <announcement>
     <title>ORIENTATION</title>
     <image src="../../assets/img/parent.png" alt="Orientation" class="orientation-img" />
-    <text>Join us for our Orientation! Meet the teachers, learn about school 
+    <text>Join us for our Orientation! Meet the teachers, learn about school
     life, and get ready for an exciting year ahead.</text>
   </announcement>
 </announcements>

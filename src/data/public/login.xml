@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<login>
+<login xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/login.xsd">
   <page>
     <logo>../../../assets/img/fhlc-logo.png</logo>
     <decorative-image>../../../assets/img/login.jpg</decorative-image>

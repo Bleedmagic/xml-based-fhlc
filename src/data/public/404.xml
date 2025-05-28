@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<error>
+<error xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/404.xsd">
   <code>404</code>
   <message>Page Not Found</message>
   <description>

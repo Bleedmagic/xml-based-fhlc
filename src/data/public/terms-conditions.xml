@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<terms-conditions>
+<terms-conditions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/terms-conditions.xsd">
   <section>
     <title>Terms and Conditions</title>
     <content>These terms and conditions (“Agreement”) set forth the general terms and conditions of your use

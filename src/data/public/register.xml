@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<register>
+<register xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/register.xsd">
   <page>
     <logo>../../../assets/img/fhlc-logo.png</logo>
     <decorative-image>../../../assets/img/register.jpg</decorative-image>

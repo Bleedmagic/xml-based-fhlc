@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<enrollment>
+<enrollment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/currentstudents.xsd">
   <title>Online Enrollment Process for Current Students</title>
   <steps>
     <step number="1">
