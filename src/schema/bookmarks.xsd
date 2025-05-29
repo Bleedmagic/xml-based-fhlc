@@ -1,25 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+  vc:minVersion="1.1"
+  elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:element name="bookmarks">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" name="user">
+        <xs:element name="user" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element maxOccurs="unbounded" name="link">
+              <xs:element name="link" maxOccurs="10">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="title" type="xs:string" />
-                    <xs:element name="url" type="xs:string" />
+                    <xs:element name="url">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value="https?://.+" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
-            <xs:attribute name="email" type="xs:string" use="required" />
+            <xs:attribute name="email" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:pattern value="[^@\s]+@[^@\s]+\.[^@\s]+" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:assert test="count(link/url) = count(distinct-values(link/url))" />
           </xs:complexType>
         </xs:element>
       </xs:sequence>
+      <xs:assert test="count(user/@email) = count(distinct-values(user/@email))" />
     </xs:complexType>
   </xs:element>
 </xs:schema>

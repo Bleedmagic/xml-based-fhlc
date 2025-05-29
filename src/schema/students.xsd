@@ -1,23 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="students">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element maxOccurs="unbounded" name="student">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="id" type="xs:string" />
-              <xs:element name="name" type="xs:string" />
-              <xs:element name="guardian_name" type="xs:string" />
-              <xs:element name="guardian_contact" type="xs:unsignedLong" />
-              <xs:element name="grade" type="xs:string" />
-              <xs:element name="section" type="xs:string" />
-              <xs:element name="status" type="xs:string" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-</xs:schema>
+<xs:element name="students">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="student">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="id" type="xs:string" />
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="guardian_name" type="xs:string" />
+            <xs:element name="guardian_contact" type="xs:unsignedLong" />
+            <xs:element name="grade" type="xs:string" />
+            <xs:element name="section" type="xs:string" />
+            <xs:element name="status" type="xs:string" />
+          </xs:sequence>
+          <xs:assert test="status = ('Active', 'Inactive')" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>

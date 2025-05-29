@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.1" encoding="utf-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+  vc:minVersion="1.1">
+
   <xs:element name="sections">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" name="section">
+        <xs:element name="section" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" type="xs:unsignedByte" />
@@ -14,6 +17,10 @@
               <xs:element name="number_of_students" type="xs:unsignedByte" />
               <xs:element name="schedule" type="xs:string" />
             </xs:sequence>
+            <xs:assert test="id ge 1" />
+            <xs:assert test="number_of_students ge 1 and number_of_students le 50" />
+            <xs:assert
+              test="matches(schedule, '^Monday to Friday, \d{1,2}:\d{2} (AM|PM) - \d{1,2}:\d{2} (AM|PM)$')" />
           </xs:complexType>
         </xs:element>
       </xs:sequence>

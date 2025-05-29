@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.1" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+  vc:minVersion="1.1"
+  elementFormDefault="qualified">
   <xs:element name="faculty">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="teachers">
           <xs:complexType>
             <xs:sequence>
-              <xs:element maxOccurs="unbounded" name="teacher">
+              <xs:element name="teacher" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="id" type="xs:string" />
@@ -16,6 +18,9 @@
                     <xs:element name="grade_levels" type="xs:string" />
                     <xs:element name="type" type="xs:string" />
                   </xs:sequence>
+                  <xs:assert test="matches(id, '^T\d{3}$')" />
+                  <xs:assert test="type = ('Full Time', 'Part Time')" />
+                  <xs:assert test="string-length(normalize-space(subject_handled)) &gt; 0" />
                 </xs:complexType>
               </xs:element>
             </xs:sequence>

@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.1" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+  vc:minVersion="1.1"
+  elementFormDefault="qualified">
   <xs:element name="events">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" name="event">
+        <xs:element name="event" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="title" type="xs:string" />
@@ -12,6 +14,8 @@
               <xs:element name="from" type="xs:dateTime" />
               <xs:element name="to" type="xs:dateTime" />
             </xs:sequence>
+            <xs:assert test="xs:dateTime(from) lt xs:dateTime(to)" />
+            <xs:assert test="year-from-dateTime(xs:dateTime(from)) = year-from-date(current-date())" />
           </xs:complexType>
         </xs:element>
       </xs:sequence>
