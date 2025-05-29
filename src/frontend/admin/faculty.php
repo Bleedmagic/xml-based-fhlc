@@ -139,6 +139,44 @@ if (file_exists($xmlPath)) {
         </div>
         <!-- /.container-fluid -->
 
+        <!-- Add Faculty Modal -->
+        <div class="modal fade" id="addFacultyModal" tabindex="-1" aria-labelledby="addFacultyLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <form action="scripts/add-faculty.php" method="POST">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="addFacultyLabel">Add New Faculty</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="facultyName">Name</label>
+                    <input type="text" class="form-control" id="facultyName" name="name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="facultySubject">Subjects Handled</label>
+                    <input type="text" class="form-control" id="facultySubject" name="subject_handled" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="facultyGrades">Grade Levels</label>
+                    <input type="text" class="form-control" id="facultyGrades" name="grade_levels" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="facultyType">Type</label>
+                    <input type="text" class="form-control" id="facultyType" name="type" required>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary">Add Faculty</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
       </div>
       <!-- End of Main Content -->
 
@@ -180,14 +218,17 @@ if (file_exists($xmlPath)) {
         }]
       });
 
+      // Replace your existing addButton click‐handler:
       var addButton = $('<button>')
         .text('Add New')
         .addClass('btn btn-primary btn-sm ml-2')
-        .on('click', function() {
-          window.location.href = './scripts/add-faculty.php';
+        .attr({
+          'data-toggle': 'modal',
+          'data-target': '#addFacultyModal'
         });
 
       $('#dataTable_filter').append(addButton);
+
     });
   </script>
 
