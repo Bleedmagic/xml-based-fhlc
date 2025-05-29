@@ -248,7 +248,7 @@ if (file_exists($xmlFilePath)) {
 
           <div class="row">
 
-            <!-- @TODO New -->
+            <!-- Calendar Widget -->
             <div class="col-xl-4 col-lg-4">
               <div class="card shadow mb-4">
                 <!-- Card Header -->
@@ -256,7 +256,7 @@ if (file_exists($xmlFilePath)) {
                   <h6 class="m-0 font-weight-bold text-success">Events Schedule</h6>
                 </div>
                 <!-- Card Body -->
-                <div class="card-body">
+                <div class="card-body d-flex justify-content-center">
                   <div id="calendarWidget"></div>
                 </div>
               </div>
