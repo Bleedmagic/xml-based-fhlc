@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.1" encoding="utf-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+  vc:minVersion="1.1">
   <xs:element name="grades-remarks">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" name="student">
+        <xs:element name="student" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" type="xs:string" />
@@ -13,6 +15,9 @@
               <xs:element name="general_average" type="xs:unsignedByte" />
               <xs:element name="remarks" type="xs:string" />
             </xs:sequence>
+            <xs:assert test="matches(id, '^\d{6}-\d{3}$')" />
+            <xs:assert
+              test="(general_average ge 75 and remarks = 'Passed') or (general_average lt 75 and remarks = 'Failed')" />
           </xs:complexType>
         </xs:element>
       </xs:sequence>

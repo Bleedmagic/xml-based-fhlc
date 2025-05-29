@@ -69,7 +69,12 @@ foreach ($xml->user as $user) {
     $user->middle_name  = htmlspecialchars(trim($_POST['middle_name'] ?? ''));
     $user->last_name    = htmlspecialchars(trim($_POST['last_name']));
     $user->phone_number = htmlspecialchars(trim($_POST['phone_number'] ?? ''));
-    $user->age          = (int)($_POST['age'] ?? 0);
+    $age = (int)($_POST['age'] ?? 0);
+    if ($age < 18) {
+      header('Location: ../settings.php?updated=0');
+      exit();
+    }
+    $user->age = $age;
     $user->address      = htmlspecialchars(trim($_POST['address'] ?? ''));
 
     $xml->asXML($xmlFile);

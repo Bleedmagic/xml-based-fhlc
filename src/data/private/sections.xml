@@ -68,7 +68,7 @@
   <section>
     <id>9</id>
     <name>Willow</name>
-    <grade_level>Grade 3</grade_level>
+    <grade_level>Kindergarten</grade_level>
     <adviser>Leo Gutierrez</adviser>
     <number_of_students>23</number_of_students>
     <schedule>Monday to Friday, 7:30 AM - 1:00 PM</schedule>
@@ -108,7 +108,7 @@
   <section>
     <id>14</id>
     <name>Sequoia</name>
-    <grade_level>Grade 2</grade_level>
+    <grade_level>Kindergarten</grade_level>
     <adviser>Adrian Flores</adviser>
     <number_of_students>29</number_of_students>
     <schedule>Monday to Friday, 7:30 AM - 1:00 PM</schedule>
