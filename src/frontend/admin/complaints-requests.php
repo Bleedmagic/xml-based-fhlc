@@ -333,7 +333,7 @@ if (file_exists($xmlPath)) {
 
       $(function() {
         // Open the modal
-        $('.respond-btn').on('click', function() {
+        $('#dataTable').on('click', '.respond-btn', function() {
           const id = $(this).data('id');
           const email = $(this).data('email');
           const subject = $(this).data('subject');
