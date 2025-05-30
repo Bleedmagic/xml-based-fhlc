@@ -6,10 +6,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 }
 
 $xmlPath = __DIR__ . '/../../../data/private/faculty.xml';
-$id = $_GET['id'] ?? '';
 
-if (!$id) {
-  die('No teacher ID specified.');
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' || empty($_POST['id'])) {
+  die('Invalid request.');
 }
 
 if (!file_exists($xmlPath)) {
@@ -18,27 +17,19 @@ if (!file_exists($xmlPath)) {
 
 $xml = simplexml_load_file($xmlPath);
 $teacherToDelete = null;
-$indexToDelete = -1;
 
-foreach ($xml->teachers->teacher as $index => $teacher) {
-  if ((string)$teacher->id === $id) {
+foreach ($xml->teachers->teacher as $teacher) {
+  if ((string)$teacher->id === $_POST['id']) {
     $teacherToDelete = $teacher;
-    $indexToDelete = $index;
     break;
   }
 }
 
-if (!$teacherToDelete) {
-  die('Teacher not found.');
+if ($teacherToDelete) {
+  $dom = dom_import_simplexml($teacherToDelete);
+  $dom->parentNode->removeChild($dom);
+  $xml->asXML($xmlPath);
 }
 
-// Remove the teacher node
-$dom = dom_import_simplexml($teacherToDelete);
-$dom->parentNode->removeChild($dom);
-
-// Save changes to XML
-$xml->asXML($xmlPath);
-
-// Redirect to faculty list
 header('Location: ../faculty.php');
 exit();
