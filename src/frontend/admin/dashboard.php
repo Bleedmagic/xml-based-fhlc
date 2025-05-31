@@ -122,6 +122,31 @@ if (file_exists($xmlFilePath)) {
   <!-- ------------- -->
   <!-- CUSTOM STYLES -->
   <link rel="stylesheet" href="../../../assets/css/dashboard.css">
+  <style>
+    .clickable-card-primary:hover {
+      background-color: #e6f0fb;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .clickable-card-success:hover {
+      background-color: #e6f4ea;
+      box-shadow: 0 0 10px rgba(40, 167, 69, 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .clickable-card-info:hover {
+      background-color: #c4f0f9;
+      box-shadow: 0 0 10px rgba(23, 162, 184, 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .clickable-card-warning:hover {
+      background-color: #fff8e1;
+      box-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+  </style>
   <!-- ------------- -->
 </head>
 
@@ -157,7 +182,9 @@ if (file_exists($xmlFilePath)) {
 
             <!-- Total Faculty Card -->
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
+              <div class="card border-left-primary shadow h-100 py-2 clickable-card-primary"
+                style="cursor: pointer;"
+                onclick="window.location.href='faculty.php'">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -175,7 +202,9 @@ if (file_exists($xmlFilePath)) {
 
             <!-- Total Students Card -->
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-success shadow h-100 py-2">
+              <div class="card border-left-success shadow h-100 py-2 clickable-card-success"
+                style="cursor: pointer;"
+                onclick="window.location.href='students.php'">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -193,12 +222,15 @@ if (file_exists($xmlFilePath)) {
 
             <!-- Total Sections Card -->
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info shadow h-100 py-2">
+              <div class="card border-left-info shadow h-100 py-2 clickable-card-info"
+                style="cursor: pointer;"
+                onclick="window.location.href='sections.php'">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                        Total Sections</div>
+                        Total Sections
+                      </div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $totalSections ?></div>
                     </div>
                     <div class="col-auto">
@@ -211,7 +243,9 @@ if (file_exists($xmlFilePath)) {
 
             <!-- Open Complaints/Requests Card -->
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-warning shadow h-100 py-2">
+              <div class="card border-left-warning shadow h-100 py-2 clickable-card-warning"
+                style="cursor: pointer;"
+                onclick="window.location.href='complaints.php'">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
