@@ -47,9 +47,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'guardian') {
             <a href="enroll-new.php" class="btn-summary">Enroll New Students</a>
           </div>
 
-          <!-- Enrollment Form for Current Students -->
+          <!-- Enrollment Form for New Students -->
           <section class="fee-section">
-            <h5>Current Student Enrollment Form</h5>
+            <h5>New Student Enrollment Form</h5>
             <form action="dashboard.php" method="POST" class="needs-validation" novalidate enctype="multipart/form-data">
 
               <!-- Student Full Name -->
